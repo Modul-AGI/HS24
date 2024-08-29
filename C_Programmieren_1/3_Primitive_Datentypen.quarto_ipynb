@@ -1,0 +1,172 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Primitive Datentypen\n",
+        "\n",
+        "Bei primitiven Datentypen handelt es sich um die kleinste Einheit der Programmiersprache, sie werden deshalb auch \"atomare Datentypen\" genannt. Alle komplexeren Datentypen (Tabellarische Daten, Bilder, Geodaten) basieren auf diesen einfachen Strukturen. Die für uns wichtigsten Datentypen lauten: *Boolean*, *String*, *Integer* und *Float*. Das sind ähnliche Datentypen wie ihr bereits aus R kennt:\n",
+        "\n",
+        "| Python | R | Beschreibung | Beispiel | in Python | \n",
+        "|:---|:---|:---|:---|:---|\n",
+        "| Boolean | Logical | Logische Werte ja / nein | Wahr / Falsch | `regen = True` |\n",
+        "| String | Character | Textinformation | Bern, Luzern | `stadt = \"Bern\"` |\n",
+        "| Integer | Integer | Zahl ohne Nachkommastelle | Anzahl Einwohner | `bern = 133115` |\n",
+        "| Float | Double | Zahl mit Nachkommastelle | Temperatur | `temp = 22.5` |\n",
+        "\n",
+        "## Boolean\n",
+        "\n",
+        "Hierbei handelt es sich um den einfachsten Datentyp. Er beinhaltet nur zwei Zustände: Wahr oder Falsch. In Python werden diese mit `True` oder `False` definiert (diese Schreibweise muss genau beachtet werden). Beispielsweise sind das Antworten auf geschlossene Fragen.\n"
+      ],
+      "id": "9d4795b3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "regen = True # \"es regnet\"\n",
+        "\n",
+        "sonne = False # \"die Sonne scheint nicht\"\n",
+        "\n",
+        "type(sonne)"
+      ],
+      "id": "fd83c340",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Um zu prüfen, ob ein bestimmter Wert `True` oder `False` ist verwendet man `is True`. Will man also fragen ob es regnet, wir dies folgendermassen formuliert:\n"
+      ],
+      "id": "129c9d02"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# regnet es?\n",
+        "regen is True"
+      ],
+      "id": "490f6608",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Ob die Sonne scheint, lautet folgendermassen (natürlich müssen dazu die Variabel `sonne` bereits existieren):\n"
+      ],
+      "id": "4ed2c48b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# scheint die Sonne?\n",
+        "sonne is True"
+      ],
+      "id": "20e594c4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## String\n",
+        "\n",
+        "In sogenannten *Strings* werden Textinformationen gespeichert. Beispielsweise können das die Namen von Ortschaften sein.\n"
+      ],
+      "id": "6c782394"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "stadt = \"Bern\"\n",
+        "land = \"Schweiz\"\n",
+        "\n",
+        "type(stadt)"
+      ],
+      "id": "ad88640d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Strings können mit `+` miteinander verbunden werden\n"
+      ],
+      "id": "e15c0428"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "stadt + \" ist die Hauptstadt der \" + land"
+      ],
+      "id": "06ba1f60",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Integer\n",
+        "\n",
+        "In *Integer* werden ganzzahlige Werte gespeichert, beispielsweise die Anzahl Einwohner einer Stadt. \n"
+      ],
+      "id": "cda52789"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "bern_einwohner = 133115\n",
+        "\n",
+        "type(bern_einwohner)"
+      ],
+      "id": "a0ff3a7e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Float\n",
+        "\n",
+        "Als *Float* werden Zahlen mit Nachkommastellen gespeichert, wie zum Beispiel die Temperatur in Grad Celsius.\n"
+      ],
+      "id": "65277e97"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "bern_flaeche = 51.62\n",
+        "\n",
+        "type(bern_flaeche)"
+      ],
+      "id": "e3a6a0be",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/home/rata/.local/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
