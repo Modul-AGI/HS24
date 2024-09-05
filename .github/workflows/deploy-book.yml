@@ -24,7 +24,9 @@ jobs:
           python-version: 3.11
           auto-activate-base: false
 
-      - run: |
+       - name: get QUARTO_PYTHON
+         run: |
+          conda init
           conda activate module-agi
           which python3
 
