@@ -27,6 +27,7 @@ jobs:
       - name: get QUARTO_PYTHON
         run: |
           conda init
+          source /home/runner/.bashrc
           conda activate module-agi
           which python3
 
