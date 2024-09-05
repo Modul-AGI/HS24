@@ -38,4 +38,4 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          QUARTO_PYTHON: 3.11
+          QUARTO_PYTHON: /usr/share/miniconda/envs/modul-agi/bin/python3
