@@ -29,7 +29,7 @@ jobs:
           conda init
           source /home/runner/.bashrc
           conda info --envs
-          conda activate module-agi
+          conda activate modul-agi
           which python3
 
       - name: Render and Publish
