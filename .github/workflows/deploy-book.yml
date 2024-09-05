@@ -16,6 +16,8 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
       - uses: conda-incubator/setup-miniconda@v3
         with:
@@ -24,16 +26,18 @@ jobs:
           python-version: 3.11
           auto-activate-base: false
 
-       - name: get QUARTO_PYTHON
-         run: |
+      - name: get QUARTO_PYTHON
+        run: |
           conda init
-          conda activate module-agi
+          source /home/runner/.bashrc
+          conda info --envs
+          conda activate modul-agi
           which python3
 
-       - name: Render and Publish
-         uses: quarto-dev/quarto-actions/publish@v2
-         with:
-           target: gh-pages
-         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           QUARTO_PYTHON: 3.11
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUARTO_PYTHON: /usr/share/miniconda/envs/modul-agi/bin/python3
