@@ -24,6 +24,11 @@ jobs:
           python-version: 3.11
           auto-activate-base: false
 
+      - run: |
+          conda activate module-agi
+          which python3
+
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
