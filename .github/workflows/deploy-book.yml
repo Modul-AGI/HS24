@@ -16,8 +16,13 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: conda-incubator/setup-miniconda@v3
         with:
-          tinytex: true
+          activate-environment: modul-agi
+          environment-file: environment.yml
+          python-version: 3.11
+          auto-activate-base: false
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
