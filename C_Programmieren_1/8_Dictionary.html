@@ -709,27 +709,27 @@ window.onload = function() {
 <p>Ähnlich wie eine List, ist eine Dictionary ein Behälter wo mehrere Elemente abgespeichert werden können. Wie bei einem Wörterbuch bekommt jedes Element ein “Schlüsselwort”, mit dem man den Eintrag finden kann. Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die Erklärung “erdichten, schwindeln, sich aus den Fingern saugen”.</p>
 <p><img src="figures/trump.jpg" class="img-fluid"></p>
 <p>In Python würde man diese <em>Dictionary</em> folgendermassen erstellen:</p>
-<div id="1ad3ca70" class="cell" data-execution_count="1">
+<div id="6e061a7d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>langenscheidt <span class="op">=</span> {<span class="st">"trump"</span>:<span class="st">"erdichten- schwindeln- sich aus den Fingern saugen"</span>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Schlüssel (von nun an mit <em>Key</em> bezeichnet) des Eintrages lautet “trump” und der dazugehörige Wert (<em>Value</em>) “erdichten- schwindeln- aus den Fingern saugen”. Beachte die geschweiften Klammern (<code>{</code> und <code>}</code>) bei der Erstellung einer Dictionary.</p>
 <p>Eine <em>Dictionary</em> besteht aber meistens nicht aus einem, sondern aus mehreren Einträgen: Diese werden Kommagetrennt aufgeführt.</p>
-<div id="fab4140a" class="cell" data-execution_count="2">
+<div id="1a102f92" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>langenscheidt <span class="op">=</span> {<span class="st">"trump"</span>:<span class="st">"erdichten- schwindeln- sich aus den Fingern saugen"</span>, <span class="st">"trumpery"</span>:<span class="st">"Plunder- Ramsch- Schund"</span>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Der Clou der <em>Dictionary</em> ist, dass man nun einen Eintrag mittels dem <em>Key</em> aufrufen kann. Wenn wir also nun wissen wollen was “trump” heisst, ermitteln wir dies mit der nachstehenden Codezeile:</p>
-<div id="a0ef8d5a" class="cell" data-execution_count="3">
+<div id="b92eee7b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>langenscheidt[<span class="st">"trump"</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>'erdichten- schwindeln- sich aus den Fingern saugen'</code></pre>
 </div>
 </div>
 <p>Um eine <em>Dictionary</em> mit einem weiteren Eintrag zu ergänzen, geht man sehr ähnlich vor wie beim Abrufen von Einträgen.</p>
-<div id="c1f9692e" class="cell" data-execution_count="4">
+<div id="ffc89888" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>langenscheidt[<span class="st">"trumpet"</span>] <span class="op">=</span> <span class="st">"trompete"</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Ein <em>Key</em> kann auch mehrere Einträge enthalten. An unserem Langenscheidts Beispiel: Das Wort “trump” ist zwar eindeutig, doch “trumpery” hat vier verschiedene Bedeutungen. In so einem Fall können wir einem Eintrag auch eine <em>List</em> von Werten zuweisen. Beachte die Eckigen Klammern und die Kommas, welche die Listeneinträge voneinander trennt.</p>
-<div id="c912540a" class="cell" data-execution_count="5">
+<div id="ff686e11" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>langenscheidt[<span class="st">"trumpery"</span>] <span class="op">=</span> [<span class="st">"Plunder- Ramsch- Schund"</span>, </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Gewäsch- Quatsch"</span>, </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Schund- Kitsch"</span>, </span>
@@ -742,7 +742,7 @@ window.onload = function() {
  'billig- nichtssagend']</code></pre>
 </div>
 </div>
-<div id="4d169661" class="cell" data-execution_count="6">
+<div id="7e1f49f1" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(langenscheidt[<span class="st">"trumpery"</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>4</code></pre>

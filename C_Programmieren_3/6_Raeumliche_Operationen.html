@@ -715,7 +715,7 @@ window.onload = function() {
 
 
 <p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in <a href="5_GIS_in_Python.html" class="quarto-xref"><span>Input: GIS in Python</span></a> beschrieben.</p>
-<div id="cb171033" class="cell" data-execution_count="1">
+<div id="e2eba94b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> gpd.read_file(<span class="st">"data/zeckenstiche.gpkg"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -727,7 +727,7 @@ Cell <span class="ansi-green-fg">In[1], line 3</span>
 <span class="ansi-green-fg ansi-bold">      1</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span> <span style="font-weight:bold;color:rgb(0,0,255)">geopandas</span> <span style="font-weight:bold;color:rgb(0,135,0)">as</span> <span style="font-weight:bold;color:rgb(0,0,255)">gpd</span>
 <span class="ansi-green-fg">----&gt; 3</span> zeckenstiche <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">gpd</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read_file</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">data/zeckenstiche.gpkg</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/geopandas/io/file.py:294</span>, in <span class="ansi-cyan-fg">_read_file</span><span class="ansi-blue-fg">(filename, bbox, mask, columns, rows, engine, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/geopandas/io/file.py:294</span>, in <span class="ansi-cyan-fg">_read_file</span><span class="ansi-blue-fg">(filename, bbox, mask, columns, rows, engine, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    291</span>             from_bytes <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">True</span>
 <span class="ansi-green-fg ansi-bold">    293</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> engine <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">pyogrio</span><span style="color:rgb(175,0,0)">"</span>:
 <span class="ansi-green-fg">--&gt; 294</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_read_file_pyogrio</span><span class="ansi-yellow-bg">(</span>
@@ -736,7 +736,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    298</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> engine <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">fiona</span><span style="color:rgb(175,0,0)">"</span>:
 <span class="ansi-green-fg ansi-bold">    299</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> pd<span style="color:rgb(98,98,98)">.</span>api<span style="color:rgb(98,98,98)">.</span>types<span style="color:rgb(98,98,98)">.</span>is_file_like(filename):
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/geopandas/io/file.py:547</span>, in <span class="ansi-cyan-fg">_read_file_pyogrio</span><span class="ansi-blue-fg">(path_or_bytes, bbox, mask, rows, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/geopandas/io/file.py:547</span>, in <span class="ansi-cyan-fg">_read_file_pyogrio</span><span class="ansi-blue-fg">(path_or_bytes, bbox, mask, rows, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    538</span>     warnings<span style="color:rgb(98,98,98)">.</span>warn(
 <span class="ansi-green-fg ansi-bold">    539</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">The </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">include_fields</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> and </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">ignore_fields</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> keywords are deprecated, and </span><span style="color:rgb(175,0,0)">"</span>
 <span class="ansi-green-fg ansi-bold">    540</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">will be removed in a future release. You can use the </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">columns</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> keyword </span><span style="color:rgb(175,0,0)">"</span>
@@ -746,7 +746,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    545</span>     kwargs[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">columns</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">=</span> kwargs<span style="color:rgb(98,98,98)">.</span>pop(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">include_fields</span><span style="color:rgb(175,0,0)">"</span>)
 <span class="ansi-green-fg">--&gt; 547</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">pyogrio</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read_dataframe</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path_or_bytes</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">bbox</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">bbox</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/geopandas.py:261</span>, in <span class="ansi-cyan-fg">read_dataframe</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, fid_as_index, use_arrow, on_invalid, arrow_to_pandas_kwargs, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/geopandas.py:261</span>, in <span class="ansi-cyan-fg">read_dataframe</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, fid_as_index, use_arrow, on_invalid, arrow_to_pandas_kwargs, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    256</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> use_arrow:
 <span class="ansi-green-fg ansi-bold">    257</span>     <span style="font-style:italic;color:rgb(95,135,135)"># For arrow, datetimes are read as is.</span>
 <span class="ansi-green-fg ansi-bold">    258</span>     <span style="font-style:italic;color:rgb(95,135,135)"># For numpy IO, datetimes are read as string values to preserve timezone info</span>
@@ -773,7 +773,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    280</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> use_arrow:
 <span class="ansi-green-fg ansi-bold">    281</span>     meta, table <span style="color:rgb(98,98,98)">=</span> result
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/raw.py:196</span>, in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, return_fids, datetime_as_string, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/raw.py:196</span>, in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, return_fids, datetime_as_string, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">     56</span> <span style="font-style:italic;color:rgb(175,0,0)">"""Read OGR data source into numpy arrays.</span>
 <span class="ansi-green-fg ansi-bold">     57</span> 
 <span class="ansi-green-fg ansi-bold">     58</span> <span style="font-style:italic;color:rgb(175,0,0)">IMPORTANT: non-linear geometry types (e.g., MultiSurface) are converted</span>
@@ -801,9 +801,9 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    213</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">datetime_as_string</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">datetime_as_string</span><span class="ansi-yellow-bg">,</span>
 <span class="ansi-green-fg ansi-bold">    214</span> <span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/_io.pyx:1239</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_read</span><span class="ansi-blue-fg">()</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/_io.pyx:1239</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_read</span><span class="ansi-blue-fg">()</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/_io.pyx:219</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_open</span><span class="ansi-blue-fg">()</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/_io.pyx:219</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_open</span><span class="ansi-blue-fg">()</span>
 
 <span class="ansi-red-fg">DataSourceError</span>: data/zeckenstiche.gpkg: No such file or directory</pre>
 </div>
@@ -824,7 +824,7 @@ Hinweis
 <li>Welcher Datentyp eure Operation <em>braucht</em> seht ihr in <a href="https://geopandas.org/">der Dokumentation</a>. Welcher Datentyp ihr <em>habt</em> seht ihr mit <code>type()</code>.</li>
 <li>Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst <code>x</code>)</li>
 </ul>
-<div id="251c69a3" class="cell" data-execution_count="2">
+<div id="dfcdb166" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoDataFrame zu Geoseries:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>zecken_geoseries <span class="op">=</span> gpd.GeoSeries(zeckenstiche[<span class="st">"geometry"</span>])          </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -849,7 +849,7 @@ Cell <span class="ansi-green-fg">In[2], line 2</span>
 <section id="buffer" class="level2">
 <h2 class="anchored" data-anchor-id="buffer">Buffer</h2>
 <p>Eine typische GIS Operation ist das “Buffern” von Objekten. Der ArcGIS Befehl <a href="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm">“Buffer”</a> erreichen wir in Geopandas mit <code>.buffer()</code>. Folgender Code macht einen Buffer mit einer Distanz von 10m.</p>
-<div id="4244e301" class="cell" data-execution_count="3">
+<div id="e7bc5faf" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>buffered <span class="op">=</span> zeckenstiche.<span class="bu">buffer</span>(<span class="dv">10</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -863,7 +863,7 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 </div>
 </div>
 <p>Um Geopandas-Objekte zu plotten kann man einfach <code>.plot()</code> verwenden. Zudem kann man mit <code>boundary</code> die Umrisse eines Polygons extrahieren:</p>
-<div id="69abae83" class="cell" data-execution_count="4">
+<div id="b83dd509" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> buffered.boundary.plot() <span class="co"># plottet die boundries    </span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"black"</span>) <span class="co"># plottet die Punkte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -883,7 +883,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <section id="union" class="level2">
 <h2 class="anchored" data-anchor-id="union">Union</h2>
 <p>Mit <code>unary_union</code> können wir aus unserer <em>Point</em>-Geometrie ein <em>MultiPoint</em> erstellen (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur" class="quarto-xref"><span>Aufbau von GeoDataFrames</span></a>). Dieser Befehl lautet in ArcGIS <a href="https://desktop.arcgis.com/de/arcmap/10.3/tools/analysis-toolbox/union.htm">Union</a>.</p>
-<div id="ff49efec" class="cell" data-execution_count="5">
+<div id="044e047c" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_union <span class="op">=</span> zeckenstiche[<span class="st">"geometry"</span>].unary_union</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(zeckenstiche_union) <span class="co"># Es handelt sich nun um den Typ "MultiPoint"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -900,7 +900,7 @@ Cell <span class="ansi-green-fg">In[5], line 1</span>
 </div>
 </div>
 <p>Wenn wir uns <code>zeckenstiche_union</code> nun mit <code>print</code> anschauen sehen wir, dass sämtliche Koordinaten in einem Objekt zusammengepackt sind:</p>
-<div id="240f8693" class="cell" data-execution_count="6">
+<div id="7b171f7b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeckenstiche_union)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -917,7 +917,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 <section id="sec-raeumliche-operationen-mbg" class="level2">
 <h2 class="anchored" data-anchor-id="sec-raeumliche-operationen-mbg">Minimum Bounding Geometry</h2>
 <p>Über ein <em>MultiPoint</em> lassen sich jetzt wunderbar sogenannte (in ESRI Terminologie) <a href="https://pro.arcgis.com/de/pro-app/tool-reference/data-management/minimum-bounding-geometry.htm">Minimum Bounding Geometries</a> rechnen. Mit den gleichnamigen Funktionen können wir nun eine <code>convex_hull</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> sowie eine <code>envelope</code> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> über alle Punkte rechnen.</p>
-<div id="19884d41" class="cell" data-execution_count="7">
+<div id="4290b98f" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> zeckenstiche_union.convex_hull</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> zeckenstiche_union.envelope</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -933,7 +933,7 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </div>
 </div>
 <p>Nun konvertiere ich beide Polygon-Geometrien in <em>GeoSeries</em>, damit sie einfacher zu visualisieren sind:</p>
-<div id="2b75e3f5" class="cell" data-execution_count="8">
+<div id="5287291e" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> gpd.GeoSeries(my_convex_hull)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> gpd.GeoSeries(my_envelope)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -949,7 +949,7 @@ Cell <span class="ansi-green-fg">In[8], line 1</span>
 </div>
 </div>
 <p>Um die beiden Objekte nebeneinander zu visualisieren importiere ich zuerst <code>pyplot</code> aus <code>matplotlib</code> (mit dem alias <code>plt</code>) und erstelle <code>subplots</code></p>
-<div id="dc139c9a" class="cell" data-execution_count="9">
+<div id="ecf4c7a2" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>,sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>,figsize <span class="op">=</span> (<span class="dv">9</span>, <span class="dv">9</span>))</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -988,7 +988,7 @@ Cell <span class="ansi-green-fg">In[9], line 5</span>
 <section id="overlay" class="level2">
 <h2 class="anchored" data-anchor-id="overlay">Overlay</h2>
 <p>Viele der Funktionen aus dem ESRI Toolset <a href="https://pro.arcgis.com/de/pro-app/tool-reference/analysis/an-overview-of-the-overlay-toolset.htm">“Overlay”</a> sind in der <em>Geopandas</em> Funktion <code>overlay</code> verpackt. Um sie zu demonstrieren nutze ich die Geometrien, die wir in weiter oben erstellt haben (<code>buffered</code> und <code>my_convex_hull</code>). Zuerst muss ich sie aber noch von <em>GeoSeries</em> in <em>GeoDataFrames</em> konverieren.</p>
-<div id="3690d4e1" class="cell" data-execution_count="10">
+<div id="16e07a6d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>buffered_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> buffered, crs <span class="op">=</span> <span class="dv">2056</span>)               </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> my_convex_hull, crs <span class="op">=</span> <span class="dv">2056</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1004,7 +1004,7 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 </div>
 </div>
 <p>Nun kann ich zum beispielsweise die Overlay-Funktion <code>difference</code> ausführen:</p>
-<div id="29cc3e76" class="cell" data-execution_count="11">
+<div id="0b67a77b" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_difference <span class="op">=</span> gpd.overlay(my_convex_hull_gdf,buffered_gdf, how<span class="op">=</span><span class="st">'difference'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -1017,7 +1017,7 @@ Cell <span class="ansi-green-fg">In[11], line 1</span>
 </div>
 </div>
 </div>
-<div id="dc33d4d7" class="cell" data-execution_count="12">
+<div id="4d17142f" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bereitet die drei Subplots vor ################</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">9</span>,<span class="dv">9</span>))</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span>

@@ -716,7 +716,7 @@ window.onload = function() {
 <section id="die-grundform" class="level2">
 <h2 class="anchored" data-anchor-id="die-grundform">Die Grundform</h2>
 <p>Nirgends ist der Aspekt der Automatisierung so sichtbar wie in <em>for loops</em>. Loops sind “Schleifen” wo eine Aufgabe beliebig lange wiederholt wird. Auch <em>for loops</em> sind im Grunde genommen simple. Auf den ersten Blick sieht eine <em>for loop</em> aus wie eine <em>Function</em> definition (siehe <a href="../C_Programmieren_2/4_Functions_I.html" class="quarto-xref"><span>Function Basics</span></a> und <a href="../C_Programmieren_2/6_Functions_II.html" class="quarto-xref"><span>Function Advanced</span></a>). Im folgenden Beispiel seht ihr ein minimales Beispiel einer <em>for loop</em>.</p>
-<div id="16f2f1bc" class="cell" data-execution_count="1">
+<div id="f8a39f08" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> platzhalter <span class="kw">in</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>]:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Iteration"</span>,platzhalter)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -739,7 +739,7 @@ Iteration 2</code></pre>
 <h2 class="anchored" data-anchor-id="der-iterator">Der Iterator</h2>
 <p>Im obigen Beispiel haben wir über eine <em>List</em> iteriert, wir haben also eine Liste als Iterator verwendet. Es gibt aber noch andere “Dinge”, über die wir iterieren können. Angenommen wir wollen den gleichen <em>for loop</em> mit den Zahlen von 0 bis 100 oder 100 bis 1’000 durchführen. Es wäre ganz schön mühsam, alle Zahlen von 0 bis 100 manuell in einer Liste zu erfassen. Zu diesem Zweck können wir die Funktion <code>range</code> verwenden. Mit <code>range(3)</code> erstellen wir einen Iterator mit den Werten 0, 1 und 2. Mit <code>range(100,1001)</code> erhalten wir die Werte von 100 bis 1’000.</p>
 <p>Der gleiche <em>loop</em> wie oben lautet mit <code>range</code> folgendermassen:</p>
-<div id="ea2cf406" class="cell" data-execution_count="2">
+<div id="d9ccf4e1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> platzhalter <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Iteration"</span>,platzhalter)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

@@ -729,7 +729,7 @@ window.onload = function() {
 <section id="histogramm-aus-list" class="level3">
 <h3 class="anchored" data-anchor-id="histogramm-aus-list">Histogramm aus <code>List</code></h3>
 <p><code>pandas</code> vereinfacht das Visualisieren von Daten sogar soweit, dass es sich jewils lohnt seine Listen, Dictionaries usw. zuerst in eine <code>Series</code> oder <code>DataFrame</code> zu überführen um sie zu visualisieren (wie ich zum Beispiel in <a href="../C_Programmieren_2/10_Zufallzahlen.html" class="quarto-xref"><span>Zufallszahlen generieren</span></a> jeweils gemacht habe).</p>
-<div id="7e00cc83" class="cell" data-execution_count="1">
+<div id="fef06fab" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -751,7 +751,7 @@ window.onload = function() {
 <section id="boxplot-aus-list" class="level3">
 <h3 class="anchored" data-anchor-id="boxplot-aus-list">Boxplot aus <code>List</code></h3>
 <p>Das Visualisieren als Boxplot ist sehr ähnlich, man ersetzt <code>"hist"</code> lediglich durch <code>"box</code>. Eine komplette liste der möglichen Argumente für findet ihr hier: <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.html</a></p>
-<div id="9ed25fc8" class="cell" data-execution_count="2">
+<div id="c09097bb" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>random_gamma.plot(kind <span class="op">=</span> <span class="st">"box"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -765,7 +765,7 @@ window.onload = function() {
 <section id="scatterplot-aus-dataframe" class="level3">
 <h3 class="anchored" data-anchor-id="scatterplot-aus-dataframe">Scatterplot aus DataFrame</h3>
 <p>Um einen Scatterplot zu erstellen, braucht es eine <code>DataFrame</code> (eine <code>Series</code> reicht hierfür nicht aus).</p>
-<div id="9eff9ec7" class="cell" data-execution_count="3">
+<div id="350b289d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> pd.read_csv(<span class="st">"data/zeckenstiche.csv"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -774,7 +774,7 @@ window.onload = function() {
 Cell <span class="ansi-green-fg">In[3], line 1</span>
 <span class="ansi-green-fg">----&gt; 1</span> zeckenstiche <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pd</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read_csv</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">data/zeckenstiche.csv</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1026</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
 <span class="ansi-green-fg ansi-bold">   1013</span> kwds_defaults <span style="color:rgb(98,98,98)">=</span> _refine_defaults_read(
 <span class="ansi-green-fg ansi-bold">   1014</span>     dialect,
 <span class="ansi-green-fg ansi-bold">   1015</span>     delimiter,
@@ -784,19 +784,19 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">   1024</span> kwds<span style="color:rgb(98,98,98)">.</span>update(kwds_defaults)
 <span class="ansi-green-fg">-&gt; 1026</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">filepath_or_buffer</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">kwds</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pandas/io/parsers/readers.py:620</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:620</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
 <span class="ansi-green-fg ansi-bold">    617</span> _validate_names(kwds<span style="color:rgb(98,98,98)">.</span>get(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">names</span><span style="color:rgb(175,0,0)">"</span>, <span style="font-weight:bold;color:rgb(0,135,0)">None</span>))
 <span class="ansi-green-fg ansi-bold">    619</span> <span style="font-style:italic;color:rgb(95,135,135)"># Create the parser.</span>
 <span class="ansi-green-fg">--&gt; 620</span> parser <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">TextFileReader</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">filepath_or_buffer</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwds</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-fg ansi-bold">    622</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> chunksize <span style="font-weight:bold;color:rgb(175,0,255)">or</span> iterator:
 <span class="ansi-green-fg ansi-bold">    623</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> parser
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1620</span>, in <span class="ansi-cyan-fg">TextFileReader.__init__</span><span class="ansi-blue-fg">(self, f, engine, **kwds)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1620</span>, in <span class="ansi-cyan-fg">TextFileReader.__init__</span><span class="ansi-blue-fg">(self, f, engine, **kwds)</span>
 <span class="ansi-green-fg ansi-bold">   1617</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>options[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">has_index_names</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">=</span> kwds[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">has_index_names</span><span style="color:rgb(175,0,0)">"</span>]
 <span class="ansi-green-fg ansi-bold">   1619</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>handles: IOHandles <span style="color:rgb(98,98,98)">|</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span> <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>
 <span class="ansi-green-fg">-&gt; 1620</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_engine <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_make_engine</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">f</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">engine</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1880</span>, in <span class="ansi-cyan-fg">TextFileReader._make_engine</span><span class="ansi-blue-fg">(self, f, engine)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1880</span>, in <span class="ansi-cyan-fg">TextFileReader._make_engine</span><span class="ansi-blue-fg">(self, f, engine)</span>
 <span class="ansi-green-fg ansi-bold">   1878</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">b</span><span style="color:rgb(175,0,0)">"</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(175,0,255)">in</span> mode:
 <span class="ansi-green-fg ansi-bold">   1879</span>         mode <span style="color:rgb(98,98,98)">+</span><span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">b</span><span style="color:rgb(175,0,0)">"</span>
 <span class="ansi-green-fg">-&gt; 1880</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>handles <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">get_handle</span><span class="ansi-yellow-bg">(</span>
@@ -812,7 +812,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">   1890</span> <span style="font-weight:bold;color:rgb(0,135,0)">assert</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>handles <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>
 <span class="ansi-green-fg ansi-bold">   1891</span> f <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>handles<span style="color:rgb(98,98,98)">.</span>handle
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pandas/io/common.py:873</span>, in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-fg">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/common.py:873</span>, in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-fg">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
 <span class="ansi-green-fg ansi-bold">    868</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> <span style="color:rgb(0,135,0)">isinstance</span>(handle, <span style="color:rgb(0,135,0)">str</span>):
 <span class="ansi-green-fg ansi-bold">    869</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Check whether the filename is to be opened in binary mode.</span>
 <span class="ansi-green-fg ansi-bold">    870</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Binary mode does not support 'encoding' and 'newline'.</span>
@@ -833,7 +833,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 </div>
 </div>
 </div>
-<div id="1a437723" class="cell" data-execution_count="4">
+<div id="33b7c4f8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(<span class="st">"x"</span>, <span class="st">"y"</span>, kind <span class="op">=</span> <span class="st">"scatter"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -850,7 +850,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <section id="statische-karte-aus-geodataframe" class="level3">
 <h3 class="anchored" data-anchor-id="statische-karte-aus-geodataframe">Statische Karte aus GeoDataFrame</h3>
 <p>Um aus <em>GeoDataFrames</em> Karten zu machen verwendet man ebenfalls die <code>.plot()</code> Methode. Um wirklich schöne Karten mit Python herzustellen braucht man viel Übung. Für eine schnelle Visualisierung reicht aber die <code>.plot()</code> Methode.</p>
-<div id="42657f8b" class="cell" data-execution_count="5">
+<div id="f5d7a5bd" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> gpd.read_file(<span class="st">"data/zeckenstiche.gpkg"</span>)</span>
@@ -864,7 +864,7 @@ Cell <span class="ansi-green-fg">In[5], line 3</span>
 <span class="ansi-green-fg">----&gt; 3</span> zeckenstiche <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">gpd</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read_file</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">data/zeckenstiche.gpkg</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-fg ansi-bold">      4</span> wald <span style="color:rgb(98,98,98)">=</span> gpd<span style="color:rgb(98,98,98)">.</span>read_file(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">data/wald.gpkg</span><span style="color:rgb(175,0,0)">"</span>)
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/geopandas/io/file.py:294</span>, in <span class="ansi-cyan-fg">_read_file</span><span class="ansi-blue-fg">(filename, bbox, mask, columns, rows, engine, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/geopandas/io/file.py:294</span>, in <span class="ansi-cyan-fg">_read_file</span><span class="ansi-blue-fg">(filename, bbox, mask, columns, rows, engine, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    291</span>             from_bytes <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">True</span>
 <span class="ansi-green-fg ansi-bold">    293</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> engine <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">pyogrio</span><span style="color:rgb(175,0,0)">"</span>:
 <span class="ansi-green-fg">--&gt; 294</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_read_file_pyogrio</span><span class="ansi-yellow-bg">(</span>
@@ -873,7 +873,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    298</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> engine <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">fiona</span><span style="color:rgb(175,0,0)">"</span>:
 <span class="ansi-green-fg ansi-bold">    299</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> pd<span style="color:rgb(98,98,98)">.</span>api<span style="color:rgb(98,98,98)">.</span>types<span style="color:rgb(98,98,98)">.</span>is_file_like(filename):
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/geopandas/io/file.py:547</span>, in <span class="ansi-cyan-fg">_read_file_pyogrio</span><span class="ansi-blue-fg">(path_or_bytes, bbox, mask, rows, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/geopandas/io/file.py:547</span>, in <span class="ansi-cyan-fg">_read_file_pyogrio</span><span class="ansi-blue-fg">(path_or_bytes, bbox, mask, rows, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    538</span>     warnings<span style="color:rgb(98,98,98)">.</span>warn(
 <span class="ansi-green-fg ansi-bold">    539</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">The </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">include_fields</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> and </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">ignore_fields</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> keywords are deprecated, and </span><span style="color:rgb(175,0,0)">"</span>
 <span class="ansi-green-fg ansi-bold">    540</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">will be removed in a future release. You can use the </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">columns</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> keyword </span><span style="color:rgb(175,0,0)">"</span>
@@ -883,7 +883,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    545</span>     kwargs[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">columns</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">=</span> kwargs<span style="color:rgb(98,98,98)">.</span>pop(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">include_fields</span><span style="color:rgb(175,0,0)">"</span>)
 <span class="ansi-green-fg">--&gt; 547</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">pyogrio</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read_dataframe</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path_or_bytes</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">bbox</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">bbox</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/geopandas.py:261</span>, in <span class="ansi-cyan-fg">read_dataframe</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, fid_as_index, use_arrow, on_invalid, arrow_to_pandas_kwargs, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/geopandas.py:261</span>, in <span class="ansi-cyan-fg">read_dataframe</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, fid_as_index, use_arrow, on_invalid, arrow_to_pandas_kwargs, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    256</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> use_arrow:
 <span class="ansi-green-fg ansi-bold">    257</span>     <span style="font-style:italic;color:rgb(95,135,135)"># For arrow, datetimes are read as is.</span>
 <span class="ansi-green-fg ansi-bold">    258</span>     <span style="font-style:italic;color:rgb(95,135,135)"># For numpy IO, datetimes are read as string values to preserve timezone info</span>
@@ -910,7 +910,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    280</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> use_arrow:
 <span class="ansi-green-fg ansi-bold">    281</span>     meta, table <span style="color:rgb(98,98,98)">=</span> result
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/raw.py:196</span>, in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, return_fids, datetime_as_string, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/raw.py:196</span>, in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, return_fids, datetime_as_string, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">     56</span> <span style="font-style:italic;color:rgb(175,0,0)">"""Read OGR data source into numpy arrays.</span>
 <span class="ansi-green-fg ansi-bold">     57</span> 
 <span class="ansi-green-fg ansi-bold">     58</span> <span style="font-style:italic;color:rgb(175,0,0)">IMPORTANT: non-linear geometry types (e.g., MultiSurface) are converted</span>
@@ -938,16 +938,16 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    213</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">datetime_as_string</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">datetime_as_string</span><span class="ansi-yellow-bg">,</span>
 <span class="ansi-green-fg ansi-bold">    214</span> <span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/_io.pyx:1239</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_read</span><span class="ansi-blue-fg">()</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/_io.pyx:1239</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_read</span><span class="ansi-blue-fg">()</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/_io.pyx:219</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_open</span><span class="ansi-blue-fg">()</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/_io.pyx:219</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_open</span><span class="ansi-blue-fg">()</span>
 
 <span class="ansi-red-fg">DataSourceError</span>: data/zeckenstiche.gpkg: No such file or directory</pre>
 </div>
 </div>
 </div>
 <p><strong>Einfache Plots ohne anpassung:</strong></p>
-<div id="7b26c96a" class="cell" data-execution_count="6">
+<div id="cde42244" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>wald.plot()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -961,7 +961,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </div>
 </div>
 <p><strong>Anpassung der Plot Grösse:</strong></p>
-<div id="dcf2a28c" class="cell" data-execution_count="7">
+<div id="554c91db" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>wald.plot(figsize <span class="op">=</span> (<span class="dv">5</span>,<span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -975,7 +975,7 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </div>
 </div>
 <p><strong>Choroplethenkarte Karte</strong></p>
-<div id="7a6bcbc0" class="cell" data-execution_count="8">
+<div id="259689f5" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> ListedColormap</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>my_cmap <span class="op">=</span> ListedColormap([<span class="st">"green"</span>,<span class="st">"lightgrey"</span>])</span>
@@ -994,7 +994,7 @@ Cell <span class="ansi-green-fg">In[8], line 4</span>
 </div>
 </div>
 <p><strong>Mehrere Layers:</strong></p>
-<div id="20178c31" class="cell" data-execution_count="9">
+<div id="12d48bce" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.plot(column <span class="op">=</span> <span class="st">"Wald_text"</span>, legend <span class="op">=</span> <span class="va">True</span>, cmap <span class="op">=</span> my_cmap)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(color <span class="op">=</span> <span class="st">"Red"</span>, ax <span class="op">=</span> base)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1014,23 +1014,23 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 <h3 class="anchored" data-anchor-id="interaktive-karten-aus-geodataframe">Interaktive Karten aus GeoDataFrame</h3>
 <p>Weitere Informationen dazu findet ihr hier: <a href="https://geopandas.org/docs/user_guide/interactive_mapping.html" class="uri">https://geopandas.org/docs/user_guide/interactive_mapping.html</a></p>
 <p>Vollautomatisch, ohne Anpassungen:</p>
-<div id="0ac7dec7" class="cell" data-execution_count="10">
+<div id="36083afb" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zeckenstiche Rot eingefärbt:</p>
-<div id="63907302" class="cell" data-execution_count="11">
+<div id="f1cc7755" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore(color <span class="op">=</span> <span class="st">"red"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zeckenstiche nach <code>"accuracy"</code> eingefärbt:</p>
-<div id="1cdbcb15" class="cell" data-execution_count="12">
+<div id="03377ef5" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore(column <span class="op">=</span> <span class="st">"accuracy"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Wald nach <code>"Wald_text"</code> eingefärbt (beachte, dass ich <code>my_cmap</code> weiter oben erstellt habe!):</p>
-<div id="12c9e964" class="cell" data-execution_count="13">
+<div id="43d29a39" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>wald.explore(column <span class="op">=</span> <span class="st">"Wald_text"</span>, cmap <span class="op">=</span> my_cmap)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zwei übereinander gelagerte Layers:</p>
-<div id="ecd27133" class="cell" data-execution_count="14">
+<div id="92e6fc29" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.explore(column <span class="op">=</span> <span class="st">"Wald_text"</span>, cmap <span class="op">=</span> my_cmap)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore(m <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"red"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1050,7 +1050,7 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 <section id="sec-geoviz" class="level2">
 <h2 class="anchored" data-anchor-id="sec-geoviz">Anhang 2: Geodaten visualisieren</h2>
 <p>In folgenden Beispielen zeigen wir noch ein paar einfache Wege, wie ihr die Zeckenstichdaten visualisieren könnt.</p>
-<div id="0241d251" class="cell" data-execution_count="15">
+<div id="4df59cd7" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1076,7 +1076,7 @@ Cell <span class="ansi-green-fg">In[11], line 6</span>
 <span class="ansi-green-fg ansi-bold">      7</span> zeckenstiche_full <span style="color:rgb(98,98,98)">=</span> pd<span style="color:rgb(98,98,98)">.</span>read_csv(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">data/zeckenstiche_full.csv</span><span style="color:rgb(175,0,0)">"</span>)
 <span class="ansi-green-fg ansi-bold">      9</span> geom <span style="color:rgb(98,98,98)">=</span> gpd<span style="color:rgb(98,98,98)">.</span>points_from_xy(zeckenstiche_full[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">x</span><span style="color:rgb(175,0,0)">'</span>], zeckenstiche_full[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">y</span><span style="color:rgb(175,0,0)">'</span>])
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/geopandas/io/file.py:294</span>, in <span class="ansi-cyan-fg">_read_file</span><span class="ansi-blue-fg">(filename, bbox, mask, columns, rows, engine, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/geopandas/io/file.py:294</span>, in <span class="ansi-cyan-fg">_read_file</span><span class="ansi-blue-fg">(filename, bbox, mask, columns, rows, engine, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    291</span>             from_bytes <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">True</span>
 <span class="ansi-green-fg ansi-bold">    293</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> engine <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">pyogrio</span><span style="color:rgb(175,0,0)">"</span>:
 <span class="ansi-green-fg">--&gt; 294</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_read_file_pyogrio</span><span class="ansi-yellow-bg">(</span>
@@ -1085,7 +1085,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    298</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> engine <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">fiona</span><span style="color:rgb(175,0,0)">"</span>:
 <span class="ansi-green-fg ansi-bold">    299</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> pd<span style="color:rgb(98,98,98)">.</span>api<span style="color:rgb(98,98,98)">.</span>types<span style="color:rgb(98,98,98)">.</span>is_file_like(filename):
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/geopandas/io/file.py:547</span>, in <span class="ansi-cyan-fg">_read_file_pyogrio</span><span class="ansi-blue-fg">(path_or_bytes, bbox, mask, rows, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/geopandas/io/file.py:547</span>, in <span class="ansi-cyan-fg">_read_file_pyogrio</span><span class="ansi-blue-fg">(path_or_bytes, bbox, mask, rows, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    538</span>     warnings<span style="color:rgb(98,98,98)">.</span>warn(
 <span class="ansi-green-fg ansi-bold">    539</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">The </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">include_fields</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> and </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">ignore_fields</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> keywords are deprecated, and </span><span style="color:rgb(175,0,0)">"</span>
 <span class="ansi-green-fg ansi-bold">    540</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">will be removed in a future release. You can use the </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">columns</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> keyword </span><span style="color:rgb(175,0,0)">"</span>
@@ -1095,7 +1095,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    545</span>     kwargs[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">columns</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">=</span> kwargs<span style="color:rgb(98,98,98)">.</span>pop(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">include_fields</span><span style="color:rgb(175,0,0)">"</span>)
 <span class="ansi-green-fg">--&gt; 547</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">pyogrio</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read_dataframe</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path_or_bytes</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">bbox</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">bbox</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/geopandas.py:261</span>, in <span class="ansi-cyan-fg">read_dataframe</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, fid_as_index, use_arrow, on_invalid, arrow_to_pandas_kwargs, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/geopandas.py:261</span>, in <span class="ansi-cyan-fg">read_dataframe</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, fid_as_index, use_arrow, on_invalid, arrow_to_pandas_kwargs, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">    256</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> use_arrow:
 <span class="ansi-green-fg ansi-bold">    257</span>     <span style="font-style:italic;color:rgb(95,135,135)"># For arrow, datetimes are read as is.</span>
 <span class="ansi-green-fg ansi-bold">    258</span>     <span style="font-style:italic;color:rgb(95,135,135)"># For numpy IO, datetimes are read as string values to preserve timezone info</span>
@@ -1122,7 +1122,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    280</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> use_arrow:
 <span class="ansi-green-fg ansi-bold">    281</span>     meta, table <span style="color:rgb(98,98,98)">=</span> result
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/raw.py:196</span>, in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, return_fids, datetime_as_string, **kwargs)</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/raw.py:196</span>, in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, return_fids, datetime_as_string, **kwargs)</span>
 <span class="ansi-green-fg ansi-bold">     56</span> <span style="font-style:italic;color:rgb(175,0,0)">"""Read OGR data source into numpy arrays.</span>
 <span class="ansi-green-fg ansi-bold">     57</span> 
 <span class="ansi-green-fg ansi-bold">     58</span> <span style="font-style:italic;color:rgb(175,0,0)">IMPORTANT: non-linear geometry types (e.g., MultiSurface) are converted</span>
@@ -1150,9 +1150,9 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <span class="ansi-green-fg ansi-bold">    213</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">datetime_as_string</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">datetime_as_string</span><span class="ansi-yellow-bg">,</span>
 <span class="ansi-green-fg ansi-bold">    214</span> <span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/_io.pyx:1239</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_read</span><span class="ansi-blue-fg">()</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/_io.pyx:1239</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_read</span><span class="ansi-blue-fg">()</span>
 
-File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3.11/site-packages/pyogrio/_io.pyx:219</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_open</span><span class="ansi-blue-fg">()</span>
+File <span class="ansi-green-fg">~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pyogrio/_io.pyx:219</span>, in <span class="ansi-cyan-fg">pyogrio._io.ogr_open</span><span class="ansi-blue-fg">()</span>
 
 <span class="ansi-red-fg">DataSourceError</span>: data/wald.gpkg: No such file or directory</pre>
 </div>
@@ -1161,7 +1161,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <section id="kernel-density-plot" class="level3">
 <h3 class="anchored" data-anchor-id="kernel-density-plot">Kernel Density Plot</h3>
 <p>Mit der Erweiterung <code>seaborn</code> lassen sich mit wenigen Zeilen Code eine <em>Kernel Density</em> rechnen und visualisieren. Siehe nachstehenden Code:</p>
-<div id="2875d12b" class="cell" data-execution_count="16">
+<div id="75e700eb" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
@@ -1189,7 +1189,7 @@ Cell <span class="ansi-green-fg">In[12], line 1</span>
 <section id="hintergrundkarte" class="level3">
 <h3 class="anchored" data-anchor-id="hintergrundkarte">Hintergrundkarte</h3>
 <p>Mit der Erweiterung <code>contextily</code> kann man sehr schnell und einfach Hintergrundkarten in den Plot einbinden. Dafür muss das <em>GeoDataFrame</em> vorher aber in WGS84 Koordinaten (EPSG 3857) konvertiert werden (mit <code>to_crs</code>, s.u.).</p>
-<div id="250e14e4" class="cell" data-execution_count="17">
+<div id="ca99cdb6" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> contextily <span class="im">as</span> ctx</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
@@ -1215,7 +1215,7 @@ Cell <span class="ansi-green-fg">In[13], line 1</span>
 <section id="kde-mit-hintergrundkarte" class="level3">
 <h3 class="anchored" data-anchor-id="kde-mit-hintergrundkarte">KDE mit Hintergrundkarte</h3>
 <p>Kernel Denisty und Hintergrundkarte können auch kombiniert werden:</p>
-<div id="c666316f" class="cell" data-execution_count="18">
+<div id="b94dacca" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> zeckenstiche_gpd.to_crs(epsg <span class="op">=</span> <span class="dv">3857</span>).geometry.x</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>lng <span class="op">=</span> zeckenstiche_gpd.to_crs(epsg <span class="op">=</span> <span class="dv">3857</span>).geometry.y</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>

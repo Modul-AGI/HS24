@@ -796,29 +796,29 @@ Tip&nbsp;16.1: Positron Projekt erstellen
 <section id="boolean" class="level2">
 <h2 class="anchored" data-anchor-id="boolean">Boolean</h2>
 <p>Hierbei handelt es sich um den einfachsten Datentyp. Er beinhaltet nur zwei Zustände: <em>Wahr</em> oder <em>Falsch</em>. In Python werden diese mit <code>True</code> oder <code>False</code> definiert (diese Schreibweise muss genau beachtet werden). Beispielsweise sind das Antworten auf geschlossene Fragen.</p>
-<div id="d80d8155" class="cell" data-execution_count="1">
+<div id="b258a0f1" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>regen <span class="op">=</span> <span class="va">True</span> <span class="co"># "es regnet"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sonne <span class="op">=</span> <span class="va">False</span> <span class="co"># "die Sonne scheint nicht"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(sonne)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>bool</code></pre>
 </div>
 </div>
 <p>Um zu prüfen, ob ein bestimmter Wert <code>True</code> oder <code>False</code> ist verwendet man <code>is True</code>. Will man also fragen ob es regnet, wir dies folgendermassen formuliert:</p>
-<div id="03280be5" class="cell" data-execution_count="2">
+<div id="96cd7697" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># regnet es?</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>regen <span class="kw">is</span> <span class="va">True</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Ob die Sonne scheint, lautet folgendermassen (natürlich müssen dazu die Variabel <code>sonne</code> bereits existieren):</p>
-<div id="259bdfe1" class="cell" data-execution_count="3">
+<div id="c2e33c6b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># scheint die Sonne?</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sonne <span class="kw">is</span> <span class="va">True</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>False</code></pre>
 </div>
 </div>
@@ -826,19 +826,19 @@ Tip&nbsp;16.1: Positron Projekt erstellen
 <section id="string" class="level2">
 <h2 class="anchored" data-anchor-id="string">String</h2>
 <p>In sogenannten <em>Strings</em> werden Textinformationen gespeichert. Beispielsweise können das die Namen von Ortschaften sein.</p>
-<div id="2597b2bf" class="cell" data-execution_count="4">
+<div id="a88024dd" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stadt <span class="op">=</span> <span class="st">"Bern"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>land <span class="op">=</span> <span class="st">"Schweiz"</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(stadt)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>str</code></pre>
 </div>
 </div>
 <p>Strings können mit <code>+</code> miteinander verbunden werden</p>
-<div id="661cec3d" class="cell" data-execution_count="5">
+<div id="568294c1" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>stadt <span class="op">+</span> <span class="st">" ist die Hauptstadt der "</span> <span class="op">+</span> land</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>'Bern ist die Hauptstadt der Schweiz'</code></pre>
 </div>
 </div>
@@ -846,11 +846,11 @@ Tip&nbsp;16.1: Positron Projekt erstellen
 <section id="integer" class="level2">
 <h2 class="anchored" data-anchor-id="integer">Integer</h2>
 <p>In <em>Integer</em> werden ganzzahlige Werte gespeichert, beispielsweise die Anzahl Einwohner einer Stadt.</p>
-<div id="92c2ef0d" class="cell" data-execution_count="6">
+<div id="d7e77038" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bern_einwohner <span class="op">=</span> <span class="dv">133115</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(bern_einwohner)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>int</code></pre>
 </div>
 </div>
@@ -858,11 +858,11 @@ Tip&nbsp;16.1: Positron Projekt erstellen
 <section id="float" class="level2">
 <h2 class="anchored" data-anchor-id="float">Float</h2>
 <p>Als <em>Float</em> werden Zahlen mit Nachkommastellen gespeichert, wie zum Beispiel die Temperatur in Grad Celsius.</p>
-<div id="bca629aa" class="cell" data-execution_count="7">
+<div id="cacd5def" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>bern_flaeche <span class="op">=</span> <span class="fl">51.62</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(bern_flaeche)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>float</code></pre>
 </div>
 </div>

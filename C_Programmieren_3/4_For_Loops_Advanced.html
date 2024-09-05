@@ -732,7 +732,7 @@ Hinweis
 </div>
 </div>
 </div>
-<div id="12dc3108" class="cell" data-execution_count="1">
+<div id="13f2a550" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>eltern <span class="op">=</span> [<span class="st">"Papa"</span>, <span class="st">"Mama"</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>band <span class="op">=</span> [<span class="st">"Il Buono"</span>, <span class="st">"Il Brutto"</span>, <span class="st">"Il Cattivo"</span>]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -798,7 +798,7 @@ We like to party!
 <section id="verkürzte-schreibweise" class="level2">
 <h2 class="anchored" data-anchor-id="verkürzte-schreibweise">Verkürzte Schreibweise</h2>
 <p>Es ist äusserst häufig der Fall, dass wir den Output aus einem Loop in einer Liste abspeichern wollen. Wie das geht haben wir ja bereits in <a href="3_For_Loops_Basics.html" class="quarto-xref"><span>Basic for loop</span></a> gelernt:</p>
-<div id="b654e4e8" class="cell" data-execution_count="2">
+<div id="ca9453e3" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rollen <span class="op">=</span> [<span class="st">"bitch"</span>,<span class="st">"lover"</span>,<span class="st">"child"</span>,<span class="st">"mother"</span>,<span class="st">"sinner"</span>,<span class="st">"saint"</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>refrain <span class="op">=</span> []</span>
@@ -807,11 +807,11 @@ We like to party!
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    refrain.append(liedzeile)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nur ist das ein <em>bisschen</em> umständlich, weil wir dafür viele Zeilen Code brauchen, um etwas eigentlich ganz simples zu bewerkstelligen. Es gibt deshalb dafür auch eine verkürzte Schreibweise, welche ich in der letzten Woche bereits einmal verwendet habe (siehe <a href="../C_Programmieren_2/11_Uebung_8.html#sec-offset-vis" class="quarto-xref"><span>Übung 8.6</span></a>). Der obige Loop hat in der verkürzten Schreibweise die folgende Form:</p>
-<div id="1807230b" class="cell" data-execution_count="3">
+<div id="b09bcc24" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>refrain <span class="op">=</span> [<span class="st">"I'm a "</span><span class="op">+</span> rolle <span class="cf">for</span> rolle <span class="kw">in</span> rollen]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Diese verkürzte Schreibweise heisst in Python <em>list comprehension</em> und sie ist äusserst praktisch, wenn man sie beherrscht. Das Beherrschen ist aber nicht zentral, es reicht schon wenn ihr eine solche Schreibweise wieder erkennt und richtig interpretieren könnt (im Sinne von “<em>Aha, hier wird also in einem Loop eine Liste erstellt</em>”). In der folgenden Darstellung seht ihr farblich, welche Elemente sich in der verkürzten Schreibweise wo wiederfinden und welche Elemente gar nicht wiederverwendet werden.</p>
-<div id="e5d261c1" class="cell" data-execution_count="4">
+<div id="1f777abc" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rollen <span class="op">=</span> [<span class="st">"bitch"</span>,<span class="st">"lover"</span>,<span class="st">"child"</span>,<span class="st">"mother"</span>,<span class="st">"sinner"</span>,<span class="st">"saint"</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="columns">

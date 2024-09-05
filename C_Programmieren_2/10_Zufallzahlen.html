@@ -706,22 +706,22 @@ window.onload = function() {
 
 
 <p>Im Block “<em>Datenqualität und Unsicherheit</em>” habt ihr euch bereits mit Zufallszahlen und Simulationen auseinandergesetzt. Programmiersprachen sind für eine solche Anwendung sehr gut geeignet, und deshalb werden wir in diesem Abschnitt eine Erweiterung zur Erstellung von Zufallszahlen kennenlernen. Diese Erweiterung lautet <code>random</code> und ist Teil der <a href="https://en.wikibooks.org/wiki/Python_Programming/Standard_Library">“Python Standard Library”</a>, was bedeutet das dieses Erweiterung bereits installiert ist, und wir sie nicht installieren müssen.</p>
-<div id="e255b5fa" class="cell" data-execution_count="1">
+<div id="d051cea4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="109064b2" class="cell" data-execution_count="2">
+<div id="4a4f6f0a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Innerhalb vom <code>random</code> gibt es zahlreiche Funktionen um Zufallszahlen zu generieren, je nachdem was unsere Anforderungen an die Zufallszahl ist. Eine Anforderung könnte zum Beispiel sein, dass die Zahl innerhalb eines bestimmten Bereichs luegen soll (z.B. “<em>generiere eine Zufallszahl zwischen 1 und 9</em>”). Oder aber, dass sie eine ganze Zahl sein muss. Weiter könnte die Anforderung sein, dass sie aus einer bestimmten Verteilung kommen sollte, zum Beispiel einer Normalverteilung. In diesem letzten Fall müssen wir den Mittlwert sowie die Standartabweichung unserer Verteilung angeben.</p>
 <p>Um eine ganzzahlige Zufallszahl zwischen 1 und 9 zu generieren, können wir die Funktion <code>randrange()</code> nutzen:</p>
-<div id="c5adc963" class="cell" data-execution_count="3">
+<div id="30cf9da1" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>random.randrange(start <span class="op">=</span> <span class="dv">1</span>, stop <span class="op">=</span> <span class="dv">10</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>1</code></pre>
 </div>
 </div>
 <p>Wenn wir auf diese Weise mit <code>randrange()</code> immer wieder neue Zufallszahlen generieren fällt auf, dass die Verteilung der Zahlen ziemlich gleichmässig ist. Es ist also gleich wahrscheinlich eine 9 zu bekommen, wie eine 1 oder eine 5. Die Zahlen kommen also aus einer “uniformen” Verteilung. Um dies zu verdeutlichen generiere ich in den folgenden Codezeilen 500 Zufallszahlen zwischen 1 und 9 mit der Funktion <code>randrange</code> und visualisiere die Häufigkeit der einzelnen Zahlen in einem Histogramm.</p>
-<div id="b4596ed7" class="cell" data-execution_count="4">
+<div id="0fd52f91" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># erstellt eine Liste von Zufallszahlen 1 - 9</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (lernen wir zu einem späteren Zeitpunkt)</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [random.randrange(<span class="dv">1</span>, <span class="dv">10</span>) <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">500</span>)]</span>
@@ -741,7 +741,7 @@ window.onload = function() {
 </div>
 <p>Die Funktion <code>randrange()</code> generiert nur ganzzahlige Zufallszahlen. Wenn wir aber eine Zufallszahl mit Nachkommastellen brauchen, verwenden wir die Funktion <code>uniform()</code>.</p>
 <p>Um Zufallszahlen aus einer “Normalverteilung” zu erhalten, verwenden wir die Funktion <code>normalvariate</code>. Hier müssen wir den Mittelwert und die Standartabweichung dieser Verteilung angeben. Tatsächlich können wir bei dieser Variante keine Minimum- und Maximumwerte festlegen: Theoretisch könnte der Generator jeden erdenklichen Zahlenwert rausspucken, am wahrscheinlichsten ist jedoch eine Zahl nahe am angegebenen Mittelwert.</p>
-<div id="cb93e433" class="cell" data-execution_count="5">
+<div id="b0826483" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mu = Mittelwert, sigma = Standartabweichung</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>random.normalvariate(mu <span class="op">=</span> <span class="dv">5</span>, sigma <span class="op">=</span> <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -749,7 +749,7 @@ window.onload = function() {
 </div>
 </div>
 <p>Wenn wir die obige Funktion 10’000x laufen lassen und uns das Histogramm der generierten Zahlen anschauen, dann zeichnet sich folgendes Bild ab.</p>
-<div id="aa71c22a" class="cell" data-execution_count="6">
+<div id="85be83c9" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [random.normalvariate(mu <span class="op">=</span> <span class="dv">5</span>, sigma <span class="op">=</span> <span class="dv">2</span>) <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10000</span>)]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>pd.Series(b).plot(kind <span class="op">=</span> <span class="st">"hist"</span>, bins <span class="op">=</span> <span class="dv">30</span>, edgecolor <span class="op">=</span> <span class="st">"black"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
