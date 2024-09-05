@@ -24,16 +24,16 @@ jobs:
           python-version: 3.11
           auto-activate-base: false
 
-       - name: get QUARTO_PYTHON
-         run: |
+      - name: get QUARTO_PYTHON
+        run: |
           conda init
           conda activate module-agi
           which python3
 
-       - name: Render and Publish
-         uses: quarto-dev/quarto-actions/publish@v2
-         with:
-           target: gh-pages
-         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           QUARTO_PYTHON: 3.11
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUARTO_PYTHON: 3.11
