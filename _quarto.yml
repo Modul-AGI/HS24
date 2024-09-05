@@ -39,7 +39,7 @@ book:
     logo: zhaw_sw_pos.png
     collapse-level: 1
     style: floating
-  repo-url: https://github.com/modul-AGI/hs23
+  repo-url: https://github.com/modul-AGI/hs24
   repo-actions: [edit]
   chapters: 
     - index.qmd
