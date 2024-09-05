@@ -7,11 +7,11 @@ project:
 lang: de
 
 format:
-  pdf: default
+  # pdf: default
   html:
     toc: true
     theme:
-      dark: [darkly, theme-custom.scss]
+      dark: [darkly, theme-custom.scss, custom-dark.scss]
       light: [flatly, theme-custom.scss]
     number-sections: false
     css:
@@ -36,7 +36,7 @@ book:
   downloads: [pdf]
   sidebar: 
     position: left
-    logo: zhaw_sw_neg.png
+    logo: zhaw_sw_pos.png
     collapse-level: 1
     style: floating
   repo-url: https://github.com/modul-AGI/hs23
@@ -51,6 +51,8 @@ book:
       - A_Unsicherheit/5_Unschaerfe-des-Waldrandes.qmd
       - A_Unsicherheit/6_Automatisieren-Modelbuilder.qmd
       - A_Unsicherheit/7_Leistungsnachweis.qmd
+    - ---
+    - part: "🗃️ Teil: Datenbanken"
     - part: "B_Datenbanken_1/1_Einleitung.qmd"
       chapters: 
       - B_Datenbanken_1/2_Uebung.qmd
@@ -66,25 +68,27 @@ book:
       - B_Datenbanken_3/3_Uebung_Datenbankverbindung.qmd
       - B_Datenbanken_3/4_Uebung_Abfragen_einblenden.qmd
       - B_Datenbanken_3/5_Uebung_Geoverarbeitung.qmd
+    - ---
+    - part: "🤖 Teil: Programmieren"
     - part: "C_Programmieren_1/1_Einleitung.qmd"
       chapters:
-      - C_Programmieren_1/2_Python-Command-Prompt.qmd
+      # - C_Programmieren_1/2_Python-Command-Prompt.qmd
       - C_Programmieren_1/3_Primitive_Datentypen.qmd
       - C_Programmieren_1/4_Uebung_1.qmd
       - C_Programmieren_1/5_Komplexe_Datentypen.qmd
       - C_Programmieren_1/6_Uebung_2.qmd
-      - C_Programmieren_1/7_JupyterNotebook.qmd
+      # - C_Programmieren_1/7_JupyterNotebook.qmd
       - C_Programmieren_1/8_Dictionary.qmd
       - C_Programmieren_1/9_Uebung_3.qmd
       - C_Programmieren_1/10_Tabellarische_Daten.qmd
       - C_Programmieren_1/11_Uebung_4.qmd
       - C_Programmieren_1/12_Uebung_5.qmd
-      - C_Programmieren_1/13_Anhang.qmd
+      # - C_Programmieren_1/13_Anhang.qmd
     - part: "C_Programmieren_2/1_Einleitung.qmd"
       chapters:
       - C_Programmieren_2/2_Conda.qmd
       - C_Programmieren_2/3_Python_Module.qmd
-      - C_Programmieren_2/3_JupyterLab-Desktop.qmd
+      # - C_Programmieren_2/3_JupyterLab-Desktop.qmd
       - C_Programmieren_2/4_Functions_I.qmd
       - C_Programmieren_2/5_Uebung_5.qmd
       - C_Programmieren_2/6_Functions_II.qmd
@@ -112,6 +116,8 @@ book:
       # - C_Programmieren_3/8_Daten_Visualisieren.qmd moved to 10_Anhang.qmd
       - C_Programmieren_3/9_Leistungsnachweis.qmd
       - C_Programmieren_3/10_Anhang.qmd
+    - ---
+    - part: "🛣️ Teil: Netzwerkanalyse"
     - part: "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.qmd"
       chapters: 
       - D_Netzwerkanalyse_1/2_Vorbereitung.qmd
@@ -128,6 +134,8 @@ book:
       - D_Netzwerkanalyse_3/4_Zentralitaetsmasse.qmd
       - D_Netzwerkanalyse_3/5_Flaechen_verrechnen.qmd
       - D_Netzwerkanalyse_3/6_Leistungsnachweis.qmd
+    - ---
+    - part: "🌍 Teil: WebGIS"
     - part: "E_WebGIS_1/1_Einleitung.qmd"
       chapters: 
       - E_WebGIS_1/2_Uebung_Web_Map.qmd
