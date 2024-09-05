@@ -28,6 +28,7 @@ jobs:
         run: |
           conda init
           source /home/runner/.bashrc
+          conda info --envs
           conda activate module-agi
           which python3
 
