@@ -201,7 +201,7 @@ window.onload = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unsicherheit</span></a>
+ <span class="menu-text">💥 Teil: Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -712,7 +712,7 @@ window.onload = function() {
 
 
 <p>In dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald Layer kennt ihr bereits aus dem Block “Datenqualität und Unsicherheit” und wir haben ihn in <a href="5_GIS_in_Python.html#sec-pythongis-formate" class="quarto-xref"><span>Geodatenformate</span></a> kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche (siehe <a href="../C_Programmieren_1/1_Einleitung.html#tbl-datensaetze" class="quarto-xref">Tabelle&nbsp;<span>1</span></a>) als Geodaten einzulesen und in einer grossem Plot zu visualisieren.</p>
-<div id="0ef44590" class="cell" data-execution_count="1">
+<div id="6474efcf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd <span class="op">=</span> gpd.read_file(<span class="st">"data/zeckenstiche.gpkg"</span>)</span>
@@ -833,7 +833,7 @@ Abbildung&nbsp;47.1: “Spatial Join” zwischen <code>zeckenstiche</code> und <
 </figure>
 </div>
 <p>In Python wird ein <em>Spatial Join</em> zwischen <code>zeckenstiche</code> und <code>wald</code> wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: <code>left_df</code> bestimmt den Geometrietyp des Outputs):</p>
-<div id="5e6cce15" class="cell" data-execution_count="2">
+<div id="386e058f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">

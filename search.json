@@ -16,7 +16,7 @@
     "section": "",
     "text": "Layer\nDie Feature Class Tick_Original beinhaltet die Originalstandorte der via Zecken App gemeldeten Zeckenstiche im Raum Zürich aus dem Zeitraum März 2015 bis Juli 2019. Es handelt sich dabei um 1076 Meldungen. Die anderen 40 Feature Classes mit den Bezeichnungen Tick_Run_1 (bis …40) enthalten die mittels Zufall veränderten Positionen der Originalstandorte (vgl. Abschnitt Datenvorverarbeitung).\nDer Layer Wald_NichtWald beinhaltet die Waldausdehnung innerhalb des Untersuchungsraums. Die Daten stammen aus dem Landschaftsmodell swissTLM3D von swisstopo (Layer Bodenbedeckung).",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Datengrundlage</span>"
     ]
   },
@@ -27,7 +27,7 @@
     "section": "",
     "text": "FC Wald_Nichtwald\n\nWald: 0 = Kein Wald / 1 = Wald\n\nFC Tick_Original\n\nID: ID Zeckenstichmeldung\nacc_: Zoomstufe in Karte während der Erfassung des Stiches in der App\nx_lv95: X Koordinate (CH1903+ LV95)\ny_lv95: Y Koordinate (CH1903+ LV95)\nRun_Nr: 0 (Original)\n\nFC Tick_Run_1 bis Tick_Run_40\n\nID: ID Zeckenstichmeldung (gleich wie in Original)\nacc_: Zoomstufe in Karte während der Erfassung des Stiches in der App (gleich wie in Original)\nx_lv95: X Koordinate (Originalstandort)\ny_lv95: Y Koordinate (Originalstandort)\nRun_Nr_x: X Zufallskoordinate Run Nr\nRun_Nr_y: Y Zufallskoordinate Run Nr\nRun_Nr: Nummer Zufallsdurchgang",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Datengrundlage</span>"
     ]
   },
@@ -38,7 +38,7 @@
     "section": "",
     "text": "Übung 1: Daten erkunden und neues “Resultate” Feature Dataset erstellen\nDownloade das ArcGIS Pro Package von Moodle, speichere es lokal auf deinem Computer und entpacke die Datei. Öffne anschliessend das Projekt-File (*.aprx), erkunde die Daten und mache dich mit ihnen vertraut.\nErstelle anschliessend in der Projekt-Geodatenbank Unsicherheit.gdb ein neues Feature Dataset mit dem Namen “Resultate”. Weise dem neuen Feature Dataset das Koordinatensystem CH1903+ LV95 zu.\nIn diesem neuen Feature Dataset sollen nachfolgend alle neu erstellten (Zwischen-)Resultate abgelegt werden.",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datenvorverarbeitung</span>"
     ]
   },
@@ -49,7 +49,7 @@
     "section": "",
     "text": "Übung 2: Zusammenfügen (Append) aller Runs zu einem Datensatz\nKopiere zuerst die Feature Class Tick_Original in das Feature Dataset Resultate. Benenne die kopierte Feature Class in Tick_Append um, ändere auch den Alias. Nutze anschliessend das Geoverarbeitungswerkzeug “Append”, um die soeben kopierten Original-Standorte mit den Zeckenstichstandorten aller Runs zusammenzufügen. Wähle unter Field Matching Type die Option “Use the field map to reconcile field differences”.\nÜberprüfe das Resultat. Die Tick_Append Feature Class sollte anschliessend 44’116 Features beinhalten.",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
     ]
   },
@@ -60,7 +60,7 @@
     "section": "",
     "text": "ArcGIS Pro Help: Geoprocessing Tool Append\n\n\n\nhttps://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/append.htm",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
     ]
   },
@@ -71,7 +71,7 @@
     "section": "Übung 3: Summe der Stiche innerhalb der Waldfläche",
     "text": "Übung 3: Summe der Stiche innerhalb der Waldfläche\nUm zu überprüfen wie viele Stiche sich innerhalb des Waldes befinden, muss zunächst der Punktlayer mit den Stichdaten aller Runs und den Originaldaten (Resultat aus Übung 2) mit dem Wald-Layer überlagert werden. Hierbei bietet sich das Geoverarbeitungswerkzeug “Summarize Within” (GeoAnalytics Desktop Tools) an. Dieses Werkzeug zählt alle Punkte welche sich in den jeweiligen Flächen des Input-Polygons befinden. Ausserdem kann damit eine separate Output Tabelle (Output Grouped Table) generiert werden, welche für jeden Run angibt (Group Field = Run_Nr), wie viele Punkte pro Run inner- oder ausserhalb des Waldes liegen. Hinweis: Speichere die Output Grouped Table direkt auf Datenbank-Ebene und nicht im Feature Dataset Resultate. Ansonsten kann die Ausführung des Werkzeugs zu einem Fehler führen.\n\n\n\n\n\n\nArcGIS Pro Help: Geoprocessing Tool Summarize Within\n\n\n\nhttps://pro.arcgis.com/en/pro-app/latest/tool-reference/geoanalytics-desktop/summarize-within.htm\n\n\nÜberprüfe anschliessend die beiden generierten Outputs (Tabelle und Feature Class). Welche Informationen sind darin enthalten? Was bedeuten die Werte in den Feldern Join ID, Run_Nr und Count of Points innerhalb der Output Grouped Table?",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
     ]
   },
@@ -82,7 +82,7 @@
     "section": "Übung 4: Prozentualer Anteil der Stiche innerhalb des Waldes",
     "text": "Übung 4: Prozentualer Anteil der Stiche innerhalb des Waldes\nErweitere die Output Grouped Table (Resultat aus Übung 3) um ein Feld, in dem du anschliessend den prozentualen Anteil der Punkte pro Run innerhalb des Waldes berechnen kannst.\nHinweis: Pro Run gibt es 1076 Features\n\n\n\n\n\n\nArcGIS Pro Help: Calculate Field\n\n\n\nhttps://pro.arcgis.com/en/pro-app/tool-reference/data-management/calculate-field.htm",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
     ]
   },
@@ -93,7 +93,7 @@
     "section": "Übung 5: Diagramm (Bar Chart) mit prozentualem Anteil der individuellen Runs",
     "text": "Übung 5: Diagramm (Bar Chart) mit prozentualem Anteil der individuellen Runs\nErstelle zuerst eine Kopie der Output Grouped Table in der Projekt-Geodatenbank. Entferne nachfolgend in der soeben erstellten Kopie alle Records welche die Summen der Stiche ausserhalb des Waldes beinhalten.\nHinweis: beachte die Werte im Feld Join_ID\n\n\n\n\n\n\nArcGIS Pro Help: Select Layer By Attribute\n\n\n\nhttps://pro.arcgis.com/en/pro-app/tool-reference/data-management/select-layer-by-attribute.htm\n\n\nErstelle anschliessend ein Balkendiagramm welches die unterschiedlichen prozentualen Anteile der Stiche innerhalb des Waldes pro Run symbolisiert. Gehe hierfür in das Menüband “Standalone Table” und wähle “Create Chart”.\n\nBeachte die Werte und deren Spannweite. Was bedeuten die Werte? Was für Aussagen bezüglich Unsicherheit (Genauigkeit) können bei den Stichdaten gemacht werden?",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
     ]
   },
@@ -104,7 +104,7 @@
     "section": "Übung 6: Berechnung des Mittelwertes aller Runs",
     "text": "Übung 6: Berechnung des Mittelwertes aller Runs\nNutze die Tabelle der in Übung 3 erstellten Feature Class und berechne den prozentualen Anteil aller Stiche (über alle Runs) welche sich innerhalb des Waldes befinden. Vergleiche diesen Wert mit dem Wert aus den Originaldaten.",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
     ]
   },
@@ -115,7 +115,7 @@
     "section": "",
     "text": "Übung 7: Waldrandlinie aus Waldpolygon erstellen\nDie Waldrandlinie kann mit Hilfe des Geoverarbeitungswerkzeug “Polygon to Line” hergeleitet werden. Überlege dir, ob vorgängig eine Selektion im Input Feature notwendig ist.\nBetrachte das Resultat und überlege dir wie genau die digitale Waldrandlinie dem Waldrand in der Realität entspricht? Kann das Objekt Waldrand überhaupt grenzscharf abgebildet werden (vgl. rote Linie in Abbildung)?",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unschärfe des Waldrandes</span>"
     ]
   },
@@ -126,7 +126,7 @@
     "section": "",
     "text": "ArcGIS Pro Help: Polygon To Line\n\n\n\nhttps://pro.arcgis.com/en/pro-app/tool-reference/data-management/polygon-to-line.htm\n\n\n\n\n\n\n\n\n\nAbbildung 4.1: Rote Linie: abgeleitete Waldrandlinie / orange Punkte: Stichstandorte original / blaue Punkte: Stichstandorte 40 Monte Carlo Runs",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unschärfe des Waldrandes</span>"
     ]
   },
@@ -137,7 +137,7 @@
     "section": "Übung 8: Waldrandbereich festlegen",
     "text": "Übung 8: Waldrandbereich festlegen\nWir gehen davon aus, dass ein Waldrand kaum mit einer grenzscharfen Linie repräsentiert werden kann. In der Realität entspricht ein Waldrand wohl eher einem bestimmten Bereich. Der Waldrand an sich hat eine Unschärfe (Vagueness). In der GIS-Welt wird eine solche Unschärfe oft mit einem Puffer mit einem zu definierenden Abstand zu einer Linie (Waldrandlinie) abgebildet.\nErstelle basierend auf der in Übung 7 erstellten Waldrandlinie nun den Waldrandbereich mit einem äusseren und inneren Abstand von 25 Metern. Benutze hierfür das dir bereits bekannte Geoverarbeitungswerkzeug “Buffer”. Achte bei der Umsetzung auf die korrekte Festlegung der Werkzeugparameter.\n\n\n\n\n\n\nArcGIS Pro Help: Buffer\n\n\n\nhttps://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm\n\n\nOptional Analog wie in Übungen 3 bis 5 könntest du nun untersuchen, welchen Einfluss die Unschärfe des Waldrandes darauf hat, ob Zeckenstichstandorte im Waldrandbereich liegen oder nicht.",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unschärfe des Waldrandes</span>"
     ]
   },
@@ -148,7 +148,7 @@
     "section": "Übung 9: Distanz zu Waldrandlinie berechnen",
     "text": "Übung 9: Distanz zu Waldrandlinie berechnen\nNun wollen wir diese Unschärfe des Konzepts Waldrand noch erweitern und die grenzscharfe Pufferdistanz aus der vorigen Übung mit einer graduellen Zugehörigkeit (membership function) ersetzen. Hierfür sollen folgende Fuzzy Tallness Werte definiert werden (vgl. Abbildung): Abstand zu Waldrandlinie:\n\n10 Meter = 1\n10 bis 20 = 0.7\n20 bis 30 = 0.4\n&gt; 30 Meter = 0\n\n\nBerechne nun als ersten Schritt für den gesamten Untersuchungsraum den Abstand zur nächstgelegenen Waldrandlinie. Nutze hierfür das Geoverarbeitungswerkzeug “Euclidean Distance”. Lege die Output Cell Size auf 1 Meter fest und definiere in den Environments das Output Coordinate System und den Raum in dem diese globale Rasterfunktion ausgeführt wird (Extent = Untersuchungsgebiet).\n\n\n\n\n\n\nArcGIS Pro Help: Euclidean Distance\n\n\n\nhttps://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm\n\n\nDie Ausführung dieser Rasterfunktion kann einige Minuten dauern.",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unschärfe des Waldrandes</span>"
     ]
   },
@@ -159,7 +159,7 @@
     "section": "Übung 10: Zuweisung der Fuzzy Tallness Werte",
     "text": "Übung 10: Zuweisung der Fuzzy Tallness Werte\nJeder Zelle mit einem Distanzwert soll nun ein Fuzzy Tallness Wert gemäss Abbildung in Übung 9 zugeteilt werden. Verwende hierfür das Geoverarbeitungswerkzeug “Reclassify”.\n\n\n\n\n\n\nArcGIS Pro Help: Reclassify\n\n\n\nhttps://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/reclassify.htm\n\n\nBeim Reklassifizieren können den neuen Werten nur ganzzahlige Werte zugeteilt werden. Verwende deshalb die Werte 100, 70, 40 und 0 statt 1, 0.7, 0.4 und 0. Nutze anschliessend zuerst das Werkzeug “Float” und dann “Divide” um die ganzzahligen Werte wieder in Kommawerte umzurechnen.\n\nFloat\nDivide",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unschärfe des Waldrandes</span>"
     ]
   },
@@ -170,7 +170,7 @@
     "section": "Übung 11: Unschärfe-Werte den Stichstandorten zuweisen",
     "text": "Übung 11: Unschärfe-Werte den Stichstandorten zuweisen\nDie für jede Zelle definierten Unschärfe-Werte (membership zum Waldrand) werden nun den Daten mit den Stichstandorten zugeteilt. Dies erfolgt mittels “Extract Values to Points”.\n\n\n\n\n\n\nArcGIS Pro Help: Extract Values to Points\n\n\n\nhttps://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm\n\n\nDabei sollen die Unschärfe-Werte (1 / 0.7 / 0.4 / 0) vorerst nur den Original-Stichstandortdaten zugeteilt werden (Input point feature = Tick_Original). Erstelle eine grafische Visualisierung (bsp. Histogramm).\nBeantworte anschliessend folgende Fragen:\nWie viele Zeckenstiche im Original-Datensatz verfügen über Waldrand Unschärfe-Werte von 1, 0.7, 0.4 und 0 und welche Aussage kannst du damit machen?",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unschärfe des Waldrandes</span>"
     ]
   },
@@ -181,7 +181,7 @@
     "section": "",
     "text": "Übung 12: Waldrand-Fuzzy-Modell in ModelBuilder erstellen\nErstelle ein Modell mit ModelBuilder in dem die 5 Prozesse von Übung 9 bis 11 automatisiert ausgeführt werden können. Das Modell kann anschliessend wie ein normales Werkzeug aufgerufen werden. Als Modellparameter müssen die Fuzzy Tallness Distanzen resp. Werte angepasst sowie ein neuer Output Datensatz erstellt werden können.\nVorgehen:\nMit Hilfe von solchen Modellen kannst du deine Geoverarbeitungsketten auf einfache Art und Weise automatisieren ☺.",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Automatisierung mit ModelBuilder</span>"
     ]
   },
@@ -192,7 +192,7 @@
     "section": "",
     "text": "Gehe in das Menüband “Analysis”.\nWähle den Button ModelBuilder. Damit wird ein neues, noch leeres Modell erstellt.\nGehe in das Catalog Pane und navigiere zu “Toolboxes &gt; Unsicherheit.tbx” und benenne das Modell sinnvoll (Name und Label). Hinweis: keine Sonderzeichen und Leerschläge erlaubt.\nGehe im Catalog Pane in das Register “History”.\nFüge die letzten 5 Prozesse (Übungen 9 bis 11) nacheinander mittels Drag und Drop dem neuen Modell hinzu.\nKlicke im Modell mit rechter Maustaste auf das Tool Reclassify und wähle im Kontextmenü Create Variable &gt; From Parameter &gt; Reclassification\nKlicke mit rechter Maustaste auf die soeben erstellte Modellvariable und wähle im Kontextmenü “Parameter”. Diese Modellvariable erscheint nun beim Aufrufen des Modells als veränderbarer Parameter, d.h. die Fuzzy Tallness Distanzen und Werte können angepasst werden.\nKlicke mit rechter Maustaste auf den Final Output und definiere ihn ebenfalls als Modellparameter.\nSpeichere das Modell via Menüband ModelBuilder &gt; Save\nGehe im Catalog auf Toolboxes &gt; Unsicherheit.tbx &gt; und öffne dein Modell mittels Doppelklick.\nGebe die Modellparameter ein (Fuzzy Tallness Distanzen & Werte und Output Dataset) und führe das Modell mit Run aus.",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Automatisierung mit ModelBuilder</span>"
     ]
   },
@@ -203,7 +203,7 @@
     "section": "",
     "text": "Als Leistungsnachweis wird eine schriftliche Dokumentation der Lösung dieser Übung erwartet. Die Dokumentation sollte vier A4-Seiten nicht überschreiten und muss Folgendes beinhalten:\n\nName und Vorname der Autorin oder des Autors.\nResultate der Übung aufbereitet mittels ansprechenden Grafiken, Tabellen und evtl. Karten.\nBeantwortung der in dieser Übung enthaltenen Fragen.\nKurze Diskussion der Resultate.\nBeschreibung des ModelBuilder Modells inklusive:\n\nGrafische Abbildung des ModelBuilder Modells\nWelche Modellparameter wurden definiert und weshalb\nStichwortartige Beschreibung was das Modell berechnet\n\n\nAbgabeform und -termin\nLade deine vollständige Dokumentation spätestens bis Freitag 2. Oktober 2024 als PDF über Moodle hoch (Abgabe Leistungsnachweis Datenqualität und Unsicherheit).",
     "crumbs": [
-      "Unsicherheit",
+      "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Leistungsnachweis</span>"
     ]
   },
@@ -619,7 +619,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html",
     "title": "Übung 1",
     "section": "",
-    "text": "Übung 1.1\nErstelle eine Variabel vorname mit deinem Vornamen und eine zweite Variabel nachname mit deinem Nachnamen. Was sind vorname und nachname für Datentypen?\nMusterlösung\nvorname = \"Guido\"\nnachname = \"van Rossum\"\n\ntype(vorname) # es handelt sich um den Datentyp \"str\", also String (Text)",
+    "text": "Übung 1.1\nErstelle eine Variabel vorname mit deinem Vornamen und eine zweite Variabel nachname mit deinem Nachnamen. Was sind vorname und nachname für Datentypen?",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Übung 1</span>"
@@ -630,7 +630,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html#übung-1.2",
     "title": "Übung 1",
     "section": "Übung 1.2",
-    "text": "Übung 1.2\n“Klebe” Vor- und Nachname mit einem Leerschlag dazwischen zusammen.\n\n\nMusterlösung\nvorname + \" \" + nachname",
+    "text": "Übung 1.2\n“Klebe” Vor- und Nachname mit einem Leerschlag dazwischen zusammen.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Übung 1</span>"
@@ -641,7 +641,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html#übung-1.3",
     "title": "Übung 1",
     "section": "Übung 1.3",
-    "text": "Übung 1.3\nErstelle eine Variabel groesse_cm mit deiner Körpergrösse in Zentimeter. Was ist das für ein Datentyp?\n\n\nMusterlösung\ngroesse_cm = 184\ntype(groesse_cm) # es handelt sich hierbei um den Datentyp \"integer\"",
+    "text": "Übung 1.3\nErstelle eine Variabel groesse_cm mit deiner Körpergrösse in Zentimeter. Was ist das für ein Datentyp?",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Übung 1</span>"
@@ -652,7 +652,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html#übung-1.4",
     "title": "Übung 1",
     "section": "Übung 1.4",
-    "text": "Übung 1.4\nErmittle deine Grösse in Fuss auf der Basis von groesse_cm (1 Fuss entspricht 30.48 cm). Was ist das für ein Datentyp?\n\n\nMusterlösung\ngroesse_fuss = groesse_cm / 30.48\ntype(groesse_fuss) # es handelt sich um den Datentyp \"float\"",
+    "text": "Übung 1.4\nErmittle deine Grösse in Fuss auf der Basis von groesse_cm (1 Fuss entspricht 30.48 cm). Was ist das für ein Datentyp?",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Übung 1</span>"
@@ -663,7 +663,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html#übung-1.5",
     "title": "Übung 1",
     "section": "Übung 1.5",
-    "text": "Übung 1.5\nErstelle eine boolsche Variable blond und setzte sie auf True wenn diese Eigenschaft auf dich zutrifft und False falls nicht.\n\n\nMusterlösung\nblond = False",
+    "text": "Übung 1.5\nErstelle eine boolsche Variable blond und setzte sie auf True wenn diese Eigenschaft auf dich zutrifft und False falls nicht.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Übung 1</span>"
@@ -674,7 +674,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html#übung-1.6",
     "title": "Übung 1",
     "section": "Übung 1.6",
-    "text": "Übung 1.6\nErstelle eine Variabel einwohner mit der Einwohnerzahl der Schweiz (8’603’900, per 31. Dezember 2019). Erstelle eine zweite Variabel flaeche (ohne Umlaute!) mit der Flächengrösse der Schweiz (41’285 km\\(^2\\)). Berechne nun die Einwohnerdichte.\n\n\nMusterlösung\neinwohner = 8603900\nflaeche = 41285\n\ndichte = einwohner / flaeche\n\ndichte",
+    "text": "Übung 1.6\nErstelle eine Variabel einwohner mit der Einwohnerzahl der Schweiz (8’603’900, per 31. Dezember 2019). Erstelle eine zweite Variabel flaeche (ohne Umlaute!) mit der Flächengrösse der Schweiz (41’285 km\\(^2\\)). Berechne nun die Einwohnerdichte.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Übung 1</span>"
@@ -685,7 +685,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html#übung-1.7",
     "title": "Übung 1",
     "section": "Übung 1.7",
-    "text": "Übung 1.7\nErstelle eine Variabel gewicht_kg (kg) und groesse_m (m) und berechne aufgrund von gewicht_kg und groesse_m ein BodyMassIndex (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter).\n\n\nMusterlösung\ngewicht_kg = 85\ngroesse_m = groesse_cm / 100\n\ngewicht_kg / (groesse_m * groesse_m)",
+    "text": "Übung 1.7\nErstelle eine Variabel gewicht_kg (kg) und groesse_m (m) und berechne aufgrund von gewicht_kg und groesse_m ein BodyMassIndex (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter).",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Übung 1</span>"
@@ -707,7 +707,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html",
     "title": "Übung 2",
     "section": "",
-    "text": "Übung 2.1\nMusterlösung\nvornamen = [\"Christopher\", \"Henning\", \"Severin\"]\nnachnamen = [\"Annen\", \"May\", \"Kantereit\"]\n\ngroessen = [174, 182, 162]",
+    "text": "Übung 2.1",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Übung 2</span>"
@@ -729,7 +729,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#übung-2.2",
     "title": "Übung 2",
     "section": "Übung 2.2",
-    "text": "Übung 2.2\nWie erhältst du den ersten Eintrag in der Variable vornamen?\n\n\nMusterlösung\nvornamen[0]",
+    "text": "Übung 2.2\nWie erhältst du den ersten Eintrag in der Variable vornamen?",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Übung 2</span>"
@@ -740,7 +740,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#übung-2.3",
     "title": "Übung 2",
     "section": "Übung 2.3",
-    "text": "Übung 2.3\nListen können durch die Methode append ergänzt werden (s.u.). Ergänze die Listen vornamen, nachnamen und groessen durch je einen Eintrag.\n\nvornamen.append(\"Malte\")\n\n\n\nMusterlösung\nnachnamen.append(\"Huck\")\n\ngroessen.append(177)",
+    "text": "Übung 2.3\nListen können durch die Methode append ergänzt werden (s.u.). Ergänze die Listen vornamen, nachnamen und groessen durch je einen Eintrag.\n\nvornamen.append(\"Malte\")",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Übung 2</span>"
@@ -751,7 +751,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#übung-2.4",
     "title": "Übung 2",
     "section": "Übung 2.4",
-    "text": "Übung 2.4\nErmittle die Summe aller Werte in groessen. Tip: Nutze dazu sum()\n\n\nMusterlösung\nsum(groessen)",
+    "text": "Übung 2.4\nErmittle die Summe aller Werte in groessen. Tip: Nutze dazu sum()",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Übung 2</span>"
@@ -762,7 +762,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#übung-2.5",
     "title": "Übung 2",
     "section": "Übung 2.5",
-    "text": "Übung 2.5\nErmittle die Anzahl Werte in groessen . Tip: Nutze dazu len()\n\n\nMusterlösung\nlen(groessen)",
+    "text": "Übung 2.5\nErmittle die Anzahl Werte in groessen . Tip: Nutze dazu len()",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Übung 2</span>"
@@ -773,7 +773,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#sec-mittelwert",
     "title": "Übung 2",
     "section": "Uebung 2.6",
-    "text": "Uebung 2.6\nBerechne die durchschnittliche Grösse aller Personen in groessen. Tip: Nutze dazu len() und sum().\n\n\nMusterlösung\nsum(groessen) / len(groessen)",
+    "text": "Uebung 2.6\nBerechne die durchschnittliche Grösse aller Personen in groessen. Tip: Nutze dazu len() und sum().",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Übung 2</span>"
@@ -784,7 +784,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#übung-2.7",
     "title": "Übung 2",
     "section": "Übung 2.7",
-    "text": "Übung 2.7\nErmittle nun noch die Minimum- und Maximumwerte aus groessen (finde die dazugehörige Funktion selber heraus).\n\n\nMusterlösung\nmin(groessen)\nmax(groessen)",
+    "text": "Übung 2.7\nErmittle nun noch die Minimum- und Maximumwerte aus groessen (finde die dazugehörige Funktion selber heraus).",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Übung 2</span>"
@@ -806,7 +806,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html",
     "title": "Übung 3",
     "section": "",
-    "text": "Übung 3.1\nErstelle eine Dictionary mit folgenden Einträgen: Vorname und Nachname von (d)einer Person. Weise diese Dictionary der Variable me zu.\nMusterlösung\nme = {\"vorname\": \"Guido\", \"nachname\": \"van Rossum\"}",
+    "text": "Übung 3.1\nErstelle eine Dictionary mit folgenden Einträgen: Vorname und Nachname von (d)einer Person. Weise diese Dictionary der Variable me zu.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -817,7 +817,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.2",
     "title": "Übung 3",
     "section": "Übung 3.2",
-    "text": "Übung 3.2\nRufe verschiedene Elemente aus der Dictionary via dem Key ab.\n\n\nMusterlösung\nme[\"nachname\"]",
+    "text": "Übung 3.2\nRufe verschiedene Elemente aus der Dictionary via dem Key ab.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -828,7 +828,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.3",
     "title": "Übung 3",
     "section": "Übung 3.3",
-    "text": "Übung 3.3\nNutze me um nachstehenden Satz (mit deinen Values) zu erstellen:\n\n\nMusterlösung\n\"Mein Name ist \"+me[\"nachname\"] +\", \"+ me[\"vorname\"]+\" \"+me[\"nachname\"]\n\n\n'Mein Name ist van Rossum, Guido van Rossum'",
+    "text": "Übung 3.3\nNutze me um nachstehenden Satz (mit deinen Values) zu erstellen:\n'Mein Name ist van Rossum, Guido van Rossum'",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -839,7 +839,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.4",
     "title": "Übung 3",
     "section": "Übung 3.4",
-    "text": "Übung 3.4\nErgänze die Dictionary me durch einen Eintrag “groesse” mit (d)einer Grösse.\n\n\nMusterlösung\nme[\"groesse\"] = 181",
+    "text": "Übung 3.4\nErgänze die Dictionary me durch einen Eintrag “groesse” mit (d)einer Grösse.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -850,7 +850,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.5",
     "title": "Übung 3",
     "section": "Übung 3.5",
-    "text": "Übung 3.5\nErstelle eine neue Dictionary people mit den Keys “vornamen”, “nachnamen” und “groesse” und jeweils 3 Einträgen pro Key.\n\n\nMusterlösung\npeople = {\"vornamen\": [\"Christopher\", \"Henning\", \"Severin\"], \"nachnamen\": [\"Annen\",\"May\", \"Kantereit\"], \"groessen\": [174, 182, 162]}",
+    "text": "Übung 3.5\nErstelle eine neue Dictionary people mit den Keys “vornamen”, “nachnamen” und “groesse” und jeweils 3 Einträgen pro Key.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -861,7 +861,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.6",
     "title": "Übung 3",
     "section": "Übung 3.6",
-    "text": "Übung 3.6\nRufe den ersten Vornamen deiner Dict auf. Dazu musst du dein Wissen über Listen und Dictionaries kombinieren.\n\n\nMusterlösung\npeople[\"vornamen\"][0]",
+    "text": "Übung 3.6\nRufe den ersten Vornamen deiner Dict auf. Dazu musst du dein Wissen über Listen und Dictionaries kombinieren.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -872,7 +872,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.7",
     "title": "Übung 3",
     "section": "Übung 3.7",
-    "text": "Übung 3.7\nRufe den dritten Nachname deiner Dict auf.\n\n\nMusterlösung\npeople[\"nachnamen\"][2]",
+    "text": "Übung 3.7\nRufe den dritten Nachname deiner Dict auf.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -883,7 +883,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.8",
     "title": "Übung 3",
     "section": "Übung 3.8",
-    "text": "Übung 3.8\nBerechne den Mittelwert aller grössen in deiner Dict\n\n\nMusterlösung\nsum(people[\"groessen\"])/len(people[\"groessen\"])",
+    "text": "Übung 3.8\nBerechne den Mittelwert aller grössen in deiner Dict",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Übung 3</span>"
@@ -916,7 +916,7 @@
     "href": "C_Programmieren_1/11_Uebung_4.html#sec-ex-to-csv",
     "title": "Übung 4",
     "section": "Übung 4.2",
-    "text": "Übung 4.2\nIn der Praxis kommen Tabellarische Daten meist als “csv” Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.\n\npeople_df.to_csv(\"people.csv\")\n\n\n\n\n\n\n\nAchtung!\n\n\n\nFalls ihr nicht wisst, wo das csv abgespeichet ist solltet ihr das Kapitel ?sec-jupyternotebook nochmals durchlesen.\nDie Working Directory zu kennen ist wichtig, besonders auch für die nächste Aufgabe. Falls ihr die aktuelle Working Directory neu setzen und dafür JupyterLab schliessen müsst, denkt daran die Notebook vorgängig zu speichern und im File Explorer aufzusuchen.",
+    "text": "Übung 4.2\nIn der Praxis kommen Tabellarische Daten meist als “csv” Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.\n\npeople_df.to_csv(\"people.csv\")",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Übung 4</span>"
@@ -949,7 +949,7 @@
     "href": "C_Programmieren_1/11_Uebung_4.html#sec-ex-sel-col",
     "title": "Übung 4",
     "section": "Übung 4.5",
-    "text": "Übung 4.5\nUm eine einzelne Spalte zu selektieren (z.B. die Spalte “ID”), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer Dictionary. Probiere es aus.\n\n\nMusterlösung\nzeckenstiche[\"ID\"]",
+    "text": "Übung 4.5\nUm eine einzelne Spalte zu selektieren (z.B. die Spalte “ID”), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer Dictionary. Probiere es aus.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Übung 4</span>"
@@ -960,7 +960,7 @@
     "href": "C_Programmieren_1/11_Uebung_4.html#sec-ex-new-col",
     "title": "Übung 4",
     "section": "Übung 4.6",
-    "text": "Übung 4.6\nAuch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen Dictionary Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.).\n\nzeckenstiche[\"Stichtyp\"] = \"Zecke\"\n\n\n\nMusterlösung\nzeckenstiche",
+    "text": "Übung 4.6\nAuch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen Dictionary Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.).\n\nzeckenstiche[\"Stichtyp\"] = \"Zecke\"",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Übung 4</span>"
@@ -982,18 +982,7 @@
     "href": "C_Programmieren_1/12_Uebung_5.html#übung-5.1-neue-conda-umgebung-erstellen",
     "title": "Übung 5",
     "section": "",
-    "text": "Starte Python Command Prompt (siehe Python Command Prompt)\nFühre den Befehl: conda create --name geopython2 aus\nBestätige die Installation mit y\nPrüfe, ob u.a. folgende Meldung im Terminal erscheint (melde dich falls nicht):\n#\n# To activate this environment, use\n#\n#     $ activate geopython2\n#\n# To deactivate an active environment, use\n#\n#     $ deactivate\nFühre den Befehl aus, der in der Meldung steht:\nactivate geopython2               # (Windows) \nconda activate geopython2         # (MacOS, Linux)\nPrüfe, ob die Eingabeforderung im Terminal nun mit (geopython2) beginnt (melde dich falls nicht)\n# ↓ vorher\n(arcgispro-py3) C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3&gt;\n\n# ↓ nachher\n(geopython2)  C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\geopython&gt;\nFühre den folgenden Befehl aus:\nconda install -c conda-forge jupyterlab geopandas matplotlib descartes\nBestätige die Installation mit y\nPrüfe, ob die installation erfolgreich war (erscheint folgende Meldung im Terminal?):\nPreparing transaction: done\nVerifying transaction: done\nExecuting transaction: done\nRetrieving notices: ...working... done",
-    "crumbs": [
-      "Programmieren I",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Übung 5</span>"
-    ]
-  },
-  {
-    "objectID": "C_Programmieren_1/12_Uebung_5.html#sec-jupyterlab-desktop",
-    "href": "C_Programmieren_1/12_Uebung_5.html#sec-jupyterlab-desktop",
-    "title": "Übung 5",
-    "section": "Übung 5.2 JupyterLab Desktop installieren",
-    "text": "Übung 5.2 JupyterLab Desktop installieren\nDie Tatsache, dass JupyterLab via dem Command Prompt gestartet wird und im Browser läuft, ist ungewohnt und auch etwas umständlich. Um nur schon eines der soeben erstellten Jupyter Notebooks (*.ipynb File) zu betrachten muss (1) der Terminal geöffnet, (2) in den richtigen Ordner navigiert (3) die richtige Conda Umgebung aktiviert und (4) JupyterLab gestartet werden.\nDeshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: https://github.com/jupyterlab/jupyterlab-desktop#installation.",
+    "text": "Starte Python Command Prompt \nFühre den Befehl: conda create --name geopython2 aus\nBestätige die Installation mit y\nPrüfe, ob u.a. folgende Meldung im Terminal erscheint (melde dich falls nicht):\n#\n# To activate this environment, use\n#\n#     $ activate geopython2\n#\n# To deactivate an active environment, use\n#\n#     $ deactivate\nFühre den Befehl aus, der in der Meldung steht:\nactivate geopython2               # (Windows) \nconda activate geopython2         # (MacOS, Linux)\nPrüfe, ob die Eingabeforderung im Terminal nun mit (geopython2) beginnt (melde dich falls nicht)\n# ↓ vorher\n(arcgispro-py3) C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3&gt;\n\n# ↓ nachher\n(geopython2)  C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\geopython&gt;\nFühre den folgenden Befehl aus:\nconda install -c conda-forge jupyterlab geopandas matplotlib descartes\nBestätige die Installation mit y\nPrüfe, ob die installation erfolgreich war (erscheint folgende Meldung im Terminal?):\nPreparing transaction: done\nVerifying transaction: done\nExecuting transaction: done\nRetrieving notices: ...working... done",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Übung 5</span>"
@@ -1004,7 +993,7 @@
     "href": "C_Programmieren_2/2_Conda.html",
     "title": "Conda",
     "section": "",
-    "text": "Was ist Conda?\nConda ist ein (von im Wesentlichen zwei1) Verwaltungssystem für Python2 Bibliotheken welches unter Windows, macOS und Linux läuft. Mit Conda lassen sich diese Libraries und deren Abhängigkeiten schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten “Virtuellen Umgebungen”. Diese Umgebungen ermöglichen es, dass Package Installationen in abgeschottenen “Container” erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.",
+    "text": "Was ist Conda?\nConda ist ein Verwaltungssystem für Python Bibliotheken1 welches unter Windows, macOS und Linux läuft. Neben Conda gibt es noch den “Package Manager” pip, welchen wir im Unterricht aber nicht nutzen werden. Mit Conda lassen sich diese Libraries schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten “Virtuellen Umgebungen”. Diese Umgebungen ermöglichen es, dass Package Installationen in abgeschottenen “Container” erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Conda</span>"
@@ -1037,7 +1026,7 @@
     "href": "C_Programmieren_2/2_Conda.html#conda-packages-installieren",
     "title": "Conda",
     "section": "Conda packages installieren",
-    "text": "Conda packages installieren\nJetzt wo wir ein eigenes Conda Environment erstellt haben (geopython) müssen wir dieses mit Libraries befüllen. Aktuell ist es nämlich noch ziemlich leer, wie ihr mit conda list sehen könnt (versucht es aus!).\nLetzte Woche hatten wir die Packages pandas sowie jupyter lab gebraucht. Diese Packages waren im Environment arcgispro-py3 bereits vorinstalliert.\n\nconda install -c conda-forge jupyterlab   # installiert jupyterlab \nconda install -c conda-forge pandas       # installiert pandas\n-c ist in den obigen install Befehlen ein sogenannter Flag welcher ankündigt, dass gleich der “Channel” angegeben wird. In beiden Fällen nutzen wir den “Channel” conda-forge, d.h. die Packages werden von conda-forge geladen. Welcher Channel angegeben werden muss kann über eine kurze Internetsuche in Erfahrung gebracht werden (z.B. nach “conda install pandas” suchen).\nBestätigt die Rückfragen (Proceed ([y]/n)?) mit y + Enter. Schaut euch nun euer Environment mit conda list an und startet danach jupyter lab indem ihr eben diesen Befehl in der Konsole eingebt. Wechselt aber vorher das Verzeichnis zu einem sinvolleren Ort (wie in Kapitel ?sec-jupyternotebook beschrieben).",
+    "text": "Conda packages installieren\nJetzt wo wir ein eigenes Conda Environment erstellt haben (geopython) müssen wir dieses mit Libraries befüllen. Aktuell ist es nämlich noch ziemlich leer, wie ihr mit conda list sehen könnt (versucht es aus!).\n\n\nconda install -c conda-forge jupyterlab   # installiert jupyterlab \nconda install -c conda-forge pandas       # installiert pandas\n-c ist in den obigen install Befehlen ein sogenannter Flag welcher ankündigt, dass gleich der “Channel” angegeben wird. In beiden Fällen nutzen wir den Channel conda-forge, d.h. die Packages werden von conda-forge geladen. Welcher Channel angegeben werden muss kann über eine kurze Internetsuche in Erfahrung gebracht werden (z.B. nach “conda install pandas” suchen).\nBestätigt die Rückfragen (Proceed ([y]/n)?) mit y + Enter. Schaut euch nun euer Environment mit conda list an und startet danach jupyter lab indem ihr eben diesen Befehl in der Konsole eingebt. Wechselt aber vorher das Verzeichnis zu einem sinvolleren Ort.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Conda</span>"
@@ -1048,7 +1037,7 @@
     "href": "C_Programmieren_2/2_Conda.html#sec-conda-cheat-sheet",
     "title": "Conda",
     "section": "Conda cheat sheet",
-    "text": "Conda cheat sheet\nIn der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda nochmal zusammengefasst. Wichtig ist vor allem, wann dieser Schritt nötig ist und wie er ausgeführt wird. Um die Tabelle kompakt zu halten werden gewisse Details als Fussnote verlinkt.\n\n\n\nSchritt\nWann ist dies nötig?\nDetails zum Vorgehen / Befehl für die Konsole3\n\n\n\n\n1. Conda installieren (installiert das Program conda)\neinmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)\nMiniconda (empfohlen) oder anaconda herunterladen und installieren\n\n\n2. Virtual environment erstellen (erstellt eine neue Arbeitsumgebung)\neinmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)\nin der Konsole: conda create --name geopython\n\n\n3. Virutal environment aktivieren (schaltet den “Bearbeitungsmodus” ein)\njedes mal nöig wenn ein *Erweiterung installiert oder jupyter lab gestartet** werden soll\nin der Konsole 4: activate geopython\n\n\n4. Jupyter lab installieren (fügt der virtuellen Umgebung diese IDE hinzu)\n1x pro environment*\nin der Konsole 5: conda install -c conda-forge jupyterlab\n\n\n5. Jupyter lab starten (startet die IDE “JupyterLab”)\njedes mal, wenn am Projekt gearbeitet wird\nin der Konsole 6: jupyter lab\n\n\n6. Jupyter lab (JL) beenden (beendet “JupyterLab” in der Console)\nwenn ihr die Konsole wieder braucht\nWährend JL läuft, ist die Konsole blockiert. Um JL zu beenden und die Konsole freizugeben: Tastenkombination CTRL + C\n\n\n7. weitere Module 7 installieren (fügt der environment zB pandas hinzu)\njedes mal nötig, wenn ein Modul in einer Environment fehlt8\nin der Konsole 9,10: conda install -c conda-forge pandas",
+    "text": "Conda cheat sheet\nIn der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda nochmal zusammengefasst. Wichtig ist vor allem, wann dieser Schritt nötig ist und wie er ausgeführt wird. Um die Tabelle kompakt zu halten werden gewisse Details als Fussnote verlinkt.\n\n\n\nSchritt\nWann ist dies nötig?\nDetails zum Vorgehen / Befehl für die Konsole2\n\n\n\n\n1. Conda installieren (installiert das Program conda)\neinmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)\nMiniconda (empfohlen) oder anaconda herunterladen und installieren\n\n\n2. Virtual environment erstellen (erstellt eine neue Arbeitsumgebung)\neinmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)\nin der Konsole: conda create --name geopython\n\n\n3. Virutal environment aktivieren (schaltet den “Bearbeitungsmodus” ein)\njedes mal nöig wenn ein *Erweiterung installiert oder jupyter lab gestartet** werden soll\nin der Konsole 3: activate geopython\n\n\n4. Jupyter lab installieren (fügt der virtuellen Umgebung diese IDE hinzu)\n1x pro environment*\nin der Konsole 4: conda install -c conda-forge jupyterlab\n\n\n5. Jupyter lab starten (startet die IDE “JupyterLab”)\njedes mal, wenn am Projekt gearbeitet wird\nin der Konsole 5: jupyter lab\n\n\n6. Jupyter lab (JL) beenden (beendet “JupyterLab” in der Console)\nwenn ihr die Konsole wieder braucht\nWährend JL läuft, ist die Konsole blockiert. Um JL zu beenden und die Konsole freizugeben: Tastenkombination CTRL + C\n\n\n7. weitere Module 6 installieren (fügt der environment zB pandas hinzu)\njedes mal nötig, wenn ein Modul in einer Environment fehlt7\nin der Konsole 8,9: conda install -c conda-forge pandas",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Conda</span>"
@@ -1059,7 +1048,7 @@
     "href": "C_Programmieren_2/2_Conda.html#footnotes",
     "title": "Conda",
     "section": "",
-    "text": "Neben Conda gibt es noch den “Package Manager” pip, welchen wir im Unterricht aber nicht nutzen werden.↩︎\nGenau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.↩︎\nMit Konsole ist unter Windows cmd gemeint (Windowstaste &gt; cmd). Unter Linux wird bash, auf Mac der Terminal verwendet.↩︎\nUnter Linux: conda activate geopython↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nIn Programmieren I - III brauchen wir die Module pandas, matplotlib, geopandas und descartes↩︎\nDies macht sich bemerkbar duch die Fehlermeldung ModuleNotFoundError: No module named 'pandas'↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nFalls JupyterLabs läuft und dadurch die Konsole blockiert ist, startet ihr am besten eine neue Konsole und aktiviert dort die entsprechende environment. Danach könnt ihr das Modul installieren↩︎",
+    "text": "Genau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.↩︎\nMit Konsole ist unter Windows cmd gemeint (Windowstaste &gt; cmd). Unter Linux wird bash, auf Mac der Terminal verwendet.↩︎\nUnter Linux: conda activate geopython↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nIn Programmieren I - III brauchen wir die Module pandas, matplotlib, geopandas und descartes↩︎\nDies macht sich bemerkbar duch die Fehlermeldung ModuleNotFoundError: No module named 'pandas'↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nFalls JupyterLabs läuft und dadurch die Konsole blockiert ist, startet ihr am besten eine neue Konsole und aktiviert dort die entsprechende environment. Danach könnt ihr das Modul installieren↩︎",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Conda</span>"
@@ -1114,7 +1103,7 @@
     "href": "C_Programmieren_2/5_Uebung_5.html",
     "title": "Übung 5",
     "section": "",
-    "text": "Übung 5.1\nErstelle eine Function, die gruezi heisst, einen Nachnamen als Input annimmt und per Sie grüsst.\nMusterlösung\ndef gruezi(nachname):\n    return \"Guten Tag, \" + nachname\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi(nachname = \"van Rossum\")\n\n'Guten Tag, van Rossum'",
+    "text": "Übung 5.1\nErstelle eine Function, die gruezi heisst, einen Nachnamen als Input annimmt und per Sie grüsst.\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi(nachname = \"van Rossum\")\n\n'Guten Tag, van Rossum'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 5</span>"
@@ -1125,7 +1114,7 @@
     "href": "C_Programmieren_2/5_Uebung_5.html#sec-gruezi2",
     "title": "Übung 5",
     "section": "Übung 5.2",
-    "text": "Übung 5.2\nErstelle eine neue Funktion gruezi2 welche im Vergleich zu gruezi einen weiteren Parameter namens anrede annimmt.\n\n\nMusterlösung\ndef gruezi2(nachname, anrede):\n    return \"Guten Tag, \" + anrede + \" \" + nachname\n\n\n\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi2(nachname = \"van Rossum\", anrede = \"Herr\")\n\n'Guten Tag, Herr van Rossum'",
+    "text": "Übung 5.2\nErstelle eine neue Funktion gruezi2 welche im Vergleich zu gruezi einen weiteren Parameter namens anrede annimmt.\n\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi2(nachname = \"van Rossum\", anrede = \"Herr\")\n\n'Guten Tag, Herr van Rossum'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 5</span>"
@@ -1136,7 +1125,7 @@
     "href": "C_Programmieren_2/5_Uebung_5.html#übung-5.3",
     "title": "Übung 5",
     "section": "Übung 5.3",
-    "text": "Übung 5.3\nErstelle eine Funktion add die zwei Zahlen summiert.\n\n\nMusterlösung\ndef add(zahl1, zahl2):\n    return zahl1 + zahl2\n\n\n\n# Das Resultat sollte folgendermassen aussehen:\nadd(zahl1 = 2, zahl2 = 10)\n\n12",
+    "text": "Übung 5.3\nErstelle eine Funktion add die zwei Zahlen summiert.\n\n# Das Resultat sollte folgendermassen aussehen:\nadd(zahl1 = 2, zahl2 = 10)\n\n12",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 5</span>"
@@ -1147,7 +1136,7 @@
     "href": "C_Programmieren_2/5_Uebung_5.html#übung-5.4",
     "title": "Übung 5",
     "section": "Übung 5.4",
-    "text": "Übung 5.4\nErstelle eine Funktion square, welche den Input quadriert.\n\n\nMusterlösung\ndef square(zahl):\n    return zahl * zahl\n\n# oder\n\ndef square(zahl):\n    return zahl**2\n\n\n\n# Das Resultat sollte folgendermassen aussehen:\nsquare(zahl = 5)\n\n25",
+    "text": "Übung 5.4\nErstelle eine Funktion square, welche den Input quadriert.\n\n# Das Resultat sollte folgendermassen aussehen:\nsquare(zahl = 5)\n\n25",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 5</span>"
@@ -1158,7 +1147,7 @@
     "href": "C_Programmieren_2/5_Uebung_5.html#übung-5.5",
     "title": "Übung 5",
     "section": "Übung 5.5",
-    "text": "Übung 5.5\nErstelle eine Funktion meter_zu_fuss, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Erinnerung: 30.48 cm ergeben 1 Fuss.\n\n\nMusterlösung\ndef meter_zu_fuss(meter):\n    fuss = meter * 100 / 30.48\n    return fuss\n\n\n\n# Das Resultat sollte folgendermassen aussehen:\n\nmeter_zu_fuss(meter = 1.80)\n\n5.905511811023622",
+    "text": "Übung 5.5\nErstelle eine Funktion meter_zu_fuss, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Erinnerung: 30.48 cm ergeben 1 Fuss.\n\n# Das Resultat sollte folgendermassen aussehen:\n\nmeter_zu_fuss(meter = 1.80)\n\n5.905511811023622",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 5</span>"
@@ -1235,7 +1224,7 @@
     "href": "C_Programmieren_2/7_Uebung_6.html",
     "title": "Übung 6",
     "section": "",
-    "text": "Übung 6.1\nErstelle eine Funktion namens times, die zwei Zahlen miteinander multipliziert.\nMusterlösung\ndef times(x, y):\n    return x * y\nMusterlösung\ntimes(2, 2)",
+    "text": "Übung 6.1\nErstelle eine Funktion namens times, die zwei Zahlen miteinander multipliziert.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1246,7 +1235,7 @@
     "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.2",
     "title": "Übung 6",
     "section": "Übung 6.2",
-    "text": "Übung 6.2\nDie eben erstellte Funktion times benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert 1).\nZusatzaufgabe: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?\n\n\nMusterlösung\ndef times(x, y = 1):\n    return x * y\n\n\n\n\nMusterlösung\ntimes(3)\n\n\n\n\nMusterlösung\n# (Zusatzaufgabe)\ndef times(x = 1, y):\n    return x * y",
+    "text": "Übung 6.2\nDie eben erstellte Funktion times benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert 1).\nZusatzaufgabe: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1257,7 +1246,7 @@
     "href": "C_Programmieren_2/7_Uebung_6.html#sec-ex-functions-bmi",
     "title": "Übung 6",
     "section": "Übung 6.3",
-    "text": "Übung 6.3\nErstelle eine Funktion namens bmi, die aus Grösse und Gewicht einen BodyMassIndex berechnet (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:\n\n\nMusterlösung\ndef bmi(groesse_m, gewicht_kg):\n    return gewicht_kg / (groesse_m * groesse_m)\n\n\n\nbmi(groesse_m = 1.8, gewicht_kg = 88)\n\n27.160493827160494",
+    "text": "Übung 6.3\nErstelle eine Funktion namens bmi, die aus Grösse und Gewicht einen BodyMassIndex berechnet (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:\n\nbmi(groesse_m = 1.8, gewicht_kg = 88)\n\n27.160493827160494",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1268,7 +1257,7 @@
     "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.4",
     "title": "Übung 6",
     "section": "Übung 6.4",
-    "text": "Übung 6.4\nErstelle eine Funktion mittelwert(), welche den Mittelwert aus einer Liste (List) von Zahlen berechnet. Nutze dazu sum() und len() analog Uebung 2.6. Das Resultat sollte folgendermassen aussehen:\n\n\nMusterlösung\ndef mittelwert(zahlen):\n    return sum(zahlen) / len(zahlen)\n\n\n\nmeine_zahlen = [50, 100, 550, 1000]\nmittelwert(meine_zahlen)\n\n425.0",
+    "text": "Übung 6.4\nErstelle eine Funktion mittelwert(), welche den Mittelwert aus einer Liste (List) von Zahlen berechnet. Nutze dazu sum() und len() analog Uebung 2.6. Das Resultat sollte folgendermassen aussehen:\n\nmeine_zahlen = [50, 100, 550, 1000]\nmittelwert(meine_zahlen)\n\n425.0",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1279,7 +1268,7 @@
     "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.5",
     "title": "Übung 6",
     "section": "Übung 6.5",
-    "text": "Übung 6.5\nErstelle eine Funktion celsius_zu_farenheit, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: Temperatur in °F = Temperatur in °C x 1,8 + 32.\n\n\nMusterlösung\ndef celsius_zu_farenheit(celsius):\n    farenheit = celsius * 1.8 + 32\n    return farenheit\n\n\nDas Resultat sollte folgendermassen aussehen:\n\ncelsius_zu_farenheit(celsius = 25)\n\n77.0",
+    "text": "Übung 6.5\nErstelle eine Funktion celsius_zu_farenheit, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: Temperatur in °F = Temperatur in °C x 1,8 + 32.\nDas Resultat sollte folgendermassen aussehen:\n\ncelsius_zu_farenheit(celsius = 25)\n\n77.0",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1290,7 +1279,7 @@
     "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.6",
     "title": "Übung 6",
     "section": "Übung 6.6",
-    "text": "Übung 6.6\nSchreibe die letzte Funktion celsius_zu_farenheit in der lambda Notation.\n\n\nMusterlösung\ncelsius_in_farenheit2 = lambda celsius: celsius * 1.8 + 32",
+    "text": "Übung 6.6\nSchreibe die letzte Funktion celsius_zu_farenheit in der lambda Notation.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1312,7 +1301,7 @@
     "href": "C_Programmieren_2/9_Uebung_7.html",
     "title": "Übung 7",
     "section": "",
-    "text": "Übung 7.1\nErstelle eine neue Funktion gruezi3 die gruezi (aus Übung 5.1) um einem weiteren Parameter uhrzeit erweitert. Die Funktion soll vor 18 Uhr (uhrzeit &lt; 18) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht 20:15 Uhr sondern 20.25).\nMusterlösung\ndef gruezi3(nachname, uhrzeit):\n    if(uhrzeit &lt; 18):\n        grussform = \"Tag\"\n    else:\n        grussform = \"Abend\"\n\n    return \"Guten \" + grussform + \" \" + nachname\n# die Lösung sollte etwa folgendermasssen funktionieren:\n\ngruezi3(\"Guido\", uhrzeit = 21)\n\n'Guten Abend Guido'",
+    "text": "Übung 7.1\nErstelle eine neue Funktion gruezi3 die gruezi (aus Übung 5.1) um einem weiteren Parameter uhrzeit erweitert. Die Funktion soll vor 18 Uhr (uhrzeit &lt; 18) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht 20:15 Uhr sondern 20.25).\n# die Lösung sollte etwa folgendermasssen funktionieren:\n\ngruezi3(\"Guido\", uhrzeit = 21)\n\n'Guten Abend Guido'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1323,7 +1312,7 @@
     "href": "C_Programmieren_2/9_Uebung_7.html#übung-7.2",
     "title": "Übung 7",
     "section": "Übung 7.2",
-    "text": "Übung 7.2\nErweitere die Funktion gruezi2 so, dass zwischen folgende Uhrzeiten berücksichtigt werden:\n\n\n\nTabelle 32.1: Uhrzeiten und ihre Begrüssungsformen\n\n\n\n\n\nUhrzeit\nBegrüssungsform\n\n\n\n\n\n5 bis 11 Uhr\nGuten Morgen\n\n\n\n11 bis 18 Uhr\nGuten Tag\n\n\n\n18 bis 22 Uhr\nGuten Abend\n\n\n\n22 bis 5 Uhr\nGute Nacht\n\n\n\n\n\n\n\nDas Problem ist etwas schwierig zu Packen weil wir die “von - bis” Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die if, elifund else Operationen. Im Dropdown unten ist unser Vorschlag.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\n\n\n\n\n\n\nMusterlösung\ndef gruezi2(nachname, anrede, uhrzeit):\n    if(uhrzeit &lt; 5):\n        was = \"Gute Nacht\"\n    elif(uhrzeit &lt; 11):\n        was = \"Guten Morgen\"\n    elif(uhrzeit &lt; 18):\n        was = \"Guten Tag\"\n    elif(uhrzeit &lt; 22):\n        was = \"Guten Abend\"\n    else:\n        was = \"Gute Nacht\"\n\n    return was + \", \" + anrede + \" \"+ nachname\n\n\nTeste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.",
+    "text": "Übung 7.2\nErweitere die Funktion gruezi2 so, dass zwischen folgende Uhrzeiten berücksichtigt werden:\n\n\n\nTabelle 32.1: Uhrzeiten und ihre Begrüssungsformen\n\n\n\n\n\nUhrzeit\nBegrüssungsform\n\n\n\n\n\n5 bis 11 Uhr\nGuten Morgen\n\n\n\n11 bis 18 Uhr\nGuten Tag\n\n\n\n18 bis 22 Uhr\nGuten Abend\n\n\n\n22 bis 5 Uhr\nGute Nacht\n\n\n\n\n\n\n\nDas Problem ist etwas schwierig zu Packen weil wir die “von - bis” Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die if, elifund else Operationen. Im Dropdown unten ist unser Vorschlag.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\n\n\n\n\nTeste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1334,7 +1323,7 @@
     "href": "C_Programmieren_2/9_Uebung_7.html#übung-7.2-1",
     "title": "Übung 7",
     "section": "Übung 7.2",
-    "text": "Übung 7.2\nErweitere die Funktion bmi aus Übung 6.3 so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der WHO Klassifizierung ausgegeben wird:\n\n\n\nTabelle 32.2: WHO Nutritional status\n\n\n\n\n\nBMI\nNutritional status\n\n\n\n\nBelow 18.5\nUnderweight\n\n\n18.5–24.9\nNormal weight\n\n\n25.0–29.9\nPre-obesity\n\n\n30.0–34.9\nObesity class I\n\n\n35.0–39.9\nObesity class II\n\n\nAbove 40\nObesity class III\n\n\n\n\n\n\n\n\nMusterlösung\ndef bmi2(groesse_m, gewicht_kg):\n    bmi = gewicht_kg / (groesse_m * groesse_m)\n    if(bmi &lt; 18.5):\n        cat = \"Underweight\"\n    elif(bmi &lt;= 24.9):\n        cat = \"Normal weight\"\n    elif(bmi &lt;= 29.9):\n        cat = \"Pre-obesity\"\n    elif(bmi &lt;= 34.9):\n        cat = \"Obesity class I\"\n    elif(bmi &lt;= 39.9):\n        cat = \"Obesity class II\"\n    else:\n        cat = \"Obesity class III\"\n    return \"Who classification: \" + cat\n\n\n\n# Der Output sollte etwa folgedermassen aussehen\nbmi2(1.7, 70)\n\n'Who classification: Normal weight'",
+    "text": "Übung 7.2\nErweitere die Funktion bmi aus Übung 6.3 so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der WHO Klassifizierung ausgegeben wird:\n\n\n\nTabelle 32.2: WHO Nutritional status\n\n\n\n\n\nBMI\nNutritional status\n\n\n\n\nBelow 18.5\nUnderweight\n\n\n18.5–24.9\nNormal weight\n\n\n25.0–29.9\nPre-obesity\n\n\n30.0–34.9\nObesity class I\n\n\n35.0–39.9\nObesity class II\n\n\nAbove 40\nObesity class III\n\n\n\n\n\n\n\n# Der Output sollte etwa folgedermassen aussehen\nbmi2(1.7, 70)\n\n'Who classification: Normal weight'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1356,7 +1345,7 @@
     "href": "C_Programmieren_2/11_Uebung_8.html",
     "title": "Übung 8",
     "section": "",
-    "text": "Übung 8.1\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.\nMusterlösung\nimport random\n\nrandom.uniform(-100, 100)\n\nrandom.normalvariate(100, 20)",
+    "text": "Übung 8.1\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1367,7 +1356,7 @@
     "href": "C_Programmieren_2/11_Uebung_8.html#übung-8.2",
     "title": "Übung 8",
     "section": "Übung 8.2",
-    "text": "Übung 8.2\nNun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten x_start und y_start mit jeweils dem Wert 0. Diese sollen als “Ursprungskoordinaten” dienen.\n\n\nMusterlösung\nx_start = 0\ny_start = 0",
+    "text": "Übung 8.2\nNun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten x_start und y_start mit jeweils dem Wert 0. Diese sollen als “Ursprungskoordinaten” dienen.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1378,7 +1367,7 @@
     "href": "C_Programmieren_2/11_Uebung_8.html#übung-8.3",
     "title": "Übung 8",
     "section": "Übung 8.3",
-    "text": "Übung 8.3\nGeneriere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die in etwa zwischen -100 und +100 liegt. Weise diese Zahl der Variabel x_offset zu. Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese y_offset zu.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nÜberlege dir, welcher Mittelwert Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?\nÜberlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):\n\n\n\n\n\n\nAbbildung 34.2: Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert \\(\\mu\\) minus Standartabweichung \\(\\sigma\\)), 2 Standartabweichungen (\\(\\mu - 2\\times\\sigma)\\) und 2 Standartabweichungen (\\(\\mu - 3\\times\\sigma)\\). Quelle: cobocards\n\n\n\n\n\n\n\n\nMusterlösung\n# Normalverteilte Werte mit Mittelwert 0 und Standartabweichung 100  \n# Achtung: bei dieser Standartabweichung sind ca 30% der Werte &gt; 100!\nx_offset = random.normalvariate(0, 100)\ny_offset = random.normalvariate(0, 100)\n\nx_offset\ny_offset",
+    "text": "Übung 8.3\nGeneriere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die in etwa zwischen -100 und +100 liegt. Weise diese Zahl der Variabel x_offset zu. Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese y_offset zu.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nÜberlege dir, welcher Mittelwert Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?\nÜberlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):\n\n\n\n\n\n\nAbbildung 34.2: Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert \\(\\mu\\) minus Standartabweichung \\(\\sigma\\)), 2 Standartabweichungen (\\(\\mu - 2\\times\\sigma)\\) und 2 Standartabweichungen (\\(\\mu - 3\\times\\sigma)\\). Quelle: cobocards",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1389,7 +1378,7 @@
     "href": "C_Programmieren_2/11_Uebung_8.html#übung-8.4",
     "title": "Übung 8",
     "section": "Übung 8.4",
-    "text": "Übung 8.4\nAddiere nun die Zufallszahlen x_offset und y_offset jeweils zu den Dummykoordinaten x_start und y_start und weise diese neuen Koordinaten x_neu und y_neu zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.\n\n\nMusterlösung\nx_offset = 10.246170309600945\ny_offset = -4.443904000288846\n\nx_neu = x_start + x_offset\ny_neu = y_start + y_offset\n\n\n\nx_neu\n\n10.246170309600945\n\n\n\ny_neu\n\n-4.443904000288846\n\n\n\n\nCode für die Visualisierung (nur FYI)\nimport pandas as pd\n\nmypoints = pd.DataFrame({\n    \"x\": [x_start, x_neu],\n    \"y\": [y_start, y_neu],\n    \"typ\": [\"start\", \"neu\"]\n    }\n)\n\nfrom matplotlib import pyplot as plt\n\nmypoints.plot(\"x\", \"y\", kind = \"scatter\", xlim = [-100, 100], ylim = [-100, 100], c = [\"red\", \"blue\"], title = \"Ursprung (rot) und Simulation (blau)\")",
+    "text": "Übung 8.4\nAddiere nun die Zufallszahlen x_offset und y_offset jeweils zu den Dummykoordinaten x_start und y_start und weise diese neuen Koordinaten x_neu und y_neu zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.\n\nx_neu\n\n10.246170309600945\n\n\n\ny_neu\n\n-4.443904000288846\n\n\n\n\nCode für die Visualisierung (nur FYI)\nimport pandas as pd\n\nmypoints = pd.DataFrame({\n    \"x\": [x_start, x_neu],\n    \"y\": [y_start, y_neu],\n    \"typ\": [\"start\", \"neu\"]\n    }\n)\n\nfrom matplotlib import pyplot as plt\n\nmypoints.plot(\"x\", \"y\", kind = \"scatter\", xlim = [-100, 100], ylim = [-100, 100], c = [\"red\", \"blue\"], title = \"Ursprung (rot) und Simulation (blau)\")",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1400,7 +1389,7 @@
     "href": "C_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function",
     "title": "Übung 8",
     "section": "Übung 8.5",
-    "text": "Übung 8.5\nNun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (0/0) durchgespielt. In der nächsten Aufgabe (Funktionen in DataFrames) werden wir alle unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie Abbildung 34.1 zu erhalten.\nDafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.\nErstelle jetzt eine Funktion namens offset_coordinate welche als Input eine x oder y-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen distance und einem Defaultwert von 100.\n\n\nMusterlösung\ndef offset_coordinate(old, distance = 100):\n    new = old + random.normalvariate(0, distance)\n    return new\n\n\n\n# die Funktion sollte so funktionieren:\noffset_coordinate(x_start)\n\n-137.75011422876278",
+    "text": "Übung 8.5\nNun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (0/0) durchgespielt. In der nächsten Aufgabe (Funktionen in DataFrames) werden wir alle unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie Abbildung 34.1 zu erhalten.\nDafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.\nErstelle jetzt eine Funktion namens offset_coordinate welche als Input eine x oder y-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen distance und einem Defaultwert von 100.\n\n# die Funktion sollte so funktionieren:\noffset_coordinate(x_start)\n\n4.796502232175508",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1411,7 +1400,7 @@
     "href": "C_Programmieren_2/11_Uebung_8.html#sec-offset-vis",
     "title": "Übung 8",
     "section": "Übung 8.6",
-    "text": "Übung 8.6\nNun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion offset_coordinate() 1’000 mal auf die Dummykoordinate an. Nutze deine Funktion offset_coordinate um eine Visualisierung gemäss untenstehendem beispiel zu machen.\n\nx_neu_list = [offset_coordinate(x_start) for i in range(1, 1000)]\ny_neu_list = [offset_coordinate(y_start) for i in range(1, 1000)]\n\n# Liste in eine Pandas DataFrame überführen\nmysim = pd.DataFrame({\"x\" : x_neu_list, \"y\" : y_neu_list})\n\nmysim.plot(\"x\", \"y\", kind = \"scatter\")\n\nfrom matplotlib import pyplot as plt\nplt.axis(\"equal\")\n\n(np.float64(-396.491920584745),\n np.float64(377.9744189483987),\n np.float64(-356.34535403698726),\n np.float64(340.55990995949435))",
+    "text": "Übung 8.6\nNun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion offset_coordinate() 1’000 mal auf die Dummykoordinate an. Nutze deine Funktion offset_coordinate um eine Visualisierung gemäss untenstehendem beispiel zu machen.\n\nx_neu_list = [offset_coordinate(x_start) for i in range(1, 1000)]\ny_neu_list = [offset_coordinate(y_start) for i in range(1, 1000)]\n\n# Liste in eine Pandas DataFrame überführen\nmysim = pd.DataFrame({\"x\" : x_neu_list, \"y\" : y_neu_list})\n\nmysim.plot(\"x\", \"y\", kind = \"scatter\")\n\nfrom matplotlib import pyplot as plt\nplt.axis(\"equal\")\n\n(np.float64(-429.2632863306672),\n np.float64(313.826174249716),\n np.float64(-328.11236913065125),\n np.float64(358.7787435058558))",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1433,7 +1422,7 @@
     "href": "C_Programmieren_2/13_Uebung_9.html",
     "title": "Übung 9",
     "section": "",
-    "text": "Übung 9.1\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.\nMusterlösung\nzeckenstiche[\"x\"]\nzeckenstiche[\"y\"]",
+    "text": "Übung 9.1\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1466,7 +1455,7 @@
     "href": "C_Programmieren_2/13_Uebung_9.html#sec-ex-param",
     "title": "Übung 9",
     "section": "Übung 9.4",
-    "text": "Übung 9.4\nIn Übung 9.3 haben wir unsere Funktion offset_coordinate aufgerufen, ohne den Parameter distance zu spezifizieren. Dies war möglich, weil wir für distance einen Defaultwert festgelegt hatten (100 Meter). Wir können aber auch zusätzliche Parameter kommagetrennt nach der Funktion angeben. Dies sieht folgendermassen aus:\n\nzeckenstiche[\"x\"].apply(offset_coordinate, distance = 200)\n\nNutze diese Möglichkeit, um den Offset (distance) auf maximal 10 Meter zu reduzieren.\n\n\nMusterlösung\nzeckenstiche[\"x_sim\"] = zeckenstiche[\"x\"].apply(offset_coordinate, distance = 10)\nzeckenstiche[\"y_sim\"] = zeckenstiche[\"y\"].apply(offset_coordinate, distance = 10)",
+    "text": "Übung 9.4\nIn Übung 9.3 haben wir unsere Funktion offset_coordinate aufgerufen, ohne den Parameter distance zu spezifizieren. Dies war möglich, weil wir für distance einen Defaultwert festgelegt hatten (100 Meter). Wir können aber auch zusätzliche Parameter kommagetrennt nach der Funktion angeben. Dies sieht folgendermassen aus:\n\nzeckenstiche[\"x\"].apply(offset_coordinate, distance = 200)\n\nNutze diese Möglichkeit, um den Offset (distance) auf maximal 10 Meter zu reduzieren.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1609,7 +1598,7 @@
     "href": "C_Programmieren_3/2_Uebung_10.html#sec-for-gruss",
     "title": "Übung 10",
     "section": "Übung 10.2",
-    "text": "Übung 10.2\nKonstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste namen. Erstelle danach einen for loop, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür print.\n\n\nMusterlösung\nnamen = [\"Il Buono\", \"Il Brutto\", \"Il Cattivo\"]\n\nfor name in namen:\n    print(\"Ciao \",name)\n\n\nDer Output könnte etwa so aussehen:\n\n\nMusterlösung\nfor name in namen:\n    print(\"Ciao \",name)\n\n\nCiao  Il Buono\nCiao  Il Brutto\nCiao  Il Cattivo",
+    "text": "Übung 10.2\nKonstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste namen. Erstelle danach einen for loop, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür print.\nDer Output könnte etwa so aussehen:\n\n\nCiao  Il Buono\nCiao  Il Brutto\nCiao  Il Cattivo",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1620,7 +1609,7 @@
     "href": "C_Programmieren_3/2_Uebung_10.html#übung-10.3",
     "title": "Übung 10",
     "section": "Übung 10.3",
-    "text": "Übung 10.3\nKopiere den folgenden For Loop und spiele hier mit den Werten herum. Verändere den For Loop so, dass er über die Werte von -5 bis +5 iteriert.\n\n\nMusterlösung\nfor nonsense in range(3, 5):\n    print(\"Iteration\",nonsense)\n\n\nIteration 3\nIteration 4\n\n\n\n\nMusterlösung\n# Iteriert von -5 bis +5\nfor platzhalter in range(-5,6):\n    print(\"Iteration\",platzhalter)",
+    "text": "Übung 10.3\nKopiere den folgenden For Loop und spiele hier mit den Werten herum. Verändere den For Loop so, dass er über die Werte von -5 bis +5 iteriert.\n\n\nMusterlösung\nfor nonsense in range(3, 5):\n    print(\"Iteration\",nonsense)\n\n\nIteration 3\nIteration 4",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1631,7 +1620,7 @@
     "href": "C_Programmieren_3/2_Uebung_10.html#übung-10.4",
     "title": "Übung 10",
     "section": "Übung 10.4",
-    "text": "Übung 10.4\nBis jetzt haben unsere Loops nicht viel Arbeiten müssen. Erstelle nun einen For Loop, welcher für die Werte -5 bis +5 folgendes ausgibt:\nDas Quadrat von -5 ist 25\nDas Quadrat von -4 ist 16\n...\n\n\nMusterlösung\nfor platzhalter in range(-5,6):\n    print(\"Das Quadrat von\",platzhalter, \"ist\",platzhalter*platzhalter)",
+    "text": "Übung 10.4\nBis jetzt haben unsere Loops nicht viel Arbeiten müssen. Erstelle nun einen For Loop, welcher für die Werte -5 bis +5 folgendes ausgibt:\nDas Quadrat von -5 ist 25\nDas Quadrat von -4 ist 16\n...",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1642,7 +1631,7 @@
     "href": "C_Programmieren_3/2_Uebung_10.html#sec-forloops-ex-party",
     "title": "Übung 10",
     "section": "Übung 10.5",
-    "text": "Übung 10.5\nBisher haben wir die Platzhaltervariabel immer in unserem Loop wiederverwendet. Das müssen wir aber gar nicht, wir können den for loop einfach nutzen um etwas x mal zu wiederholen. Erstellen einen for loop der folgende beiden Sätze 5x wiederholt:\nWho likes to party?\nWe like to party!\nWho likes to party?\n....\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nNutze dafür zwei verschiedene print Befehle auf zwei Zeilen.\n\n\n\n\n\nMusterlösung\nfor i in range(5):\n    print(\"Who likes to party?\")\n    print(\"We like to party!\")",
+    "text": "Übung 10.5\nBisher haben wir die Platzhaltervariabel immer in unserem Loop wiederverwendet. Das müssen wir aber gar nicht, wir können den for loop einfach nutzen um etwas x mal zu wiederholen. Erstellen einen for loop der folgende beiden Sätze 5x wiederholt:\nWho likes to party?\nWe like to party!\nWho likes to party?\n....\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nNutze dafür zwei verschiedene print Befehle auf zwei Zeilen.",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1664,7 +1653,7 @@
     "href": "C_Programmieren_3/3_Uebung_11.html",
     "title": "Übung 11",
     "section": "",
-    "text": "Übung 11.1\nNehmen wir nochmals das Beispiel aus Übung 10.2. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. mylist) gespeichert werden.\nMusterlösung\nmylist = []\n\nfor name in [\"Il Buono\", \"Il Brutto\", \"Il Cattivo\"]:\n    mylist.append(\"Ciao \"+name)\nMusterlösung\n# Das Resultat sieht dann so aus:\nmylist\n\n\n['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']",
+    "text": "Übung 11.1\nNehmen wir nochmals das Beispiel aus Übung 10.2. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. mylist) gespeichert werden.\nMusterlösung\n# Das Resultat sieht dann so aus:\nmylist\n\n\n['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 11</span>"
@@ -1675,7 +1664,7 @@
     "href": "C_Programmieren_3/3_Uebung_11.html#sec-ex-loopoutput",
     "title": "Übung 11",
     "section": "Übung 11.2",
-    "text": "Übung 11.2\nDer im Beispiel verwendete Refrain aus dem Lied “Bitch” von Meredith Brooks besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit zwei verschiedenen, aneinander gereihten for loops den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“I do not feel ashamed” und “You know you wouldn’t want it any other way”) kannst du auch ausserhalb der Loops in die Listen einfügen (append).\n\n\nMusterlösung\nrefrain = []\n\nfor rolle in [\"bitch\",\"lover\",\"child\",\"mother\",\"sinner\",\"saint\"]:\n    liedzeile = \"I'm a \"+ rolle \n    refrain.append(liedzeile)\nrefrain.append(\"I do not feel ashamed\")\nfor rolle in [\"your hell\",\"your dream\",\"nothing in between\"]:\n    liedzeile = \"I'm \"+ rolle \n    refrain.append(liedzeile)\nrefrain.append(\"You know you wouldn't want it any other way\") \n\n\n\n\nMusterlösung\n# Das Resultat sieht dann so aus:\nrefrain\n\n\n[\"I'm a bitch\",\n \"I'm a lover\",\n \"I'm a child\",\n \"I'm a mother\",\n \"I'm a sinner\",\n \"I'm a saint\",\n 'I do not feel ashamed',\n \"I'm your hell\",\n \"I'm your dream\",\n \"I'm nothing in between\",\n \"You know you wouldn't want it any other way\"]",
+    "text": "Übung 11.2\nDer im Beispiel verwendete Refrain aus dem Lied “Bitch” von Meredith Brooks besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit zwei verschiedenen, aneinander gereihten for loops den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“I do not feel ashamed” und “You know you wouldn’t want it any other way”) kannst du auch ausserhalb der Loops in die Listen einfügen (append).\n\n\nMusterlösung\n# Das Resultat sieht dann so aus:\nrefrain\n\n\n[\"I'm a bitch\",\n \"I'm a lover\",\n \"I'm a child\",\n \"I'm a mother\",\n \"I'm a sinner\",\n \"I'm a saint\",\n 'I do not feel ashamed',\n \"I'm your hell\",\n \"I'm your dream\",\n \"I'm nothing in between\",\n \"You know you wouldn't want it any other way\"]",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 11</span>"
@@ -1719,7 +1708,7 @@
     "href": "C_Programmieren_3/4_Uebung_12.html",
     "title": "Übung 12",
     "section": "",
-    "text": "Übung 12.1\nErstelle zwei Listen bestehend aus 3 Hundenamen (hunde) und 3 Katzennamen (katzen). Erstelle einen verschachtelten For Loop, wo jeder Hund jede Katze beisst und jede Katze jeden Hund kratzt.\nMusterlösung\nhunde = [\"Bruno\", \"Berta\",\"Helmi\"]\nkatzen = [\"Greta\", \"Xavier\", \"Zachy\"]\n\nfor katze in katzen:\n    for hund in hunde:\n        print(hund, \"beisst\", katze+\" und \"+katze, \"kratzt \", hund)",
+    "text": "Übung 12.1\nErstelle zwei Listen bestehend aus 3 Hundenamen (hunde) und 3 Katzennamen (katzen). Erstelle einen verschachtelten For Loop, wo jeder Hund jede Katze beisst und jede Katze jeden Hund kratzt.",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
@@ -1741,7 +1730,7 @@
     "href": "C_Programmieren_3/4_Uebung_12.html#übung-12.2",
     "title": "Übung 12",
     "section": "Übung 12.2",
-    "text": "Übung 12.2\nErstelle einen verschachtelten Loop, wo alle Kombinationen von 0 bis 9 miteinander addiert werden.\n\n\nMusterlösung\naddition = []\n\nwerte = range(10)\n\nfor i in werte:\n    for j in werte:\n        resultat = i+j\n        addition.append(resultat)",
+    "text": "Übung 12.2\nErstelle einen verschachtelten Loop, wo alle Kombinationen von 0 bis 9 miteinander addiert werden.",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
@@ -1752,7 +1741,7 @@
     "href": "C_Programmieren_3/4_Uebung_12.html#übung-12.3",
     "title": "Übung 12",
     "section": "Übung 12.3",
-    "text": "Übung 12.3\nNutze die Funktion offset_coordinate (Lösung aus Übung 8.5) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).\n\n\nMusterlösung\nimport random\n\ndef offset_coordinate(old, distance = 100):\n    new = old + random.normalvariate(0, distance)\n    return new\n\nx_start = 0\ny_start = 0\n\nx_random = []\ny_random = []\nfor i in range(100):\n    x_new = offset_coordinate(x_start)\n    y_new = offset_coordinate(y_start)\n\n    x_random.append(x_new)\n    y_random.append(y_new)",
+    "text": "Übung 12.3\nNutze die Funktion offset_coordinate (Lösung aus Übung 8.5) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
@@ -1763,7 +1752,7 @@
     "href": "C_Programmieren_3/4_Uebung_12.html#übung-12.4-fakultativ",
     "title": "Übung 12",
     "section": "Übung 12.4 (fakultativ)",
-    "text": "Übung 12.4 (fakultativ)\nVersuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung “Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.\nZur Erinnerung, die Vorgehensweise für die Annäherung an Pi geht folgendermassen:\n\nZufallskoordinaten (x, y) zwischen 0 und 1 erstellen\nDistanz zum Ursprung (0) mit der Formel \\(\\sqrt(x^2+y^2)\\) berechnen\nBestimmen ob sich der Punkt innerhalb des Kreisviertels befindet (\\(d &lt; 1\\))\nSchritte 1 & 2 mehrfach wiederholen\nAnteil der Punkte innerhalb des Kreisviertels mit 4 Multiplizieren\n\nTipps:\n\nFür die Erstellung der Zufallspunkte brauchst du die Funktion random() aus dem modul random\nSchritte 1 - 3 werden am sinnvollsten ein eine Funktion verpakt, welche keine Argumente benötigt\nSchritt 4 löst du am besten mit einer For loop mit range(100) (für 100 Wiederholungen)\n\n\n\nMusterlösung\nimport random\n\n# erstelle eine Funktion, die zwei Zufallszahlen zwischen 0 und 1 generiert,\n# die Distanz zum Ursprung (0,0) berechnet und True retourniert, wenn der Wert ausserhalb des Kreisviertels liegt\ndef get_pi(): \n    x = random.random()\n    y = random.random()\n    pythagoras = (x**2+y**2)**0.5\n    ausserhalb = pythagoras &gt; 1\n    return ausserhalb\n\nget_pi()\n\n# die Funktion 100x wiederholen und die Anzahl Werte &gt; 1 zählen\nres = [get_pi() for x in range(100)]\n\n# Anteil der Werte &gt; 1 berechnen und mit 4 multiplizieren\n(100-sum(res))/100*4",
+    "text": "Übung 12.4 (fakultativ)\nVersuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung “Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.\nZur Erinnerung, die Vorgehensweise für die Annäherung an Pi geht folgendermassen:\n\nZufallskoordinaten (x, y) zwischen 0 und 1 erstellen\nDistanz zum Ursprung (0) mit der Formel \\(\\sqrt(x^2+y^2)\\) berechnen\nBestimmen ob sich der Punkt innerhalb des Kreisviertels befindet (\\(d &lt; 1\\))\nSchritte 1 & 2 mehrfach wiederholen\nAnteil der Punkte innerhalb des Kreisviertels mit 4 Multiplizieren\n\nTipps:\n\nFür die Erstellung der Zufallspunkte brauchst du die Funktion random() aus dem modul random\nSchritte 1 - 3 werden am sinnvollsten ein eine Funktion verpakt, welche keine Argumente benötigt\nSchritt 4 löst du am besten mit einer For loop mit range(100) (für 100 Wiederholungen)",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
@@ -1895,7 +1884,7 @@
     "href": "C_Programmieren_3/6_Uebung_14.html",
     "title": "Übung 14",
     "section": "",
-    "text": "Übung 14.1\nImportiere Geopandas und wandle zeckenstiche in eine GeoDataFrame um (zeckenstiche). Vergiss nicht, das Koordinatenbezugssystem festzulegen!\nMusterlösung\nimport pandas as pd\nimport geopandas as gpd\n\n# Übung 14.1\nzeckenstiche = pd.read_csv(\"data/zeckenstiche.csv\")\n\ngeom = gpd.points_from_xy(\n  zeckenstiche['x'],    # ↘\n  zeckenstiche['y']     # → die Geometrie Spalte\n  )   \n\nzeckenstiche_gpd = gpd.GeoDataFrame(\n    zeckenstiche,    # die DataFrame (\"Attributtabelle\")\n    geometry = geom, #\n    crs = 2056       # das Koordinatenbezugssystem (EPSG Code)\n)",
+    "text": "Übung 14.1\nImportiere Geopandas und wandle zeckenstiche in eine GeoDataFrame um (zeckenstiche). Vergiss nicht, das Koordinatenbezugssystem festzulegen!",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Übung 14</span>"
@@ -1906,7 +1895,7 @@
     "href": "C_Programmieren_3/6_Uebung_14.html#übung-14.2",
     "title": "Übung 14",
     "section": "Übung 14.2",
-    "text": "Übung 14.2\nBuffere die Zeckenstiche um eine Distanz von 12 Meter und speichere den Output in der Variabel zeckenstiche_buffer. Visualisiere die gebufferten Punkte mit .explore().\n\n\nMusterlösung\nzeckenstiche_buffer = zeckenstiche_gpd.buffer(12)\nzeckenstiche_buffer.explore()\n\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 zeckenstiche_buffer = zeckenstiche_gpd.buffer(12)\n      2 zeckenstiche_buffer.explore()\n\nNameError: name 'zeckenstiche_gpd' is not defined",
+    "text": "Übung 14.2\nBuffere die Zeckenstiche um eine Distanz von 12 Meter und speichere den Output in der Variabel zeckenstiche_buffer. Visualisiere die gebufferten Punkte mit .explore().\n\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 zeckenstiche_buffer = zeckenstiche_gpd.buffer(12)\n      2 zeckenstiche_buffer.explore()\n\nNameError: name 'zeckenstiche_gpd' is not defined",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Übung 14</span>"
@@ -1917,7 +1906,7 @@
     "href": "C_Programmieren_3/6_Uebung_14.html#übung-14.3",
     "title": "Übung 14",
     "section": "Übung 14.3",
-    "text": "Übung 14.3\nExtrahiere die Umrisse von zeckenstiche_buffer und speichere diese in zeckenstiche_buffer_outline. Visualisiere anschliessend diese Umrisse.\n\n\nMusterlösung\nzeckenstiche_buffer_outline = zeckenstiche_buffer.boundary\n\nzeckenstiche_buffer_outline.explore()\n\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[3], line 1\n----&gt; 1 zeckenstiche_buffer_outline = zeckenstiche_buffer.boundary\n      3 zeckenstiche_buffer_outline.explore()\n\nNameError: name 'zeckenstiche_buffer' is not defined",
+    "text": "Übung 14.3\nExtrahiere die Umrisse von zeckenstiche_buffer und speichere diese in zeckenstiche_buffer_outline. Visualisiere anschliessend diese Umrisse.\n\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[3], line 1\n----&gt; 1 zeckenstiche_buffer_outline = zeckenstiche_buffer.boundary\n      3 zeckenstiche_buffer_outline.explore()\n\nNameError: name 'zeckenstiche_buffer' is not defined",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Übung 14</span>"
@@ -1939,7 +1928,7 @@
     "href": "C_Programmieren_3/6_Uebung_14.html#übung-14.5",
     "title": "Übung 14",
     "section": "Übung 14.5",
-    "text": "Übung 14.5\nBerechne das “Envelope” von zeckenstiche_gpd anhand der Beispiele in Räumliche Operationen. Speichere den Output als zeckenstiche_envelope.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nDenk daran, dass du zuerst noch einen Union machen musst (siehe Räumliche Operationen)\n\n\n\n\n\nMusterlösung\nzeckenstiche_envelope = zeckenstiche_gpd.unary_union.envelope\n\nzeckenstiche_envelope",
+    "text": "Übung 14.5\nBerechne das “Envelope” von zeckenstiche_gpd anhand der Beispiele in Räumliche Operationen. Speichere den Output als zeckenstiche_envelope.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nDenk daran, dass du zuerst noch einen Union machen musst (siehe Räumliche Operationen)",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Übung 14</span>"
@@ -1950,7 +1939,7 @@
     "href": "C_Programmieren_3/6_Uebung_14.html#übung-14.6",
     "title": "Übung 14",
     "section": "Übung 14.6",
-    "text": "Übung 14.6\nExportiere zeckenstiche_gpd als “Geopackage” mit dem Namen “zeckenstiche.gpkg”. Lese nochmal Geodatenformate wenn du nicht mehr weisst, wie das geht. Versuche anschliessend, “zeckenstiche.gpkg” wieder einzulesen.\n\n\nMusterlösung\nzeckenstiche.to_file(\"data/zeckenstiche.gpkg\")",
+    "text": "Übung 14.6\nExportiere zeckenstiche_gpd als “Geopackage” mit dem Namen “zeckenstiche.gpkg”. Lese nochmal Geodatenformate wenn du nicht mehr weisst, wie das geht. Versuche anschliessend, “zeckenstiche.gpkg” wieder einzulesen.",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Übung 14</span>"
@@ -1983,7 +1972,7 @@
     "href": "C_Programmieren_3/7_Uebung_15.html",
     "title": "Übung 15",
     "section": "",
-    "text": "Übung 15.1\nLade das File “wald.gpkg” (siehe Tabelle 1) herunter und speichere es in deiner Workings Directory. Importiere den Datensatz und speichere ihn in der Variable wald.\nSchau dir wald an (mit type, .plot() etc.)\nMusterlösung\nimport geopandas as gpd \n\nwald = gpd.read_file(\"data/wald.gpkg\")\n\nwald\ntype(wald)\nwald.plot()",
+    "text": "Übung 15.1\nLade das File “wald.gpkg” (siehe Tabelle 1) herunter und speichere es in deiner Workings Directory. Importiere den Datensatz und speichere ihn in der Variable wald.\nSchau dir wald an (mit type, .plot() etc.)",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>48</span>  <span class='chapter-title'>Übung 15</span>"
@@ -1994,7 +1983,7 @@
     "href": "C_Programmieren_3/7_Uebung_15.html#sec-ex-spatialjoin",
     "title": "Übung 15",
     "section": "Übung 15.2",
-    "text": "Übung 15.2\nFühre einen SpatialJoin zwischen wald und zeckenstiche durch. Vertausche die Reihenfolge (left_df, right_df) und schaue dir den Output an. Wodurch unterscheiden sich die beiden outputs? Was sagt dir das über die Funktionsweise von sjoin?\n\n\n\n\n\n\nWichtig!\n\n\n\nMelde dich bei den Betreuern wenn der SpatialJoin bei dir nicht funktioniert und du eine Fehlermeldung bekommst.\n\n\n\n\nMusterlösung\nzeckenstiche_gpd = gpd.read_file(\"data/zeckenstiche.gpkg\")\n\ngpd.sjoin(left_df = zeckenstiche_gpd, right_df = wald)\ngpd.sjoin(left_df = wald, right_df = zeckenstiche_gpd) \n\n# in beiden Fällen hat der Output geich viele Zeilen. \n# In der ersten Variante ist die Geometrie\n# des Outputs \"Point\", im zweiten Fall \"Multipolygon\"",
+    "text": "Übung 15.2\nFühre einen SpatialJoin zwischen wald und zeckenstiche durch. Vertausche die Reihenfolge (left_df, right_df) und schaue dir den Output an. Wodurch unterscheiden sich die beiden outputs? Was sagt dir das über die Funktionsweise von sjoin?\n\n\n\n\n\n\nWichtig!\n\n\n\nMelde dich bei den Betreuern wenn der SpatialJoin bei dir nicht funktioniert und du eine Fehlermeldung bekommst.",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>48</span>  <span class='chapter-title'>Übung 15</span>"
@@ -2005,7 +1994,7 @@
     "href": "C_Programmieren_3/7_Uebung_15.html#sec-ex-count",
     "title": "Übung 15",
     "section": "Übung 15.3",
-    "text": "Übung 15.3\nFühre nun den SpatialJoin aus Übung 15.2 in der Reihenfolge aus, der dir am sinnvollsten erscheint. Weise den Output dieser Operation der Variabel zeckenstiche_join zu.\nNutze nun die dazugewonnene Spalte Wald_text um die Anzahl Zeckenstich-Meldungen im Wald zu zählen. Dazu musst du wie folgt vorgehen:\n\nEntsprechende Spalte selektieren (siehe Übung 4.5)\nWerte in der Spalte mit “ja” vergleichen\nAnzahl True mit sum() zählen (True entspricht immer 1, False entspricht immer 0)\n\n\n\nMusterlösung\n# die folgende Variante (mit dem Output \"point\") ist sinnvoller, da auch\n# wir uns primär für die Punkte (Zeckenstiche) interessieren.\nzeckenstiche_join = gpd.sjoin(left_df = zeckenstiche_gpd, right_df = wald)\n\nsum(zeckenstiche_join[\"Wald_text\"] == \"ja\")",
+    "text": "Übung 15.3\nFühre nun den SpatialJoin aus Übung 15.2 in der Reihenfolge aus, der dir am sinnvollsten erscheint. Weise den Output dieser Operation der Variabel zeckenstiche_join zu.\nNutze nun die dazugewonnene Spalte Wald_text um die Anzahl Zeckenstich-Meldungen im Wald zu zählen. Dazu musst du wie folgt vorgehen:\n\nEntsprechende Spalte selektieren (siehe Übung 4.5)\nWerte in der Spalte mit “ja” vergleichen\nAnzahl True mit sum() zählen (True entspricht immer 1, False entspricht immer 0)",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>48</span>  <span class='chapter-title'>Übung 15</span>"
@@ -2016,7 +2005,7 @@
     "href": "C_Programmieren_3/7_Uebung_15.html#übung-15.4",
     "title": "Übung 15",
     "section": "Übung 15.4",
-    "text": "Übung 15.4\nBerechne nun Anteil der Zeckenstiche im Wald (gemessen an der Anzahl Zeckenstich-Meldungen total). Weise den Output der Variabel anteil_wald zu.\n\n\nMusterlösung\nanteil_wald = sum(zeckenstiche_join[\"Wald_text\"] == \"ja\")/len(zeckenstiche_join[\"Wald_text\"])",
+    "text": "Übung 15.4\nBerechne nun Anteil der Zeckenstiche im Wald (gemessen an der Anzahl Zeckenstich-Meldungen total). Weise den Output der Variabel anteil_wald zu.",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>48</span>  <span class='chapter-title'>Übung 15</span>"
@@ -2894,11 +2883,11 @@
   {
     "objectID": "A_Unsicherheit/1_Einleitung.html",
     "href": "A_Unsicherheit/1_Einleitung.html",
-    "title": "Unsicherheit",
+    "title": "💥 Teil: Unsicherheit",
     "section": "",
     "text": "Übungsziele\n\n\n\n\nDu bist in der Lage bei zukünftigen GIS Arbeiten mit der Unsicherheit von Punktdaten umzugehen.\nDu kannst reale räumliche Objekte dahin beurteilen, ob diese grenzscharf oder nur mit einer Unschärfe abgebildet werden können.\nDu kannst mit Fuzzy-Tallness umgehen und diese definieren.\nDu kannst unscharfe Phänomene in deinen zukünftigen Projekten berücksichtigen und deren Unschärfe in den Geoverarbeitungsprozess integrieren und auswerten.\nDu kannst ein Modell mit ModelBuilder erstellen und ausführen.",
     "crumbs": [
-      "Unsicherheit"
+      "💥 Teil: Unsicherheit"
     ]
   },
   {
@@ -2946,7 +2935,7 @@
     "href": "C_Programmieren_1/1_Einleitung.html",
     "title": "Programmieren I",
     "section": "",
-    "text": "Vorbereitung\nIm Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt Mit ArcGIS Installation durch.\nWer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt Ohne ArcGIS Installation durch.",
+    "text": "Vorbereitung\nUm Python sinnvoll lernen und anwenden zu können, müsst ihr ein paar Programme installieren. Die folgenden Kapitel leiten euch dabei an.",
     "crumbs": [
       "Programmieren I"
     ]
@@ -2956,7 +2945,7 @@
     "href": "C_Programmieren_1/1_Einleitung.html#vorbereitung",
     "title": "Programmieren I",
     "section": "",
-    "text": "Mit ArcGIS Installation (v.a. Windows Nutzer)\nUm zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte im Video (s.u.) ausführen:\n\nPython Command Prompt suchen und starten\nMittels dem Befehl cd in dein Persönliches Laufwerk wechseln (cd C:\\Users\\DeinUserName\\Desktop, siehe dazu diesen Video)\nMittels des Befehls jupyter lab das Programm Juypter Lab starten\nMit Klick auf den Button ein neues Notebook erstellen\n\n\n\nOhne ArcGIS Installation (v.a. Mac / Linux Nutzer)\nWer keine ArcGIS installation hat, sollte folgende Software installieren:\n\nÜberprüfe, ob Python &gt; 3.9 installiert ist. Tippe dafür folgenden Befehl in den Terminal: bash     python3 --version\nWenn die Python nicht vorhanden oder die Version älter / kleiner als 3.9 ist, installiert eine aktuelle Version von Python: https://www.python.org/downloads/\nInstalliert Miniconda von dieser Website: https://docs.conda.io/projects/miniconda/en/latest/\nTippt folgende Befehle in der Commandozeile ein:\nconda create --name geopython1\nconda activate geopython1   # Windows nutzer: conda activate geopython1\nconda install -c conda-forge jupyterlab pandas",
+    "text": "Positron IDE\nUm mit R zu Programmieren habt ihr bisher in RStudio gearbeitet. RStudio ist eine sogenannte “Integrierte Entwicklungsumgebung” (Integrated development environment, IDE), wo ihr eure R-Scripts entwicklen konntet. Posit, die Herstellen von RStudio, haben eine zweite IDE erstellt, die von der Bedienung sehr ähnlich ist wie RStudio, aber Python besser unterstützt. Diese IDE heisst Positron und ist ebenfalls kostenlos und mit freiem Quellcode verfügbar.\nLadet die neuste Version von Positron für euer Betriebssystem herunter (siehe hier) und installiert diese.\n\n\nPython\nIm Modul Angewandte Geoinformatik benutzen wir Python. Mit der Installation von ArcGIS sollte die Python bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt Mit ArcGIS Installation durch.\n\n\n\n\n\n\nHinweis\n\n\n\nWer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt Ohne ArcGIS Installation durch.\n\n\n\nMit ArcGIS Installation (v.a. Windows Nutzer)\nUm zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte ausführen:\n\nPython Command Prompt suchen und starten\nFolgender Befehl eingeben:\npython3 --version\nWenn der obige Befehl eine Fehlermeldung verursacht, bitte mit der der Anleitung Ohne ArcGIS Installation weiterfahren.\n\n\n\nOhne ArcGIS Installation (v.a. Mac / Linux Nutzer)\nWer keine ArcGIS installation hat, sollte folgendermassen vorgehen:\n\nÜberprüfe, ob Python ≥ 3.11 installiert ist. Tippe dafür folgenden Befehl in den Terminal:\npython3 --version\nWenn die Python nicht vorhanden oder die Version &lt; 3.11 ist, solltet ihr eine aktuelle Version von Python installieren: https://www.python.org/downloads/\nInstalliert Miniconda von dieser Website: https://docs.conda.io/projects/miniconda/en/latest/\n\n\n\n\nConda\nMit der Software conda verwalten wir unsere Python Packages in sogenannte conda environments. Erstellt die environment für den ersten Kurstag mit folgendem Befehl im Terminal:\nconda create --name geopython1\nconda activate geopython1   # Windows nutzer: activate geopython1\nconda install -c conda-forge jupyterlab pandas",
     "crumbs": [
       "Programmieren I"
     ]
@@ -2966,7 +2955,7 @@
     "href": "C_Programmieren_1/1_Einleitung.html#daten",
     "title": "Programmieren I",
     "section": "Daten",
-    "text": "Daten\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I → Datensätze herunterladen könnt.\n\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\n\n\n\nDatensatz (inkl. Link)\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet\n\n\n\n\n\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nPython kennen lernen, erste Interaktionen mit Python durch die Commandline\nErste Erfahrungen mit JupyterLab sammeln\nDie wichtigsten Datentypen in Python kennen lernen (bool, str, int, float, list, dict)\nPandas DataFrames kennen lernen und einfache Manipulationen durchführen",
+    "text": "Daten\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I → Datensätze herunterladen könnt.\n\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\n\n\n\nDatensatz\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet",
     "crumbs": [
       "Programmieren I"
     ]

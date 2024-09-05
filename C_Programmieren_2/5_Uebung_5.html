@@ -201,7 +201,7 @@ window.onload = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unsicherheit</span></a>
+ <span class="menu-text">💥 Teil: Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -719,16 +719,9 @@ window.onload = function() {
 <section id="sec-functions1-ex-gruezi" class="level2">
 <h2 class="anchored" data-anchor-id="sec-functions1-ex-gruezi">Übung 5.1</h2>
 <p>Erstelle eine Function, die <code>gruezi</code> heisst, einen Nachnamen als Input annimmt und per Sie grüsst.</p>
-<div id="51e2bf92" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gruezi(nachname):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Guten Tag, "</span> <span class="op">+</span> nachname</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="82eaf455" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat soll in etwa folgendermassen aussehen:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>gruezi(nachname <span class="op">=</span> <span class="st">"van Rossum"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6789f9e8" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat soll in etwa folgendermassen aussehen:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>gruezi(nachname <span class="op">=</span> <span class="st">"van Rossum"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>'Guten Tag, van Rossum'</code></pre>
 </div>
@@ -737,16 +730,9 @@ window.onload = function() {
 <section id="sec-gruezi2" class="level2">
 <h2 class="anchored" data-anchor-id="sec-gruezi2">Übung 5.2</h2>
 <p>Erstelle eine neue Funktion <code>gruezi2</code> welche im Vergleich zu <code>gruezi</code> einen weiteren Parameter namens <code>anrede</code> annimmt.</p>
-<div id="046db30a" class="cell" data-execution_count="3">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gruezi2(nachname, anrede):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Guten Tag, "</span> <span class="op">+</span> anrede <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> nachname</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="eaa01088" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat soll in etwa folgendermassen aussehen:</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>gruezi2(nachname <span class="op">=</span> <span class="st">"van Rossum"</span>, anrede <span class="op">=</span> <span class="st">"Herr"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cb881c3f" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat soll in etwa folgendermassen aussehen:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>gruezi2(nachname <span class="op">=</span> <span class="st">"van Rossum"</span>, anrede <span class="op">=</span> <span class="st">"Herr"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>'Guten Tag, Herr van Rossum'</code></pre>
 </div>
@@ -755,16 +741,9 @@ window.onload = function() {
 <section id="übung-5.3" class="level2">
 <h2 class="anchored" data-anchor-id="übung-5.3">Übung 5.3</h2>
 <p>Erstelle eine Funktion <code>add</code> die zwei Zahlen summiert.</p>
-<div id="c5a624ff" class="cell" data-execution_count="5">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(zahl1, zahl2):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> zahl1 <span class="op">+</span> zahl2</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="0af82170" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>add(zahl1 <span class="op">=</span> <span class="dv">2</span>, zahl2 <span class="op">=</span> <span class="dv">10</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9dac92a1" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>add(zahl1 <span class="op">=</span> <span class="dv">2</span>, zahl2 <span class="op">=</span> <span class="dv">10</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>12</code></pre>
 </div>
@@ -773,21 +752,9 @@ window.onload = function() {
 <section id="übung-5.4" class="level2">
 <h2 class="anchored" data-anchor-id="übung-5.4">Übung 5.4</h2>
 <p>Erstelle eine Funktion <code>square</code>, welche den Input quadriert.</p>
-<div id="e5458011" class="cell" data-execution_count="7">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(zahl):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> zahl <span class="op">*</span> zahl</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># oder</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(zahl):</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> zahl<span class="op">**</span><span class="dv">2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="5e616c08" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>square(zahl <span class="op">=</span> <span class="dv">5</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b8496baf" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>square(zahl <span class="op">=</span> <span class="dv">5</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>25</code></pre>
 </div>
@@ -796,18 +763,10 @@ window.onload = function() {
 <section id="übung-5.5" class="level2">
 <h2 class="anchored" data-anchor-id="übung-5.5">Übung 5.5</h2>
 <p>Erstelle eine Funktion <code>meter_zu_fuss</code>, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Erinnerung: 30.48 cm ergeben 1 Fuss.</p>
-<div id="d2267436" class="cell" data-execution_count="9">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> meter_zu_fuss(meter):</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    fuss <span class="op">=</span> meter <span class="op">*</span> <span class="dv">100</span> <span class="op">/</span> <span class="fl">30.48</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fuss</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="9556aa25" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>meter_zu_fuss(meter <span class="op">=</span> <span class="fl">1.80</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6c0805bf" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>meter_zu_fuss(meter <span class="op">=</span> <span class="fl">1.80</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>5.905511811023622</code></pre>
 </div>

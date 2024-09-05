@@ -204,7 +204,7 @@ window.onload = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unsicherheit</span></a>
+ <span class="menu-text">💥 Teil: Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -738,13 +738,13 @@ window.onload = function() {
 <li><p>Wenn die Session geladen ist, könnt ihr eure Übungsdaten über den <code>Upload</code> Button hochladen. Öffnet anschliessend ein neues Jupyter Notebook und speichert es unter dem Namen <code>visualisierung_zeckenstiche.ipynb</code>.</p></li>
 <li><p>Nun müssen wir noch die Packages installieren, die wir in dieser Session haben wollen. Statt <code>conda</code> verwenden wir jetzt allerdings <code>pip</code>, da die Serverlösung mit diesem Packagemanager arbeitet.</p></li>
 </ol>
-<div id="17add0ab" class="cell" data-execution_count="1">
+<div id="7b342ef6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install geopandas folium matplotlib mapclassify</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Startet nun das Kernel neu über Kernel -&gt; Restart.</p>
 <p>Importiert nun als erstes die zwei Packages <code>geopandas</code> und <code>folium</code>.</p>
 <p>Ladet zudem die drei Datensätze <code>wald.gpkg</code>, <code>zeckenstiche_original.gpkg</code> und <code>zeckenstiche_simuliert.gpkg</code> mit der <code>read_file</code> Funktion von Geopandas in euer Jupyter Notebook.</p>
-<div id="53c2135b" class="cell" data-execution_count="3">
+<div id="5fdebef6" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -840,7 +840,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <section id="übung-2-base-map" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2-base-map">Übung 2: Base Map</h2>
 <p>Nun können wir unsere Karte bauen. Zuerst müssen wir eine Basiskarte erstellen, zu welcher wir dann die weiteren Layer hinzufügen können. Dazu nutzen wir nun Folium. Als Mittelpunkt der Karte wählen wir die WGS84 Koordinaten der Stadt Zürich (Zurich latitude: 47.36667, longitude: 8.55) aus.</p>
-<div id="9d1405e4" class="cell" data-execution_count="4">
+<div id="0b1a95d9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Zurich latitude longitude: 47.36667, 8.55</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">map</span> <span class="op">=</span> folium.Map(location<span class="op">=</span>[<span class="fl">47.36667</span>, <span class="fl">8.55</span>], zoom_start <span class="op">=</span> <span class="dv">13</span>, tiles <span class="op">=</span> <span class="st">"cartodbpositron"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -852,7 +852,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <p>Da unser Wald Datensatz aus zwei Zeilen mit Wald und nicht Wald besteht, müssen wir die Waldflächen zuerst noch rausfiltern.</p>
 <p>Folium kann nur das weltweite CRS WGS84 (EPSG:4326) verarbeiten und da der Geodataframe Wald das Schweizer CRS CH1903+ / LV95 (EPSG:2056) verwendet, müssen wir dieses mittels <code>to_crs()</code> transformieren, bevor wir ihn visualisieren können.</p>
 <p>Tipp: Wenn ihr am Schluss des Commands ein ; hinzufügt, wird kein Output generiert. Somit wird nicht für jeden Layer den wir hinzufügen, eine Karte erstellt.</p>
-<div id="6a1a7328" class="cell" data-execution_count="5">
+<div id="7fe29438" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wald zur Karte hinzufügen</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>is_wald <span class="op">=</span> wald[wald[<span class="st">"Wald_text"</span>] <span class="op">==</span> <span class="st">"ja"</span>] <span class="co"># Selektieren nur den Wald</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>is_wald.to_crs(<span class="dv">4326</span>).explore(</span>
@@ -867,7 +867,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <section id="übung-4-original-und-simulierter-zeckenstich-layer-hinzufügen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-4-original-und-simulierter-zeckenstich-layer-hinzufügen">Übung 4: Original und simulierter Zeckenstich Layer hinzufügen</h2>
 <p>Nun wollen wir neben dem Wald Layer (Polygon) den originalen Zeckenstiche Layer (Punkte) hinzufügen. Kopiere dazu den unteren Code.</p>
-<div id="1075198e" class="cell" data-execution_count="6">
+<div id="3c5789ec" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Original Zeckenstiche zur Karte hinzufügen</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche_original_gpd.to_crs(<span class="dv">4326</span>).explore(</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> <span class="bu">map</span>,                                     <span class="co"># Fügt diesen Layer der Map map hinzu</span></span>
@@ -889,7 +889,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <section id="übung-5-layer-control-hinzufügen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-5-layer-control-hinzufügen">Übung 5: Layer Control hinzufügen</h2>
 <p>Zum Abschluss wollen wir noch ein <code>Layer Control</code> hinzufügen, damit wir die verschiedenen Layer ein- und ausblenden können. Schaut dafür im <a href="https://python-visualization.github.io/folium/latest/user_guide.html">User Guide von Folium</a> und sucht nach der Layer Control Funktion und versucht diese eurer <code>map</code> hinzuzufügen. Zum Schluss kannst du die <code>map</code> aufrufen, damit diese Dargestellt wird. Das finale Produkt sollte wie folgt aussehen:</p>
-<div id="7f3ede72" class="cell" data-execution_count="9">
+<div id="fc912d59" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
 <html>
@@ -918,7 +918,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_569a881b4080e224b255e7ae54e20160 {
+                #map_dbf8239ae4c4cc638100b4a5800a5ab6 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -932,14 +932,14 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_569a881b4080e224b255e7ae54e20160&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_dbf8239ae4c4cc638100b4a5800a5ab6&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_569a881b4080e224b255e7ae54e20160 = L.map(
-                &quot;map_569a881b4080e224b255e7ae54e20160&quot;,
+            var map_dbf8239ae4c4cc638100b4a5800a5ab6 = L.map(
+                &quot;map_dbf8239ae4c4cc638100b4a5800a5ab6&quot;,
                 {
                     center: [47.36667, 8.55],
                     crs: L.CRS.EPSG3857,
@@ -953,27 +953,27 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 
         
     
-            var tile_layer_345d9193651c1843163963338c46011f = L.tileLayer(
+            var tile_layer_c6e47fb9058e238c0e34537b7aca8817 = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 20, &quot;maxZoom&quot;: 20, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abcd&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_345d9193651c1843163963338c46011f.addTo(map_569a881b4080e224b255e7ae54e20160);
+            tile_layer_c6e47fb9058e238c0e34537b7aca8817.addTo(map_dbf8239ae4c4cc638100b4a5800a5ab6);
         
     
-            var layer_control_b5d544c264032f8e73bad4f5e654a1b3_layers = {
+            var layer_control_71c9e119e4e1ab609e73abe188911fb4_layers = {
                 base_layers : {
-                    &quot;cartodbpositron&quot; : tile_layer_345d9193651c1843163963338c46011f,
+                    &quot;cartodbpositron&quot; : tile_layer_c6e47fb9058e238c0e34537b7aca8817,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_b5d544c264032f8e73bad4f5e654a1b3 = L.control.layers(
-                layer_control_b5d544c264032f8e73bad4f5e654a1b3_layers.base_layers,
-                layer_control_b5d544c264032f8e73bad4f5e654a1b3_layers.overlays,
+            let layer_control_71c9e119e4e1ab609e73abe188911fb4 = L.control.layers(
+                layer_control_71c9e119e4e1ab609e73abe188911fb4_layers.base_layers,
+                layer_control_71c9e119e4e1ab609e73abe188911fb4_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_569a881b4080e224b255e7ae54e20160);
+            ).addTo(map_dbf8239ae4c4cc638100b4a5800a5ab6);
 
         
 </script>

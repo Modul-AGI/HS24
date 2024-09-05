@@ -200,7 +200,7 @@ window.onload = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unsicherheit</span></a>
+ <span class="menu-text">💥 Teil: Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -729,7 +729,7 @@ window.onload = function() {
 <section id="histogramm-aus-list" class="level3">
 <h3 class="anchored" data-anchor-id="histogramm-aus-list">Histogramm aus <code>List</code></h3>
 <p><code>pandas</code> vereinfacht das Visualisieren von Daten sogar soweit, dass es sich jewils lohnt seine Listen, Dictionaries usw. zuerst in eine <code>Series</code> oder <code>DataFrame</code> zu überführen um sie zu visualisieren (wie ich zum Beispiel in <a href="../C_Programmieren_2/10_Zufallzahlen.html" class="quarto-xref"><span>Zufallszahlen generieren</span></a> jeweils gemacht habe).</p>
-<div id="e2c719f2" class="cell" data-execution_count="1">
+<div id="7e00cc83" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -751,7 +751,7 @@ window.onload = function() {
 <section id="boxplot-aus-list" class="level3">
 <h3 class="anchored" data-anchor-id="boxplot-aus-list">Boxplot aus <code>List</code></h3>
 <p>Das Visualisieren als Boxplot ist sehr ähnlich, man ersetzt <code>"hist"</code> lediglich durch <code>"box</code>. Eine komplette liste der möglichen Argumente für findet ihr hier: <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.html</a></p>
-<div id="c16642d3" class="cell" data-execution_count="2">
+<div id="9ed25fc8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>random_gamma.plot(kind <span class="op">=</span> <span class="st">"box"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -765,7 +765,7 @@ window.onload = function() {
 <section id="scatterplot-aus-dataframe" class="level3">
 <h3 class="anchored" data-anchor-id="scatterplot-aus-dataframe">Scatterplot aus DataFrame</h3>
 <p>Um einen Scatterplot zu erstellen, braucht es eine <code>DataFrame</code> (eine <code>Series</code> reicht hierfür nicht aus).</p>
-<div id="bb8c5cd9" class="cell" data-execution_count="3">
+<div id="9eff9ec7" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> pd.read_csv(<span class="st">"data/zeckenstiche.csv"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -833,7 +833,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 </div>
 </div>
 </div>
-<div id="4aeef34c" class="cell" data-execution_count="4">
+<div id="1a437723" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(<span class="st">"x"</span>, <span class="st">"y"</span>, kind <span class="op">=</span> <span class="st">"scatter"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -850,7 +850,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <section id="statische-karte-aus-geodataframe" class="level3">
 <h3 class="anchored" data-anchor-id="statische-karte-aus-geodataframe">Statische Karte aus GeoDataFrame</h3>
 <p>Um aus <em>GeoDataFrames</em> Karten zu machen verwendet man ebenfalls die <code>.plot()</code> Methode. Um wirklich schöne Karten mit Python herzustellen braucht man viel Übung. Für eine schnelle Visualisierung reicht aber die <code>.plot()</code> Methode.</p>
-<div id="1375c35e" class="cell" data-execution_count="5">
+<div id="42657f8b" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> gpd.read_file(<span class="st">"data/zeckenstiche.gpkg"</span>)</span>
@@ -947,7 +947,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 </div>
 </div>
 <p><strong>Einfache Plots ohne anpassung:</strong></p>
-<div id="0ebfab6c" class="cell" data-execution_count="6">
+<div id="7b26c96a" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>wald.plot()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -961,7 +961,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </div>
 </div>
 <p><strong>Anpassung der Plot Grösse:</strong></p>
-<div id="2babb281" class="cell" data-execution_count="7">
+<div id="dcf2a28c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>wald.plot(figsize <span class="op">=</span> (<span class="dv">5</span>,<span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -975,7 +975,7 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </div>
 </div>
 <p><strong>Choroplethenkarte Karte</strong></p>
-<div id="6b9cde74" class="cell" data-execution_count="8">
+<div id="7a6bcbc0" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> ListedColormap</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>my_cmap <span class="op">=</span> ListedColormap([<span class="st">"green"</span>,<span class="st">"lightgrey"</span>])</span>
@@ -994,7 +994,7 @@ Cell <span class="ansi-green-fg">In[8], line 4</span>
 </div>
 </div>
 <p><strong>Mehrere Layers:</strong></p>
-<div id="99fafde6" class="cell" data-execution_count="9">
+<div id="20178c31" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.plot(column <span class="op">=</span> <span class="st">"Wald_text"</span>, legend <span class="op">=</span> <span class="va">True</span>, cmap <span class="op">=</span> my_cmap)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(color <span class="op">=</span> <span class="st">"Red"</span>, ax <span class="op">=</span> base)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1014,23 +1014,23 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 <h3 class="anchored" data-anchor-id="interaktive-karten-aus-geodataframe">Interaktive Karten aus GeoDataFrame</h3>
 <p>Weitere Informationen dazu findet ihr hier: <a href="https://geopandas.org/docs/user_guide/interactive_mapping.html" class="uri">https://geopandas.org/docs/user_guide/interactive_mapping.html</a></p>
 <p>Vollautomatisch, ohne Anpassungen:</p>
-<div id="556077ac" class="cell" data-execution_count="10">
+<div id="0ac7dec7" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zeckenstiche Rot eingefärbt:</p>
-<div id="9aa6b98e" class="cell" data-execution_count="11">
+<div id="63907302" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore(color <span class="op">=</span> <span class="st">"red"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zeckenstiche nach <code>"accuracy"</code> eingefärbt:</p>
-<div id="7a707c1d" class="cell" data-execution_count="12">
+<div id="1cdbcb15" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore(column <span class="op">=</span> <span class="st">"accuracy"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Wald nach <code>"Wald_text"</code> eingefärbt (beachte, dass ich <code>my_cmap</code> weiter oben erstellt habe!):</p>
-<div id="62a30f44" class="cell" data-execution_count="13">
+<div id="12c9e964" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>wald.explore(column <span class="op">=</span> <span class="st">"Wald_text"</span>, cmap <span class="op">=</span> my_cmap)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zwei übereinander gelagerte Layers:</p>
-<div id="76d3ae65" class="cell" data-execution_count="14">
+<div id="ecd27133" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.explore(column <span class="op">=</span> <span class="st">"Wald_text"</span>, cmap <span class="op">=</span> my_cmap)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche.explore(m <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"red"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1050,7 +1050,7 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 <section id="sec-geoviz" class="level2">
 <h2 class="anchored" data-anchor-id="sec-geoviz">Anhang 2: Geodaten visualisieren</h2>
 <p>In folgenden Beispielen zeigen wir noch ein paar einfache Wege, wie ihr die Zeckenstichdaten visualisieren könnt.</p>
-<div id="1a465422" class="cell" data-execution_count="15">
+<div id="0241d251" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1161,7 +1161,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <section id="kernel-density-plot" class="level3">
 <h3 class="anchored" data-anchor-id="kernel-density-plot">Kernel Density Plot</h3>
 <p>Mit der Erweiterung <code>seaborn</code> lassen sich mit wenigen Zeilen Code eine <em>Kernel Density</em> rechnen und visualisieren. Siehe nachstehenden Code:</p>
-<div id="fc5ddabc" class="cell" data-execution_count="16">
+<div id="2875d12b" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
@@ -1189,7 +1189,7 @@ Cell <span class="ansi-green-fg">In[12], line 1</span>
 <section id="hintergrundkarte" class="level3">
 <h3 class="anchored" data-anchor-id="hintergrundkarte">Hintergrundkarte</h3>
 <p>Mit der Erweiterung <code>contextily</code> kann man sehr schnell und einfach Hintergrundkarten in den Plot einbinden. Dafür muss das <em>GeoDataFrame</em> vorher aber in WGS84 Koordinaten (EPSG 3857) konvertiert werden (mit <code>to_crs</code>, s.u.).</p>
-<div id="0364d660" class="cell" data-execution_count="17">
+<div id="250e14e4" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> contextily <span class="im">as</span> ctx</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
@@ -1215,7 +1215,7 @@ Cell <span class="ansi-green-fg">In[13], line 1</span>
 <section id="kde-mit-hintergrundkarte" class="level3">
 <h3 class="anchored" data-anchor-id="kde-mit-hintergrundkarte">KDE mit Hintergrundkarte</h3>
 <p>Kernel Denisty und Hintergrundkarte können auch kombiniert werden:</p>
-<div id="d715ae70" class="cell" data-execution_count="18">
+<div id="c666316f" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> zeckenstiche_gpd.to_crs(epsg <span class="op">=</span> <span class="dv">3857</span>).geometry.x</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>lng <span class="op">=</span> zeckenstiche_gpd.to_crs(epsg <span class="op">=</span> <span class="dv">3857</span>).geometry.y</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>

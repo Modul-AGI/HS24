@@ -201,7 +201,7 @@ window.onload = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unsicherheit</span></a>
+ <span class="menu-text">💥 Teil: Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -719,7 +719,7 @@ window.onload = function() {
 <section id="übung-4.1" class="level2">
 <h2 class="anchored" data-anchor-id="übung-4.1">Übung 4.1</h2>
 <p>Importiere <code>pandas</code> und nutze die Funktion <code>DataFrame</code> um <code>people</code> in eine DataFrame umzuwandeln (siehe dazu das Beispiel unten). Weise den Output der Variable <code>people_df</code> zu und schau dir <code>people_df</code> an.</p>
-<div id="10b1224c" class="cell" data-execution_count="1">
+<div id="e772d92a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>people <span class="op">=</span> {<span class="st">"vornamen"</span>: [<span class="st">"Christopher"</span>, <span class="st">"Henning"</span>, <span class="st">"Severin"</span>], <span class="st">"nachnamen"</span>: [<span class="st">"Annen"</span>,<span class="st">"May"</span>, <span class="st">"Kantereit"</span>], <span class="st">"groessen"</span>: [<span class="dv">174</span>, <span class="dv">182</span>, <span class="dv">162</span>]}</span>
@@ -731,28 +731,21 @@ window.onload = function() {
 <section id="sec-ex-to-csv" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-to-csv">Übung 4.2</h2>
 <p>In der Praxis kommen Tabellarische Daten meist als “csv” Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.</p>
-<div id="85833906" class="cell" data-execution_count="2">
+<div id="22729b24" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>people_df.to_csv(<span class="st">"people.csv"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Achtung!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Falls ihr nicht wisst, wo das csv abgespeichet ist solltet ihr das Kapitel <span class="quarto-unresolved-ref">?sec-jupyternotebook</span> nochmals durchlesen.</p>
-<p>Die <em>Working Directory</em> zu kennen ist wichtig, besonders auch für die nächste Aufgabe. Falls ihr die aktuelle Working Directory neu setzen und dafür JupyterLab schliessen müsst, denkt daran die Notebook vorgängig zu speichern und im File Explorer aufzusuchen.</p>
-</div>
-</div>
+<!-- :::{.callout-note}
+## Achtung!
+
+Falls ihr nicht wisst, wo das csv abgespeichet ist solltet ihr das Kapitel @sec-jupyternotebook nochmals durchlesen. 
+
+Die *Working Directory* zu kennen ist wichtig, besonders auch für die nächste Aufgabe. Falls ihr die aktuelle Working Directory neu setzen und dafür JupyterLab schliessen müsst, denkt daran die Notebook vorgängig zu speichern und im File Explorer aufzusuchen.
+::: -->
 </section>
 <section id="sec-ex-import-zeckenstiche" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-import-zeckenstiche">Übung 4.3</h2>
 <p>Genau so einfach ist es eine csv zu importieren. Lade die Datei “zeckenstiche.csv” (siehe <a href="1_Einleitung.html#tbl-datensaetze" class="quarto-xref">Tabelle&nbsp;<span>1</span></a>) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei “zeckenstiche.csv”.</p>
-<div id="6d7f57f6" class="cell" data-execution_count="3">
+<div id="40a7788a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ich habe die Daten in einem Unterordner "data" abgespeichert</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> pd.read_csv(<span class="st">"data/zeckenstiche.csv"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -760,7 +753,7 @@ Achtung!
 <section id="sec-ex-scatterplot" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-scatterplot">Übung 4.4</h2>
 <p>Die <em>DataFrame</em> <code>zeckenstiche</code> beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus.</p>
-<div id="04bb3799" class="cell" data-execution_count="4">
+<div id="18aac58c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> zeckenstiche.plot.scatter(<span class="st">"x"</span>,<span class="st">"y"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fig.axis(<span class="st">"equal"</span>)</span>
@@ -771,24 +764,12 @@ Achtung!
 <section id="sec-ex-sel-col" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-sel-col">Übung 4.5</h2>
 <p>Um eine einzelne Spalte zu selektieren (z.B. die Spalte “ID”), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer <em>Dictionary</em>. Probiere es aus.</p>
-<div id="7fd453cc" class="cell" data-execution_count="5">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche[<span class="st">"ID"</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 </section>
 <section id="sec-ex-new-col" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-new-col">Übung 4.6</h2>
 <p>Auch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen <em>Dictionary</em> Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.).</p>
-<div id="0ea904b8" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche[<span class="st">"Stichtyp"</span>] <span class="op">=</span> <span class="st">"Zecke"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="e9b10c09" class="cell" data-execution_count="7">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div id="2707e61a" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche[<span class="st">"Stichtyp"</span>] <span class="op">=</span> <span class="st">"Zecke"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

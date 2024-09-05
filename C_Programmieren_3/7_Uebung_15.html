@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -201,7 +167,7 @@ window.onload = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unsicherheit</span></a>
+ <span class="menu-text">💥 Teil: Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -718,18 +684,6 @@ window.onload = function() {
 <h2 class="anchored" data-anchor-id="sec-ex-import-wald">Übung 15.1</h2>
 <p>Lade das File “wald.gpkg” (siehe <a href="../C_Programmieren_1/1_Einleitung.html#tbl-datensaetze" class="quarto-xref">Tabelle&nbsp;<span>1</span></a>) herunter und speichere es in deiner Workings Directory. Importiere den Datensatz und speichere ihn in der Variable <code>wald</code>.</p>
 <p>Schau dir <code>wald</code> an (mit <code>type</code>, <code>.plot()</code> etc.)</p>
-<div id="db6a423a" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>wald <span class="op">=</span> gpd.read_file(<span class="st">"data/wald.gpkg"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>wald</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(wald)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>wald.plot()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 </section>
 <section id="sec-ex-spatialjoin" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-spatialjoin">Übung 15.2</h2>
@@ -747,19 +701,6 @@ Wichtig!
 <p>Melde dich bei den Betreuern wenn der <em>SpatialJoin</em> bei dir nicht funktioniert und du eine Fehlermeldung bekommst.</p>
 </div>
 </div>
-<div id="5c917251" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd <span class="op">=</span> gpd.read_file(<span class="st">"data/zeckenstiche.gpkg"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gpd.sjoin(left_df <span class="op">=</span> wald, right_df <span class="op">=</span> zeckenstiche_gpd) </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># in beiden Fällen hat der Output geich viele Zeilen. </span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># In der ersten Variante ist die Geometrie</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># des Outputs "Point", im zweiten Fall "Multipolygon"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 </section>
 <section id="sec-ex-count" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-count">Übung 15.3</h2>
@@ -770,26 +711,10 @@ Wichtig!
 <li>Werte in der Spalte mit “ja” vergleichen</li>
 <li>Anzahl <code>True</code> mit <code>sum()</code> zählen (<code>True</code> entspricht immer <code>1</code>, <code>False</code> entspricht immer <code>0</code>)</li>
 </ol>
-<div id="227a5c30" class="cell" data-execution_count="3">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die folgende Variante (mit dem Output "point") ist sinnvoller, da auch</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># wir uns primär für die Punkte (Zeckenstiche) interessieren.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche_join <span class="op">=</span> gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(zeckenstiche_join[<span class="st">"Wald_text"</span>] <span class="op">==</span> <span class="st">"ja"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 </section>
 <section id="übung-15.4" class="level2">
 <h2 class="anchored" data-anchor-id="übung-15.4">Übung 15.4</h2>
 <p>Berechne nun <em>Anteil</em> der Zeckenstiche im Wald (gemessen an der Anzahl Zeckenstich-Meldungen total). Weise den Output der Variabel <code>anteil_wald</code> zu.</p>
-<div id="e37c5fa1" class="cell" data-execution_count="4">
-<details class="code-fold">
-<summary>Musterlösung</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>anteil_wald <span class="op">=</span> <span class="bu">sum</span>(zeckenstiche_join[<span class="st">"Wald_text"</span>] <span class="op">==</span> <span class="st">"ja"</span>)<span class="op">/</span><span class="bu">len</span>(zeckenstiche_join[<span class="st">"Wald_text"</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 
 
 </section>

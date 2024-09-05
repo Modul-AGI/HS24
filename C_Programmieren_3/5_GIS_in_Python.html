@@ -201,7 +201,7 @@ window.onload = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Unsicherheit</span></a>
+ <span class="menu-text">💥 Teil: Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -717,7 +717,7 @@ window.onload = function() {
 <p>Manche mag das jetzt überraschen, andere haben es vielleicht schon gemerkt: Mit <strong>GIS</strong> hatte unseres bisheriges Wirken in Python eigentlich wenig zu tun. Unsere Zeckenstiche haben zwar x/y-Koordinaten, aber diese haben wir bisher gleich behandlet wie alle anderen Spalten.</p>
 <p>Anders gesagt: <em>Wir</em> wissen ja, dass mit den Spalten <code>x</code> und <code>y</code> Koordinaten in der Schweiz gemeint sind, Python hingegen wusste das bisher (noch) nicht. Der konkrete Raumbezug fehlt also noch, und das wird irgendwann problematisch: Denn bald wollen wir für jeden simulierten Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Das ist eine explizit räumliche Abfrage, welche nur mit explizit räumlichen Geodaten beantwortet werden kann.</p>
 <p>Was wir später mit den simulierten Zeckenstiche machen wollen, spielen wir an dieser Stelle mit den original Zeckenstichmeldungen (<code>zeckenstiche.csv</code>, siehe <a href="../C_Programmieren_1/1_Einleitung.html#tbl-datensaetze" class="quarto-xref">Tabelle&nbsp;<span>1</span></a>) durch.</p>
-<div id="b0c78f1f" class="cell" data-execution_count="1">
+<div id="ba15d42f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Unsere Zeckenstiche hatten wir auf folgende Weise importiert:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -800,7 +800,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 <li><strong>crs</strong>: ein Attribut <code>crs</code> welches das Koordinatenbezugssystem der Geometriespalte enthält.</li>
 </ol>
 <p>Beide Bestandteile müssen wir bei der Erstellung der <em>GeoDataFrame</em> festlegen. Nachstehend seht ihr, wie ihr dies bei den Zeckenstichen machen könnt, was diese Bestandteile genau bedeuten seht ihr in <a href="#sec-pythongis-datenstruktur" class="quarto-xref"><span>Aufbau von GeoDataFrames</span></a> (<strong>geometry</strong>) und <a href="#sec-pythongis-crs" class="quarto-xref"><span>Koordinatenbezugssystem</span></a> (<strong>crs</strong>).</p>
-<div id="f11eeb33" class="cell" data-execution_count="2">
+<div id="dde5c06d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>geom <span class="op">=</span> gpd.points_from_xy(</span>
@@ -834,7 +834,7 @@ Cell <span class="ansi-green-fg">In[2], line 4</span>
 </div>
 </div>
 <p>Nun sehen wir, dass die neue <code>geometry</code> Spalte die Punkt-Geometrie enthält.</p>
-<div id="5b9a4e8f" class="cell" data-execution_count="3">
+<div id="c426b6f3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -848,7 +848,7 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 </div>
 </div>
 <p>Zudem hat die <em>GeoDataFrame</em> nun ein Attribut <code>crs</code>, wo das Koordinatenbezugssystem gespeichert ist.</p>
-<div id="da5ee9ea" class="cell" data-execution_count="4">
+<div id="fe6fa6d3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd.crs.name</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -883,7 +883,7 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <h2 class="anchored" data-anchor-id="sec-pythongis-crs">Koordinatenbezugssystem</h2>
 <p>Mit <code>crs =</code> wird das Koordinatenbezugssystem (engl. <strong>C</strong>oordinate <strong>R</strong>eference <strong>S</strong>ystem) unseres Datensatzes festgelegt. Das Koordinatenbezugssystem gibt unseren x/y-Zahlenwerten einen konkreten Raumbezug auf dem Planeten und macht aus ihnen Koordiaten <em>in der Schweiz</em>. Wie lautet aber das “Koordinatenbezugssystem” unserer Daten?</p>
 <p>Im Prinzip weiss diese Information nur derjenige, der die Daten erstellt hat. Man man das Koordinatensytem aber auch anhand der Koordinaten erahnen: Es handelt sich in unserem Fall um Werte im Bereich von 2’600’000 auf der einen und 1’200’000 auf der anderen Achse. Da wir wissen das die Daten aus der Schweiz stammen kann man mit etwas Erfahrung sagen, dass es sich um Daten im neuen Schweizer Koordinatenbezugssystem <a href="https://epsg.io/2056">CH1903+ / LV95</a> handeln muss. Der EPSG Code dieses Koordinatenbezugssystems lautet 2056 und diesen Code können wir in der Funktion <code>gpd.GeoDataFrame</code> nutzuen, um das Korrekte Koordinatenbezugssystem zu zuweisen.</p>
-<div id="6d5c60f3" class="cell" data-execution_count="5">
+<div id="8f2f90b6" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Attribut `crs` wurde aufgrund vom EPSG Code richtig erkannt:</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd.crs.name</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -899,7 +899,7 @@ Cell <span class="ansi-green-fg">In[5], line 2</span>
 </div>
 </div>
 <p>Diese CRS Information erlaubt uns auch, mit einer Zeile Code eine Webmap unserer Zeckenstiche zu machen. Versucht es aus!</p>
-<div id="2e87cc46" class="cell" data-execution_count="6">
+<div id="115268b1" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd.explore()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -917,7 +917,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 <h2 class="anchored" data-anchor-id="sec-pythongis-formate">Geodatenformate</h2>
 <p>Das Einlesen von CSV und die Konvertierung von <em>DataFrame</em> zu <em>GeoDataFrame</em> hat bei den Zeckenstichen zwar gut funktioniert, es ist aber auch etwas umständlich jedes Mal die <code>geometry</code> Spalte und das <code>crs</code> zu setzen. CSVs eignen sich nicht besonders gut für das speichern von Geodaten, insbesonders wenn die Daten komplexer sind (Linien, Polygone..)). Deshalb gibt es auch spezifische Datenformate, in den Geodaten gespeichert werden können. Bei diesen Datenformaten werden <code>geometry</code> und <code>crs</code> automatisch abgespeichert.</p>
 <p>Ihr seid im Studium mit solchen Datenformate bereits in Kontakt gekommen, sicher kennt ihr ESRI’s <em>File Geodatabases</em>/<em>Feature Classes</em> sowie <em>Shapefiles</em>. Dies sind häufig genutzte Formate, aber leider nicht offen, und gerade Shapefiles haben viele Tücken (siehe <a href="http://switchfromshapefile.org/">switchfromshapefile.org</a>). Es gibt dafür ganz tolle Alternativen, beispielsweise <em>Geopackages</em> (nicht zu verwechseln mit ArcGIS Pro Packages!). Mit nachstehendem Befehl können wir <code>zeckenstiche_gpd</code> als Geopackage abspeichern.</p>
-<div id="0b1b2ca2" class="cell" data-execution_count="7">
+<div id="6968ba6a" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd.to_file(<span class="st">"data/zeckenstiche.gpkg"</span>, driver <span class="op">=</span> <span class="st">"GPKG"</span>)   </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Wer UNBEDINGT ein shapefile abspeichern will, </span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># kann ".gpkg" mit ".shp" ersetzen</span></span>
@@ -925,7 +925,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </div>
 <p>Das File “zeckenstiche.gpkg” befindet sich nun in meiner <em>Working Directory</em> und ich kann sie mit <code>gpd.read_file("data/zeckenstiche.gpkg")</code> wieder einlesen. Im Unterschied zu vorher musst ich nun <code>geometry</code> und <code>crs</code> nicht mehr zuweisen, diese sind beim Schreiben des Geopackage abgespeichert worden. Das Geopackage kann ich nun auch mit ArcGIS / QGIS öffnen, wenn ich die Punkte interaktiv explorieren möchte.</p>
 <p>Im Block “Datenqualität und Unsicherheit” habt ihr mit dem Wald Datensatz gearbeitet. Ich habe diesen als <em>Geopackage</em> exportiert (siehe <a href="../C_Programmieren_1/1_Einleitung.html#tbl-datensaetze" class="quarto-xref">Tabelle&nbsp;<span>1</span></a>) und kann ihn wie im nachstehend Codeblock ersichtlich einlesen und visualisieren.</p>
-<div id="b969844e" class="cell" data-execution_count="8">
+<div id="2906aa41" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>wald <span class="op">=</span> gpd.read_file(<span class="st">"data/wald.gpkg"</span>) <span class="co"># &lt;- importiert das File "wald.gpkg"</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>wald</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1020,7 +1020,7 @@ File <span class="ansi-green-fg">/usr/share/miniconda/envs/modul-agi/lib/python3
 </div>
 </div>
 <p>Es handelt sich also um einen Datensatz mit nur zwei Zeilen, aber mehreren Polygonen pro Zeile (das macht es zu einem <em><strong>Multi</strong>polygon</em><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>). Mit <code>plot</code> können wir diesen Datensatz einfach visualisieren und mit den Zeckenstichdaten überlagern.</p>
-<div id="45a5b2ed" class="cell" data-execution_count="9">
+<div id="82f1855c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.plot(color <span class="op">=</span> [<span class="st">"Lightgrey"</span>,<span class="st">"Green"</span>])</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd.plot(ax <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"red"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -1036,7 +1036,7 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 </div>
 </div>
 <p>Noch einfacher und sogar mit einer Basemap und Zoom möglichkeit, geht es mit der <code>explore()</code> Methode. Nun wird übrigens auch klar, dass es sich bei unseren 10 Zeckenstichen um sehr dicht beieinanderliegenden Punkte handelt.</p>
-<div id="95a24468" class="cell" data-execution_count="10">
+<div id="e203cc30" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.explore()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd.explore(m <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"red"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
