@@ -1,6 +1,6 @@
 # Python Command Prompt {#sec-python-command-prompt}
 
-Um mit `R` zu Programmieren habt ihr bisher vermutlich in RStudio gearbeitet. RStudio ist eine sogenannte "Integrierte Entwicklungsumgebung" (i.e. IDE), wo ihr eure R-Scripts entwicklen konntet. Zu Beginn werden wir in diesem Kurs *ohne* Entwicklungsumgebung arbeiten und Python von der Konsole aus bedienen. 
+Um mit `R` zu Programmieren habt ihr bisher in RStudio gearbeitet. RStudio ist eine sogenannte "Integrierte Entwicklungsumgebung" (i.e. IDE), wo ihr eure R-Scripts entwicklen konntet. Die Herstellen von RStudio haben eine neue IDE erstellt, die von der Bedienung sehr ähnlich ist wie RStudio aber Python besser unterstützt. Diese IDE heisst *Positron* und ist ebenfalls kostenlos und mit freiem Quellcode verfügbar.  
 
 Startet dazu den *Python Command Prompt* indem ihr `Windowstaste` drückt und nach dieser Applikation sucht (einfach den Namen eingeben). Nach dem öffnen der Applikation sollte sich ein schwarzes Fenster öffnen und auf eure Eingabe warten (siehe @fig-python-cmd).
 

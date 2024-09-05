@@ -2,9 +2,8 @@
 
 ## Was ist Conda?
 
-Conda ist ein (von im Wesentlichen zwei[^pip]) Verwaltungssystem für Python[^conda] Bibliotheken welches unter Windows, macOS und Linux läuft. Mit Conda lassen sich diese Libraries und deren Abhängigkeiten schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten "Virtuellen Umgebungen". Diese Umgebungen ermöglichen es, dass Package Installationen in abgeschottenen "Container" erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.
+Conda ist ein Verwaltungssystem für Python Bibliotheken[^conda] welches unter Windows, macOS und Linux läuft. Neben Conda gibt es noch den "Package Manager" `pip`, welchen wir im Unterricht aber nicht nutzen werden. Mit Conda lassen sich diese Libraries schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten "Virtuellen Umgebungen". Diese Umgebungen ermöglichen es, dass Package Installationen in abgeschottenen "Container" erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.
 
-[^pip]: Neben Conda gibt es noch den "Package Manager" `pip`, welchen wir im Unterricht aber nicht nutzen werden.
 [^conda]: Genau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.
 
 ## Conda installieren
@@ -35,7 +34,7 @@ Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (`
 
 Jetzt wo wir ein eigenes Conda Environment erstellt haben (`geopython`) müssen wir dieses mit Libraries befüllen. Aktuell ist es nämlich noch ziemlich leer, wie ihr mit `conda list` sehen könnt (versucht es aus!).
 
-Letzte Woche hatten wir die Packages [`pandas`](chap-dataframes) sowie [`jupyter lab`](#sec-jupyternotebook) gebraucht. Diese Packages waren im Environment `arcgispro-py3` bereits vorinstalliert. 
+<!-- Letzte Woche hatten wir das Packages [`pandas`](chap-dataframes) gebraucht. Diese Packages waren im Environment `arcgispro-py3` bereits vorinstalliert.  -->
 
 <!--Wir installieren diese nun selbst und nutzen die gewonnene Freiheit um statt `jupyter notebook` das Package `jupyter lab` zu installieren (`lab` ist der Nachfolger von `notebook`). -->
 
@@ -44,9 +43,9 @@ conda install -c conda-forge jupyterlab   # installiert jupyterlab
 conda install -c conda-forge pandas       # installiert pandas
 ```
 
-`-c` ist in den obigen `install` Befehlen ein sogenannter Flag welcher ankündigt, dass gleich der "Channel" angegeben wird. In beiden Fällen nutzen wir den "Channel" `conda-forge`, d.h. die Packages werden von [conda-forge](https://conda-forge.org/) geladen. Welcher Channel angegeben werden muss kann über eine kurze Internetsuche in Erfahrung gebracht werden (z.B. nach "conda install pandas" suchen).
+`-c` ist in den obigen `install` Befehlen ein sogenannter Flag welcher ankündigt, dass gleich der "Channel" angegeben wird. In beiden Fällen nutzen wir den Channel `conda-forge`, d.h. die Packages werden von [conda-forge](https://conda-forge.org/) geladen. Welcher Channel angegeben werden muss kann über eine kurze Internetsuche in Erfahrung gebracht werden (z.B. nach "conda install pandas" suchen).
 
-Bestätigt die Rückfragen (`Proceed ([y]/n)?`) mit <kbd>y</kbd> + <kbd>Enter</kbd>. Schaut euch nun euer Environment mit `conda list` an und startet danach `jupyter lab` indem ihr eben diesen Befehl in der Konsole eingebt. Wechselt aber vorher das Verzeichnis zu einem sinvolleren Ort (wie in Kapitel @sec-jupyternotebook beschrieben).
+Bestätigt die Rückfragen (`Proceed ([y]/n)?`) mit <kbd>y</kbd> + <kbd>Enter</kbd>. Schaut euch nun euer Environment mit `conda list` an und startet danach `jupyter lab` indem ihr eben diesen Befehl in der Konsole eingebt. Wechselt aber vorher das Verzeichnis zu einem sinvolleren Ort.
 
 ## Conda cheat sheet {#sec-conda-cheat-sheet}
 

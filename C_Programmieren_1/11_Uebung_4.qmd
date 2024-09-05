@@ -1,6 +1,6 @@
 ---
 output: false
-echo: true                      # set to true to show solution
+echo: false                      # set to true to show solution
 code-fold: true
 code-summary: "Musterlösung"    
 ---
@@ -34,13 +34,13 @@ In der Praxis kommen Tabellarische Daten meist als "csv" Dateien daher. Wir kön
 people_df.to_csv("people.csv")
 ```
 
-:::{.callout-note}
+<!-- :::{.callout-note}
 ## Achtung!
 
 Falls ihr nicht wisst, wo das csv abgespeichet ist solltet ihr das Kapitel @sec-jupyternotebook nochmals durchlesen. 
 
 Die *Working Directory* zu kennen ist wichtig, besonders auch für die nächste Aufgabe. Falls ihr die aktuelle Working Directory neu setzen und dafür JupyterLab schliessen müsst, denkt daran die Notebook vorgängig zu speichern und im File Explorer aufzusuchen.
-:::
+::: -->
 
 ## Übung 4.3 {#sec-ex-import-zeckenstiche}
 
