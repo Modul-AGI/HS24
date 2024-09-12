@@ -176,7 +176,7 @@ Shapefiles können nur Spaltenbezeichnungen mit 10 Zeichen speichern. Alles ande
 abgeschnitten. Das Attribut "beschreibung" ist deshalb in der Datenbank als "beschreibung"
 gespeichert, im Shapefile aber nur als "beschreibu". Dies hat zur Folge, dass das Schema beider
 Feature Classes nicht gleich ist. Aus diesem Grund muss hier explizit die Übereinstimmung der
-Spalten bestimmt werden. Mit dem kleinen Stiftsymbol können Sie die Felder anpassen bzw. zuweisen. Das gleiche gilt für das Feld "id_erfasser" bzw. "id_erfasse" (siehe @fig-db2-uebung8-2).
+Spalten bestimmt werden. Mit dem kleinen Stiftsymbol können Sie die Felder anpassen bzw. zuweisen. (siehe @fig-db2-uebung8-2-1) Das gleiche gilt für das Feld "id_erfasser" bzw. "id_erfasse" (siehe @fig-db2-uebung8-2).
 8. Erstellen Sie eine neue Karte in ArcGIS Pro und laden Sie die Feature Class "waelder" aus der Server Datenbank.
 9. Sie haben jetzt die Wälder in die Datenbank importiert.
 10. Schauen Sie sich die Wälder auch in pgAdmin an. Machen Sie hierzu eine Select Abfrage im Query Tool. In der Ergebnis Tabelle sehen Sie in der Geometry-Spalte ein kleines Karten-Symbol (View all Geometries in this column). Dies öffnet den "Geometry Viewer". Sie sollten auch dort die Geometrien der importierten Wälder sehen (siehe @fig-db2-uebung8-3).
