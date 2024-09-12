@@ -186,9 +186,10 @@ Da wir jetzt alle unsere Wälder in dieselbe Datenbank laden, sind
 natürlich einige Wälder doppelt vorhanden. Dies ist für unser Vorhaben 
 aber nicht weiter schlimm.
 :::
+![Load data](figures/screenshot_uebung8_1.jpg){#fig-db2-uebung8-1}
 
 ::: {layout-ncol=2 layout-valign="bottom"}
-![Load data](figures/screenshot_uebung8_1.jpg){#fig-db2-uebung8-1}
+![Geoprocessing Append](figures/screenshot_uebung8_2_1.jpg){#fig-db2-uebung8-2-1}
 
 ![Geoprocessing Append](figures/screenshot_uebung8_2.jpg){#fig-db2-uebung8-2}
 :::
