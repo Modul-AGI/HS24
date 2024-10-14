@@ -2126,7 +2126,7 @@
     "href": "D_Netzwerkanalyse_1/2_Vorbereitung.html#übung-1-qgis-installieren",
     "title": "Vorbereitung",
     "section": "Übung 1: QGIS installieren",
-    "text": "Übung 1: QGIS installieren\nAuf der QGIS Homepage qgis.org finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den passenden Standalone Installer des “Longterm release (most stable)” herunter (aktuell 3.28). Installieren Sie QGIS nach dem Download.",
+    "text": "Übung 1: QGIS installieren\nAuf der QGIS Homepage qgis.org finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den passenden Standalone Installer des “Longterm release (most stable)” herunter (aktuell 3.34). Installieren Sie QGIS nach dem Download.",
     "crumbs": [
       "Netzwerkanalyse I",
       "<span class='chapter-number'>51</span>  <span class='chapter-title'>Vorbereitung</span>"
@@ -2148,7 +2148,7 @@
     "href": "D_Netzwerkanalyse_1/2_Vorbereitung.html#übung-3-daten-importieren",
     "title": "Vorbereitung",
     "section": "Übung 3: Daten importieren",
-    "text": "Übung 3: Daten importieren\nWährend Shapefiles im GIS-Unterricht bisher oft zur Speicherung von Vectordaten verwendet wurden, werden in QGIS vor allem Geopackage Dateien verwendet (.gpkg). QGIS kann Shapefiles durchaus lesen und schreiben, wir werden in den Übungen aber vor allem mit Geopackage Daten arbeiten. Geopackages sind eine alternative Methode, Vektordaten abzuspeichern. Sie beheben einige Defizite, die Shapefiles mit sich bringen. Siehe dazu auch die Website “Shapefiles must die”.\n\nNeues QGIS Projekt starten und Projektdatei speichern (Beachten Sie dazu die Empfehlungen am Anfang)\nCRS auf EPSG 2056 setzen\nAus dem File netzwerkanalyse.gpgk den Layer Gemeinde_Waedenswil (siehe Tabelle 51.1) in QGIS Importieren\nSymbologie folgendermassen ändern: Fläche transparent, Stadtgrenze schwarz",
+    "text": "Übung 3: Daten importieren\nWährend Shapefiles im GIS-Unterricht bisher oft zur Speicherung von Vektordaten verwendet wurden, werden in QGIS vor allem Geopackage Dateien verwendet (.gpkg). QGIS kann Shapefiles durchaus lesen und schreiben, wir werden in den Übungen aber vor allem mit Geopackage Daten arbeiten. Geopackages sind eine alternative Methode, Vektordaten abzuspeichern. Sie beheben einige Defizite, die Shapefiles mit sich bringen. Siehe dazu auch die Website “Shapefiles must die”.\n\nNeues QGIS Projekt starten und Projektdatei speichern (Beachten Sie dazu die Empfehlungen am Anfang)\nCRS auf EPSG 2056 setzen\nAus dem File netzwerkanalyse.gpgk den Layer Gemeinde_Waedenswil (siehe Tabelle 51.1) in QGIS importieren\nSymbologie folgendermassen ändern: Fläche transparent, Stadtgrenze schwarz",
     "crumbs": [
       "Netzwerkanalyse I",
       "<span class='chapter-number'>51</span>  <span class='chapter-title'>Vorbereitung</span>"
@@ -2159,7 +2159,7 @@
     "href": "D_Netzwerkanalyse_1/2_Vorbereitung.html#sec-ex-network-plugins",
     "title": "Vorbereitung",
     "section": "Übung 4: Plugin installieren",
-    "text": "Übung 4: Plugin installieren\nQGIS wird von zahlreichen Einzelpersonen und Gruppen entwickelt. Aus diesem Grund ist die Software modular aufgebaut, und nur ein Teil wird mit der Standard-Installation mitgeliefert. Für einige Funktionen müssen zusätzliche Erweiterungen (sogenannte “Plugins”) installiert werden. Installieren Sie das Plugin “QuickOSM” um OpenStreetMap (OSM) Vektordaten rasch und einfach lokal abspeichern zu können.\n\nReiter Plugins→Manage and Install Plugins\nIm Suchfenster “QuickOSM” suchen\nPlugin anwählen und auf “install” klicken\n\nDie wichtigsten Metadaten zu allen Plugins werden auf plugins.qgis.org festgehalten. Dort findet man auch Links zur Projektseite, weiteren Dokumentation und ggf. Tutorials: Zu QuickOSM sind die Metadaten hier abrufbar: https://plugins.qgis.org/plugins/QuickOSM/",
+    "text": "Übung 4: Plugin installieren\nQGIS wird von zahlreichen Einzelpersonen und Gruppen entwickelt. Aus diesem Grund ist die Software modular aufgebaut und nur ein Teil wird mit der Standard-Installation mitgeliefert. Für einige Funktionen müssen zusätzliche Erweiterungen (sogenannte “Plugins”) installiert werden. Installieren Sie das Plugin “QuickOSM”, um OpenStreetMap (OSM) Vektordaten rasch und einfach lokal abspeichern zu können.\n\nReiter Plugins→Manage and Install Plugins\nIm Suchfenster “QuickOSM” suchen\nPlugin anwählen und auf “install” klicken\n\nDie wichtigsten Metadaten zu allen Plugins werden auf plugins.qgis.org festgehalten. Dort findet man auch Links zur Projektseite, weiteren Dokumentation und ggf. Tutorials: Zu QuickOSM sind die Metadaten hier abrufbar: https://plugins.qgis.org/plugins/QuickOSM/",
     "crumbs": [
       "Netzwerkanalyse I",
       "<span class='chapter-number'>51</span>  <span class='chapter-title'>Vorbereitung</span>"
