@@ -54,7 +54,7 @@ type(groesse_fuss) # es handelt sich um den Datentyp "float"
 
 ## Übung 1.5
 
-Erstelle eine boolsche Variable blond und setzte sie auf `True` wenn diese Eigenschaft auf dich zutrifft und `False` falls nicht. 
+Erstelle eine boolsche Variable blond und setzte sie auf `True`, wenn diese Eigenschaft auf dich zutrifft, und `False`, falls nicht. 
 
 ```{python}
 blond = False
