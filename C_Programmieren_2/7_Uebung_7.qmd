@@ -5,9 +5,9 @@ code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 
-# Übung 6
+# Übung 7
 
-## Übung 6.1
+## Übung 7.1
 
 Erstelle eine Funktion namens `times`, die zwei Zahlen miteinander multipliziert. 
 
@@ -20,7 +20,7 @@ def times(x, y):
 times(2, 2)
 ```
 
-## Übung 6.2
+## Übung 7.2
 
 Die eben erstellte Funktion `times` benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert `1`). 
 
@@ -43,7 +43,7 @@ def times(x = 1, y):
     return x * y
 ```
 
-## Übung 6.3 {#sec-ex-functions-bmi}
+## Übung 7.3 {#sec-ex-functions-bmi}
 
 Erstelle eine Funktion namens `bmi`, die aus Grösse und Gewicht einen BodyMassIndex berechnet ($BMI=\frac{m}{l^2}$, $m$: Körpermasse in Kilogramm, $l$: Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:
 
@@ -62,7 +62,7 @@ bmi(groesse_m = 1.8, gewicht_kg = 88)
 ```
 
 <!-- %  Mittelwert -->
-## Übung 6.4
+## Übung 7.4
 
 Erstelle eine Funktion `mittelwert()`, welche den Mittelwert aus einer Liste (`List`) von Zahlen berechnet. Nutze dazu `sum()` und `len()` analog @sec-mittelwert. Das Resultat sollte folgendermassen aussehen:
 
@@ -82,7 +82,7 @@ mittelwert(meine_zahlen)
 ```
 
 <!-- %  Grad Celsius in Farenheit -->
-## Übung 6.5
+## Übung 7.5
 
 Erstelle eine Funktion `celsius_zu_farenheit`, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: *Temperatur in °F = Temperatur in °C x 1,8 + 32*. 
 
@@ -103,7 +103,7 @@ celsius_zu_farenheit(celsius = 25)
 ```
 
 <!-- % Lambda Function -->
-## Übung 6.6
+## Übung 7.6
 
 Schreibe die letzte Funktion `celsius_zu_farenheit` in der *lambda* Notation.
 

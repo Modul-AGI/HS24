@@ -5,7 +5,7 @@ code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 
-# Übung 8
+# Übung 9
 
 Nun wollen wir diesen Zufallszahlengenerator `random` nutzen um eine Funktion zu entwickeln, welche einen beliebigen Punkt (mit einer x-/y-Koordinate) zufällig in einem definierten Umkreis verschiebt. Unser Fernziel ist es, den simulierten Datensatz aus  "Datenqualität und Unsicherheit" zu rekonstruieren (siehe unten). Der erste Schritt dorthin ist es, einen gemeldeten Punkt (rot in @fig-arcgiszecken) in einem definierten Umkreis zu verschieben.
 
@@ -14,7 +14,7 @@ Nun wollen wir diesen Zufallszahlengenerator `random` nutzen um eine Funktion zu
 Das Ziel dieser Übung ist es also, dass wir eine Funktion entwickeln, die uns einen zufälligen Punkt in der Nähe eines Ursprungspunktes vorschlägt. Unser Vorgehen: Wir addieren jedem Koordinatenwert (`x`/`y`) des Ursprungspunktes einen Zufallswert, zum Beispiel zwischen -100 bis +100.
 
 <!-- % Zufallszahlen aus Uniformverteilung -->
-## Übung 8.1
+## Übung 9.1
 
 Bevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul `random` vertraut machen. Importiere das Modul `random` und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.
 
@@ -27,7 +27,7 @@ random.normalvariate(100, 20)
 ```
 
 <!-- % Dummykoordinaten erstellen -->
-## Übung 8.2
+## Übung 9.2
 
 Nun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten `x_start` und `y_start` mit jeweils dem Wert `0`. Diese sollen als "Ursprungskoordinaten" dienen.
 
@@ -36,7 +36,7 @@ x_start = 0
 y_start = 0
 ```
 
-## Übung 8.3
+## Übung 9.3
 
 Generiere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die *in etwa* zwischen -100 und +100 liegt. Weise diese Zahl der Variabel `x_offset` zu.
 Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese `y_offset` zu.
@@ -61,7 +61,7 @@ x_offset
 y_offset
 ```
 
-## Übung 8.4
+## Übung 9.4
 
 Addiere nun die Zufallszahlen `x_offset` und `y_offset` **jeweils** zu den Dummykoordinaten `x_start` und `y_start` und weise diese neuen Koordinaten `x_neu` und `y_neu` zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.
 
@@ -109,7 +109,7 @@ from matplotlib import pyplot as plt
 mypoints.plot("x", "y", kind = "scatter", xlim = [-100, 100], ylim = [-100, 100], c = ["red", "blue"], title = "Ursprung (rot) und Simulation (blau)")
 ```
 
-## Übung 8.5 {#sec-ex-offset-function}
+## Übung 9.5 {#sec-ex-offset-function}
 
 Nun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (`0`/`0`) durchgespielt. In der nächsten Aufgabe (@sec-offset-dataframe) werden wir *alle* unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie @fig-arcgiszecken zu erhalten. 
 
@@ -132,7 +132,7 @@ def offset_coordinate(old, distance = 100):
 offset_coordinate(x_start)
 ```
 
-## Übung 8.6 {#sec-offset-vis}
+## Übung 9.6 {#sec-offset-vis}
 
 Nun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion `offset_coordinate()` 1'000 mal auf die Dummykoordinate an. Nutze *deine* Funktion `offset_coordinate` um eine Visualisierung gemäss untenstehendem beispiel zu machen.
 

@@ -5,7 +5,7 @@ code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 
-# Übung 9
+# Übung 10
 
 Für diese Übung brauchen wir
 
@@ -28,7 +28,7 @@ def offset_coordinate(old, distance = 100):
 zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 ```
 
-## Übung 9.1
+## Übung 10.1
 
 Mache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir @sec-dataframes nochmals an wenn du nicht mehr weisst wie das geht.
 
@@ -38,7 +38,7 @@ zeckenstiche["y"]
 ```
 
 <!-- % Neue Spalten erstellen -->
-## Übung 9.2
+## Übung 10.2
 
 Mache dich nochmals damit vertraut, wie man neue Spalten erstellt. Schau dir @sec-dataframes nochmals an wenn du nicht mehr weisst wie das geht. Erstelle ein paar neue Spalten nach dem Beispiel unten um die Hangriffe zu üben. Lösche die Spalten im Anschluss wieder mit `del zeckenstiche['test1']` etc.
 
@@ -72,7 +72,7 @@ del zeckenstiche['test2']
 del zeckenstiche['test3']
 ```
 
-## Übung 9.3 {#sec-ex-apply}
+## Übung 10.3 {#sec-ex-apply}
 
 `pandas` kennt eine ganze Familie von Methoden, um Spalten zu Manipulieren und Daten zu Aggregieren (`apply`, `map`, `mapapply`, `assign`). Es würde den Rahmen dieses Kurses sprengen, die alle im Detail durchzugehen, es lohnt sich aber sehr sich mit diesen auseinanderzusetzen wenn man sich näher mit Python befassen möchte.
 
@@ -108,7 +108,7 @@ zeckenstiche["y_sim"] = zeckenstiche["y"].apply(offset_coordinate)
 zeckenstiche
 ```
 
-## Übung 9.4 {#sec-ex-param}
+## Übung 10.4 {#sec-ex-param}
 
 In @sec-ex-apply haben wir unsere Funktion `offset_coordinate` aufgerufen, ohne den Parameter `distance` zu spezifizieren. Dies war möglich, weil wir für `distance` einen Defaultwert festgelegt hatten (100 Meter). Wir können aber auch zusätzliche Parameter kommagetrennt nach der Funktion angeben. Dies sieht folgendermassen aus:
 
@@ -127,7 +127,7 @@ zeckenstiche["x_sim"] = zeckenstiche["x"].apply(offset_coordinate, distance = 10
 zeckenstiche["y_sim"] = zeckenstiche["y"].apply(offset_coordinate, distance = 10)
 ```
 
-## Übung 9.5
+## Übung 10.5
 
 Um die Original `x`/`y`-Werte sowie die simulierten Daten im gleichen Plot darzustellen, wird folgendermassen vorgegangen: Der erste Datensatz wird mit `.plot()` visualisiert, wobei der Output einer Variabel  (z.B. `basemap`)  zugewiesen wird. Danach wird der zweite Datensatz ebenfalls mit `.plot()` visualisiert, wobei auf den ersten Plot via dem Argument `ax` verwiesen wird.
 

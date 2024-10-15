@@ -5,9 +5,9 @@ code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 
-## Übung 12
+## Übung 13
 
-## Übung  12.1
+## Übung  13.1
 
 Erstelle zwei Listen bestehend aus 3 Hundenamen (`hunde`) und 3 Katzennamen (`katzen`). Erstelle einen verschachtelten *For Loop*, wo jeder Hund jede Katze beisst und jede Katze jeden Hund kratzt.
 
@@ -28,7 +28,7 @@ for katze in katzen:
 ```
 
 <!-- % Nested Loop: Multiplikation -->
-## Übung  12.2 
+## Übung  13.2 
 
 Erstelle einen verschachtelten Loop, wo alle Kombinationen von 0 bis 9 miteinander addiert werden.
 
@@ -43,7 +43,7 @@ for i in werte:
         addition.append(resultat)
 ```
 
-## Übung  12.3 
+## Übung  13.3 
 
 Nutze die Funktion `offset_coordinate` (Lösung aus [Übung 8.5](#sec-ex-offset-function)) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).
 
@@ -67,7 +67,7 @@ for i in range(100):
     y_random.append(y_new)
 ```
 
-## Übung  12.4 (fakultativ)
+## Übung  13.4 (fakultativ)
 
 Versuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung "Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.
 

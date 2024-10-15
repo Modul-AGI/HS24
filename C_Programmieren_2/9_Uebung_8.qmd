@@ -5,9 +5,9 @@ code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 
-# Übung 7
+# Übung 8
 
-## Übung 7.1 {#sec-ex-ifelse-gruezi2}
+## Übung 8.1 {#sec-ex-ifelse-gruezi2}
 
 Erstelle eine neue Funktion `gruezi3` die `gruezi` (aus @sec-functions1-ex-gruezi) um einem weiteren Parameter `uhrzeit` erweitert. Die Funktion soll vor 18 Uhr (`uhrzeit < 18`) mit "Guten Tag" und sonst mit "Guten Abend" grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht `20:15 Uhr` sondern `20.25`).
 
@@ -31,7 +31,7 @@ def gruezi3(nachname, uhrzeit):
 gruezi3("Guido", uhrzeit = 21)
 ```
 
-## Übung 7.2
+## Übung 8.2
 
 Erweitere die Funktion `gruezi2` so, dass zwischen folgende Uhrzeiten berücksichtigt werden:
 
@@ -70,7 +70,7 @@ def gruezi2(nachname, anrede, uhrzeit):
 
 Teste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.
 
-## Übung 7.2
+## Übung 8.3
 
 Erweitere die Funktion `bmi` aus @sec-ex-functions-bmi so, dass statt dem berechneten BMI der "Nutritional status" aufgrund der [WHO Klassifizierung](https://www.euro.who.int/en/health-topics/disease-prevention/nutrition/a-healthy-lifestyle/body-mass-index-bmi) ausgegeben wird:
 
