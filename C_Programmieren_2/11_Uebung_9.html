@@ -438,7 +438,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_2/5_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  <a href="../C_Programmieren_2/5_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -801,19 +801,19 @@ Abbildung&nbsp;34.2: Normalverteilung und die Anteile innerhalb von 1 Standartab
 <section id="übung-9.4" class="level2">
 <h2 class="anchored" data-anchor-id="übung-9.4">Übung 9.4</h2>
 <p>Addiere nun die Zufallszahlen <code>x_offset</code> und <code>y_offset</code> <strong>jeweils</strong> zu den Dummykoordinaten <code>x_start</code> und <code>y_start</code> und weise diese neuen Koordinaten <code>x_neu</code> und <code>y_neu</code> zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.</p>
-<div id="e26a29d6" class="cell" data-execution_count="5">
+<div id="ce29af24" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x_neu</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>10.246170309600945</code></pre>
 </div>
 </div>
-<div id="3aac6013" class="cell" data-execution_count="6">
+<div id="a170eb73" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>y_neu</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>-4.443904000288846</code></pre>
 </div>
 </div>
-<div id="cd620117" class="cell" data-execution_count="7">
+<div id="2ba84769" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code für die Visualisierung (nur FYI)</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -843,18 +843,18 @@ Abbildung&nbsp;34.2: Normalverteilung und die Anteile innerhalb von 1 Standartab
 <p>Nun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (<code>0</code>/<code>0</code>) durchgespielt. In der nächsten Aufgabe (<a href="12_Funktionen_in_DataFrames.html" class="quarto-xref"><span>Funktionen in DataFrames</span></a>) werden wir <em>alle</em> unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie <a href="#fig-arcgiszecken" class="quarto-xref">Abbildung&nbsp;<span>34.1</span></a> zu erhalten.</p>
 <p>Dafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.</p>
 <p>Erstelle jetzt eine Funktion namens <code>offset_coordinate</code> welche als Input eine <code>x</code> <em>oder</em> <code>y</code>-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen <code>distance</code> und einem Defaultwert von 100.</p>
-<div id="a62f758a" class="cell" data-execution_count="9">
+<div id="151d2b44" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die Funktion sollte so funktionieren:</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>offset_coordinate(x_start)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>-32.51445968079135</code></pre>
+<pre><code>82.64809238439982</code></pre>
 </div>
 </div>
 </section>
 <section id="sec-offset-vis" class="level2">
 <h2 class="anchored" data-anchor-id="sec-offset-vis">Übung 9.6</h2>
 <p>Nun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion <code>offset_coordinate()</code> 1’000 mal auf die Dummykoordinate an. Nutze <em>deine</em> Funktion <code>offset_coordinate</code> um eine Visualisierung gemäss untenstehendem beispiel zu machen.</p>
-<div id="b0e27d49" class="cell" data-execution_count="10">
+<div id="f7ab13fe" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x_neu_list <span class="op">=</span> [offset_coordinate(x_start) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">1000</span>)]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y_neu_list <span class="op">=</span> [offset_coordinate(y_start) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">1000</span>)]</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -866,15 +866,15 @@ Abbildung&nbsp;34.2: Normalverteilung und die Anteile innerhalb von 1 Standartab
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">"equal"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>(np.float64(-361.53240079698844),
- np.float64(348.28813165470956),
- np.float64(-307.501280703051),
- np.float64(291.2143395459185))</code></pre>
+<pre><code>(np.float64(-288.19705259794705),
+ np.float64(341.0144323254153),
+ np.float64(-342.8962936714175),
+ np.float64(339.44099214124856))</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="11_Uebung_9_files/figure-html/cell-11-output-2.png" width="608" height="429" class="figure-img"></p>
+<p><img src="11_Uebung_9_files/figure-html/cell-11-output-2.png" width="604" height="429" class="figure-img"></p>
 </figure>
 </div>
 </div>
