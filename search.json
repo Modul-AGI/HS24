@@ -1099,8 +1099,8 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/5_Uebung_5.html",
-    "href": "C_Programmieren_2/5_Uebung_5.html",
+    "objectID": "C_Programmieren_2/5_Uebung_6.html",
+    "href": "C_Programmieren_2/5_Uebung_6.html",
     "title": "Übung 5",
     "section": "",
     "text": "Übung 5.1\nErstelle eine Function, die gruezi heisst, einen Nachnamen als Input annimmt und per Sie grüsst.\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi(nachname = \"van Rossum\")\n\n'Guten Tag, van Rossum'",
@@ -1110,8 +1110,8 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/5_Uebung_5.html#sec-gruezi2",
-    "href": "C_Programmieren_2/5_Uebung_5.html#sec-gruezi2",
+    "objectID": "C_Programmieren_2/5_Uebung_6.html#sec-gruezi2",
+    "href": "C_Programmieren_2/5_Uebung_6.html#sec-gruezi2",
     "title": "Übung 5",
     "section": "Übung 5.2",
     "text": "Übung 5.2\nErstelle eine neue Funktion gruezi2 welche im Vergleich zu gruezi einen weiteren Parameter namens anrede annimmt.\n\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi2(nachname = \"van Rossum\", anrede = \"Herr\")\n\n'Guten Tag, Herr van Rossum'",
@@ -1121,8 +1121,8 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/5_Uebung_5.html#übung-5.3",
-    "href": "C_Programmieren_2/5_Uebung_5.html#übung-5.3",
+    "objectID": "C_Programmieren_2/5_Uebung_6.html#übung-5.3",
+    "href": "C_Programmieren_2/5_Uebung_6.html#übung-5.3",
     "title": "Übung 5",
     "section": "Übung 5.3",
     "text": "Übung 5.3\nErstelle eine Funktion add die zwei Zahlen summiert.\n\n# Das Resultat sollte folgendermassen aussehen:\nadd(zahl1 = 2, zahl2 = 10)\n\n12",
@@ -1132,8 +1132,8 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/5_Uebung_5.html#übung-5.4",
-    "href": "C_Programmieren_2/5_Uebung_5.html#übung-5.4",
+    "objectID": "C_Programmieren_2/5_Uebung_6.html#übung-5.4",
+    "href": "C_Programmieren_2/5_Uebung_6.html#übung-5.4",
     "title": "Übung 5",
     "section": "Übung 5.4",
     "text": "Übung 5.4\nErstelle eine Funktion square, welche den Input quadriert.\n\n# Das Resultat sollte folgendermassen aussehen:\nsquare(zahl = 5)\n\n25",
@@ -1143,8 +1143,8 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/5_Uebung_5.html#übung-5.5",
-    "href": "C_Programmieren_2/5_Uebung_5.html#übung-5.5",
+    "objectID": "C_Programmieren_2/5_Uebung_6.html#übung-5.5",
+    "href": "C_Programmieren_2/5_Uebung_6.html#übung-5.5",
     "title": "Übung 5",
     "section": "Übung 5.5",
     "text": "Übung 5.5\nErstelle eine Funktion meter_zu_fuss, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Erinnerung: 30.48 cm ergeben 1 Fuss.\n\n# Das Resultat sollte folgendermassen aussehen:\n\nmeter_zu_fuss(meter = 1.80)\n\n5.905511811023622",
@@ -1220,69 +1220,69 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/7_Uebung_6.html",
-    "href": "C_Programmieren_2/7_Uebung_6.html",
-    "title": "Übung 6",
+    "objectID": "C_Programmieren_2/7_Uebung_7.html",
+    "href": "C_Programmieren_2/7_Uebung_7.html",
+    "title": "Übung 7",
     "section": "",
-    "text": "Übung 6.1\nErstelle eine Funktion namens times, die zwei Zahlen miteinander multipliziert.",
+    "text": "Übung 7.1\nErstelle eine Funktion namens times, die zwei Zahlen miteinander multipliziert.",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/7_Uebung_6.html#übung-6.2",
-    "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.2",
-    "title": "Übung 6",
-    "section": "Übung 6.2",
-    "text": "Übung 6.2\nDie eben erstellte Funktion times benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert 1).\nZusatzaufgabe: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?",
+    "objectID": "C_Programmieren_2/7_Uebung_7.html#übung-7.2",
+    "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.2",
+    "title": "Übung 7",
+    "section": "Übung 7.2",
+    "text": "Übung 7.2\nDie eben erstellte Funktion times benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert 1).\nZusatzaufgabe: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/7_Uebung_6.html#sec-ex-functions-bmi",
-    "href": "C_Programmieren_2/7_Uebung_6.html#sec-ex-functions-bmi",
-    "title": "Übung 6",
-    "section": "Übung 6.3",
-    "text": "Übung 6.3\nErstelle eine Funktion namens bmi, die aus Grösse und Gewicht einen BodyMassIndex berechnet (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:\n\nbmi(groesse_m = 1.8, gewicht_kg = 88)\n\n27.160493827160494",
+    "objectID": "C_Programmieren_2/7_Uebung_7.html#sec-ex-functions-bmi",
+    "href": "C_Programmieren_2/7_Uebung_7.html#sec-ex-functions-bmi",
+    "title": "Übung 7",
+    "section": "Übung 7.3",
+    "text": "Übung 7.3\nErstelle eine Funktion namens bmi, die aus Grösse und Gewicht einen BodyMassIndex berechnet (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:\n\nbmi(groesse_m = 1.8, gewicht_kg = 88)\n\n27.160493827160494",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/7_Uebung_6.html#übung-6.4",
-    "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.4",
-    "title": "Übung 6",
-    "section": "Übung 6.4",
-    "text": "Übung 6.4\nErstelle eine Funktion mittelwert(), welche den Mittelwert aus einer Liste (List) von Zahlen berechnet. Nutze dazu sum() und len() analog Uebung 2.6. Das Resultat sollte folgendermassen aussehen:\n\nmeine_zahlen = [50, 100, 550, 1000]\nmittelwert(meine_zahlen)\n\n425.0",
+    "objectID": "C_Programmieren_2/7_Uebung_7.html#übung-7.4",
+    "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.4",
+    "title": "Übung 7",
+    "section": "Übung 7.4",
+    "text": "Übung 7.4\nErstelle eine Funktion mittelwert(), welche den Mittelwert aus einer Liste (List) von Zahlen berechnet. Nutze dazu sum() und len() analog Uebung 2.6. Das Resultat sollte folgendermassen aussehen:\n\nmeine_zahlen = [50, 100, 550, 1000]\nmittelwert(meine_zahlen)\n\n425.0",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/7_Uebung_6.html#übung-6.5",
-    "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.5",
-    "title": "Übung 6",
-    "section": "Übung 6.5",
-    "text": "Übung 6.5\nErstelle eine Funktion celsius_zu_farenheit, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: Temperatur in °F = Temperatur in °C x 1,8 + 32.\nDas Resultat sollte folgendermassen aussehen:\n\ncelsius_zu_farenheit(celsius = 25)\n\n77.0",
+    "objectID": "C_Programmieren_2/7_Uebung_7.html#übung-7.5",
+    "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.5",
+    "title": "Übung 7",
+    "section": "Übung 7.5",
+    "text": "Übung 7.5\nErstelle eine Funktion celsius_zu_farenheit, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: Temperatur in °F = Temperatur in °C x 1,8 + 32.\nDas Resultat sollte folgendermassen aussehen:\n\ncelsius_zu_farenheit(celsius = 25)\n\n77.0",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/7_Uebung_6.html#übung-6.6",
-    "href": "C_Programmieren_2/7_Uebung_6.html#übung-6.6",
-    "title": "Übung 6",
-    "section": "Übung 6.6",
-    "text": "Übung 6.6\nSchreibe die letzte Funktion celsius_zu_farenheit in der lambda Notation.",
+    "objectID": "C_Programmieren_2/7_Uebung_7.html#übung-7.6",
+    "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.6",
+    "title": "Übung 7",
+    "section": "Übung 7.6",
+    "text": "Übung 7.6\nSchreibe die letzte Funktion celsius_zu_farenheit in der lambda Notation.",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 6</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
     ]
   },
   {
@@ -1297,36 +1297,36 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/9_Uebung_7.html",
-    "href": "C_Programmieren_2/9_Uebung_7.html",
-    "title": "Übung 7",
+    "objectID": "C_Programmieren_2/9_Uebung_8.html",
+    "href": "C_Programmieren_2/9_Uebung_8.html",
+    "title": "Übung 8",
     "section": "",
-    "text": "Übung 7.1\nErstelle eine neue Funktion gruezi3 die gruezi (aus Übung 5.1) um einem weiteren Parameter uhrzeit erweitert. Die Funktion soll vor 18 Uhr (uhrzeit &lt; 18) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht 20:15 Uhr sondern 20.25).\n# die Lösung sollte etwa folgendermasssen funktionieren:\n\ngruezi3(\"Guido\", uhrzeit = 21)\n\n'Guten Abend Guido'",
+    "text": "Übung 8.1\nErstelle eine neue Funktion gruezi3 die gruezi (aus Übung 5.1) um einem weiteren Parameter uhrzeit erweitert. Die Funktion soll vor 18 Uhr (uhrzeit &lt; 18) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht 20:15 Uhr sondern 20.25).\n# die Lösung sollte etwa folgendermasssen funktionieren:\n\ngruezi3(\"Guido\", uhrzeit = 21)\n\n'Guten Abend Guido'",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 7</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 8</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/9_Uebung_7.html#übung-7.2",
-    "href": "C_Programmieren_2/9_Uebung_7.html#übung-7.2",
-    "title": "Übung 7",
-    "section": "Übung 7.2",
-    "text": "Übung 7.2\nErweitere die Funktion gruezi2 so, dass zwischen folgende Uhrzeiten berücksichtigt werden:\n\n\n\nTabelle 32.1: Uhrzeiten und ihre Begrüssungsformen\n\n\n\n\n\nUhrzeit\nBegrüssungsform\n\n\n\n\n\n5 bis 11 Uhr\nGuten Morgen\n\n\n\n11 bis 18 Uhr\nGuten Tag\n\n\n\n18 bis 22 Uhr\nGuten Abend\n\n\n\n22 bis 5 Uhr\nGute Nacht\n\n\n\n\n\n\n\nDas Problem ist etwas schwierig zu Packen weil wir die “von - bis” Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die if, elifund else Operationen. Im Dropdown unten ist unser Vorschlag.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\n\n\n\n\nTeste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.",
+    "objectID": "C_Programmieren_2/9_Uebung_8.html#übung-8.2",
+    "href": "C_Programmieren_2/9_Uebung_8.html#übung-8.2",
+    "title": "Übung 8",
+    "section": "Übung 8.2",
+    "text": "Übung 8.2\nErweitere die Funktion gruezi2 so, dass zwischen folgende Uhrzeiten berücksichtigt werden:\n\n\n\nTabelle 32.1: Uhrzeiten und ihre Begrüssungsformen\n\n\n\n\n\nUhrzeit\nBegrüssungsform\n\n\n\n\n\n5 bis 11 Uhr\nGuten Morgen\n\n\n\n11 bis 18 Uhr\nGuten Tag\n\n\n\n18 bis 22 Uhr\nGuten Abend\n\n\n\n22 bis 5 Uhr\nGute Nacht\n\n\n\n\n\n\n\nDas Problem ist etwas schwierig zu Packen weil wir die “von - bis” Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die if, elifund else Operationen. Im Dropdown unten ist unser Vorschlag.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\n\n\n\n\nTeste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 7</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 8</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/9_Uebung_7.html#übung-7.2-1",
-    "href": "C_Programmieren_2/9_Uebung_7.html#übung-7.2-1",
-    "title": "Übung 7",
-    "section": "Übung 7.2",
-    "text": "Übung 7.2\nErweitere die Funktion bmi aus Übung 6.3 so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der WHO Klassifizierung ausgegeben wird:\n\n\n\nTabelle 32.2: WHO Nutritional status\n\n\n\n\n\nBMI\nNutritional status\n\n\n\n\nBelow 18.5\nUnderweight\n\n\n18.5–24.9\nNormal weight\n\n\n25.0–29.9\nPre-obesity\n\n\n30.0–34.9\nObesity class I\n\n\n35.0–39.9\nObesity class II\n\n\nAbove 40\nObesity class III\n\n\n\n\n\n\n\n# Der Output sollte etwa folgedermassen aussehen\nbmi2(1.7, 70)\n\n'Who classification: Normal weight'",
+    "objectID": "C_Programmieren_2/9_Uebung_8.html#übung-8.3",
+    "href": "C_Programmieren_2/9_Uebung_8.html#übung-8.3",
+    "title": "Übung 8",
+    "section": "Übung 8.3",
+    "text": "Übung 8.3\nErweitere die Funktion bmi aus Übung 7.3 so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der WHO Klassifizierung ausgegeben wird:\n\n\n\nTabelle 32.2: WHO Nutritional status\n\n\n\n\n\nBMI\nNutritional status\n\n\n\n\nBelow 18.5\nUnderweight\n\n\n18.5–24.9\nNormal weight\n\n\n25.0–29.9\nPre-obesity\n\n\n30.0–34.9\nObesity class I\n\n\n35.0–39.9\nObesity class II\n\n\nAbove 40\nObesity class III\n\n\n\n\n\n\n\n# Der Output sollte etwa folgedermassen aussehen\nbmi2(1.7, 70)\n\n'Who classification: Normal weight'",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 7</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 8</span>"
     ]
   },
   {
@@ -1341,69 +1341,69 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/11_Uebung_8.html",
-    "href": "C_Programmieren_2/11_Uebung_8.html",
-    "title": "Übung 8",
+    "objectID": "C_Programmieren_2/11_Uebung_9.html",
+    "href": "C_Programmieren_2/11_Uebung_9.html",
+    "title": "Übung 9",
     "section": "",
-    "text": "Übung 8.1\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.",
+    "text": "Übung 9.1\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/11_Uebung_8.html#übung-8.2",
-    "href": "C_Programmieren_2/11_Uebung_8.html#übung-8.2",
-    "title": "Übung 8",
-    "section": "Übung 8.2",
-    "text": "Übung 8.2\nNun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten x_start und y_start mit jeweils dem Wert 0. Diese sollen als “Ursprungskoordinaten” dienen.",
+    "objectID": "C_Programmieren_2/11_Uebung_9.html#übung-9.2",
+    "href": "C_Programmieren_2/11_Uebung_9.html#übung-9.2",
+    "title": "Übung 9",
+    "section": "Übung 9.2",
+    "text": "Übung 9.2\nNun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten x_start und y_start mit jeweils dem Wert 0. Diese sollen als “Ursprungskoordinaten” dienen.",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/11_Uebung_8.html#übung-8.3",
-    "href": "C_Programmieren_2/11_Uebung_8.html#übung-8.3",
-    "title": "Übung 8",
-    "section": "Übung 8.3",
-    "text": "Übung 8.3\nGeneriere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die in etwa zwischen -100 und +100 liegt. Weise diese Zahl der Variabel x_offset zu. Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese y_offset zu.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nÜberlege dir, welcher Mittelwert Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?\nÜberlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):\n\n\n\n\n\n\nAbbildung 34.2: Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert \\(\\mu\\) minus Standartabweichung \\(\\sigma\\)), 2 Standartabweichungen (\\(\\mu - 2\\times\\sigma)\\) und 2 Standartabweichungen (\\(\\mu - 3\\times\\sigma)\\). Quelle: cobocards",
+    "objectID": "C_Programmieren_2/11_Uebung_9.html#übung-9.3",
+    "href": "C_Programmieren_2/11_Uebung_9.html#übung-9.3",
+    "title": "Übung 9",
+    "section": "Übung 9.3",
+    "text": "Übung 9.3\nGeneriere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die in etwa zwischen -100 und +100 liegt. Weise diese Zahl der Variabel x_offset zu. Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese y_offset zu.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nÜberlege dir, welcher Mittelwert Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?\nÜberlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):\n\n\n\n\n\n\nAbbildung 34.2: Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert \\(\\mu\\) minus Standartabweichung \\(\\sigma\\)), 2 Standartabweichungen (\\(\\mu - 2\\times\\sigma)\\) und 2 Standartabweichungen (\\(\\mu - 3\\times\\sigma)\\). Quelle: cobocards",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/11_Uebung_8.html#übung-8.4",
-    "href": "C_Programmieren_2/11_Uebung_8.html#übung-8.4",
-    "title": "Übung 8",
-    "section": "Übung 8.4",
-    "text": "Übung 8.4\nAddiere nun die Zufallszahlen x_offset und y_offset jeweils zu den Dummykoordinaten x_start und y_start und weise diese neuen Koordinaten x_neu und y_neu zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.\n\nx_neu\n\n10.246170309600945\n\n\n\ny_neu\n\n-4.443904000288846\n\n\n\n\nCode für die Visualisierung (nur FYI)\nimport pandas as pd\n\nmypoints = pd.DataFrame({\n    \"x\": [x_start, x_neu],\n    \"y\": [y_start, y_neu],\n    \"typ\": [\"start\", \"neu\"]\n    }\n)\n\nfrom matplotlib import pyplot as plt\n\nmypoints.plot(\"x\", \"y\", kind = \"scatter\", xlim = [-100, 100], ylim = [-100, 100], c = [\"red\", \"blue\"], title = \"Ursprung (rot) und Simulation (blau)\")",
+    "objectID": "C_Programmieren_2/11_Uebung_9.html#übung-9.4",
+    "href": "C_Programmieren_2/11_Uebung_9.html#übung-9.4",
+    "title": "Übung 9",
+    "section": "Übung 9.4",
+    "text": "Übung 9.4\nAddiere nun die Zufallszahlen x_offset und y_offset jeweils zu den Dummykoordinaten x_start und y_start und weise diese neuen Koordinaten x_neu und y_neu zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.\n\nx_neu\n\n10.246170309600945\n\n\n\ny_neu\n\n-4.443904000288846\n\n\n\n\nCode für die Visualisierung (nur FYI)\nimport pandas as pd\n\nmypoints = pd.DataFrame({\n    \"x\": [x_start, x_neu],\n    \"y\": [y_start, y_neu],\n    \"typ\": [\"start\", \"neu\"]\n    }\n)\n\nfrom matplotlib import pyplot as plt\n\nmypoints.plot(\"x\", \"y\", kind = \"scatter\", xlim = [-100, 100], ylim = [-100, 100], c = [\"red\", \"blue\"], title = \"Ursprung (rot) und Simulation (blau)\")",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function",
-    "href": "C_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function",
-    "title": "Übung 8",
-    "section": "Übung 8.5",
-    "text": "Übung 8.5\nNun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (0/0) durchgespielt. In der nächsten Aufgabe (Funktionen in DataFrames) werden wir alle unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie Abbildung 34.1 zu erhalten.\nDafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.\nErstelle jetzt eine Funktion namens offset_coordinate welche als Input eine x oder y-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen distance und einem Defaultwert von 100.\n\n# die Funktion sollte so funktionieren:\noffset_coordinate(x_start)\n\n10.9378164245929",
+    "objectID": "C_Programmieren_2/11_Uebung_9.html#sec-ex-offset-function",
+    "href": "C_Programmieren_2/11_Uebung_9.html#sec-ex-offset-function",
+    "title": "Übung 9",
+    "section": "Übung 9.5",
+    "text": "Übung 9.5\nNun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (0/0) durchgespielt. In der nächsten Aufgabe (Funktionen in DataFrames) werden wir alle unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie Abbildung 34.1 zu erhalten.\nDafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.\nErstelle jetzt eine Funktion namens offset_coordinate welche als Input eine x oder y-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen distance und einem Defaultwert von 100.\n\n# die Funktion sollte so funktionieren:\noffset_coordinate(x_start)\n\n-32.51445968079135",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/11_Uebung_8.html#sec-offset-vis",
-    "href": "C_Programmieren_2/11_Uebung_8.html#sec-offset-vis",
-    "title": "Übung 8",
-    "section": "Übung 8.6",
-    "text": "Übung 8.6\nNun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion offset_coordinate() 1’000 mal auf die Dummykoordinate an. Nutze deine Funktion offset_coordinate um eine Visualisierung gemäss untenstehendem beispiel zu machen.\n\nx_neu_list = [offset_coordinate(x_start) for i in range(1, 1000)]\ny_neu_list = [offset_coordinate(y_start) for i in range(1, 1000)]\n\n# Liste in eine Pandas DataFrame überführen\nmysim = pd.DataFrame({\"x\" : x_neu_list, \"y\" : y_neu_list})\n\nmysim.plot(\"x\", \"y\", kind = \"scatter\")\n\nfrom matplotlib import pyplot as plt\nplt.axis(\"equal\")\n\n(np.float64(-342.8016610358932),\n np.float64(344.8492268813678),\n np.float64(-390.96253345109847),\n np.float64(434.9539710663838))",
+    "objectID": "C_Programmieren_2/11_Uebung_9.html#sec-offset-vis",
+    "href": "C_Programmieren_2/11_Uebung_9.html#sec-offset-vis",
+    "title": "Übung 9",
+    "section": "Übung 9.6",
+    "text": "Übung 9.6\nNun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion offset_coordinate() 1’000 mal auf die Dummykoordinate an. Nutze deine Funktion offset_coordinate um eine Visualisierung gemäss untenstehendem beispiel zu machen.\n\nx_neu_list = [offset_coordinate(x_start) for i in range(1, 1000)]\ny_neu_list = [offset_coordinate(y_start) for i in range(1, 1000)]\n\n# Liste in eine Pandas DataFrame überführen\nmysim = pd.DataFrame({\"x\" : x_neu_list, \"y\" : y_neu_list})\n\nmysim.plot(\"x\", \"y\", kind = \"scatter\")\n\nfrom matplotlib import pyplot as plt\nplt.axis(\"equal\")\n\n(np.float64(-361.53240079698844),\n np.float64(348.28813165470956),\n np.float64(-307.501280703051),\n np.float64(291.2143395459185))",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 8</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
     ]
   },
   {
@@ -1418,58 +1418,58 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/13_Uebung_9.html",
-    "href": "C_Programmieren_2/13_Uebung_9.html",
-    "title": "Übung 9",
+    "objectID": "C_Programmieren_2/13_Uebung_10.html",
+    "href": "C_Programmieren_2/13_Uebung_10.html",
+    "title": "Übung 10",
     "section": "",
-    "text": "Übung 9.1\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.",
+    "text": "Übung 10.1\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 9</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/13_Uebung_9.html#übung-9.2",
-    "href": "C_Programmieren_2/13_Uebung_9.html#übung-9.2",
-    "title": "Übung 9",
-    "section": "Übung 9.2",
-    "text": "Übung 9.2\nMache dich nochmals damit vertraut, wie man neue Spalten erstellt. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht. Erstelle ein paar neue Spalten nach dem Beispiel unten um die Hangriffe zu üben. Lösche die Spalten im Anschluss wieder mit del zeckenstiche['test1'] etc.\n\n\nMusterlösung\nzeckenstiche[\"test1\"] = \"test1\"\n\nzeckenstiche[\"test2\"] = 10\n\nzeckenstiche[\"test3\"] = range(10)\n\n\n\n# zeckenstiche könnte danach folgendermassen aussehen:\nzeckenstiche\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[4], line 2\n      1 # zeckenstiche könnte danach folgendermassen aussehen:\n----&gt; 2 zeckenstiche\n\nNameError: name 'zeckenstiche' is not defined\n\n\n\n\n# unnötigen Spalten wieder entfernen:\ndel zeckenstiche['test1']\ndel zeckenstiche['test2']\ndel zeckenstiche['test3']\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[5], line 2\n      1 # unnötigen Spalten wieder entfernen:\n----&gt; 2 del zeckenstiche['test1']\n      3 del zeckenstiche['test2']\n      4 del zeckenstiche['test3']\n\nNameError: name 'zeckenstiche' is not defined",
+    "objectID": "C_Programmieren_2/13_Uebung_10.html#übung-10.2",
+    "href": "C_Programmieren_2/13_Uebung_10.html#übung-10.2",
+    "title": "Übung 10",
+    "section": "Übung 10.2",
+    "text": "Übung 10.2\nMache dich nochmals damit vertraut, wie man neue Spalten erstellt. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht. Erstelle ein paar neue Spalten nach dem Beispiel unten um die Hangriffe zu üben. Lösche die Spalten im Anschluss wieder mit del zeckenstiche['test1'] etc.\n\n\nMusterlösung\nzeckenstiche[\"test1\"] = \"test1\"\n\nzeckenstiche[\"test2\"] = 10\n\nzeckenstiche[\"test3\"] = range(10)\n\n\n\n# zeckenstiche könnte danach folgendermassen aussehen:\nzeckenstiche\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[4], line 2\n      1 # zeckenstiche könnte danach folgendermassen aussehen:\n----&gt; 2 zeckenstiche\n\nNameError: name 'zeckenstiche' is not defined\n\n\n\n\n# unnötigen Spalten wieder entfernen:\ndel zeckenstiche['test1']\ndel zeckenstiche['test2']\ndel zeckenstiche['test3']\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[5], line 2\n      1 # unnötigen Spalten wieder entfernen:\n----&gt; 2 del zeckenstiche['test1']\n      3 del zeckenstiche['test2']\n      4 del zeckenstiche['test3']\n\nNameError: name 'zeckenstiche' is not defined",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 9</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/13_Uebung_9.html#sec-ex-apply",
-    "href": "C_Programmieren_2/13_Uebung_9.html#sec-ex-apply",
-    "title": "Übung 9",
-    "section": "Übung 9.3",
-    "text": "Übung 9.3\npandas kennt eine ganze Familie von Methoden, um Spalten zu Manipulieren und Daten zu Aggregieren (apply, map, mapapply, assign). Es würde den Rahmen dieses Kurses sprengen, die alle im Detail durchzugehen, es lohnt sich aber sehr sich mit diesen auseinanderzusetzen wenn man sich näher mit Python befassen möchte.\nIm unserem Fall brauchen wir lediglich die Methode apply um die Funktion offset_coordinate() auf die Zeckenstichkoordinaten anzuwenden. Dabei gehen wir wie folgt for:\n\nzeckenstiche[\"x\"].apply(offset_coordinate)\n#\\______1_______/ \\_2_/\\_______3_________/\n\n# 1. Spalte selektieren ([\"x\"])\n# 2. Methode \"apply\" aufrufen\n# 3. Function übergeben\n\nVerwende dieses Schema um auch offset_coordinate auf die y Spalte anzuwenden und speichere den Output dieser beiden Operationen als neue Spalten x_sim sowie y_sim. Die DataFrame zeckenstiche sollte danach wie folgt aussehen:\n\n\nMusterlösung\nzeckenstiche[\"x_sim\"] = zeckenstiche[\"x\"].apply(offset_coordinate)\nzeckenstiche[\"y_sim\"] = zeckenstiche[\"y\"].apply(offset_coordinate)\n\n\n\nzeckenstiche\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[8], line 1\n----&gt; 1 zeckenstiche\n\nNameError: name 'zeckenstiche' is not defined",
+    "objectID": "C_Programmieren_2/13_Uebung_10.html#sec-ex-apply",
+    "href": "C_Programmieren_2/13_Uebung_10.html#sec-ex-apply",
+    "title": "Übung 10",
+    "section": "Übung 10.3",
+    "text": "Übung 10.3\npandas kennt eine ganze Familie von Methoden, um Spalten zu Manipulieren und Daten zu Aggregieren (apply, map, mapapply, assign). Es würde den Rahmen dieses Kurses sprengen, die alle im Detail durchzugehen, es lohnt sich aber sehr sich mit diesen auseinanderzusetzen wenn man sich näher mit Python befassen möchte.\nIm unserem Fall brauchen wir lediglich die Methode apply um die Funktion offset_coordinate() auf die Zeckenstichkoordinaten anzuwenden. Dabei gehen wir wie folgt for:\n\nzeckenstiche[\"x\"].apply(offset_coordinate)\n#\\______1_______/ \\_2_/\\_______3_________/\n\n# 1. Spalte selektieren ([\"x\"])\n# 2. Methode \"apply\" aufrufen\n# 3. Function übergeben\n\nVerwende dieses Schema um auch offset_coordinate auf die y Spalte anzuwenden und speichere den Output dieser beiden Operationen als neue Spalten x_sim sowie y_sim. Die DataFrame zeckenstiche sollte danach wie folgt aussehen:\n\n\nMusterlösung\nzeckenstiche[\"x_sim\"] = zeckenstiche[\"x\"].apply(offset_coordinate)\nzeckenstiche[\"y_sim\"] = zeckenstiche[\"y\"].apply(offset_coordinate)\n\n\n\nzeckenstiche\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[8], line 1\n----&gt; 1 zeckenstiche\n\nNameError: name 'zeckenstiche' is not defined",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 9</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/13_Uebung_9.html#sec-ex-param",
-    "href": "C_Programmieren_2/13_Uebung_9.html#sec-ex-param",
-    "title": "Übung 9",
-    "section": "Übung 9.4",
-    "text": "Übung 9.4\nIn Übung 9.3 haben wir unsere Funktion offset_coordinate aufgerufen, ohne den Parameter distance zu spezifizieren. Dies war möglich, weil wir für distance einen Defaultwert festgelegt hatten (100 Meter). Wir können aber auch zusätzliche Parameter kommagetrennt nach der Funktion angeben. Dies sieht folgendermassen aus:\n\nzeckenstiche[\"x\"].apply(offset_coordinate, distance = 200)\n\nNutze diese Möglichkeit, um den Offset (distance) auf maximal 10 Meter zu reduzieren.",
+    "objectID": "C_Programmieren_2/13_Uebung_10.html#sec-ex-param",
+    "href": "C_Programmieren_2/13_Uebung_10.html#sec-ex-param",
+    "title": "Übung 10",
+    "section": "Übung 10.4",
+    "text": "Übung 10.4\nIn Übung 10.3 haben wir unsere Funktion offset_coordinate aufgerufen, ohne den Parameter distance zu spezifizieren. Dies war möglich, weil wir für distance einen Defaultwert festgelegt hatten (100 Meter). Wir können aber auch zusätzliche Parameter kommagetrennt nach der Funktion angeben. Dies sieht folgendermassen aus:\n\nzeckenstiche[\"x\"].apply(offset_coordinate, distance = 200)\n\nNutze diese Möglichkeit, um den Offset (distance) auf maximal 10 Meter zu reduzieren.",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 9</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_2/13_Uebung_9.html#übung-9.5",
-    "href": "C_Programmieren_2/13_Uebung_9.html#übung-9.5",
-    "title": "Übung 9",
-    "section": "Übung 9.5",
-    "text": "Übung 9.5\nUm die Original x/y-Werte sowie die simulierten Daten im gleichen Plot darzustellen, wird folgendermassen vorgegangen: Der erste Datensatz wird mit .plot() visualisiert, wobei der Output einer Variabel (z.B. basemap) zugewiesen wird. Danach wird der zweite Datensatz ebenfalls mit .plot() visualisiert, wobei auf den ersten Plot via dem Argument ax verwiesen wird.\nBei den roten Punkten handelt es sich um die Original-Zeckenstichen, bei den blauen um die simulierten (leicht verschoben) Zeckenstiche. Visualisiere deine eigenen Zeckenstiche auf diese Weise.\n\nfrom matplotlib import pyplot as plt\n\nbasemap = zeckenstiche.plot(\"x\", \"y\", kind = \"scatter\", color = \"red\")\nzeckenstiche.plot(\"x_sim\", \"y_sim\", kind = \"scatter\", ax = basemap, color = \"blue\")\n\nplt.axis(\"equal\")\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[11], line 3\n      1 from matplotlib import pyplot as plt\n----&gt; 3 basemap = zeckenstiche.plot(\"x\", \"y\", kind = \"scatter\", color = \"red\")\n      4 zeckenstiche.plot(\"x_sim\", \"y_sim\", kind = \"scatter\", ax = basemap, color = \"blue\")\n      6 plt.axis(\"equal\")\n\nNameError: name 'zeckenstiche' is not defined",
+    "objectID": "C_Programmieren_2/13_Uebung_10.html#übung-10.5",
+    "href": "C_Programmieren_2/13_Uebung_10.html#übung-10.5",
+    "title": "Übung 10",
+    "section": "Übung 10.5",
+    "text": "Übung 10.5\nUm die Original x/y-Werte sowie die simulierten Daten im gleichen Plot darzustellen, wird folgendermassen vorgegangen: Der erste Datensatz wird mit .plot() visualisiert, wobei der Output einer Variabel (z.B. basemap) zugewiesen wird. Danach wird der zweite Datensatz ebenfalls mit .plot() visualisiert, wobei auf den ersten Plot via dem Argument ax verwiesen wird.\nBei den roten Punkten handelt es sich um die Original-Zeckenstichen, bei den blauen um die simulierten (leicht verschoben) Zeckenstiche. Visualisiere deine eigenen Zeckenstiche auf diese Weise.\n\nfrom matplotlib import pyplot as plt\n\nbasemap = zeckenstiche.plot(\"x\", \"y\", kind = \"scatter\", color = \"red\")\nzeckenstiche.plot(\"x_sim\", \"y_sim\", kind = \"scatter\", ax = basemap, color = \"blue\")\n\nplt.axis(\"equal\")\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[11], line 3\n      1 from matplotlib import pyplot as plt\n----&gt; 3 basemap = zeckenstiche.plot(\"x\", \"y\", kind = \"scatter\", color = \"red\")\n      4 zeckenstiche.plot(\"x_sim\", \"y_sim\", kind = \"scatter\", ax = basemap, color = \"blue\")\n      6 plt.axis(\"equal\")\n\nNameError: name 'zeckenstiche' is not defined",
     "crumbs": [
       "Programmieren II",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 9</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
     ]
   },
   {
@@ -1583,58 +1583,58 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_3/2_Uebung_10.html",
-    "href": "C_Programmieren_3/2_Uebung_10.html",
-    "title": "Übung 10",
+    "objectID": "C_Programmieren_3/2_Uebung_11.html",
+    "href": "C_Programmieren_3/2_Uebung_11.html",
+    "title": "Übung 11",
     "section": "",
-    "text": "Übung 10.1\nKopiere den folgenden for Loop und lasse ihn bei dir laufen. Spiele mit den Werten rum, um ein Gefühl für For Loops zu bekommen: Ergänze die Liste mit weiteren Zahlen, verändere den Namen der Platzhaltervariabel und verändere den Text, der in print ausgegeben wird.\nMusterlösung\nfor platzhalter in [0,1,2,5,10]:\n    print(\"Iteration\",platzhalter)\n\n\nIteration 0\nIteration 1\nIteration 2\nIteration 5\nIteration 10",
+    "text": "Übung 11.1\nKopiere den folgenden for Loop und lasse ihn bei dir laufen. Spiele mit den Werten rum, um ein Gefühl für For Loops zu bekommen: Ergänze die Liste mit weiteren Zahlen, verändere den Namen der Platzhaltervariabel und verändere den Text, der in print ausgegeben wird.\nMusterlösung\nfor platzhalter in [0,1,2,5,10]:\n    print(\"Iteration\",platzhalter)\n\n\nIteration 0\nIteration 1\nIteration 2\nIteration 5\nIteration 10",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 11</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/2_Uebung_10.html#sec-for-gruss",
-    "href": "C_Programmieren_3/2_Uebung_10.html#sec-for-gruss",
-    "title": "Übung 10",
-    "section": "Übung 10.2",
-    "text": "Übung 10.2\nKonstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste namen. Erstelle danach einen for loop, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür print.\nDer Output könnte etwa so aussehen:\n\n\nCiao  Il Buono\nCiao  Il Brutto\nCiao  Il Cattivo",
+    "objectID": "C_Programmieren_3/2_Uebung_11.html#sec-for-gruss",
+    "href": "C_Programmieren_3/2_Uebung_11.html#sec-for-gruss",
+    "title": "Übung 11",
+    "section": "Übung 11.2",
+    "text": "Übung 11.2\nKonstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste namen. Erstelle danach einen for loop, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür print.\nDer Output könnte etwa so aussehen:\n\n\nCiao  Il Buono\nCiao  Il Brutto\nCiao  Il Cattivo",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 11</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/2_Uebung_10.html#übung-10.3",
-    "href": "C_Programmieren_3/2_Uebung_10.html#übung-10.3",
-    "title": "Übung 10",
-    "section": "Übung 10.3",
-    "text": "Übung 10.3\nKopiere den folgenden For Loop und spiele hier mit den Werten herum. Verändere den For Loop so, dass er über die Werte von -5 bis +5 iteriert.\n\n\nMusterlösung\nfor nonsense in range(3, 5):\n    print(\"Iteration\",nonsense)\n\n\nIteration 3\nIteration 4",
+    "objectID": "C_Programmieren_3/2_Uebung_11.html#übung-11.3",
+    "href": "C_Programmieren_3/2_Uebung_11.html#übung-11.3",
+    "title": "Übung 11",
+    "section": "Übung 11.3",
+    "text": "Übung 11.3\nKopiere den folgenden For Loop und spiele hier mit den Werten herum. Verändere den For Loop so, dass er über die Werte von -5 bis +5 iteriert.\n\n\nMusterlösung\nfor nonsense in range(3, 5):\n    print(\"Iteration\",nonsense)\n\n\nIteration 3\nIteration 4",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 11</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/2_Uebung_10.html#übung-10.4",
-    "href": "C_Programmieren_3/2_Uebung_10.html#übung-10.4",
-    "title": "Übung 10",
-    "section": "Übung 10.4",
-    "text": "Übung 10.4\nBis jetzt haben unsere Loops nicht viel Arbeiten müssen. Erstelle nun einen For Loop, welcher für die Werte -5 bis +5 folgendes ausgibt:\nDas Quadrat von -5 ist 25\nDas Quadrat von -4 ist 16\n...",
+    "objectID": "C_Programmieren_3/2_Uebung_11.html#übung-11.4",
+    "href": "C_Programmieren_3/2_Uebung_11.html#übung-11.4",
+    "title": "Übung 11",
+    "section": "Übung 11.4",
+    "text": "Übung 11.4\nBis jetzt haben unsere Loops nicht viel Arbeiten müssen. Erstelle nun einen For Loop, welcher für die Werte -5 bis +5 folgendes ausgibt:\nDas Quadrat von -5 ist 25\nDas Quadrat von -4 ist 16\n...",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 11</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/2_Uebung_10.html#sec-forloops-ex-party",
-    "href": "C_Programmieren_3/2_Uebung_10.html#sec-forloops-ex-party",
-    "title": "Übung 10",
-    "section": "Übung 10.5",
-    "text": "Übung 10.5\nBisher haben wir die Platzhaltervariabel immer in unserem Loop wiederverwendet. Das müssen wir aber gar nicht, wir können den for loop einfach nutzen um etwas x mal zu wiederholen. Erstellen einen for loop der folgende beiden Sätze 5x wiederholt:\nWho likes to party?\nWe like to party!\nWho likes to party?\n....\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nNutze dafür zwei verschiedene print Befehle auf zwei Zeilen.",
+    "objectID": "C_Programmieren_3/2_Uebung_11.html#sec-forloops-ex-party",
+    "href": "C_Programmieren_3/2_Uebung_11.html#sec-forloops-ex-party",
+    "title": "Übung 11",
+    "section": "Übung 11.5",
+    "text": "Übung 11.5\nBisher haben wir die Platzhaltervariabel immer in unserem Loop wiederverwendet. Das müssen wir aber gar nicht, wir können den for loop einfach nutzen um etwas x mal zu wiederholen. Erstellen einen for loop der folgende beiden Sätze 5x wiederholt:\nWho likes to party?\nWe like to party!\nWho likes to party?\n....\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nNutze dafür zwei verschiedene print Befehle auf zwei Zeilen.",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 10</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Übung 11</span>"
     ]
   },
   {
@@ -1649,25 +1649,25 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_3/3_Uebung_11.html",
-    "href": "C_Programmieren_3/3_Uebung_11.html",
-    "title": "Übung 11",
+    "objectID": "C_Programmieren_3/3_Uebung_12.html",
+    "href": "C_Programmieren_3/3_Uebung_12.html",
+    "title": "Übung 12",
     "section": "",
-    "text": "Übung 11.1\nNehmen wir nochmals das Beispiel aus Übung 10.2. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. mylist) gespeichert werden.\nMusterlösung\n# Das Resultat sieht dann so aus:\nmylist\n\n\n['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']",
+    "text": "Übung 12.1\nNehmen wir nochmals das Beispiel aus Übung 11.2. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. mylist) gespeichert werden.\nMusterlösung\n# Das Resultat sieht dann so aus:\nmylist\n\n\n['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 11</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 12</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/3_Uebung_11.html#sec-ex-loopoutput",
-    "href": "C_Programmieren_3/3_Uebung_11.html#sec-ex-loopoutput",
-    "title": "Übung 11",
-    "section": "Übung 11.2",
-    "text": "Übung 11.2\nDer im Beispiel verwendete Refrain aus dem Lied “Bitch” von Meredith Brooks besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit zwei verschiedenen, aneinander gereihten for loops den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“I do not feel ashamed” und “You know you wouldn’t want it any other way”) kannst du auch ausserhalb der Loops in die Listen einfügen (append).\n\n\nMusterlösung\n# Das Resultat sieht dann so aus:\nrefrain\n\n\n[\"I'm a bitch\",\n \"I'm a lover\",\n \"I'm a child\",\n \"I'm a mother\",\n \"I'm a sinner\",\n \"I'm a saint\",\n 'I do not feel ashamed',\n \"I'm your hell\",\n \"I'm your dream\",\n \"I'm nothing in between\",\n \"You know you wouldn't want it any other way\"]",
+    "objectID": "C_Programmieren_3/3_Uebung_12.html#sec-ex-loopoutput",
+    "href": "C_Programmieren_3/3_Uebung_12.html#sec-ex-loopoutput",
+    "title": "Übung 12",
+    "section": "Übung 12.2",
+    "text": "Übung 12.2\nDer im Beispiel verwendete Refrain aus dem Lied “Bitch” von Meredith Brooks besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit zwei verschiedenen, aneinander gereihten for loops den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“I do not feel ashamed” und “You know you wouldn’t want it any other way”) kannst du auch ausserhalb der Loops in die Listen einfügen (append).\n\n\nMusterlösung\n# Das Resultat sieht dann so aus:\nrefrain\n\n\n[\"I'm a bitch\",\n \"I'm a lover\",\n \"I'm a child\",\n \"I'm a mother\",\n \"I'm a sinner\",\n \"I'm a saint\",\n 'I do not feel ashamed',\n \"I'm your hell\",\n \"I'm your dream\",\n \"I'm nothing in between\",\n \"You know you wouldn't want it any other way\"]",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 11</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 12</span>"
     ]
   },
   {
@@ -1686,7 +1686,7 @@
     "href": "C_Programmieren_3/4_For_Loops_Advanced.html#verschachtelte-for-loops",
     "title": "Advanced for loops",
     "section": "",
-    "text": "Hinweis\n\n\n\n\n\nAls Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. for bandmitglied in band, for vogel in voegel usw, dies hilft mir den Überblick im loop zu bewahren.\n\n\n\n\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nEin anderes Beispiel: In Übung 10.5 haben wir die beiden Zeilen \"Who likes to party?\", “We like to party?” 5x wiederholt. Dabei werden die Wörter `to party für jede Wiederholung zwei mal wiederholt:\nWho likes to party?\nWe like to party!\nWho likes to party?\nWe like to party!\n...\n\nDies kann man in zwei verschachtelte For Loops umschreiben:\nfor i in range(5):\n    inner = [\"Who likes\", \"We like\"]\n    for j in inner:\n        print(j+\" to party\")\n\nWho likes to party\nWe like to party\nWho likes to party\nWe like to party",
+    "text": "Hinweis\n\n\n\n\n\nAls Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. for bandmitglied in band, for vogel in voegel usw, dies hilft mir den Überblick im loop zu bewahren.\n\n\n\n\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nEin anderes Beispiel: In Übung 11.5 haben wir die beiden Zeilen \"Who likes to party?\", “We like to party?” 5x wiederholt. Dabei werden die Wörter `to party für jede Wiederholung zwei mal wiederholt:\nWho likes to party?\nWe like to party!\nWho likes to party?\nWe like to party!\n...\n\nDies kann man in zwei verschachtelte For Loops umschreiben:\nfor i in range(5):\n    inner = [\"Who likes\", \"We like\"]\n    for j in inner:\n        print(j+\" to party\")\n\nWho likes to party\nWe like to party\nWho likes to party\nWe like to party",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>42</span>  <span class='chapter-title'>Advanced *for loops*</span>"
@@ -1697,65 +1697,65 @@
     "href": "C_Programmieren_3/4_For_Loops_Advanced.html#verkürzte-schreibweise",
     "title": "Advanced for loops",
     "section": "Verkürzte Schreibweise",
-    "text": "Verkürzte Schreibweise\nEs ist äusserst häufig der Fall, dass wir den Output aus einem Loop in einer Liste abspeichern wollen. Wie das geht haben wir ja bereits in Basic for loop gelernt:\n\nrollen = [\"bitch\",\"lover\",\"child\",\"mother\",\"sinner\",\"saint\"]\n\nrefrain = []\nfor rolle in rollen:\n    liedzeile = \"I'm a \"+ rolle \n    refrain.append(liedzeile)\n\nNur ist das ein bisschen umständlich, weil wir dafür viele Zeilen Code brauchen, um etwas eigentlich ganz simples zu bewerkstelligen. Es gibt deshalb dafür auch eine verkürzte Schreibweise, welche ich in der letzten Woche bereits einmal verwendet habe (siehe Übung 8.6). Der obige Loop hat in der verkürzten Schreibweise die folgende Form:\n\nrefrain = [\"I'm a \"+ rolle for rolle in rollen]\n\nDiese verkürzte Schreibweise heisst in Python list comprehension und sie ist äusserst praktisch, wenn man sie beherrscht. Das Beherrschen ist aber nicht zentral, es reicht schon wenn ihr eine solche Schreibweise wieder erkennt und richtig interpretieren könnt (im Sinne von “Aha, hier wird also in einem Loop eine Liste erstellt”). In der folgenden Darstellung seht ihr farblich, welche Elemente sich in der verkürzten Schreibweise wo wiederfinden und welche Elemente gar nicht wiederverwendet werden.\n\nrollen = [\"bitch\",\"lover\",\"child\",\"mother\",\"sinner\",\"saint\"]\n\n\n\nHerkömmlicher For-Loop:\n\n  ref = []\n  for r in rollen:\n      liedzeile = \"I'm a \"+ r\n      refrain.append(liedzeile)\n  \n\n\n\n\nVerkürzte Schreibweise:\n\nref = [\"I'm a \"+ r for r in rollen]",
+    "text": "Verkürzte Schreibweise\nEs ist äusserst häufig der Fall, dass wir den Output aus einem Loop in einer Liste abspeichern wollen. Wie das geht haben wir ja bereits in Basic for loop gelernt:\n\nrollen = [\"bitch\",\"lover\",\"child\",\"mother\",\"sinner\",\"saint\"]\n\nrefrain = []\nfor rolle in rollen:\n    liedzeile = \"I'm a \"+ rolle \n    refrain.append(liedzeile)\n\nNur ist das ein bisschen umständlich, weil wir dafür viele Zeilen Code brauchen, um etwas eigentlich ganz simples zu bewerkstelligen. Es gibt deshalb dafür auch eine verkürzte Schreibweise, welche ich in der letzten Woche bereits einmal verwendet habe (siehe Übung 9.6). Der obige Loop hat in der verkürzten Schreibweise die folgende Form:\n\nrefrain = [\"I'm a \"+ rolle for rolle in rollen]\n\nDiese verkürzte Schreibweise heisst in Python list comprehension und sie ist äusserst praktisch, wenn man sie beherrscht. Das Beherrschen ist aber nicht zentral, es reicht schon wenn ihr eine solche Schreibweise wieder erkennt und richtig interpretieren könnt (im Sinne von “Aha, hier wird also in einem Loop eine Liste erstellt”). In der folgenden Darstellung seht ihr farblich, welche Elemente sich in der verkürzten Schreibweise wo wiederfinden und welche Elemente gar nicht wiederverwendet werden.\n\nrollen = [\"bitch\",\"lover\",\"child\",\"mother\",\"sinner\",\"saint\"]\n\n\n\nHerkömmlicher For-Loop:\n\n  ref = []\n  for r in rollen:\n      liedzeile = \"I'm a \"+ r\n      refrain.append(liedzeile)\n  \n\n\n\n\nVerkürzte Schreibweise:\n\nref = [\"I'm a \"+ r for r in rollen]",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>42</span>  <span class='chapter-title'>Advanced *for loops*</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/4_Uebung_12.html",
-    "href": "C_Programmieren_3/4_Uebung_12.html",
-    "title": "Übung 12",
+    "objectID": "C_Programmieren_3/4_Uebung_13.html",
+    "href": "C_Programmieren_3/4_Uebung_13.html",
+    "title": "Übung 13",
     "section": "",
-    "text": "Übung 12.1\nErstelle zwei Listen bestehend aus 3 Hundenamen (hunde) und 3 Katzennamen (katzen). Erstelle einen verschachtelten For Loop, wo jeder Hund jede Katze beisst und jede Katze jeden Hund kratzt.",
+    "text": "Übung 13.1\nErstelle zwei Listen bestehend aus 3 Hundenamen (hunde) und 3 Katzennamen (katzen). Erstelle einen verschachtelten For Loop, wo jeder Hund jede Katze beisst und jede Katze jeden Hund kratzt.",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 13</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/4_Uebung_12.html#übung-12.1",
-    "href": "C_Programmieren_3/4_Uebung_12.html#übung-12.1",
-    "title": "Übung 12",
+    "objectID": "C_Programmieren_3/4_Uebung_13.html#übung-13.1",
+    "href": "C_Programmieren_3/4_Uebung_13.html#übung-13.1",
+    "title": "Übung 13",
     "section": "",
     "text": "Bruno beisst Greta und Greta kratzt  Bruno\nBerta beisst Greta und Greta kratzt  Berta\nHelmi beisst Greta und Greta kratzt  Helmi\n....",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 13</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/4_Uebung_12.html#übung-12.2",
-    "href": "C_Programmieren_3/4_Uebung_12.html#übung-12.2",
-    "title": "Übung 12",
-    "section": "Übung 12.2",
-    "text": "Übung 12.2\nErstelle einen verschachtelten Loop, wo alle Kombinationen von 0 bis 9 miteinander addiert werden.",
+    "objectID": "C_Programmieren_3/4_Uebung_13.html#übung-13.2",
+    "href": "C_Programmieren_3/4_Uebung_13.html#übung-13.2",
+    "title": "Übung 13",
+    "section": "Übung 13.2",
+    "text": "Übung 13.2\nErstelle einen verschachtelten Loop, wo alle Kombinationen von 0 bis 9 miteinander addiert werden.",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 13</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/4_Uebung_12.html#übung-12.3",
-    "href": "C_Programmieren_3/4_Uebung_12.html#übung-12.3",
-    "title": "Übung 12",
-    "section": "Übung 12.3",
-    "text": "Übung 12.3\nNutze die Funktion offset_coordinate (Lösung aus Übung 8.5) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).",
+    "objectID": "C_Programmieren_3/4_Uebung_13.html#übung-13.3",
+    "href": "C_Programmieren_3/4_Uebung_13.html#übung-13.3",
+    "title": "Übung 13",
+    "section": "Übung 13.3",
+    "text": "Übung 13.3\nNutze die Funktion offset_coordinate (Lösung aus Übung 8.5) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 13</span>"
     ]
   },
   {
-    "objectID": "C_Programmieren_3/4_Uebung_12.html#übung-12.4-fakultativ",
-    "href": "C_Programmieren_3/4_Uebung_12.html#übung-12.4-fakultativ",
-    "title": "Übung 12",
-    "section": "Übung 12.4 (fakultativ)",
-    "text": "Übung 12.4 (fakultativ)\nVersuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung “Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.\nZur Erinnerung, die Vorgehensweise für die Annäherung an Pi geht folgendermassen:\n\nZufallskoordinaten (x, y) zwischen 0 und 1 erstellen\nDistanz zum Ursprung (0) mit der Formel \\(\\sqrt(x^2+y^2)\\) berechnen\nBestimmen ob sich der Punkt innerhalb des Kreisviertels befindet (\\(d &lt; 1\\))\nSchritte 1 & 2 mehrfach wiederholen\nAnteil der Punkte innerhalb des Kreisviertels mit 4 Multiplizieren\n\nTipps:\n\nFür die Erstellung der Zufallspunkte brauchst du die Funktion random() aus dem modul random\nSchritte 1 - 3 werden am sinnvollsten ein eine Funktion verpakt, welche keine Argumente benötigt\nSchritt 4 löst du am besten mit einer For loop mit range(100) (für 100 Wiederholungen)",
+    "objectID": "C_Programmieren_3/4_Uebung_13.html#übung-13.4-fakultativ",
+    "href": "C_Programmieren_3/4_Uebung_13.html#übung-13.4-fakultativ",
+    "title": "Übung 13",
+    "section": "Übung 13.4 (fakultativ)",
+    "text": "Übung 13.4 (fakultativ)\nVersuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung “Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.\nZur Erinnerung, die Vorgehensweise für die Annäherung an Pi geht folgendermassen:\n\nZufallskoordinaten (x, y) zwischen 0 und 1 erstellen\nDistanz zum Ursprung (0) mit der Formel \\(\\sqrt(x^2+y^2)\\) berechnen\nBestimmen ob sich der Punkt innerhalb des Kreisviertels befindet (\\(d &lt; 1\\))\nSchritte 1 & 2 mehrfach wiederholen\nAnteil der Punkte innerhalb des Kreisviertels mit 4 Multiplizieren\n\nTipps:\n\nFür die Erstellung der Zufallspunkte brauchst du die Funktion random() aus dem modul random\nSchritte 1 - 3 werden am sinnvollsten ein eine Funktion verpakt, welche keine Argumente benötigt\nSchritt 4 löst du am besten mit einer For loop mit range(100) (für 100 Wiederholungen)",
     "crumbs": [
       "Programmieren III",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 12</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Übung 13</span>"
     ]
   },
   {
@@ -2038,7 +2038,7 @@
     "href": "C_Programmieren_3/9_Leistungsnachweis.html#anforderungen",
     "title": "Leistungsnachweis",
     "section": "Anforderungen",
-    "text": "Anforderungen\nFühre die Analyse folgendermassen durch:\n\nmit dem ganzen Datensatz zeckenstiche_full.csv (1’076 Meldungen, siehe Tabelle 1)\nmit mindestens 50 Iterationen\nmit drei verschiedenen Distanz-Werten (distance = in Übung 8.5).\n\nVisualisiere für jeden Distanzwert die Verteilung der Anteile (z.B: mittels einem Boxplot)",
+    "text": "Anforderungen\nFühre die Analyse folgendermassen durch:\n\nmit dem ganzen Datensatz zeckenstiche_full.csv (1’076 Meldungen, siehe Tabelle 1)\nmit mindestens 50 Iterationen\nmit drei verschiedenen Distanz-Werten (distance = in Übung 9.5).\n\nVisualisiere für jeden Distanzwert die Verteilung der Anteile (z.B: mittels einem Boxplot)",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>49</span>  <span class='chapter-title'>Leistungsnachweis</span>"
@@ -2965,7 +2965,7 @@
     "href": "C_Programmieren_2/1_Einleitung.html",
     "title": "Programmieren II",
     "section": "",
-    "text": "Letzte Woche habt ihr die wichtigsten Datentypen in Python kennen gelernt und sowohl den Command Prompt wie auch Juypter Notebook verwendet. Diese Woche werden wir Python Module genauer beleuchten und dabei conda kennenlernen. Zudem widmen wir uns dem Erstellen von Funktionen (Functions), Fallunterscheidungen (if und else) sowie dem Erstellen von Zufallszahlen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nConda verstehen und beherrschen\nPython Module verstehen\nFunctions kennenlernen und beherrschen\nFunction auf eine ganze Spalte einer DataFrame anwenden können.",
+    "text": "Letzte Woche habt ihr die wichtigsten Datentypen in Python kennen gelernt und sowohl den Command Prompt wie auch Positron verwendet. Diese Woche werden wir Python Module genauer beleuchten und dabei conda kennenlernen. Zudem widmen wir uns dem Erstellen von Funktionen (Functions), Fallunterscheidungen (if und else) sowie dem Erstellen von Zufallszahlen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nConda verstehen und beherrschen\nPython Module verstehen\nFunctions kennenlernen und beherrschen\nFunction auf eine ganze Spalte einer DataFrame anwenden können.",
     "crumbs": [
       "Programmieren II"
     ]

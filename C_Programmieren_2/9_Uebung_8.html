@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../C_Programmieren_2/12_Funktionen_in_DataFrames.html" rel="next">
-<link href="../C_Programmieren_2/10_Zufallzahlen.html" rel="prev">
+<link href="../C_Programmieren_2/10_Zufallzahlen.html" rel="next">
+<link href="../C_Programmieren_2/8_If_else.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -141,35 +141,6 @@ window.onload = function() {
 
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -183,7 +154,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../C_Programmieren_2/11_Uebung_8.html"><span class="chapter-title">Übung 8</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../C_Programmieren_2/9_Uebung_8.html"><span class="chapter-title">Übung 8</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -438,7 +409,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_2/5_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  <a href="../C_Programmieren_2/5_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -448,7 +419,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_2/7_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 6</span></a>
+  <a href="../C_Programmieren_2/7_Uebung_7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -458,7 +429,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_2/9_Uebung_7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 7</span></a>
+  <a href="../C_Programmieren_2/9_Uebung_8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Übung 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -468,7 +439,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_2/11_Uebung_8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Übung 8</span></a>
+  <a href="../C_Programmieren_2/11_Uebung_9.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -478,7 +449,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_2/13_Uebung_9.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 9</span></a>
+  <a href="../C_Programmieren_2/13_Uebung_10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 10</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -504,7 +475,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_3/2_Uebung_10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 10</span></a>
+  <a href="../C_Programmieren_3/2_Uebung_11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 11</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -514,7 +485,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_3/3_Uebung_11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 11</span></a>
+  <a href="../C_Programmieren_3/3_Uebung_12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 12</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -524,7 +495,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Programmieren_3/4_Uebung_12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 12</span></a>
+  <a href="../C_Programmieren_3/4_Uebung_13.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 13</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -714,19 +685,16 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#übung-8.1" id="toc-übung-8.1" class="nav-link active" data-scroll-target="#übung-8.1">Übung 8.1</a></li>
+  <li><a href="#sec-ex-ifelse-gruezi2" id="toc-sec-ex-ifelse-gruezi2" class="nav-link active" data-scroll-target="#sec-ex-ifelse-gruezi2">Übung 8.1</a></li>
   <li><a href="#übung-8.2" id="toc-übung-8.2" class="nav-link" data-scroll-target="#übung-8.2">Übung 8.2</a></li>
   <li><a href="#übung-8.3" id="toc-übung-8.3" class="nav-link" data-scroll-target="#übung-8.3">Übung 8.3</a></li>
-  <li><a href="#übung-8.4" id="toc-übung-8.4" class="nav-link" data-scroll-target="#übung-8.4">Übung 8.4</a></li>
-  <li><a href="#sec-ex-offset-function" id="toc-sec-ex-offset-function" class="nav-link" data-scroll-target="#sec-ex-offset-function">Übung 8.5</a></li>
-  <li><a href="#sec-offset-vis" id="toc-sec-offset-vis" class="nav-link" data-scroll-target="#sec-offset-vis">Übung 8.6</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/C_Programmieren_2/11_Uebung_8.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/C_Programmieren_2/9_Uebung_8.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../C_Programmieren_2/11_Uebung_8.html"><span class="chapter-title">Übung 8</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../C_Programmieren_2/9_Uebung_8.html"><span class="chapter-title">Übung 8</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">Übung 8</span></h1>
 </div>
@@ -745,31 +713,62 @@ window.Quarto = {
 </header>
 
 
-<p>Nun wollen wir diesen Zufallszahlengenerator <code>random</code> nutzen um eine Funktion zu entwickeln, welche einen beliebigen Punkt (mit einer x-/y-Koordinate) zufällig in einem definierten Umkreis verschiebt. Unser Fernziel ist es, den simulierten Datensatz aus “Datenqualität und Unsicherheit” zu rekonstruieren (siehe unten). Der erste Schritt dorthin ist es, einen gemeldeten Punkt (rot in <a href="#fig-arcgiszecken" class="quarto-xref">Abbildung&nbsp;<span>34.1</span></a>) in einem definierten Umkreis zu verschieben.</p>
-<div id="fig-arcgiszecken" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-arcgiszecken-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/arcgiszecken.jpg" class="img-fluid figure-img">
+<section id="sec-ex-ifelse-gruezi2" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ex-ifelse-gruezi2">Übung 8.1</h2>
+<p>Erstelle eine neue Funktion <code>gruezi3</code> die <code>gruezi</code> (aus <a href="5_Uebung_6.html#sec-functions1-ex-gruezi" class="quarto-xref"><span>Übung 5.1</span></a>) um einem weiteren Parameter <code>uhrzeit</code> erweitert. Die Funktion soll vor 18 Uhr (<code>uhrzeit &lt; 18</code>) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht <code>20:15 Uhr</code> sondern <code>20.25</code>).</p>
+<div id="87446de2" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die Lösung sollte etwa folgendermasssen funktionieren:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>gruezi3(<span class="st">"Guido"</span>, uhrzeit <span class="op">=</span> <span class="dv">21</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>'Guten Abend Guido'</code></pre>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-arcgiszecken-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;34.1: Ausschnitt der simulierten Zeckenstiche. Der rote Punkt stellt jeweils den gemeldeten Zeckenstich dar, die blaue Punktwolke drum herum sind simulierte Punkte welche die Ungenauigkeit der Daten wiederspiegelt.
-</figcaption>
-</figure>
 </div>
-<p>Das Ziel dieser Übung ist es also, dass wir eine Funktion entwickeln, die uns einen zufälligen Punkt in der Nähe eines Ursprungspunktes vorschlägt. Unser Vorgehen: Wir addieren jedem Koordinatenwert (<code>x</code>/<code>y</code>) des Ursprungspunktes einen Zufallswert, zum Beispiel zwischen -100 bis +100.</p>
-<!-- % Zufallszahlen aus Uniformverteilung -->
-<section id="übung-8.1" class="level2">
-<h2 class="anchored" data-anchor-id="übung-8.1">Übung 8.1</h2>
-<p>Bevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul <code>random</code> vertraut machen. Importiere das Modul <code>random</code> und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.</p>
-<!-- % Dummykoordinaten erstellen -->
 </section>
 <section id="übung-8.2" class="level2">
 <h2 class="anchored" data-anchor-id="übung-8.2">Übung 8.2</h2>
-<p>Nun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten <code>x_start</code> und <code>y_start</code> mit jeweils dem Wert <code>0</code>. Diese sollen als “Ursprungskoordinaten” dienen.</p>
-</section>
-<section id="übung-8.3" class="level2">
-<h2 class="anchored" data-anchor-id="übung-8.3">Übung 8.3</h2>
-<p>Generiere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die <em>in etwa</em> zwischen -100 und +100 liegt. Weise diese Zahl der Variabel <code>x_offset</code> zu. Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese <code>y_offset</code> zu.</p>
+<p>Erweitere die Funktion <code>gruezi2</code> so, dass zwischen folgende Uhrzeiten berücksichtigt werden:</p>
+<div id="tbl-begruesung" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-begruesung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;32.1: Uhrzeiten und ihre Begrüssungsformen
+</figcaption>
+<div aria-describedby="tbl-begruesung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Uhrzeit</th>
+<th style="text-align: left;">Begrüssungsform</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">5 bis 11 Uhr</td>
+<td style="text-align: left;">Guten Morgen</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11 bis 18 Uhr</td>
+<td style="text-align: left;">Guten Tag</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18 bis 22 Uhr</td>
+<td style="text-align: left;">Guten Abend</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">22 bis 5 Uhr</td>
+<td style="text-align: left;">Gute Nacht</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Das Problem ist etwas schwierig zu Packen weil wir die “von - bis” Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die <code>if</code>, <code>elif</code>und <code>else</code> Operationen. Im Dropdown unten ist unser Vorschlag.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -782,101 +781,63 @@ Hinweis
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Überlege dir, welcher <em>Mittelwert</em> Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?</p>
-<p>Überlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):</p>
-<div id="fig-normal" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-normal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/normalverteilung.jpg" class="img-fluid figure-img">
+<p><img src="figures/if-else2.png" class="img-fluid"></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;34.2: Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert <span class="math inline">\(\mu\)</span> minus Standartabweichung <span class="math inline">\(\sigma\)</span>), 2 Standartabweichungen (<span class="math inline">\(\mu - 2\times\sigma)\)</span> und 2 Standartabweichungen (<span class="math inline">\(\mu - 3\times\sigma)\)</span>. Quelle: <a href="https://www.cobocards.com/">cobocards</a>
+</div>
+</div>
+<p>Teste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.</p>
+</section>
+<section id="übung-8.3" class="level2">
+<h2 class="anchored" data-anchor-id="übung-8.3">Übung 8.3</h2>
+<p>Erweitere die Funktion <code>bmi</code> aus <a href="7_Uebung_7.html#sec-ex-functions-bmi" class="quarto-xref"><span>Übung 7.3</span></a> so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der <a href="https://www.euro.who.int/en/health-topics/disease-prevention/nutrition/a-healthy-lifestyle/body-mass-index-bmi">WHO Klassifizierung</a> ausgegeben wird:</p>
+<div id="tbl-who-bmi" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-who-bmi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;32.2: WHO Nutritional status
 </figcaption>
+<div aria-describedby="tbl-who-bmi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">BMI</th>
+<th style="text-align: left;">Nutritional status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Below 18.5</td>
+<td style="text-align: left;">Underweight</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">18.5–24.9</td>
+<td style="text-align: left;">Normal weight</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25.0–29.9</td>
+<td style="text-align: left;">Pre-obesity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30.0–34.9</td>
+<td style="text-align: left;">Obesity class I</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">35.0–39.9</td>
+<td style="text-align: left;">Obesity class II</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Above 40</td>
+<td style="text-align: left;">Obesity class III</td>
+</tr>
+</tbody>
+</table>
+</div>
 </figure>
 </div>
-</div>
-</div>
-</div>
-</section>
-<section id="übung-8.4" class="level2">
-<h2 class="anchored" data-anchor-id="übung-8.4">Übung 8.4</h2>
-<p>Addiere nun die Zufallszahlen <code>x_offset</code> und <code>y_offset</code> <strong>jeweils</strong> zu den Dummykoordinaten <code>x_start</code> und <code>y_start</code> und weise diese neuen Koordinaten <code>x_neu</code> und <code>y_neu</code> zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.</p>
-<div id="e18d39f6" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x_neu</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7d42600e" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Der Output sollte etwa folgedermassen aussehen</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>bmi2(<span class="fl">1.7</span>, <span class="dv">70</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>10.246170309600945</code></pre>
-</div>
-</div>
-<div id="584184ed" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>y_neu</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>-4.443904000288846</code></pre>
-</div>
-</div>
-<div id="6701cad2" class="cell" data-execution_count="7">
-<details class="code-fold">
-<summary>Code für die Visualisierung (nur FYI)</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mypoints <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"x"</span>: [x_start, x_neu],</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"y"</span>: [y_start, y_neu],</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"typ"</span>: [<span class="st">"start"</span>, <span class="st">"neu"</span>]</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>mypoints.plot(<span class="st">"x"</span>, <span class="st">"y"</span>, kind <span class="op">=</span> <span class="st">"scatter"</span>, xlim <span class="op">=</span> [<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>], ylim <span class="op">=</span> [<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>], c <span class="op">=</span> [<span class="st">"red"</span>, <span class="st">"blue"</span>], title <span class="op">=</span> <span class="st">"Ursprung (rot) und Simulation (blau)"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="11_Uebung_8_files/figure-html/cell-8-output-1.png" width="617" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="sec-ex-offset-function" class="level2">
-<h2 class="anchored" data-anchor-id="sec-ex-offset-function">Übung 8.5</h2>
-<p>Nun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (<code>0</code>/<code>0</code>) durchgespielt. In der nächsten Aufgabe (<a href="12_Funktionen_in_DataFrames.html" class="quarto-xref"><span>Funktionen in DataFrames</span></a>) werden wir <em>alle</em> unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie <a href="#fig-arcgiszecken" class="quarto-xref">Abbildung&nbsp;<span>34.1</span></a> zu erhalten.</p>
-<p>Dafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.</p>
-<p>Erstelle jetzt eine Funktion namens <code>offset_coordinate</code> welche als Input eine <code>x</code> <em>oder</em> <code>y</code>-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen <code>distance</code> und einem Defaultwert von 100.</p>
-<div id="eb44f265" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die Funktion sollte so funktionieren:</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>offset_coordinate(x_start)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>10.9378164245929</code></pre>
-</div>
-</div>
-</section>
-<section id="sec-offset-vis" class="level2">
-<h2 class="anchored" data-anchor-id="sec-offset-vis">Übung 8.6</h2>
-<p>Nun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion <code>offset_coordinate()</code> 1’000 mal auf die Dummykoordinate an. Nutze <em>deine</em> Funktion <code>offset_coordinate</code> um eine Visualisierung gemäss untenstehendem beispiel zu machen.</p>
-<div id="c2242a4e" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x_neu_list <span class="op">=</span> [offset_coordinate(x_start) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">1000</span>)]</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y_neu_list <span class="op">=</span> [offset_coordinate(y_start) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">1000</span>)]</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste in eine Pandas DataFrame überführen</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>mysim <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span> : x_neu_list, <span class="st">"y"</span> : y_neu_list})</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>mysim.plot(<span class="st">"x"</span>, <span class="st">"y"</span>, kind <span class="op">=</span> <span class="st">"scatter"</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">"equal"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>(np.float64(-342.8016610358932),
- np.float64(344.8492268813678),
- np.float64(-390.96253345109847),
- np.float64(434.9539710663838))</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="11_Uebung_8_files/figure-html/cell-11-output-2.png" width="604" height="429" class="figure-img"></p>
-</figure>
-</div>
+<pre><code>'Who classification: Normal weight'</code></pre>
 </div>
 </div>
 
@@ -1450,13 +1411,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../C_Programmieren_2/10_Zufallzahlen.html" class="pagination-link" aria-label="Zufallszahlen generieren">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Zufallszahlen generieren</span></span>
+      <a href="../C_Programmieren_2/8_If_else.html" class="pagination-link" aria-label="If / Else">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">If / Else</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../C_Programmieren_2/12_Funktionen_in_DataFrames.html" class="pagination-link" aria-label="Funktionen in *DataFrames*">
-        <span class="nav-page-text"><span class="chapter-title">Funktionen in <em>DataFrames</em></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../C_Programmieren_2/10_Zufallzahlen.html" class="pagination-link" aria-label="Zufallszahlen generieren">
+        <span class="nav-page-text"><span class="chapter-title">Zufallszahlen generieren</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1465,4 +1426,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/C_Programmieren_2/11_Uebung_8.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/C_Programmieren_2/9_Uebung_8.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></div></div></footer></body></html>
