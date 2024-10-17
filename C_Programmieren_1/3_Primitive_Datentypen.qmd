@@ -42,7 +42,7 @@ sonne = False # "die Sonne scheint nicht"
 type(sonne)
 ```
 
-Um zu prüfen, ob ein bestimmter Wert `True` oder `False` ist verwendet man `is True`. Will man also fragen ob es regnet, wir dies folgendermassen formuliert:
+Um zu prüfen, ob ein bestimmter Wert `True` oder `False` ist, verwendet man `is True`. Will man also fragen, ob es regnet, wird dies folgendermassen formuliert:
 
 ```{python}
 # regnet es?

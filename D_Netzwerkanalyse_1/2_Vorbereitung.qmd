@@ -1,7 +1,7 @@
 
 # Vorbereitung
 
-Damit wir im ersten Teil von Netzwerkanalyse direkt loslegen können solltet ihr euch vorgängig mit QGIS vertraut machen. Dafür haben wir ein paar Übungen zusammengesetellt, die ihr als Vorbereitung auf Netzwerkanalyse I erledigen solltet.
+Damit wir im ersten Teil von Netzwerkanalyse direkt loslegen können, solltet ihr euch vorgängig mit QGIS vertraut machen. Dafür haben wir ein paar Übungen zusammengestellt, die ihr als Vorbereitung auf Netzwerkanalyse I erledigen solltet.
 
 :::{.callout-note}
 ## Übungsziele
@@ -33,7 +33,7 @@ Hier befinden sich alle Datensätze, die im Laufe des Blocks "Netzwerkanalyse" b
 
 ## Übung 1: QGIS installieren
 
-Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den passenden Standalone Installer des "Longterm release (most stable)" herunter (aktuell **3.28**). Installieren Sie QGIS nach dem Download.
+Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den passenden Standalone Installer des "Longterm release (most stable)" herunter (aktuell **3.34**). Installieren Sie QGIS nach dem Download.
 
 ## Übung 2: Tutorials anschauen
 
@@ -41,16 +41,16 @@ Schauen Sie sich danach zum Einstieg einzelne Videos vom Youtube Nutzer [Marshal
 
 ## Übung 3: Daten importieren
 
-Während Shapefiles im GIS-Unterricht bisher oft zur Speicherung von Vectordaten verwendet wurden, werden in QGIS vor allem Geopackage Dateien verwendet (.gpkg). QGIS kann Shapefiles durchaus lesen und schreiben, wir werden in den Übungen aber vor allem mit Geopackage Daten arbeiten. Geopackages sind eine alternative Methode, Vektordaten abzuspeichern. Sie beheben einige Defizite, die Shapefiles mit sich bringen. Siehe dazu auch die Website ["Shapefiles must die"](http://switchfromshapefile.org/). 
+Während Shapefiles im GIS-Unterricht bisher oft zur Speicherung von Vektordaten verwendet wurden, werden in QGIS vor allem Geopackage Dateien verwendet (.gpkg). QGIS kann Shapefiles durchaus lesen und schreiben, wir werden in den Übungen aber vor allem mit Geopackage Daten arbeiten. Geopackages sind eine alternative Methode, Vektordaten abzuspeichern. Sie beheben einige Defizite, die Shapefiles mit sich bringen. Siehe dazu auch die Website ["Shapefiles must die"](http://switchfromshapefile.org/). 
 
 1. Neues QGIS Projekt starten und Projektdatei speichern (Beachten Sie dazu die Empfehlungen am Anfang)
 2. CRS auf EPSG 2056 setzen
-3. Aus dem File *netzwerkanalyse.gpgk* den Layer *Gemeinde_Waedenswil* (siehe @tbl-datensaetze-netzwerkanalyse) in QGIS Importieren
+3. Aus dem File *netzwerkanalyse.gpgk* den Layer *Gemeinde_Waedenswil* (siehe @tbl-datensaetze-netzwerkanalyse) in QGIS importieren
 4. Symbologie folgendermassen ändern: Fläche transparent, Stadtgrenze schwarz
 
 ## Übung 4: Plugin installieren {#sec-ex-network-plugins}
 
-QGIS wird von zahlreichen Einzelpersonen und Gruppen entwickelt. Aus diesem Grund ist die Software modular aufgebaut, und nur ein Teil wird mit der Standard-Installation mitgeliefert. Für einige Funktionen müssen zusätzliche Erweiterungen (sogenannte "Plugins") installiert werden. Installieren Sie das Plugin "QuickOSM" um OpenStreetMap (OSM) Vektordaten rasch und einfach lokal abspeichern zu können.
+QGIS wird von zahlreichen Einzelpersonen und Gruppen entwickelt. Aus diesem Grund ist die Software modular aufgebaut und nur ein Teil wird mit der Standard-Installation mitgeliefert. Für einige Funktionen müssen zusätzliche Erweiterungen (sogenannte "Plugins") installiert werden. Installieren Sie das Plugin "QuickOSM", um OpenStreetMap (OSM) Vektordaten rasch und einfach lokal abspeichern zu können.
 
 1. Reiter Plugins→Manage and Install Plugins
 2. Im Suchfenster "QuickOSM" suchen

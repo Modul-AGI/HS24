@@ -90,24 +90,24 @@ book:
       - C_Programmieren_2/3_Python_Module.qmd
       # - C_Programmieren_2/3_JupyterLab-Desktop.qmd
       - C_Programmieren_2/4_Functions_I.qmd
-      - C_Programmieren_2/5_Uebung_5.qmd
+      - C_Programmieren_2/5_Uebung_6.qmd
       - C_Programmieren_2/6_Functions_II.qmd
-      - C_Programmieren_2/7_Uebung_6.qmd
+      - C_Programmieren_2/7_Uebung_7.qmd
       - C_Programmieren_2/8_If_else.qmd
-      - C_Programmieren_2/9_Uebung_7.qmd
+      - C_Programmieren_2/9_Uebung_8.qmd
       - C_Programmieren_2/10_Zufallzahlen.qmd
-      - C_Programmieren_2/11_Uebung_8.qmd
+      - C_Programmieren_2/11_Uebung_9.qmd
       - C_Programmieren_2/12_Funktionen_in_DataFrames.qmd
-      - C_Programmieren_2/13_Uebung_9.qmd
+      - C_Programmieren_2/13_Uebung_10.qmd
       - C_Programmieren_2/20_Anhang.qmd 
     - part: "C_Programmieren_3/1_Einleitung.qmd"
       chapters:
       - C_Programmieren_3/2_For_Loops_Intro.qmd
-      - C_Programmieren_3/2_Uebung_10.qmd
+      - C_Programmieren_3/2_Uebung_11.qmd
       - C_Programmieren_3/3_For_Loops_Basics.qmd
-      - C_Programmieren_3/3_Uebung_11.qmd
+      - C_Programmieren_3/3_Uebung_12.qmd
       - C_Programmieren_3/4_For_Loops_Advanced.qmd
-      - C_Programmieren_3/4_Uebung_12.qmd
+      - C_Programmieren_3/4_Uebung_13.qmd
       - C_Programmieren_3/5_GIS_in_Python.qmd
       - C_Programmieren_3/6_Raeumliche_Operationen.qmd
       - C_Programmieren_3/6_Uebung_14.qmd

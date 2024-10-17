@@ -9,7 +9,7 @@ Wir haben in der Vorlesung ein paar SQL-Abfragen über die "waelder" Datenbank d
 2. Formulieren Sie die folgenden SQL-Abfragen und führen diese über das Query Tool von pgAdmin aus.
 Schauen Sie sich anschliessend das Ergebnis in der Attributtabelle und im Geometry Viewer an.
 - Nicht räumliche Abfragen:
-    a. Welche Sichtungsmeldungen wurden von "id_erfasser_x" erfasst?
+    a. Welche Sichtungsmeldungen wurden von "id_erfasser = x" erfasst?
     b. Wurden Löwen gesichtet? Wenn ja, wie viele?
     c. Wie viele Tiere von jeder Art wurden jeweils gesichtet. Geben Sie eine Liste mit den Namen der Tierarten und der Anzahl der Sichtungen aus.
     d. Wie viele Hasen wurden gesichtet? Geben Sie eine Zahl aus.

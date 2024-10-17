@@ -47,7 +47,7 @@ groessen.append(177)
 
 ## Übung 2.4
 
-Ermittle die Summe aller Werte in `groessen`. Tip: Nutze dazu `sum()`
+Ermittle die Summe aller Werte in `groessen`. Tipp: Nutze dazu `sum()`
 
 ```{python}
 sum(groessen)
@@ -55,7 +55,7 @@ sum(groessen)
 
 ## Übung 2.5
 
-Ermittle die Anzahl Werte in `groessen` . Tip: Nutze dazu `len()`
+Ermittle die Anzahl Werte in `groessen` . Tipp: Nutze dazu `len()`
 
 ```{python}
 len(groessen)
@@ -63,7 +63,7 @@ len(groessen)
 
 ## Uebung 2.6 {#sec-mittelwert}
 
-Berechne die durchschnittliche Grösse aller Personen in `groessen`. Tip: Nutze dazu `len()` und `sum()`.
+Berechne die durchschnittliche Grösse aller Personen in `groessen`. Tipp: Nutze dazu `len()` und `sum()`.
 
 ```{python}
 sum(groessen) / len(groessen)

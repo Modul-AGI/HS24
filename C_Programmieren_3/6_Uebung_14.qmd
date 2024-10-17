@@ -59,7 +59,7 @@ zeckenstiche_buffer_outline.explore()
 
 ## Übung  14.4
 
-Nutze nachstehenden Code um zwei Datensätze im gleichen Plot darzustellen. 
+Nutze nachstehenden Code, um zwei Datensätze im gleichen Plot darzustellen. 
 
 ```{python}
 #| echo: true
@@ -85,7 +85,7 @@ zeckenstiche_gpd.explore(m = base, color = "pink")
 <!-- % Envelope -->
 ## Übung  14.5
 
-Berechne das "Envelope" von `zeckenstiche_gpd` anhand der Beispiele in @sec-raeumliche-operationen. Speichere den Output als `zeckenstiche_envelope`.
+Berechne "Envelope" von `zeckenstiche_gpd` anhand der Beispiele in @sec-raeumliche-operationen. Speichere den Output als `zeckenstiche_envelope`.
 
 :::{.callout-note collapse="true"}
 
@@ -101,7 +101,7 @@ zeckenstiche_envelope
 
 ## Übung  14.6
 
-Exportiere `zeckenstiche_gpd` als "Geopackage" mit dem Namen "zeckenstiche.gpkg". Lese nochmal @sec-pythongis-formate wenn du nicht mehr weisst, wie das geht. Versuche anschliessend, "zeckenstiche.gpkg" wieder einzulesen.
+Exportiere `zeckenstiche_gpd` als "Geopackage" mit dem Namen "zeckenstiche.gpkg". Lese nochmal @sec-pythongis-formate, wenn du nicht mehr weisst, wie das geht. Versuche anschliessend, "zeckenstiche.gpkg" wieder einzulesen.
 
 ```{python}
 #| eval: false
