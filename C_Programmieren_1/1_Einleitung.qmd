@@ -15,49 +15,49 @@ Ladet die neuste Version von Positron für euer Betriebssystem herunter (siehe [
 
 ### Python 
 
-Im Modul Angewandte Geoinformatik benutzen wir Python. Mit der Installation von ArcGIS sollte Python bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt [Mit ArcGIS Installation](#sec-mit-arcgis) durch.
+Im Modul Angewandte Geoinformatik benutzen wir Python. Mit der Installation von ArcGIS sollte Python bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt **Windows** (s.u.) durch.
 
-:::{.callout-note}
-Wer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt [Ohne ArcGIS Installation](#sec-ohne-arcgis) durch.
-
-:::
+Wer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte **Mac / Linux** (s.u.).
 
 
-#### Mit ArcGIS Installation (v.a. Windows Nutzer){#sec-mit-arcgis}
+
+
+:::{.panel-tabset}
+
+
+#### Windows {#sec-mit-arcgis}
+
+**Mit ArcGIS Installation**
 
 Um zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte ausführen:
 
-1. Python Command Prompt suchen und starten
+1. *Python Command Prompt* suchen und starten (siehe @sec-terminal)
 2. Folgender Befehl eingeben: 
 
     ```bash
     python3 --version
     ```
-3. Wenn der obige Befehl eine Fehlermeldung verursacht, bitte mit der Anleitung [Ohne ArcGIS Installation](#sec-ohne-arcgis) weiterfahren.
+3. Wenn der obige Befehl eine Fehlermeldung verursacht, bitte die Anleitung **Mac / Linux** befolgen.
 
 
-#### Ohne ArcGIS Installation (v.a. Mac / Linux Nutzer){#sec-ohne-arcgis}
+#### Mac / Linux {#sec-ohne-arcgis}
+
+**Ohne ArcGIS Installation**
 
 Wer keine ArcGIS Installation hat, sollte folgendermassen vorgehen:
 
 1. Überprüfe, ob Python ≥ 3.11 installiert ist. Tippe dafür folgenden Befehl in den Terminal:
 
     ```bash
-    python3 --version
+    python3 --version   
+    # oder:
+    python --version
     ```
 2. Wenn Python nicht vorhanden oder die Version < 3.11 ist, solltet ihr eine aktuelle Version von Python installieren: <https://www.python.org/downloads/>
-3. Installiert Miniconda von dieser Website: <https://docs.conda.io/projects/miniconda/en/latest/>
+3. Installiert Miniconda von dieser Website: <https://docs.conda.io/projects/miniconda/en/latest/>. Wählt den installer für eure Plattform aus, und verwendet *nicht* den grossen grünnen Button "Download Anaconda".
 
-### Conda
 
-Mit der Software `conda` verwalten wir unsere Python Packages in sogenannte *conda environments*. Erstellt die environment für den ersten Kurstag mit folgendem Befehl im Terminal:  
-
-```bash
-conda create --name geopython1
-conda activate geopython1   # Windows nutzer: activate geopython1
-conda install -c conda-forge jupyterlab pandas
-```
-
+:::
 
 
 ## Daten
@@ -71,11 +71,3 @@ Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs un
 | wald.gpkg | Ein Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in "Wald" und "nicht Wald" unterscheidet |
 : Datensätze für den Teil "Programmieren I - III" {#tbl-datensaetze}
 
-<!-- :::{.callout-note}
-## Übungsziele
-
-- Python kennen lernen, erste Interaktionen mit Python durch die Commandline
-- Erste Erfahrungen mit JupyterLab sammeln
-- Die wichtigsten Datentypen in Python kennen lernen (`bool`, `str`, `int`, `float`, `list`, `dict`)
-- Pandas DataFrames kennen lernen und einfache Manipulationen durchführen 
-::: -->

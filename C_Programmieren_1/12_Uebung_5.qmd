@@ -11,7 +11,7 @@ Diese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr m
 
 ## Übung 5.1 Neue Conda Umgebung erstellen
 
-1. Starte Python Command Prompt <!--(siehe [Python Command Prompt](#sec-python-command-prompt))-->
+1. Starte Python Command Prompt (siehe [Python Command Prompt](#sec-terminal-windows))
 2. Führe den Befehl: `conda create --name geopython2` aus
 3. Bestätige die Installation mit `y`
 4. Prüfe, ob u.a. folgende Meldung im Terminal erscheint (melde dich falls nicht):

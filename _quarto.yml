@@ -72,7 +72,7 @@ book:
     - part: "🤖 Teil: Programmieren"
     - part: "C_Programmieren_1/1_Einleitung.qmd"
       chapters:
-      # - C_Programmieren_1/2_Python-Command-Prompt.qmd
+      - C_Programmieren_1/2_Python-Command-Prompt.qmd
       - C_Programmieren_1/3_Primitive_Datentypen.qmd
       - C_Programmieren_1/4_Uebung_1.qmd
       - C_Programmieren_1/5_Komplexe_Datentypen.qmd

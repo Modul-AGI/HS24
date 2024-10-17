@@ -12,21 +12,6 @@ Bei primitiven Datentypen handelt es sich um die kleinste Einheit der Programmie
 
 :::{#tip-positron-project .callout-tip}
 
-## Positron Projekt erstellen
-
-Um die nachfolgenden Codebeispiele selbst ausprobieren zu können, müsst ihr 
-
-1. *Positron* starten
-2. In Positron ein neues Projekt erstellen (⨁ New → New Project → Python Project)
-   - Project Name: *Python_Code* (unser Vorschlag)
-   - Parent Directory: `Pfad\zu\deinem\Modul-AGI-Kurs\Programmieren1`
-3. Python Umgebung auswählen:
-   - *Use an existing Python installation* auswählen
-   - Python Interpreter: Hier die Umgebung *geopython1* suchen
-   - Klick *Create* → Current Window
-4. File direkt abspeichern: <kbd>Ctrl</kbd> + <kbd>S</kbd> (sinnvollen Namen mit endung `.py` geben)
-4. Im neuen Textfile Pythoncode schreiben
-5. Mit <kbd>Ctrl</kbd> + <kbd>Enter</kbd> Pythoncode ausführen
 :::
 
 
