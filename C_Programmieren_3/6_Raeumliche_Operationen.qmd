@@ -1,6 +1,6 @@
 # Räumliche Operationen {#sec-raeumliche-operationen}
 
-Was bringt uns diese *Geo* Erweiterung? Mit *GeoDataFrames* sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen *DataFrames* noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in @sec-pythongis beschrieben.
+Was bringt uns diese *Geo* Erweiterung? Mit *GeoDataFrames* sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen *DataFrames* noch nicht möglich waren. Ich möchte dies an ein paar Beispielen demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in @sec-pythongis beschrieben.
 
 ```{python}
 import geopandas as gpd
@@ -10,9 +10,9 @@ zeckenstiche = gpd.read_file("data/zeckenstiche.gpkg")
 
 :::{.callout-note}
 
-- Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen *Geometrien*, *Geoseries* und *GeoDataFrames* hin- und her konvertieren (siehe @sec-pythongis-datenstruktur). 
-- Welcher Datentyp eure Operation *braucht* seht ihr in [der Dokumentation](https://geopandas.org/). Welcher Datentyp ihr *habt* seht ihr mit `type()`.
-- Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst `x`)
+- Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen *Geometrien*, *Geoseries* und *GeoDataFrames* hin und her konvertieren (siehe @sec-pythongis-datenstruktur). 
+- Welcher Datentyp eure Operation *braucht*, seht ihr in [der Dokumentation](https://geopandas.org/). Welcher Datentyp ihr *habt*, seht ihr mit `type()`.
+- Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst `x`), braucht ihr folgenden Code:
 
 ```{python}
 # von GeoDataFrame zu Geoseries:
@@ -25,13 +25,13 @@ zecken_geodataframe = gpd.GeoDataFrame(geometry = zecken_geoseries)
 
 ## Buffer
 
-Eine typische GIS Operation ist das "Buffern" von Objekten. Der ArcGIS Befehl ["Buffer"](https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm) erreichen wir in Geopandas mit `.buffer()`. Folgender Code macht einen Buffer mit einer Distanz von 10m. 
+Eine typische GIS-Operation ist das "Buffern" von Objekten. Der ArcGIS Befehl ["Buffer"](https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm) erreichen wir in Geopandas mit `.buffer()`. Folgender Code macht einen Buffer mit einer Distanz von 10m. 
 
 ```{python}
 buffered = zeckenstiche.buffer(10) 
 ```
 
-Um Geopandas-Objekte zu plotten kann man einfach `.plot()` verwenden. Zudem kann man mit `boundary` die Umrisse eines Polygons extrahieren:
+Um Geopandas-Objekte zu plotten, kann man einfach `.plot()` verwenden. Zudem kann man mit `boundary` die Umrisse eines Polygons extrahieren:
 
 ```{python}
 base = buffered.boundary.plot() # plottet die boundries    
@@ -74,7 +74,7 @@ my_convex_hull = gpd.GeoSeries(my_convex_hull)
 my_envelope = gpd.GeoSeries(my_envelope)
 ```
 
-Um die beiden Objekte nebeneinander zu visualisieren importiere ich zuerst `pyplot` aus `matplotlib` (mit dem alias `plt`) und erstelle `subplots`
+Um die beiden Objekte nebeneinander zu visualisieren, importiere ich zuerst `pyplot` aus `matplotlib` (mit dem alias `plt`) und erstelle `subplots`
 
 ```{python}
 from matplotlib import pyplot as plt
@@ -93,14 +93,14 @@ zeckenstiche.plot(ax = ax2, color = "black")
 
 ## Overlay
 
-Viele der Funktionen aus dem ESRI Toolset ["Overlay"](https://pro.arcgis.com/de/pro-app/tool-reference/analysis/an-overview-of-the-overlay-toolset.htm) sind in der *Geopandas* Funktion `overlay` verpackt. Um sie zu demonstrieren nutze ich die Geometrien, die wir in weiter oben erstellt haben (`buffered` und `my_convex_hull`). Zuerst muss ich sie aber noch von *GeoSeries* in *GeoDataFrames* konverieren.
+Viele der Funktionen aus dem ESRI Toolset ["Overlay"](https://pro.arcgis.com/de/pro-app/tool-reference/analysis/an-overview-of-the-overlay-toolset.htm) sind in der *Geopandas* Funktion `overlay` verpackt. Um sie zu demonstrieren nutze ich die Geometrien, die wir in weiter oben erstellt haben (`buffered` und `my_convex_hull`). Zuerst muss ich sie aber noch von *GeoSeries* in *GeoDataFrames* konvertieren.
 
 ```{python}
 buffered_gdf = gpd.GeoDataFrame(geometry = buffered, crs = 2056)               
 my_convex_hull_gdf = gpd.GeoDataFrame(geometry = my_convex_hull, crs = 2056) 
 ```
 
-Nun kann ich zum beispielsweise die Overlay-Funktion `difference` ausführen:
+Nun kann ich beispielsweise die Overlay-Funktion `difference` ausführen:
 
 ```{python}
 my_difference = gpd.overlay(my_convex_hull_gdf,buffered_gdf, how='difference')
