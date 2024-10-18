@@ -35,7 +35,9 @@ Um zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar S
 2. Folgender Befehl eingeben: 
 
     ```bash
-    python3 --version
+    python3 --version   
+    # oder:
+    python --version
     ```
 3. Wenn der obige Befehl eine Fehlermeldung verursacht, bitte die Anleitung **Mac / Linux** befolgen.
 
