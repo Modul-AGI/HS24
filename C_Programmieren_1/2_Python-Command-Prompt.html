@@ -570,19 +570,19 @@ window.onload = function() {
 <section id="sec-conda-env" class="level2">
 <h2 class="anchored" data-anchor-id="sec-conda-env">Conda Environment erstellen</h2>
 <p>Mit der Software <code>conda</code> verwalten wir unsere Python Packages in sogenannte <em>Conda Environments</em>. Wenn ihr auf Windows mit einer ArcGIS installation arbeitet, verwendet ihr für Conda den <em>Python Command Prompt</em>, wenn ihr auf Mac / Linux arbeitet, verwendet ihr für Conda den Terminal innerhalb von Positron (siehe <a href="#sec-terminal" class="quarto-xref"><span>Terminal</span></a>).</p>
-<p>Folgende commands erstellen die <em>Environment</em> für den ersten Kurstag:</p>
+<p>Folgende commands erstellen die <em>Environment</em> für den ersten Kurstag (sollte einzeln ausgeführt werden!):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> geopython1</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate geopython1</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge jupyterlab pandas matplotlib</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="sec-wd" class="level2">
 <h2 class="anchored" data-anchor-id="sec-wd">Arbeitsordner / Working Directory erstellen</h2>
-<p>Um in Positron arbeiten zu können braucht ihr eine designierte Working Directory. Erstellt auf eurem Computer einen solchen Ordner, wo ihr die Pythonskripts und die zugehörigen Daten abspeichern könnt. Diese lautet zum Beispiel:</p>
+<p>Um in Positron arbeiten zu können, braucht ihr eine designierte Working Directory. Erstellt auf eurem Computer einen solchen Ordner, wo ihr die Pythonskripts und die zugehörigen Daten abspeichern könnt. Diese lautet zum Beispiel:</p>
 <p><code>C:\Pfad\zu\deinem\Modul-AGI-Kurs\Programmieren1\Python_Code</code></p>
 </section>
 <section id="positron-starten-und-verwenden" class="level2">
 <h2 class="anchored" data-anchor-id="positron-starten-und-verwenden">Positron starten und verwenden</h2>
-<p>Startet Positron und klickt auf <em>File → Open Folder</em> und öffnet den Pfad, den ihr im letzten Schritt erstellt habt (<a href="#sec-wd" class="quarto-xref"><span>Arbeitsordner / Working Directory erstellen</span></a>). Jetzt solltet ihr die Environment, die ihr in <a href="#sec-conda-env" class="quarto-xref"><span>Conda Environment erstellen</span></a> erstellt habt als <em>Python interpreter</em> nutzen können (siehe <a href="#fig-positron-intereter" class="quarto-xref">Abbildung&nbsp;<span>16.1</span></a>).</p>
+<p>Startet Positron und klickt auf <em>File → Open Folder</em> und öffnet den Pfad, den ihr im letzten Schritt erstellt habt (<a href="#sec-wd" class="quarto-xref"><span>Arbeitsordner / Working Directory erstellen</span></a>). Jetzt solltet ihr die Environment, die ihr in <a href="#sec-conda-env" class="quarto-xref"><span>Conda Environment erstellen</span></a> erstellt habt, als <em>Python interpreter</em> nutzen können (siehe <a href="#fig-positron-intereter" class="quarto-xref">Abbildung&nbsp;<span>16.1</span></a>).</p>
 <div id="fig-positron-intereter" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-positron-intereter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -593,7 +593,7 @@ Abbildung&nbsp;16.1: Wenn Positron erstellte <em>Environment</em> findet, kann d
 </figcaption>
 </figure>
 </div>
-<p>Die Erfahrung hat aber gezeigt, dass Positron diese erstellten <em>Environments</em> nicht immer findet. Soll dies der Fall sein, gibt es den folgenden Workaround:</p>
+<p>Die Erfahrung hat aber gezeigt, dass Positron diese erstellten <em>Environments</em> nicht immer findet. Sollte dies der Fall sein, gibt es den folgenden Workaround:</p>
 <p>Startet Positron <em>aus der Conda Environment</em> mit dem entsprechenden Befehl im Terminal (siehe <a href="#sec-terminal" class="quarto-xref"><span>Terminal</span></a>). Verwendet dazu den Pfad, den ihr im Schritt <a href="#sec-wd" class="quarto-xref"><span>Arbeitsordner / Working Directory erstellen</span></a> erstellt habt.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate geopython1                                      </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>          <span class="co"># ↓ euer Pfad verwenden!</span></span>
@@ -606,7 +606,7 @@ Abbildung&nbsp;16.1: Wenn Positron erstellte <em>Environment</em> findet, kann d
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Mit ArcGIS installation (Windows)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Ohne ArcGIS installation (Linux / Mac)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Startet dazu den <em>Python Command Prompt</em> indem ihr <code>Windowstaste</code> drückt, und nach dieser Applikation sucht (einfach den Namen eingeben). Nach dem öffnen der Applikation sollte sich ein schwarzes Fenster öffnen und auf eure Eingabe warten (siehe <a href="#fig-python-cmd" class="quarto-xref">Abbildung&nbsp;<span>16.2</span></a>).</p>
+<p>Startet dazu den <em>Python Command Prompt</em>, indem ihr <code>Windowstaste</code> drückt und nach dieser Applikation sucht (einfach den Namen eingeben). Nach dem Öffnen der Applikation sollte sich ein schwarzes Fenster öffnen und auf eure Eingabe warten (siehe <a href="#fig-python-cmd" class="quarto-xref">Abbildung&nbsp;<span>16.2</span></a>).</p>
 <div id="fig-python-cmd" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-python-cmd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
