@@ -2,114 +2,104 @@
 
 ## Vergleich R vs. Python
 
-Der Umgang mit Modulen ist in Python in vielerlei Hinsicht ähnlich wie in R. An dieser Stelle möchten wir die Unterschiede in einem Direktvergleich beleuchten. Dafür verwenden wir **ein fiktives Modul** namens `maler`, in Anlehnung an die Analogie des Hausbauens mit Spezialisten (siehe Vorlesungsfolien).  Nehmen wir an, dieses Modul existiert als Python Modul wie auch als R Library.
+Der Umgang mit Modulen ist in Python in vielerlei Hinsicht ähnlich wie in R. An dieser Stelle möchten wir die Unterschiede in einem Direktvergleich beleuchten. Dafür verwenden wir **ein fiktives Modul** namens `maler`, in Anlehnung an die Analogie des Hausbauens mit Spezialisten (siehe Vorlesungsfolien). Nehmen wir an, dieses Modul existiert als Python Modul wie auch als R Library.
 
 ### Erweiterung installieren {#sec-install-module}
 
-In R ist die Installation einer *Library* selbst ein R-Befehl und wird innerhalb von R ausgeführt. Wenn wir keine Quelle angeben, woher die Library heruntergeladen werden soll, wird eine Default-Quelle verwendet, die im System hinterlegt ist (z.B. "https://cloud.r-project.org"). 
+In R ist die Installation einer *Library* selbst ein R-Befehl und wird innerhalb von R ausgeführt. Wenn wir keine Quelle angeben, woher die Library heruntergeladen werden soll, wird eine Default-Quelle verwendet, die im System hinterlegt ist (z.B. "https://cloud.r-project.org").
 
-In Python ist dies leider etwas komplizierter, es braucht für die Installation einer Python *Library* eine Zusatzsoftware wie zum Beispiel `conda` (siehe dazu das Kapitel @sec-conda). Es gibt auch noch andere Wege, wie zum Beispiel `pip`, aber diese lassen wir der Einfachheit an dieser Stelle weg.
+In Python ist dies leider etwas komplizierter, es braucht für die Installation einer Python *Library* eine Zusatzsoftware wie zum Beispiel `conda`. Es gibt auch noch andere Wege, wie zum Beispiel `pip`, aber diese lassen wir der Einfachheit an dieser Stelle weg.
 
-:::: columns
-
+::: columns
 ::: {.column width="48%"}
-
 in R:
 
-```r
+``` r
 install.packages("maler")
-``` 
-:::
-
-::: {.column width="2%"}
-
-:::
-
-::: {.column width="48%"}
-
-In Python:
-
-```sh
-conda install -c conda-foge maler 
 ```
 :::
 
-:::: 
+::: {.column width="2%"}
+:::
+
+::: {.column width="48%"}
+In Python:
+
+``` sh
+conda install -c conda-forge maler 
+```
+:::
+:::
+
+::: {.callout-note title="Exkurs Conda" collapse="true"}
+## Was ist Conda?
+
+Conda ist ein Verwaltungssystem für Python-Bibliotheken[^3_python_module-1], welches unter Windows, macOS und Linux läuft. Neben Conda gibt es noch den "Package Manager" `pip`, welchen wir im Unterricht aber nicht nutzen werden. Mit Conda lassen sich diese Libraries schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten "virtuellen Umgebungen" (wie z.B. geopython1 bzw. geopython2, welche wir in Programmieren I erstellt haben). Diese Umgebungen ermöglichen es, dass Package-Installationen in abgeschottenen "Container" erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.
+:::
+
+[^3_python_module-1]: Genau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.
 
 ### Erweiterung laden {#sec-modules-import}
 
 Um eine Erweiterung nutzen zu können, müssen wir diese sowohl in R wie auch in Python in die aktuelle Session importieren. In R und Python sehen die Befehle folgendermassen aus:
 
-:::: columns
-
+::: columns
 ::: {.column width="48%"}
 in R:
 
-
-```r
+``` r
 library(maler)
 ```
-
 :::
 
 ::: {.column width="2%"}
-
 :::
 
 ::: {.column width="48%"}
-
 in Python:
 
-```python
+``` python
 import maler
 ```
 :::
-
-::::
+:::
 
 ### Erweiterung verwenden
 
-Um eine Funktion aus einer *Library* in R zu verwenden, kann ich diese *Function* direkt aufrufen. In Python hingegen muss ich entsprechende Erweiterung der *Function* mit einem Punkt voranstellen. 
+Um eine Funktion aus einer *Library* in R zu verwenden, kann ich diese *Function* direkt aufrufen. In Python hingegen muss ich entsprechende Erweiterung der *Function* mit einem Punkt voranstellen.
 
 Das ist zwar umständlicher, dafür aber weniger fehleranfällig. Angenommen zwei leicht unterschiedliche Funktionen heissen beide `wand_bemalen()`. Die eine stammt aus der Erweiterung `maler`, die andere aus der Erweiterung `maurer`. Wenn die Funktion in R aufgerufen wird ist nicht klar, aus welcher Library die Funktion verwendet werden soll. In Python ist im nachstehenden Beispiel unmissverständlich, dass `wand_bemalen()` aus dem Modul `maler` gemeint ist.
 
-:::: columns
-
+::: columns
 ::: {.column width="48%"}
-
 in R:
 
-```r
+``` r
 wand_bemalen()
 ```
-
 :::
 
 ::: {.column width="2%"}
-
 :::
 
 ::: {.column width="48%"}
-
 in Python:
 
-```python
+``` python
 maler.wand_bemalen()
 ```
-
 :::
-
-::::
+:::
 
 ## Python Eigenheiten
 
-In Python gibt es in Bezug auf die Verwendung von Modulen ein paar Eigenheiten, die wir aus der R Welt nicht kennen. Es ist wichtig diese Eigenheiten zu kennen, denn man trifft sie immer wieder an. 
+In Python gibt es in Bezug auf die Verwendung von Modulen ein paar Eigenheiten, die wir aus der R Welt nicht kennen. Es ist wichtig diese Eigenheiten zu kennen, denn man trifft sie immer wieder an.
 
 ### Modul mit Alias importieren
 
 Da es umständlich sein kann, jedesmal `maler.wand_bemalen()` voll auszuschreiben, können wir dem Modul beim Import auch einen "Alias" vergeben. Für gewisse populäre Module haben sich solche Aliasse eingebürgert. Beispielsweise wird `pandas` meist mit dem Alias `pd` importiert. Es ist sinnvoll, sich an diese Konventionen zu halten. Übertragen auf unser `maler` beispiel sieht der Import mit einem Alias folgendermassen aus:
 
-```python
+``` python
 import maler as m               # importiert "maler" mit dem Alias "m"
 m.wand_bemalen()                # nun wird "m." vorangestellt statt "maler."
 ```
@@ -118,7 +108,7 @@ m.wand_bemalen()                # nun wird "m." vorangestellt statt "maler."
 
 Es gibt noch die Variante, explizit eine spezifische *Function* aus einem Modul zu laden. Wenn man dies macht, kann man die Funktion ohne vorangestelltes Modul nutzen (genau wie in R). Dies sieht folgendermassen aus:
 
-```python
+``` python
 from maler import wand_bemalen  # importiert nur die Funktion "wand_bemalen"
 wand_bemalen()                  # das Voranstellen von "maler." ist nun nicht nötig
 ```
@@ -127,7 +117,7 @@ wand_bemalen()                  # das Voranstellen von "maler." ist nun nicht n�
 
 Zusätzlich ist es möglich, **alle** *Functions* aus einem Modul so zu importieren, dass der Modulname nicht mehr erwähnt werden muss. Diese Notation wird nicht empfohlen, aber es ist wichtig sie zu kennen.
 
-```python
+``` python
 from maler import *             # importier alle Funktionen (*) von "maler"
 wand_bemalen()                  # das Voranstellen von "maler." ist nun nicht nötig
 ```

@@ -6,7 +6,7 @@ code-summary: "Musterlösung"
 ---
 # Übung 6
 
-Bevor du mit den Übungen anfägst, solltest du bereits eine eigene Conda Environment nach der Anleitung in Kapitel "@sec-conda" erstellt haben.
+Bevor du mit den Übungen anfägst, solltest du bereits eine eigene Conda Environment nach der Anleitung in Übung 5 "@sec-conda2" erstellt haben.
 
 ## Übung 6.1 {#sec-functions1-ex-gruezi}
 
