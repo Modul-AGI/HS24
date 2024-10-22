@@ -1,8 +1,5 @@
 ---
 output: false
-echo: false                      # set to true to show solution
-code-fold: true
-code-summary: "Musterlösung"    
 ---
 
 # Übung 5 {#sec-conda2}
@@ -59,12 +56,3 @@ Diese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr m
     Executing transaction: done
     Retrieving notices: ...working... done
     ```
-
-<!--
-## Übung 5.2 JupyterLab Desktop installieren {#sec-jupyterlab-desktop}
-
-Die Tatsache, dass JupyterLab via dem *Command Prompt* gestartet wird und im Browser läuft, ist ungewohnt und auch etwas umständlich. Um nur schon eines der soeben erstellten Jupyter Notebooks (\*.ipynb File) zu *betrachten* muss (1) der Terminal geöffnet, (2) in den richtigen Ordner navigiert (3) die richtige Conda Umgebung aktiviert und (4) JupyterLab gestartet werden.
-
-Deshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: <https://github.com/jupyterlab/jupyterlab-desktop#installation>.
-
--->
