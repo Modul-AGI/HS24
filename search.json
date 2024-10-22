@@ -718,7 +718,7 @@
     "href": "C_Programmieren_1/4_Uebung_1.html#übung-1.5",
     "title": "Übung 1",
     "section": "Übung 1.5",
-    "text": "Übung 1.5\nErstelle eine boolsche Variable blond und setzte sie auf True wenn diese Eigenschaft auf dich zutrifft und False falls nicht.",
+    "text": "Übung 1.5\nErstelle eine boolsche Variable blond und setzte sie auf True, wenn diese Eigenschaft auf dich zutrifft, und False, falls nicht.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Übung 1</span>"
@@ -751,7 +751,7 @@
     "href": "C_Programmieren_1/5_Komplexe_Datentypen.html",
     "title": "Komplexe Datentypen",
     "section": "",
-    "text": "Im letzten Kapitel haben wir primitive Datentypen angeschaut. Diese stellen eine gute Basis dar, in der Praxis haben wir aber meistens nicht einen Temperaturwert, sondern eine Liste von Temperaturwerten. Wir haben nicht einen Vornamen sondern eine Tabelle mit Vor- und Nachnamen. Dafür gibt es in Python komplexere Datenstrukturen die als Gefässe für primitive Datentypen betrachtet werden können. Auch hier finden wir viele Ähnlichkeiten mit R:\n\n\n\n\n\n\n\n\n\n\nPython\nR\nBeschreibung\nBeispiel\n\n\n\n\n\nList\n(Vector)\nwerden über die Position abgerufen\nBeachtet die eckigen Klammern: hexerei = [3,2,1]\n\n\n\nDict\nList\nwerden über ein Schlüsselwort abgerufen\nBeachtet die geschweiften Klammern: langenscheidt = {\"trump\":\"erdichten\"}\n\n\n\nDataFrame\nDataframe\nTabellarische Daten\nSpezialfall einer dict pd.DataFrame({\"x\":[1,2,3], \"y\": [3,4,5]}\n\n\n\n\nIn Python gibt es noch weitere komplexe Datentypen wie Tuples und Sets. Diese spielen in unserem Kurs aber eine untergeordnete Rolle. Ich erwähne an dieser Stelle zwei häufig genannte Typen, damit ihr sie schon mal gehört habt:\n\nTuples:\n\nsind ähnlich wie Lists, nur können sie nachträglich nicht verändert werden. Das heisst, es ist nach der Erstellung keine Ergänzung von neuen Werten oder Löschung von bestehenden Werten möglich.\nsie werden mit runden Klammern erstellt: mytuple = (2,2,1)\n\nSets\n\nsind ähnlich wie Dicts, verfügen aber nicht über keys und values\njeder Wert wird nur 1x gespeichert (Duplikate werden automatisch entfernt)\nsie werden mit geschweiften Klammern erstellt: myset = {3,2,2}\n\n\nWohl das einfachste Gefäss, um mehrere Werte zu speichern sind Python-Listen, sogenannte Lists. Diese Lists werden mit eckigen Klammern erstellt. Die Reihenfolge, in denen die Werte angegeben werden, wird gespeichert. Das erlaubt es uns, bestimmte Werte aufgrund ihrer Position abzurufen.\nEine List wird folgendermassen erstellt:\n\nhexerei = [3,1,2]\n\nDer erste Wert wird in Python mit 0 (!!!) aufgerufen:\n\nhexerei[0]\n\n3\n\n\n\ntype(hexerei)\n\nlist\n\n\nIm Prinzip sind Lists ähnlich wie Vectors in R, mit dem Unterschied das in Python-Lists unterschiedliche Datentypen abgespeichert werden können. Zum Beispiel auch weitere, verschachtelte Lists:\n\nchaos = [23, \"ja\", [1,2,3]]\n\n\n# Der Inhalt vom ersten Wert ist vom Typ \"Int\"\ntype(chaos[0])\n\nint\n\n\n\n# Der Inhalt vom dritten Wert ist vom Typ \"List\"\n\ntype(chaos[2])\n\nlist",
+    "text": "Im letzten Kapitel haben wir primitive Datentypen angeschaut. Diese stellen eine gute Basis dar, in der Praxis haben wir aber meistens nicht einen Temperaturwert, sondern eine Liste von Temperaturwerten. Wir haben nicht einen Vornamen, sondern eine Tabelle mit Vor- und Nachnamen. Dafür gibt es in Python komplexere Datenstrukturen die als Gefässe für primitive Datentypen betrachtet werden können. Auch hier finden wir viele Ähnlichkeiten mit R:\n\n\n\n\n\n\n\n\n\n\nPython\nR\nBeschreibung\nBeispiel\n\n\n\n\n\nList\n(Vector)\nwerden über die Position abgerufen\nBeachtet die eckigen Klammern: hexerei = [3,2,1]\n\n\n\nDict\nList\nwerden über ein Schlüsselwort abgerufen\nBeachtet die geschweiften Klammern: langenscheidt = {\"trump\":\"erdichten\"}\n\n\n\nDataFrame\nDataframe\nTabellarische Daten\nSpezialfall einer dict pd.DataFrame({\"x\":[1,2,3], \"y\": [3,4,5]}\n\n\n\n\nIn Python gibt es noch weitere komplexe Datentypen wie Tuples und Sets. Diese spielen in unserem Kurs aber eine untergeordnete Rolle. Ich erwähne an dieser Stelle zwei häufig genannte Typen, damit ihr sie schon mal gehört habt:\n\nTuples:\n\nsind ähnlich wie Lists, nur können sie nachträglich nicht verändert werden. Das heisst, es ist nach der Erstellung keine Ergänzung von neuen Werten oder Löschung von bestehenden Werten möglich.\nsie werden mit runden Klammern erstellt: mytuple = (2,2,1)\n\nSets\n\nsind ähnlich wie Dicts, verfügen aber nicht über keys und values\njeder Wert wird nur 1x gespeichert (Duplikate werden automatisch entfernt)\nsie werden mit geschweiften Klammern erstellt: myset = {3,2,2}\n\n\nWohl das einfachste Gefäss, um mehrere Werte zu speichern, sind Python-Listen, sogenannte Lists. Diese Lists werden mit eckigen Klammern erstellt. Die Reihenfolge, in denen die Werte angegeben werden, wird gespeichert. Das erlaubt es uns, bestimmte Werte aufgrund ihrer Position abzurufen.\nEine List wird folgendermassen erstellt:\n\nhexerei = [3,1,2]\n\nDer erste Wert wird in Python mit 0 (!!!) aufgerufen:\n\nhexerei[0]\n\n3\n\n\n\ntype(hexerei)\n\nlist\n\n\nIm Prinzip sind Lists ähnlich wie Vectors in R, mit dem Unterschied, dass in Python-Lists unterschiedliche Datentypen abgespeichert werden können. Zum Beispiel auch weitere, verschachtelte Lists:\n\nchaos = [23, \"ja\", [1,2,3]]\n\n\n# Der Inhalt vom ersten Wert ist vom Typ \"Int\"\ntype(chaos[0])\n\nint\n\n\n\n# Der Inhalt vom dritten Wert ist vom Typ \"List\"\n\ntype(chaos[2])\n\nlist",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Komplexe Datentypen</span>"
@@ -806,7 +806,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#übung-2.4",
     "title": "Übung 2",
     "section": "Übung 2.4",
-    "text": "Übung 2.4\nErmittle die Summe aller Werte in groessen. Tip: Nutze dazu sum()",
+    "text": "Übung 2.4\nErmittle die Summe aller Werte in groessen. Tipp: Nutze dazu sum()",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Übung 2</span>"
@@ -817,7 +817,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#übung-2.5",
     "title": "Übung 2",
     "section": "Übung 2.5",
-    "text": "Übung 2.5\nErmittle die Anzahl Werte in groessen . Tip: Nutze dazu len()",
+    "text": "Übung 2.5\nErmittle die Anzahl Werte in groessen . Tipp: Nutze dazu len()",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Übung 2</span>"
@@ -828,7 +828,7 @@
     "href": "C_Programmieren_1/6_Uebung_2.html#sec-mittelwert",
     "title": "Übung 2",
     "section": "Uebung 2.6",
-    "text": "Uebung 2.6\nBerechne die durchschnittliche Grösse aller Personen in groessen. Tip: Nutze dazu len() und sum().",
+    "text": "Uebung 2.6\nBerechne die durchschnittliche Grösse aller Personen in groessen. Tipp: Nutze dazu len() und sum().",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Übung 2</span>"
@@ -850,7 +850,7 @@
     "href": "C_Programmieren_1/8_Dictionary.html",
     "title": "Dictionaries",
     "section": "",
-    "text": "In den letzten Übungen haben wir einen Fokus auf Listen gelegt. Nun wollen wir ein besonderen Fokus auf den Datentyp Dictionary legen.\nÄhnlich wie eine List, ist eine Dictionary ein Behälter wo mehrere Elemente abgespeichert werden können. Wie bei einem Wörterbuch bekommt jedes Element ein “Schlüsselwort”, mit dem man den Eintrag finden kann. Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die Erklärung “erdichten, schwindeln, sich aus den Fingern saugen”.\n\nIn Python würde man diese Dictionary folgendermassen erstellen:\n\nlangenscheidt = {\"trump\":\"erdichten- schwindeln- sich aus den Fingern saugen\"}\n\nSchlüssel (von nun an mit Key bezeichnet) des Eintrages lautet “trump” und der dazugehörige Wert (Value) “erdichten- schwindeln- aus den Fingern saugen”. Beachte die geschweiften Klammern ({ und }) bei der Erstellung einer Dictionary.\nEine Dictionary besteht aber meistens nicht aus einem, sondern aus mehreren Einträgen: Diese werden Kommagetrennt aufgeführt.\n\nlangenscheidt = {\"trump\":\"erdichten- schwindeln- sich aus den Fingern saugen\", \"trumpery\":\"Plunder- Ramsch- Schund\"}\n\nDer Clou der Dictionary ist, dass man nun einen Eintrag mittels dem Key aufrufen kann. Wenn wir also nun wissen wollen was “trump” heisst, ermitteln wir dies mit der nachstehenden Codezeile:\n\nlangenscheidt[\"trump\"]\n\n'erdichten- schwindeln- sich aus den Fingern saugen'\n\n\nUm eine Dictionary mit einem weiteren Eintrag zu ergänzen, geht man sehr ähnlich vor wie beim Abrufen von Einträgen.\n\nlangenscheidt[\"trumpet\"] = \"trompete\" \n\nEin Key kann auch mehrere Einträge enthalten. An unserem Langenscheidts Beispiel: Das Wort “trump” ist zwar eindeutig, doch “trumpery” hat vier verschiedene Bedeutungen. In so einem Fall können wir einem Eintrag auch eine List von Werten zuweisen. Beachte die Eckigen Klammern und die Kommas, welche die Listeneinträge voneinander trennt.\n\nlangenscheidt[\"trumpery\"] = [\"Plunder- Ramsch- Schund\", \n                             \"Gewäsch- Quatsch\", \n                             \"Schund- Kitsch\", \n                             \"billig- nichtssagend\"]    \nlangenscheidt[\"trumpery\"]\n\n['Plunder- Ramsch- Schund',\n 'Gewäsch- Quatsch',\n 'Schund- Kitsch',\n 'billig- nichtssagend']\n\n\n\nlen(langenscheidt[\"trumpery\"])\n\n4",
+    "text": "In den letzten Übungen haben wir einen Fokus auf Listen gelegt. Nun wollen wir ein besonderen Fokus auf den Datentyp Dictionary legen.\nÄhnlich wie eine List ist eine Dictionary ein Behälter, wo mehrere Elemente abgespeichert werden können. Wie bei einem Wörterbuch bekommt jedes Element ein “Schlüsselwort”, mit dem man den Eintrag finden kann. Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die Erklärung “erdichten, schwindeln, sich aus den Fingern saugen”.\n\nIn Python würde man diese Dictionary folgendermassen erstellen:\n\nlangenscheidt = {\"trump\":\"erdichten- schwindeln- sich aus den Fingern saugen\"}\n\nSchlüssel (von nun an mit Key bezeichnet) des Eintrages lautet “trump” und der dazugehörige Wert (Value) “erdichten- schwindeln- aus den Fingern saugen”. Beachte die geschweiften Klammern ({ und }) bei der Erstellung einer Dictionary.\nEine Dictionary besteht aber meistens nicht aus einem, sondern aus mehreren Einträgen: Diese werden Kommagetrennt aufgeführt.\n\nlangenscheidt = {\"trump\":\"erdichten- schwindeln- sich aus den Fingern saugen\", \"trumpery\":\"Plunder- Ramsch- Schund\"}\n\nDer Clou der Dictionary ist, dass man nun einen Eintrag mittels dem Key aufrufen kann. Wenn wir also nun wissen wollen, was “trump” heisst, ermitteln wir dies mit der nachstehenden Codezeile:\n\nlangenscheidt[\"trump\"]\n\n'erdichten- schwindeln- sich aus den Fingern saugen'\n\n\nUm eine Dictionary mit einem weiteren Eintrag zu ergänzen, geht man sehr ähnlich vor wie beim Abrufen von Einträgen.\n\nlangenscheidt[\"trumpet\"] = \"trompete\" \n\nEin Key kann auch mehrere Einträge enthalten. An unserem Langenscheidt Beispiel: Das Wort “trump” ist zwar eindeutig, doch “trumpery” hat vier verschiedene Bedeutungen. In so einem Fall können wir einem Eintrag auch eine List von Werten zuweisen. Beachte die eckigen Klammern und die Kommas, welche die Listeneinträge voneinander trennt.\n\nlangenscheidt[\"trumpery\"] = [\"Plunder- Ramsch- Schund\", \n                             \"Gewäsch- Quatsch\", \n                             \"Schund- Kitsch\", \n                             \"billig- nichtssagend\"]    \nlangenscheidt[\"trumpery\"]\n\n['Plunder- Ramsch- Schund',\n 'Gewäsch- Quatsch',\n 'Schund- Kitsch',\n 'billig- nichtssagend']\n\n\n\nlen(langenscheidt[\"trumpery\"])\n\n4",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Dictionaries</span>"
@@ -872,7 +872,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.2",
     "title": "Übung 3",
     "section": "Übung 3.2",
-    "text": "Übung 3.2\nRufe verschiedene Elemente aus der Dictionary via dem Key ab.",
+    "text": "Übung 3.2\nRufe verschiedene Elemente aus der Dictionary via Key ab.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Übung 3</span>"
@@ -883,7 +883,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.3",
     "title": "Übung 3",
     "section": "Übung 3.3",
-    "text": "Übung 3.3\nNutze me um nachstehenden Satz (mit deinen Values) zu erstellen:\n'Mein Name ist van Rossum, Guido van Rossum'",
+    "text": "Übung 3.3\nNutze me, um nachstehenden Satz (mit deinen Values) zu erstellen:\n'Mein Name ist van Rossum, Guido van Rossum'",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Übung 3</span>"
@@ -905,7 +905,7 @@
     "href": "C_Programmieren_1/9_Uebung_3.html#übung-3.5",
     "title": "Übung 3",
     "section": "Übung 3.5",
-    "text": "Übung 3.5\nErstelle eine neue Dictionary people mit den Keys “vornamen”, “nachnamen” und “groesse” und jeweils 3 Einträgen pro Key.",
+    "text": "Übung 3.5\nErstelle eine neue Dictionary people mit den Keys “vornamen”, “nachnamen” und “groesse” und jeweils 3 Einträge pro Key.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Übung 3</span>"
@@ -960,7 +960,7 @@
     "href": "C_Programmieren_1/11_Uebung_4.html",
     "title": "Übung 4",
     "section": "",
-    "text": "Übung 4.1\nImportiere pandas und nutze die Funktion DataFrame um people in eine DataFrame umzuwandeln (siehe dazu das Beispiel unten). Weise den Output der Variable people_df zu und schau dir people_df an.\nimport pandas as pd\n\npeople = {\"vornamen\": [\"Christopher\", \"Henning\", \"Severin\"], \"nachnamen\": [\"Annen\",\"May\", \"Kantereit\"], \"groessen\": [174, 182, 162]}\n\n\npeople_df = pd.DataFrame(people)",
+    "text": "Übung 4.1\nImportiere pandas und nutze die Funktion DataFrame, um people in eine DataFrame umzuwandeln (siehe dazu das Beispiel unten). Weise den Output der Variablen people_df zu und schau dir people_df an.\nimport pandas as pd\n\npeople = {\"vornamen\": [\"Christopher\", \"Henning\", \"Severin\"], \"nachnamen\": [\"Annen\",\"May\", \"Kantereit\"], \"groessen\": [174, 182, 162]}\n\n\npeople_df = pd.DataFrame(people)",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Übung 4</span>"
@@ -971,7 +971,7 @@
     "href": "C_Programmieren_1/11_Uebung_4.html#sec-ex-to-csv",
     "title": "Übung 4",
     "section": "Übung 4.2",
-    "text": "Übung 4.2\nIn der Praxis kommen Tabellarische Daten meist als “csv” Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.\n\npeople_df.to_csv(\"people.csv\")",
+    "text": "Übung 4.2\nIn der Praxis kommen tabellarische Daten meist als “csv” Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv-Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.\n\npeople_df.to_csv(\"people.csv\")",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Übung 4</span>"
@@ -982,7 +982,7 @@
     "href": "C_Programmieren_1/11_Uebung_4.html#sec-ex-import-zeckenstiche",
     "title": "Übung 4",
     "section": "Übung 4.3",
-    "text": "Übung 4.3\nGenau so einfach ist es eine csv zu importieren. Lade die Datei “zeckenstiche.csv” (siehe Tabelle 1) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei “zeckenstiche.csv”.\n\n# ich habe die Daten in einem Unterordner \"data\" abgespeichert\nzeckenstiche = pd.read_csv(\"data/zeckenstiche.csv\")",
+    "text": "Übung 4.3\nGenau so einfach ist es, ein csv zu importieren. Lade die Datei “zeckenstiche.csv” (siehe Tabelle 1) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei “zeckenstiche.csv”.\n\n# ich habe die Daten in einem Unterordner \"data\" abgespeichert\nzeckenstiche = pd.read_csv(\"data/zeckenstiche.csv\")",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Übung 4</span>"
@@ -1114,7 +1114,7 @@
     "href": "C_Programmieren_2/5_Uebung_6.html",
     "title": "Übung 6",
     "section": "",
-    "text": "Übung 6.1\nErstelle eine Function, die gruezi heisst, einen Nachnamen als Input annimmt und per Sie grüsst.\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi(nachname = \"van Rossum\")\n\n'Guten Tag, van Rossum'",
+    "text": "Übung 6.1\nErstelle eine Function, die gruezi heisst, einen Nachnamen als Input annimmt und per Sie grüsst.\nMusterlösung\ndef gruezi(nachname):\n    return \"Guten Tag, \" + nachname\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi(nachname = \"van Rossum\")\n\n'Guten Tag, van Rossum'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1125,7 +1125,7 @@
     "href": "C_Programmieren_2/5_Uebung_6.html#sec-gruezi2",
     "title": "Übung 6",
     "section": "Übung 6.2",
-    "text": "Übung 6.2\nErstelle eine neue Funktion gruezi2 welche im Vergleich zu gruezi einen weiteren Parameter namens anrede annimmt.\n\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi2(nachname = \"van Rossum\", anrede = \"Herr\")\n\n'Guten Tag, Herr van Rossum'",
+    "text": "Übung 6.2\nErstelle eine neue Funktion gruezi2 welche im Vergleich zu gruezi einen weiteren Parameter namens anrede annimmt.\n\n\nMusterlösung\ndef gruezi2(nachname, anrede):\n    return \"Guten Tag, \" + anrede + \" \" + nachname\n\n\n\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi2(nachname = \"van Rossum\", anrede = \"Herr\")\n\n'Guten Tag, Herr van Rossum'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1136,7 +1136,7 @@
     "href": "C_Programmieren_2/5_Uebung_6.html#übung-6.3",
     "title": "Übung 6",
     "section": "Übung 6.3",
-    "text": "Übung 6.3\nErstelle eine Funktion add die zwei Zahlen summiert.\n\n# Das Resultat sollte folgendermassen aussehen:\nadd(zahl1 = 2, zahl2 = 10)\n\n12",
+    "text": "Übung 6.3\nErstelle eine Funktion add die zwei Zahlen summiert.\n\n\nMusterlösung\ndef add(zahl1, zahl2):\n    return zahl1 + zahl2\n\n\n\n# Das Resultat sollte folgendermassen aussehen:\nadd(zahl1 = 2, zahl2 = 10)\n\n12",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1147,7 +1147,7 @@
     "href": "C_Programmieren_2/5_Uebung_6.html#übung-6.4",
     "title": "Übung 6",
     "section": "Übung 6.4",
-    "text": "Übung 6.4\nErstelle eine Funktion square, welche den Input quadriert.\n\n# Das Resultat sollte folgendermassen aussehen:\nsquare(zahl = 5)\n\n25",
+    "text": "Übung 6.4\nErstelle eine Funktion square, welche den Input quadriert.\n\n\nMusterlösung\ndef square(zahl):\n    return zahl * zahl\n\n# oder\n\ndef square(zahl):\n    return zahl**2\n\n\n\n# Das Resultat sollte folgendermassen aussehen:\nsquare(zahl = 5)\n\n25",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1158,7 +1158,7 @@
     "href": "C_Programmieren_2/5_Uebung_6.html#übung-6.5",
     "title": "Übung 6",
     "section": "Übung 6.5",
-    "text": "Übung 6.5\nErstelle eine Funktion meter_zu_fuss, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Erinnerung: 30.48 cm ergeben 1 Fuss.\n\n# Das Resultat sollte folgendermassen aussehen:\n\nmeter_zu_fuss(meter = 1.80)\n\n5.905511811023622",
+    "text": "Übung 6.5\nErstelle eine Funktion meter_zu_fuss, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Erinnerung: 30.48 cm ergeben 1 Fuss.\n\n\nMusterlösung\ndef meter_zu_fuss(meter):\n    fuss = meter * 100 / 30.48\n    return fuss\n\n\n\n# Das Resultat sollte folgendermassen aussehen:\n\nmeter_zu_fuss(meter = 1.80)\n\n5.905511811023622",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1235,7 +1235,7 @@
     "href": "C_Programmieren_2/7_Uebung_7.html",
     "title": "Übung 7",
     "section": "",
-    "text": "Übung 7.1\nErstelle eine Funktion namens times, die zwei Zahlen miteinander multipliziert.",
+    "text": "Übung 7.1\nErstelle eine Funktion namens times, die zwei Zahlen miteinander multipliziert.\nMusterlösung\ndef times(x, y):\n    return x * y\nMusterlösung\ntimes(2, 2)",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1246,7 +1246,7 @@
     "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.2",
     "title": "Übung 7",
     "section": "Übung 7.2",
-    "text": "Übung 7.2\nDie eben erstellte Funktion times benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert 1).\nZusatzaufgabe: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?",
+    "text": "Übung 7.2\nDie eben erstellte Funktion times benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert 1).\nZusatzaufgabe: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?\n\n\nMusterlösung\ndef times(x, y = 1):\n    return x * y\n\n\n\n\nMusterlösung\ntimes(3)\n\n\n\n\nMusterlösung\n# (Zusatzaufgabe)\ndef times(x = 1, y):\n    return x * y",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1257,7 +1257,7 @@
     "href": "C_Programmieren_2/7_Uebung_7.html#sec-ex-functions-bmi",
     "title": "Übung 7",
     "section": "Übung 7.3",
-    "text": "Übung 7.3\nErstelle eine Funktion namens bmi, die aus Grösse und Gewicht einen BodyMassIndex berechnet (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:\n\nbmi(groesse_m = 1.8, gewicht_kg = 88)\n\n27.160493827160494",
+    "text": "Übung 7.3\nErstelle eine Funktion namens bmi, die aus Grösse und Gewicht einen BodyMassIndex berechnet (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:\n\n\nMusterlösung\ndef bmi(groesse_m, gewicht_kg):\n    return gewicht_kg / (groesse_m * groesse_m)\n\n\n\nbmi(groesse_m = 1.8, gewicht_kg = 88)\n\n27.160493827160494",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1268,7 +1268,7 @@
     "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.4",
     "title": "Übung 7",
     "section": "Übung 7.4",
-    "text": "Übung 7.4\nErstelle eine Funktion mittelwert(), welche den Mittelwert aus einer Liste (List) von Zahlen berechnet. Nutze dazu sum() und len() analog Uebung 2.6. Das Resultat sollte folgendermassen aussehen:\n\nmeine_zahlen = [50, 100, 550, 1000]\nmittelwert(meine_zahlen)\n\n425.0",
+    "text": "Übung 7.4\nErstelle eine Funktion mittelwert(), welche den Mittelwert aus einer Liste (List) von Zahlen berechnet. Nutze dazu sum() und len() analog Uebung 2.6. Das Resultat sollte folgendermassen aussehen:\n\n\nMusterlösung\ndef mittelwert(zahlen):\n    return sum(zahlen) / len(zahlen)\n\n\n\nmeine_zahlen = [50, 100, 550, 1000]\nmittelwert(meine_zahlen)\n\n425.0",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1279,7 +1279,7 @@
     "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.5",
     "title": "Übung 7",
     "section": "Übung 7.5",
-    "text": "Übung 7.5\nErstelle eine Funktion celsius_zu_farenheit, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: Temperatur in °F = Temperatur in °C x 1,8 + 32.\nDas Resultat sollte folgendermassen aussehen:\n\ncelsius_zu_farenheit(celsius = 25)\n\n77.0",
+    "text": "Übung 7.5\nErstelle eine Funktion celsius_zu_farenheit, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: Temperatur in °F = Temperatur in °C x 1,8 + 32.\n\n\nMusterlösung\ndef celsius_zu_farenheit(celsius):\n    farenheit = celsius * 1.8 + 32\n    return farenheit\n\n\nDas Resultat sollte folgendermassen aussehen:\n\ncelsius_zu_farenheit(celsius = 25)\n\n77.0",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1290,7 +1290,7 @@
     "href": "C_Programmieren_2/7_Uebung_7.html#übung-7.6",
     "title": "Übung 7",
     "section": "Übung 7.6",
-    "text": "Übung 7.6\nSchreibe die letzte Funktion celsius_zu_farenheit in der lambda Notation.",
+    "text": "Übung 7.6\nSchreibe die letzte Funktion celsius_zu_farenheit in der lambda Notation.\n\n\nMusterlösung\ncelsius_in_farenheit2 = lambda celsius: celsius * 1.8 + 32",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Übung 7</span>"
@@ -1312,7 +1312,7 @@
     "href": "C_Programmieren_2/9_Uebung_8.html",
     "title": "Übung 8",
     "section": "",
-    "text": "Übung 8.1\nErstelle eine neue Funktion gruezi3 die gruezi (aus Übung 6.1) um einem weiteren Parameter uhrzeit erweitert. Die Funktion soll vor 18 Uhr (uhrzeit &lt; 18) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht 20:15 Uhr sondern 20.25).\n# die Lösung sollte etwa folgendermasssen funktionieren:\n\ngruezi3(\"Guido\", uhrzeit = 21)\n\n'Guten Abend Guido'",
+    "text": "Übung 8.1\nErstelle eine neue Funktion gruezi3 die gruezi (aus Übung 6.1) um einem weiteren Parameter uhrzeit erweitert. Die Funktion soll vor 18 Uhr (uhrzeit &lt; 18) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht 20:15 Uhr sondern 20.25).\nMusterlösung\ndef gruezi3(nachname, uhrzeit):\n    if(uhrzeit &lt; 18):\n        grussform = \"Tag\"\n    else:\n        grussform = \"Abend\"\n\n    return \"Guten \" + grussform + \" \" + nachname\n# die Lösung sollte etwa folgendermasssen funktionieren:\n\ngruezi3(\"Guido\", uhrzeit = 21)\n\n'Guten Abend Guido'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1323,7 +1323,7 @@
     "href": "C_Programmieren_2/9_Uebung_8.html#übung-8.2",
     "title": "Übung 8",
     "section": "Übung 8.2",
-    "text": "Übung 8.2\nErweitere die Funktion gruezi2 so, dass zwischen folgende Uhrzeiten berücksichtigt werden:\n\n\n\nTabelle 32.1: Uhrzeiten und ihre Begrüssungsformen\n\n\n\n\n\nUhrzeit\nBegrüssungsform\n\n\n\n\n\n5 bis 11 Uhr\nGuten Morgen\n\n\n\n11 bis 18 Uhr\nGuten Tag\n\n\n\n18 bis 22 Uhr\nGuten Abend\n\n\n\n22 bis 5 Uhr\nGute Nacht\n\n\n\n\n\n\n\nDas Problem ist etwas schwierig zu Packen weil wir die “von - bis” Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die if, elifund else Operationen. Im Dropdown unten ist unser Vorschlag.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\n\n\n\n\nTeste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.",
+    "text": "Übung 8.2\nErweitere die Funktion gruezi2 so, dass zwischen folgende Uhrzeiten berücksichtigt werden:\n\n\n\nTabelle 32.1: Uhrzeiten und ihre Begrüssungsformen\n\n\n\n\n\nUhrzeit\nBegrüssungsform\n\n\n\n\n\n5 bis 11 Uhr\nGuten Morgen\n\n\n\n11 bis 18 Uhr\nGuten Tag\n\n\n\n18 bis 22 Uhr\nGuten Abend\n\n\n\n22 bis 5 Uhr\nGute Nacht\n\n\n\n\n\n\n\nDas Problem ist etwas schwierig zu Packen weil wir die “von - bis” Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die if, elifund else Operationen. Im Dropdown unten ist unser Vorschlag.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\n\n\n\n\n\n\nMusterlösung\ndef gruezi2(nachname, anrede, uhrzeit):\n    if(uhrzeit &lt; 5):\n        was = \"Gute Nacht\"\n    elif(uhrzeit &lt; 11):\n        was = \"Guten Morgen\"\n    elif(uhrzeit &lt; 18):\n        was = \"Guten Tag\"\n    elif(uhrzeit &lt; 22):\n        was = \"Guten Abend\"\n    else:\n        was = \"Gute Nacht\"\n\n    return was + \", \" + anrede + \" \"+ nachname\n\n\nTeste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1334,7 +1334,7 @@
     "href": "C_Programmieren_2/9_Uebung_8.html#übung-8.3",
     "title": "Übung 8",
     "section": "Übung 8.3",
-    "text": "Übung 8.3\nErweitere die Funktion bmi aus Übung 7.3 so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der WHO Klassifizierung ausgegeben wird:\n\n\n\nTabelle 32.2: WHO Nutritional status\n\n\n\n\n\nBMI\nNutritional status\n\n\n\n\nBelow 18.5\nUnderweight\n\n\n18.5–24.9\nNormal weight\n\n\n25.0–29.9\nPre-obesity\n\n\n30.0–34.9\nObesity class I\n\n\n35.0–39.9\nObesity class II\n\n\nAbove 40\nObesity class III\n\n\n\n\n\n\n\n# Der Output sollte etwa folgedermassen aussehen\nbmi2(1.7, 70)\n\n'Who classification: Normal weight'",
+    "text": "Übung 8.3\nErweitere die Funktion bmi aus Übung 7.3 so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der WHO Klassifizierung ausgegeben wird:\n\n\n\nTabelle 32.2: WHO Nutritional status\n\n\n\n\n\nBMI\nNutritional status\n\n\n\n\nBelow 18.5\nUnderweight\n\n\n18.5–24.9\nNormal weight\n\n\n25.0–29.9\nPre-obesity\n\n\n30.0–34.9\nObesity class I\n\n\n35.0–39.9\nObesity class II\n\n\nAbove 40\nObesity class III\n\n\n\n\n\n\n\n\nMusterlösung\ndef bmi2(groesse_m, gewicht_kg):\n    bmi = gewicht_kg / (groesse_m * groesse_m)\n    if(bmi &lt; 18.5):\n        cat = \"Underweight\"\n    elif(bmi &lt;= 24.9):\n        cat = \"Normal weight\"\n    elif(bmi &lt;= 29.9):\n        cat = \"Pre-obesity\"\n    elif(bmi &lt;= 34.9):\n        cat = \"Obesity class I\"\n    elif(bmi &lt;= 39.9):\n        cat = \"Obesity class II\"\n    else:\n        cat = \"Obesity class III\"\n    return \"Who classification: \" + cat\n\n\n\n# Der Output sollte etwa folgedermassen aussehen\nbmi2(1.7, 70)\n\n'Who classification: Normal weight'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Übung 8</span>"
@@ -1356,7 +1356,7 @@
     "href": "C_Programmieren_2/11_Uebung_9.html",
     "title": "Übung 9",
     "section": "",
-    "text": "Übung 9.1\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.",
+    "text": "Übung 9.1\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.\nMusterlösung\nimport random\n\nrandom.uniform(-100, 100)\n\nrandom.normalvariate(100, 20)",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1367,7 +1367,7 @@
     "href": "C_Programmieren_2/11_Uebung_9.html#übung-9.2",
     "title": "Übung 9",
     "section": "Übung 9.2",
-    "text": "Übung 9.2\nNun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten x_start und y_start mit jeweils dem Wert 0. Diese sollen als “Ursprungskoordinaten” dienen.",
+    "text": "Übung 9.2\nNun wollen wir uns den Koordinaten zuwenden. Erstelle als erstes zwei Dummykoordinaten x_start und y_start mit jeweils dem Wert 0. Diese sollen als “Ursprungskoordinaten” dienen.\n\n\nMusterlösung\nx_start = 0\ny_start = 0",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1378,7 +1378,7 @@
     "href": "C_Programmieren_2/11_Uebung_9.html#übung-9.3",
     "title": "Übung 9",
     "section": "Übung 9.3",
-    "text": "Übung 9.3\nGeneriere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die in etwa zwischen -100 und +100 liegt. Weise diese Zahl der Variabel x_offset zu. Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese y_offset zu.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nÜberlege dir, welcher Mittelwert Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?\nÜberlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):\n\n\n\n\n\n\nAbbildung 34.2: Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert \\(\\mu\\) minus Standartabweichung \\(\\sigma\\)), 2 Standartabweichungen (\\(\\mu - 2\\times\\sigma)\\) und 2 Standartabweichungen (\\(\\mu - 3\\times\\sigma)\\). Quelle: cobocards",
+    "text": "Übung 9.3\nGeneriere nun eine Zufallszahl, die aus einer Normalverteilung stammt und die in etwa zwischen -100 und +100 liegt. Weise diese Zahl der Variabel x_offset zu. Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese y_offset zu.\n\n\n\n\n\n\nHinweis\n\n\n\n\n\nÜberlege dir, welcher Mittelwert Sinn macht um Werte zwischen -100 und +100 zu bekommen. Welche Zahl liegt zwischen -100 und +100?\nÜberlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):\n\n\n\n\n\n\nAbbildung 34.2: Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert \\(\\mu\\) minus Standartabweichung \\(\\sigma\\)), 2 Standartabweichungen (\\(\\mu - 2\\times\\sigma)\\) und 2 Standartabweichungen (\\(\\mu - 3\\times\\sigma)\\). Quelle: cobocards\n\n\n\n\n\n\n\n\nMusterlösung\n# Normalverteilte Werte mit Mittelwert 0 und Standartabweichung 100  \n# Achtung: bei dieser Standartabweichung sind ca 30% der Werte &gt; 100!\nx_offset = random.normalvariate(0, 100)\ny_offset = random.normalvariate(0, 100)\n\nx_offset\ny_offset",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1389,7 +1389,7 @@
     "href": "C_Programmieren_2/11_Uebung_9.html#übung-9.4",
     "title": "Übung 9",
     "section": "Übung 9.4",
-    "text": "Übung 9.4\nAddiere nun die Zufallszahlen x_offset und y_offset jeweils zu den Dummykoordinaten x_start und y_start und weise diese neuen Koordinaten x_neu und y_neu zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.\n\nx_neu\n\n10.246170309600945\n\n\n\ny_neu\n\n-4.443904000288846\n\n\n\n\nCode für die Visualisierung (nur FYI)\nimport pandas as pd\n\nmypoints = pd.DataFrame({\n    \"x\": [x_start, x_neu],\n    \"y\": [y_start, y_neu],\n    \"typ\": [\"start\", \"neu\"]\n    }\n)\n\nfrom matplotlib import pyplot as plt\n\nmypoints.plot(\"x\", \"y\", kind = \"scatter\", xlim = [-100, 100], ylim = [-100, 100], c = [\"red\", \"blue\"], title = \"Ursprung (rot) und Simulation (blau)\")",
+    "text": "Übung 9.4\nAddiere nun die Zufallszahlen x_offset und y_offset jeweils zu den Dummykoordinaten x_start und y_start und weise diese neuen Koordinaten x_neu und y_neu zu. Die neuen Werte stellen die leicht verschobenen Ursprungskoordinaten dar. In meinem Fall sind diese um 10.2 Meter nach Osten (positiver Wert) bzw. 4.4 Meter nach Süden (negativer Wert) verschoben worden.\n\n\nMusterlösung\nx_offset = 10.246170309600945\ny_offset = -4.443904000288846\n\nx_neu = x_start + x_offset\ny_neu = y_start + y_offset\n\n\n\nx_neu\n\n10.246170309600945\n\n\n\ny_neu\n\n-4.443904000288846\n\n\n\n\nCode für die Visualisierung (nur FYI)\nimport pandas as pd\n\nmypoints = pd.DataFrame({\n    \"x\": [x_start, x_neu],\n    \"y\": [y_start, y_neu],\n    \"typ\": [\"start\", \"neu\"]\n    }\n)\n\nfrom matplotlib import pyplot as plt\n\nmypoints.plot(\"x\", \"y\", kind = \"scatter\", xlim = [-100, 100], ylim = [-100, 100], c = [\"red\", \"blue\"], title = \"Ursprung (rot) und Simulation (blau)\")",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1400,7 +1400,7 @@
     "href": "C_Programmieren_2/11_Uebung_9.html#sec-ex-offset-function",
     "title": "Übung 9",
     "section": "Übung 9.5",
-    "text": "Übung 9.5\nNun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (0/0) durchgespielt. In der nächsten Aufgabe (Funktionen in DataFrames) werden wir alle unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie Abbildung 34.1 zu erhalten.\nDafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.\nErstelle jetzt eine Funktion namens offset_coordinate welche als Input eine x oder y-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen distance und einem Defaultwert von 100.\n\n# die Funktion sollte so funktionieren:\noffset_coordinate(x_start)\n\n-112.45333688710288",
+    "text": "Übung 9.5\nNun haben wir das zufällige Verschieben eines Einzelpunktes am Beispiel einer Dummykoordinaten (0/0) durchgespielt. In der nächsten Aufgabe (Funktionen in DataFrames) werden wir alle unsere Zeckenstichkoordinaten auf diese Weise zufällig verschieben um einen simulierten Zeckenstichdatensatz ähnlich wie Abbildung 34.1 zu erhalten.\nDafür brauchen wir die eben erarbeiteten Einzelschritte als Funktion, um diese auf alle Zeckenstiche anwenden zu können.\nErstelle jetzt eine Funktion namens offset_coordinate welche als Input eine x oder y-Achsenwert annimmt und eine leicht verschobene Wert zurückgibt.** Integriere die Standartabweichung der Verteilung als optionalen Parameter mit dem Namen distance und einem Defaultwert von 100.\n\n\nMusterlösung\ndef offset_coordinate(old, distance = 100):\n    new = old + random.normalvariate(0, distance)\n    return new\n\n\n\n# die Funktion sollte so funktionieren:\noffset_coordinate(x_start)\n\n182.9781388884318",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1411,7 +1411,7 @@
     "href": "C_Programmieren_2/11_Uebung_9.html#sec-offset-vis",
     "title": "Übung 9",
     "section": "Übung 9.6",
-    "text": "Übung 9.6\nNun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion offset_coordinate() 1’000 mal auf die Dummykoordinate an. Nutze deine Funktion offset_coordinate um eine Visualisierung gemäss untenstehendem beispiel zu machen.\n\nx_neu_list = [offset_coordinate(x_start) for i in range(1, 1000)]\ny_neu_list = [offset_coordinate(y_start) for i in range(1, 1000)]\n\n# Liste in eine Pandas DataFrame überführen\nmysim = pd.DataFrame({\"x\" : x_neu_list, \"y\" : y_neu_list})\n\nmysim.plot(\"x\", \"y\", kind = \"scatter\")\n\nfrom matplotlib import pyplot as plt\nplt.axis(\"equal\")\n\n(np.float64(-353.8191174816106),\n np.float64(347.2906351567724),\n np.float64(-323.9639152894095),\n np.float64(340.9428829213671))",
+    "text": "Übung 9.6\nNun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion offset_coordinate() 1’000 mal auf die Dummykoordinate an. Nutze deine Funktion offset_coordinate um eine Visualisierung gemäss untenstehendem beispiel zu machen.\n\nx_neu_list = [offset_coordinate(x_start) for i in range(1, 1000)]\ny_neu_list = [offset_coordinate(y_start) for i in range(1, 1000)]\n\n# Liste in eine Pandas DataFrame überführen\nmysim = pd.DataFrame({\"x\" : x_neu_list, \"y\" : y_neu_list})\n\nmysim.plot(\"x\", \"y\", kind = \"scatter\")\n\nfrom matplotlib import pyplot as plt\nplt.axis(\"equal\")\n\n(np.float64(-296.2860177977035),\n np.float64(316.92384730864376),\n np.float64(-344.12305609375795),\n np.float64(335.3704855089452))",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1422,7 +1422,7 @@
     "href": "C_Programmieren_2/12_Funktionen_in_DataFrames.html",
     "title": "Funktionen in DataFrames",
     "section": "",
-    "text": "In dieser Aufgabe haben wir das Ziel, die in der letzten Aufgabe (Zufallszahlen generieren) erstellte Funktion offset_coordinate() auf alle Zeckenstich-Koordinaten anwenden. Bildlich gesprochen: Wir nehmen unsere Zeckenstichdatensatz und schütteln ihn einmal durch. So erhalten wir einen Datensatz ähnlich wie in Abbildung 34.1 mit dem Unterschied, dass jede Zeckenstichmeldung nicht eine Wolke von simulierten Punkten enthält, sondern nur einen einzelnen Punkt.\nNutze hier die Datei zeckenstiche.csv von letzter Woche (siehe Tabelle 1). Erstelle ein neues Notebook und nutze nachstehenden Code um die nötigen Module und Functions zu haben:\n\nimport pandas as pd\n\ndef offset_coordinate(old, distance = 100):\n    import random\n    new = old + random.normalvariate(0,distance)\n\n    return new\n\nzeckenstiche = pd.read_csv(\"data/zeckenstiche.csv\")\n#           ______________________↗____________________\n#         &lt; verwendet hier euren eigenen relativen pfad &gt;\n#           -------------------------------------------\n     \n\nzeckenstiche\n\n\n---------------------------------------------------------------------------\nFileNotFoundError                         Traceback (most recent call last)\nCell In[1], line 9\n      5     new = old + random.normalvariate(0,distance)\n      7     return new\n----&gt; 9 zeckenstiche = pd.read_csv(\"data/zeckenstiche.csv\")\n     10 #           ______________________↗____________________\n     11 #         &lt; verwendet hier euren eigenen relativen pfad &gt;\n     12 #           -------------------------------------------\n     15 zeckenstiche\n\nFile ~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026, in read_csv(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\n   1013 kwds_defaults = _refine_defaults_read(\n   1014     dialect,\n   1015     delimiter,\n   (...)\n   1022     dtype_backend=dtype_backend,\n   1023 )\n   1024 kwds.update(kwds_defaults)\n-&gt; 1026 return _read(filepath_or_buffer, kwds)\n\nFile ~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:620, in _read(filepath_or_buffer, kwds)\n    617 _validate_names(kwds.get(\"names\", None))\n    619 # Create the parser.\n--&gt; 620 parser = TextFileReader(filepath_or_buffer, **kwds)\n    622 if chunksize or iterator:\n    623     return parser\n\nFile ~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1620, in TextFileReader.__init__(self, f, engine, **kwds)\n   1617     self.options[\"has_index_names\"] = kwds[\"has_index_names\"]\n   1619 self.handles: IOHandles | None = None\n-&gt; 1620 self._engine = self._make_engine(f, self.engine)\n\nFile ~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1880, in TextFileReader._make_engine(self, f, engine)\n   1878     if \"b\" not in mode:\n   1879         mode += \"b\"\n-&gt; 1880 self.handles = get_handle(\n   1881     f,\n   1882     mode,\n   1883     encoding=self.options.get(\"encoding\", None),\n   1884     compression=self.options.get(\"compression\", None),\n   1885     memory_map=self.options.get(\"memory_map\", False),\n   1886     is_text=is_text,\n   1887     errors=self.options.get(\"encoding_errors\", \"strict\"),\n   1888     storage_options=self.options.get(\"storage_options\", None),\n   1889 )\n   1890 assert self.handles is not None\n   1891 f = self.handles.handle\n\nFile ~/miniconda3/envs/modul-agi/lib/python3.12/site-packages/pandas/io/common.py:873, in get_handle(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\n    868 elif isinstance(handle, str):\n    869     # Check whether the filename is to be opened in binary mode.\n    870     # Binary mode does not support 'encoding' and 'newline'.\n    871     if ioargs.encoding and \"b\" not in ioargs.mode:\n    872         # Encoding\n--&gt; 873         handle = open(\n    874             handle,\n    875             ioargs.mode,\n    876             encoding=ioargs.encoding,\n    877             errors=errors,\n    878             newline=\"\",\n    879         )\n    880     else:\n    881         # Binary mode\n    882         handle = open(handle, ioargs.mode)\n\nFileNotFoundError: [Errno 2] No such file or directory: 'data/zeckenstiche.csv'",
+    "text": "In dieser Aufgabe haben wir das Ziel, die in der letzten Aufgabe (Zufallszahlen generieren) erstellte Funktion offset_coordinate() auf alle Zeckenstich-Koordinaten anzuwenden. Bildlich gesprochen: Wir nehmen unsere Zeckenstichdatensatz und schütteln ihn einmal durch. So erhalten wir einen Datensatz ähnlich wie in Abbildung 34.1 mit dem Unterschied, dass jede Zeckenstichmeldung nicht eine Wolke von simulierten Punkten enthält, sondern nur einen einzelnen Punkt.\nNutze hier die Datei zeckenstiche.csv von letzter Woche (siehe Tabelle 1). Erstelle ein neues Python-File und nutze nachstehenden Code, um die nötigen Module und Functions zu haben:\n\nimport pandas as pd\n\ndef offset_coordinate(old, distance = 100):\n    import random\n    new = old + random.normalvariate(0,distance)\n\n    return new\n\nzeckenstiche = pd.read_csv(\"data/zeckenstiche.csv\")\n#           ______________________↗____________________\n#         &lt; verwendet hier euren eigenen relativen pfad &gt;\n#           -------------------------------------------\n     \n\nzeckenstiche\n\n\n\n\n\n\n\n\nID\naccuracy\nx\ny\n\n\n\n\n0\n2550\n439.128951\n2681116\n1250648\n\n\n1\n10437\n301.748542\n2681092\n1250672\n\n\n2\n9174\n301.748542\n2681128\n1250683\n\n\n3\n8773\n301.748542\n2681111\n1250683\n\n\n4\n2764\n301.748529\n2681131\n1250692\n\n\n5\n2513\n301.748529\n2681171\n1250711\n\n\n6\n9185\n301.748542\n2681107\n1250712\n\n\n7\n28521\n301.748542\n2681124\n1250720\n\n\n8\n26745\n301.748542\n2681117\n1250725\n\n\n9\n27391\n301.748542\n2681138\n1250725",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>35</span>  <span class='chapter-title'>Funktionen in *DataFrames*</span>"
@@ -1433,7 +1433,7 @@
     "href": "C_Programmieren_2/13_Uebung_10.html",
     "title": "Übung 10",
     "section": "",
-    "text": "Übung 10.1\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.",
+    "text": "Übung 10.1\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.\nMusterlösung\nzeckenstiche[\"x\"]\nzeckenstiche[\"y\"]",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1455,7 +1455,7 @@
     "href": "C_Programmieren_2/13_Uebung_10.html#sec-ex-apply",
     "title": "Übung 10",
     "section": "Übung 10.3",
-    "text": "Übung 10.3\npandas kennt eine ganze Familie von Methoden, um Spalten zu Manipulieren und Daten zu Aggregieren (apply, map, mapapply, assign). Es würde den Rahmen dieses Kurses sprengen, die alle im Detail durchzugehen, es lohnt sich aber sehr sich mit diesen auseinanderzusetzen wenn man sich näher mit Python befassen möchte.\nIm unserem Fall brauchen wir lediglich die Methode apply um die Funktion offset_coordinate() auf die Zeckenstichkoordinaten anzuwenden. Dabei gehen wir wie folgt for:\n\nzeckenstiche[\"x\"].apply(offset_coordinate)\n#\\______1_______/ \\_2_/\\_______3_________/\n\n# 1. Spalte selektieren ([\"x\"])\n# 2. Methode \"apply\" aufrufen\n# 3. Function übergeben\n\nVerwende dieses Schema um auch offset_coordinate auf die y Spalte anzuwenden und speichere den Output dieser beiden Operationen als neue Spalten x_sim sowie y_sim. Die DataFrame zeckenstiche sollte danach wie folgt aussehen:\n\n\nMusterlösung\nzeckenstiche[\"x_sim\"] = zeckenstiche[\"x\"].apply(offset_coordinate)\nzeckenstiche[\"y_sim\"] = zeckenstiche[\"y\"].apply(offset_coordinate)\n\n\n\nzeckenstiche\n\n\n\n\n\n\n\n\nID\naccuracy\nx\ny\nx_sim\ny_sim\n\n\n\n\n0\n2550\n439.128951\n2681116\n1250648\n2.681073e+06\n1.250681e+06\n\n\n1\n10437\n301.748542\n2681092\n1250672\n2.681097e+06\n1.250693e+06\n\n\n2\n9174\n301.748542\n2681128\n1250683\n2.680828e+06\n1.250621e+06\n\n\n3\n8773\n301.748542\n2681111\n1250683\n2.681192e+06\n1.250755e+06\n\n\n4\n2764\n301.748529\n2681131\n1250692\n2.681101e+06\n1.250688e+06\n\n\n5\n2513\n301.748529\n2681171\n1250711\n2.680952e+06\n1.250391e+06\n\n\n6\n9185\n301.748542\n2681107\n1250712\n2.681199e+06\n1.250784e+06\n\n\n7\n28521\n301.748542\n2681124\n1250720\n2.681081e+06\n1.250657e+06\n\n\n8\n26745\n301.748542\n2681117\n1250725\n2.681106e+06\n1.250684e+06\n\n\n9\n27391\n301.748542\n2681138\n1250725\n2.681070e+06\n1.250838e+06",
+    "text": "Übung 10.3\npandas kennt eine ganze Familie von Methoden, um Spalten zu Manipulieren und Daten zu Aggregieren (apply, map, mapapply, assign). Es würde den Rahmen dieses Kurses sprengen, die alle im Detail durchzugehen, es lohnt sich aber sehr sich mit diesen auseinanderzusetzen wenn man sich näher mit Python befassen möchte.\nIm unserem Fall brauchen wir lediglich die Methode apply um die Funktion offset_coordinate() auf die Zeckenstichkoordinaten anzuwenden. Dabei gehen wir wie folgt for:\n\nzeckenstiche[\"x\"].apply(offset_coordinate)\n#\\______1_______/ \\_2_/\\_______3_________/\n\n# 1. Spalte selektieren ([\"x\"])\n# 2. Methode \"apply\" aufrufen\n# 3. Function übergeben\n\nVerwende dieses Schema um auch offset_coordinate auf die y Spalte anzuwenden und speichere den Output dieser beiden Operationen als neue Spalten x_sim sowie y_sim. Die DataFrame zeckenstiche sollte danach wie folgt aussehen:\n\n\nMusterlösung\nzeckenstiche[\"x_sim\"] = zeckenstiche[\"x\"].apply(offset_coordinate)\nzeckenstiche[\"y_sim\"] = zeckenstiche[\"y\"].apply(offset_coordinate)\n\n\n\nzeckenstiche\n\n\n\n\n\n\n\n\nID\naccuracy\nx\ny\nx_sim\ny_sim\n\n\n\n\n0\n2550\n439.128951\n2681116\n1250648\n2.681061e+06\n1.250469e+06\n\n\n1\n10437\n301.748542\n2681092\n1250672\n2.681040e+06\n1.250808e+06\n\n\n2\n9174\n301.748542\n2681128\n1250683\n2.681034e+06\n1.250735e+06\n\n\n3\n8773\n301.748542\n2681111\n1250683\n2.681184e+06\n1.250733e+06\n\n\n4\n2764\n301.748529\n2681131\n1250692\n2.681044e+06\n1.250649e+06\n\n\n5\n2513\n301.748529\n2681171\n1250711\n2.681206e+06\n1.250804e+06\n\n\n6\n9185\n301.748542\n2681107\n1250712\n2.681114e+06\n1.250669e+06\n\n\n7\n28521\n301.748542\n2681124\n1250720\n2.681096e+06\n1.250639e+06\n\n\n8\n26745\n301.748542\n2681117\n1250725\n2.681163e+06\n1.250520e+06\n\n\n9\n27391\n301.748542\n2681138\n1250725\n2.681150e+06\n1.250863e+06",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1466,7 +1466,7 @@
     "href": "C_Programmieren_2/13_Uebung_10.html#sec-ex-param",
     "title": "Übung 10",
     "section": "Übung 10.4",
-    "text": "Übung 10.4\nIn Übung 10.3 haben wir unsere Funktion offset_coordinate aufgerufen, ohne den Parameter distance zu spezifizieren. Dies war möglich, weil wir für distance einen Defaultwert festgelegt hatten (100 Meter). Wir können aber auch zusätzliche Parameter kommagetrennt nach der Funktion angeben. Dies sieht folgendermassen aus:\n\nzeckenstiche[\"x\"].apply(offset_coordinate, distance = 200)\n\nNutze diese Möglichkeit, um den Offset (distance) auf maximal 10 Meter zu reduzieren.",
+    "text": "Übung 10.4\nIn Übung 10.3 haben wir unsere Funktion offset_coordinate aufgerufen, ohne den Parameter distance zu spezifizieren. Dies war möglich, weil wir für distance einen Defaultwert festgelegt hatten (100 Meter). Wir können aber auch zusätzliche Parameter kommagetrennt nach der Funktion angeben. Dies sieht folgendermassen aus:\n\nzeckenstiche[\"x\"].apply(offset_coordinate, distance = 200)\n\nNutze diese Möglichkeit, um den Offset (distance) auf maximal 10 Meter zu reduzieren.\n\n\nMusterlösung\nzeckenstiche[\"x_sim\"] = zeckenstiche[\"x\"].apply(offset_coordinate, distance = 10)\nzeckenstiche[\"y_sim\"] = zeckenstiche[\"y\"].apply(offset_coordinate, distance = 10)",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1477,7 +1477,7 @@
     "href": "C_Programmieren_2/13_Uebung_10.html#übung-10.5",
     "title": "Übung 10",
     "section": "Übung 10.5",
-    "text": "Übung 10.5\nUm die Original x/y-Werte sowie die simulierten Daten im gleichen Plot darzustellen, wird folgendermassen vorgegangen: Der erste Datensatz wird mit .plot() visualisiert, wobei der Output einer Variabel (z.B. basemap) zugewiesen wird. Danach wird der zweite Datensatz ebenfalls mit .plot() visualisiert, wobei auf den ersten Plot via dem Argument ax verwiesen wird.\nBei den roten Punkten handelt es sich um die Original-Zeckenstichen, bei den blauen um die simulierten (leicht verschoben) Zeckenstiche. Visualisiere deine eigenen Zeckenstiche auf diese Weise.\n\nfrom matplotlib import pyplot as plt\n\nbasemap = zeckenstiche.plot(\"x\", \"y\", kind = \"scatter\", color = \"red\")\nzeckenstiche.plot(\"x_sim\", \"y_sim\", kind = \"scatter\", ax = basemap, color = \"blue\")\n\nplt.axis(\"equal\")\n\n(np.float64(2681087.763858915),\n np.float64(2681180.9589627907),\n np.float64(1250644.15),\n np.float64(1250728.85))",
+    "text": "Übung 10.5\nUm die Original x/y-Werte sowie die simulierten Daten im gleichen Plot darzustellen, wird folgendermassen vorgegangen: Der erste Datensatz wird mit .plot() visualisiert, wobei der Output einer Variabel (z.B. basemap) zugewiesen wird. Danach wird der zweite Datensatz ebenfalls mit .plot() visualisiert, wobei auf den ersten Plot via dem Argument ax verwiesen wird.\nBei den roten Punkten handelt es sich um die Original-Zeckenstichen, bei den blauen um die simulierten (leicht verschoben) Zeckenstiche. Visualisiere deine eigenen Zeckenstiche auf diese Weise.\n\nfrom matplotlib import pyplot as plt\n\nbasemap = zeckenstiche.plot(\"x\", \"y\", kind = \"scatter\", color = \"red\")\nzeckenstiche.plot(\"x_sim\", \"y_sim\", kind = \"scatter\", ax = basemap, color = \"blue\")\n\nplt.axis(\"equal\")\n\n(np.float64(2681081.5633885227),\n np.float64(2681175.258886261),\n np.float64(1250643.946478257),\n np.float64(1250733.1239566035))",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1499,7 +1499,7 @@
     "href": "C_Programmieren_2/20_Anhang.html#sec-conda",
     "title": "Anhang",
     "section": "",
-    "text": "Schritt\nWann ist dies nötig?\nDetails zum Vorgehen / Befehl für die Konsole1\n\n\n\n\n1. Conda installieren (installiert das Program conda)\neinmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)\nMiniconda (empfohlen) oder anaconda herunterladen und installieren\n\n\n2. Virtual environment erstellen (erstellt eine neue Arbeitsumgebung)\neinmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)\nin der Konsole: conda create --name geopython\n\n\n3. Virutal environment aktivieren (schaltet den “Bearbeitungsmodus” ein)\njedes mal nöig wenn ein *Erweiterung installiert oder jupyter lab gestartet** werden soll\nin der Konsole 2: activate geopython\n\n\n4. Jupyter lab installieren (fügt der virtuellen Umgebung diese IDE hinzu)\n1x pro environment*\nin der Konsole 3: conda install -c conda-forge jupyterlab\n\n\n5. Jupyter lab starten (startet die IDE “JupyterLab”)\njedes mal, wenn am Projekt gearbeitet wird\nin der Konsole 4: jupyter lab\n\n\n6. Jupyter lab (JL) beenden (beendet “JupyterLab” in der Console)\nwenn ihr die Konsole wieder braucht\nWährend JL läuft, ist die Konsole blockiert. Um JL zu beenden und die Konsole freizugeben: Tastenkombination CTRL + C\n\n\n7. weitere Module 5 installieren (fügt der environment zB pandas hinzu)\njedes mal nötig, wenn ein Modul in einer Environment fehlt6\nin der Konsole 7,8: conda install -c conda-forge pandas",
+    "text": "Schritt\nWann ist dies nötig?\nDetails zum Vorgehen / Befehl für die Konsole1\n\n\n\n\n1. Conda installieren (installiert das Program conda)\neinmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)\nMiniconda (empfohlen) oder anaconda herunterladen und installieren\n\n\n2. Virtual environment erstellen (erstellt eine neue Arbeitsumgebung)\neinmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)\nin der Konsole: conda create --name geopython\n\n\n3. Virutal environment aktivieren (schaltet den “Bearbeitungsmodus” ein)\njedes mal nöig wenn ein *Erweiterung installiert** werden soll\nin der Konsole 2: activate geopython\n\n\n4. weitere Module 3 installieren (fügt der environment zB pandas hinzu)\njedes mal nötig, wenn ein Modul in einer Environment fehlt4\nin der Konsole 5,[^jupyterlabbeenden]: conda install -c conda-forge pandas",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>37</span>  <span class='chapter-title'>Anhang</span>"
@@ -1510,7 +1510,7 @@
     "href": "C_Programmieren_2/20_Anhang.html#anhang-2-probleme-mit-conda-umlaute-im-bentzernamen",
     "title": "Anhang",
     "section": "Anhang 2: Probleme mit Conda: Umlaute im Bentzernamen",
-    "text": "Anhang 2: Probleme mit Conda: Umlaute im Bentzernamen\nAlle conda environments werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: C:\\Users\\DEIN-WINDOWS-BENUTZERNAME\\AppData\\Local\\ESRI\\conda\\envs\\. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet conda eure environment möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure conda environments zu definieren. Dazu geht ihr wie folgt vor9:\n\nÜberlege dir eine Location, wo du deine conda nvironments abspeichern möchtest (z.B. C:\\conda-envs). Erstelle diesen Ordnerpfad und prüfe ob du dort Schreibrechte hast indem du in diesem Orner C:\\conda-envs eine Dateie erstellst. Wenn das klappt, hast du Schreibrechte.\nFüge diesen Pfad deiner conda configuration hinzu:\nconda config --append envs_dirs C:\\conda-envs\nPrüfe ob der letzte Schritt funktioniert hat indem du folgendem Befehl laufen lässt und prüfst, ob C:\\conda-envs vorkommt:\nconda config --show envs_dirs\nErstelle eine neue conda environment in dieser neu erstellten directory:\nconda create --prefix=C:\\conda-envs\\geopython\nPrüfe, ob das geklappt hat, indem du die verfügbaren environments auflistest.\nconda info --envs\nWenn das geklappt hat, kannst du nun deine environment aktivieren\nconda activate geopython",
+    "text": "Anhang 2: Probleme mit Conda: Umlaute im Bentzernamen\nAlle conda environments werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: C:\\Users\\DEIN-WINDOWS-BENUTZERNAME\\AppData\\Local\\ESRI\\conda\\envs\\. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet conda eure environment möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure conda environments zu definieren. Dazu geht ihr wie folgt vor6:\n\nÜberlege dir eine Location, wo du deine conda nvironments abspeichern möchtest (z.B. C:\\conda-envs). Erstelle diesen Ordnerpfad und prüfe ob du dort Schreibrechte hast indem du in diesem Orner C:\\conda-envs eine Dateie erstellst. Wenn das klappt, hast du Schreibrechte.\nFüge diesen Pfad deiner conda configuration hinzu:\nconda config --append envs_dirs C:\\conda-envs\nPrüfe ob der letzte Schritt funktioniert hat indem du folgendem Befehl laufen lässt und prüfst, ob C:\\conda-envs vorkommt:\nconda config --show envs_dirs\nErstelle eine neue conda environment in dieser neu erstellten directory:\nconda create --prefix=C:\\conda-envs\\geopython\nPrüfe, ob das geklappt hat, indem du die verfügbaren environments auflistest.\nconda info --envs\nWenn das geklappt hat, kannst du nun deine environment aktivieren\nconda activate geopython",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>37</span>  <span class='chapter-title'>Anhang</span>"
@@ -1528,22 +1528,11 @@
     ]
   },
   {
-    "objectID": "C_Programmieren_2/20_Anhang.html#anhang-4-jupyterlab-mit-r",
-    "href": "C_Programmieren_2/20_Anhang.html#anhang-4-jupyterlab-mit-r",
-    "title": "Anhang",
-    "section": "Anhang 4: JupyterLab mit R",
-    "text": "Anhang 4: JupyterLab mit R\nEinige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort habt ihr JupyterLab mit R benutzt, dabei habt ihr aber nicht auf eurem lokalen PC, sondern auf einer gehosteten Version von JupyterLab gearbeitet, also auf einem Server. Dieser Server kann jeder Zeit wieder Offline geschaltet werden oder ihr könnt euren Zugriff darauf verlieren. Wenn ihr JupyterLab mit R lokal nutzen wollt, geht ihr wie folgt vor (Anleitung in Anlehnung an diesen Blogpost):\n\nIn eurem Python Command Prompt erstellt ihr eine neue conda environment, aktiviert diese und installiert juypterlab sowie r-ikernel (letzteres aus dem channel r, nicht wie gewohnt conda-forge).\nconda create --name r-env\nconda activate r-env\nconda install -c conda-forge jupyterlab\nconda install -c r r-irkernel\nNun ist R in eurer conda environment aktiviert. Nun könnt ihr mit folgenden Befehlen das Package IRkernel installieren sowie den Kernel für JuypterLab verfügbar machen.\nRscript -e \"install.packages('IRkernel', repos = 'https://cloud.r-project.org')\"\nRscript -e \"IRkernel::installspec(user = FALSE)\"\nOptional: Wenn ihr ein paar nützliche shortcuts für R haben wollt, könnt ihr die extension techrah/text-shortcuts mit folgender Zeile installieren.\njupyter labextension install @techrah/text-shortcuts\nNun könnt ihr JupyterLab starten und sollet nun einen R-Kernel zur Verfügung haben:\njupyter lab\n\n\n\n\n\n\n\nAbbildung 37.1: Nach den oben beschriebnen Schritten sollte nun ein R Kernel zur Verfügung stehen",
-    "crumbs": [
-      "Programmieren II",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>Anhang</span>"
-    ]
-  },
-  {
     "objectID": "C_Programmieren_2/20_Anhang.html#footnotes",
     "href": "C_Programmieren_2/20_Anhang.html#footnotes",
     "title": "Anhang",
     "section": "",
-    "text": "Mit Konsole ist unter Windows cmd gemeint (Windowstaste &gt; cmd). Unter Linux wird bash, auf Mac der Terminal verwendet.↩︎\nUnter Linux: conda activate geopython↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nIn Programmieren I - III brauchen wir die Module pandas, matplotlib, geopandas und descartes↩︎\nDies macht sich bemerkbar duch die Fehlermeldung ModuleNotFoundError: No module named 'pandas'↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nFalls JupyterLabs läuft und dadurch die Konsole blockiert ist, startet ihr am besten eine neue Konsole und aktiviert dort die entsprechende environment. Danach könnt ihr das Modul installieren↩︎\nAus: https://stackoverflow.com/a/67376348/4139249↩︎",
+    "text": "Mit Konsole ist unter Windows cmd gemeint (Windowstaste &gt; cmd). Unter Linux wird bash, auf Mac der Terminal verwendet.↩︎\nUnter Linux: conda activate geopython↩︎\nIn Programmieren I - III brauchen wir die Module pandas, matplotlib, geopandas und descartes↩︎\nDies macht sich bemerkbar duch die Fehlermeldung ModuleNotFoundError: No module named 'pandas'↩︎\nFalls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B activate geopython).↩︎\nAus: https://stackoverflow.com/a/67376348/4139249↩︎",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>37</span>  <span class='chapter-title'>Anhang</span>"

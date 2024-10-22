@@ -617,7 +617,6 @@ window.onload = function() {
   <li><a href="#schritt-3-weitere-module-installieren" id="toc-schritt-3-weitere-module-installieren" class="nav-link" data-scroll-target="#schritt-3-weitere-module-installieren">Schritt 3: weitere Module installieren</a></li>
   <li><a href="#schritt-4-arcpy-verwenden" id="toc-schritt-4-arcpy-verwenden" class="nav-link" data-scroll-target="#schritt-4-arcpy-verwenden">Schritt 4: <code>arcpy</code> verwenden</a></li>
   </ul></li>
-  <li><a href="#anhang-4-jupyterlab-mit-r" id="toc-anhang-4-jupyterlab-mit-r" class="nav-link" data-scroll-target="#anhang-4-jupyterlab-mit-r">Anhang 4: JupyterLab mit <code>R</code></a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/modul-AGI/hs24/edit/main/C_Programmieren_2/20_Anhang.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></nav>
     </div>
@@ -667,36 +666,20 @@ window.onload = function() {
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>3. <em>Virutal environment</em> aktivieren</strong> (schaltet den “Bearbeitungsmodus” ein)</td>
-<td style="text-align: left;">jedes mal nöig wenn ein *Erweiterung installiert<strong> oder </strong>jupyter lab gestartet** werden soll</td>
+<td style="text-align: left;">jedes mal nöig wenn ein *Erweiterung installiert** werden soll</td>
 <td style="text-align: left;">in der Konsole <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: <code>activate geopython</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>4. Jupyter lab installieren</strong> (fügt der virtuellen Umgebung diese IDE hinzu)</td>
-<td style="text-align: left;">1x pro environment*</td>
-<td style="text-align: left;">in der Konsole <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>: <code>conda install -c conda-forge jupyterlab</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>5. Jupyter lab starten</strong> (startet die IDE “JupyterLab”)</td>
-<td style="text-align: left;">jedes mal, wenn am Projekt gearbeitet wird</td>
-<td style="text-align: left;">in der Konsole <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>: <code>jupyter lab</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>6. Jupyter lab (JL) beenden</strong> (beendet “JupyterLab” in der Console)</td>
-<td style="text-align: left;">wenn ihr die Konsole wieder braucht</td>
-<td style="text-align: left;">Während JL läuft, ist die Konsole blockiert. Um JL zu beenden und die Konsole freizugeben: Tastenkombination <kbd>CTRL</kbd> + <kbd>C</kbd></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>7. weitere Module <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> installieren</strong> (fügt der <em>environment</em> zB <code>pandas</code> hinzu)</td>
-<td style="text-align: left;">jedes mal nötig, wenn ein Modul in einer Environment fehlt<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></td>
-<td style="text-align: left;">in der Konsole <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a><sup>,</sup><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>: <code>conda install -c conda-forge pandas</code></td>
+<td style="text-align: left;"><strong>4. weitere Module <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> installieren</strong> (fügt der <em>environment</em> zB <code>pandas</code> hinzu)</td>
+<td style="text-align: left;">jedes mal nötig, wenn ein Modul in einer Environment fehlt<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
+<td style="text-align: left;">in der Konsole <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a><sup>,</sup>[^jupyterlabbeenden]: <code>conda install -c conda-forge pandas</code></td>
 </tr>
 </tbody>
 </table>
-<!-- [^condapath]: Wenn *conda* von ArcGIS Pro verwendet wird, befindet sich die *conda* installation vermutlich hier: *C:\Program Files\ArcGIS\Pro\bin\Python\Scripts*. Prüfen, ob dieser Folder existiert und dort `conda.exe` vorhanden ist. -->
 </section>
 <section id="anhang-2-probleme-mit-conda-umlaute-im-bentzernamen" class="level2">
 <h2 class="anchored" data-anchor-id="anhang-2-probleme-mit-conda-umlaute-im-bentzernamen">Anhang 2: Probleme mit Conda: Umlaute im Bentzernamen</h2>
-<p>Alle <em>conda environments</em> werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: <code>C:\Users\DEIN-WINDOWS-BENUTZERNAME\AppData\Local\ESRI\conda\envs\</code>. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet <code>conda</code> eure <em>environment</em> möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure <em>conda environments</em> zu definieren. Dazu geht ihr wie folgt vor<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>:</p>
+<p>Alle <em>conda environments</em> werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: <code>C:\Users\DEIN-WINDOWS-BENUTZERNAME\AppData\Local\ESRI\conda\envs\</code>. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet <code>conda</code> eure <em>environment</em> möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure <em>conda environments</em> zu definieren. Dazu geht ihr wie folgt vor<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>:</p>
 <ol type="1">
 <li><p>Überlege dir eine Location, wo du deine conda nvironments abspeichern möchtest (z.B. <code>C:\conda-envs</code>). Erstelle diesen Ordnerpfad und prüfe ob du dort Schreibrechte hast indem du in diesem Orner <code>C:\conda-envs</code> eine Dateie erstellst. Wenn das klappt, hast du Schreibrechte.</p></li>
 <li><p>Füge diesen Pfad deiner conda configuration hinzu:</p>
@@ -783,50 +766,19 @@ window.onload = function() {
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>whereClause <span class="op">=</span> <span class="st">"HABITAT = 1"</span> </span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>arcpy.Select_analysis(veg, suitableVeg, whereClause)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Der Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt “Code Sample”, z.B. <a href="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm">hier</a>)</p>
-</section>
-</section>
-<section id="anhang-4-jupyterlab-mit-r" class="level2">
-<h2 class="anchored" data-anchor-id="anhang-4-jupyterlab-mit-r">Anhang 4: JupyterLab mit <code>R</code></h2>
-<p>Einige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort habt ihr JupyterLab mit <code>R</code> benutzt, dabei habt ihr aber nicht auf eurem lokalen PC, sondern auf einer <em>gehosteten</em> Version von JupyterLab gearbeitet, also auf einem Server. Dieser Server kann jeder Zeit wieder Offline geschaltet werden oder ihr könnt euren Zugriff darauf verlieren. Wenn ihr JupyterLab mit <code>R</code> lokal nutzen wollt, geht ihr wie folgt vor (Anleitung in Anlehnung an <a href="https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/">diesen Blogpost</a>):</p>
-<ol type="1">
-<li><p>In eurem Python Command Prompt erstellt ihr eine neue <code>conda</code> environment, aktiviert diese und installiert <code>juypterlab</code> sowie <code>r-ikernel</code> (letzteres aus dem channel <code>r</code>, nicht wie gewohnt <code>conda-forge</code>).</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> r-env</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate r-env</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge jupyterlab</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> r r-irkernel</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Nun ist <code>R</code> in eurer conda environment aktiviert. Nun könnt ihr mit folgenden Befehlen das Package <code>IRkernel</code> installieren sowie den Kernel für JuypterLab verfügbar machen.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"install.packages('IRkernel', repos = 'https://cloud.r-project.org')"</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">"IRkernel::installspec(user = FALSE)"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Optional: Wenn ihr ein paar nützliche shortcuts für <code>R</code> haben wollt, könnt ihr die extension <code>techrah/text-shortcuts</code> mit folgender Zeile installieren.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> labextension install @techrah/text-shortcuts</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Nun könnt ihr JupyterLab starten und sollet nun einen <em>R-Kernel</em> zur Verfügung haben:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ol>
-<div id="fig-irkernel" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-irkernel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/ir-kernel.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-irkernel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;37.1: Nach den oben beschriebnen Schritten sollte nun ein <code>R</code> Kernel zur Verfügung stehen
-</figcaption>
-</figure>
-</div>
 
 
+</section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p>Mit Konsole ist unter Windows <em>cmd</em> gemeint (Windowstaste &gt; cmd). Unter Linux wird bash, auf Mac der Terminal verwendet.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Unter Linux: <code>conda activate geopython</code><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate geopython</code>).<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate geopython</code>).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>In Programmieren I - III brauchen wir die Module <code>pandas</code>, <code>matplotlib</code>, <code>geopandas</code> und <code>descartes</code><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Dies macht sich bemerkbar duch die Fehlermeldung <code>ModuleNotFoundError: No module named 'pandas'</code><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate geopython</code>).<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>Falls JupyterLabs läuft und dadurch die Konsole blockiert ist, startet ihr am besten eine neue Konsole und aktiviert dort die entsprechende <em>environment</em>. Danach könnt ihr das Modul installieren<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Aus: <a href="https://stackoverflow.com/a/67376348/4139249" class="uri">https://stackoverflow.com/a/67376348/4139249</a><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>In Programmieren I - III brauchen wir die Module <code>pandas</code>, <code>matplotlib</code>, <code>geopandas</code> und <code>descartes</code><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Dies macht sich bemerkbar duch die Fehlermeldung <code>ModuleNotFoundError: No module named 'pandas'</code><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate geopython</code>).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Aus: <a href="https://stackoverflow.com/a/67376348/4139249" class="uri">https://stackoverflow.com/a/67376348/4139249</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

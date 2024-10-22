@@ -672,17 +672,58 @@ window.Quarto = {
 <section id="übung-7.1" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.1">Übung 7.1</h2>
 <p>Erstelle eine Funktion namens <code>times</code>, die zwei Zahlen miteinander multipliziert.</p>
+<div id="a792bf15" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> times(x, y):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> y</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="e51eb84c" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>times(<span class="dv">2</span>, <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-7.2" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.2">Übung 7.2</h2>
 <p>Die eben erstellte Funktion <code>times</code> benötigt 2 Argumente (die miteinander multipliziert werden). Wandle den zweiten Parameter in einen optionalen Parameter um (mit dem Defaultwert <code>1</code>).</p>
 <p><strong>Zusatzaufgabe</strong>: Was passiert, wenn du den ersten Parameter in einen optionalen Parameter umwandelst?</p>
+<div id="ae0026c2" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> times(x, y <span class="op">=</span> <span class="dv">1</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> y</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="ed3ec4a9" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>times(<span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="0e6b56c5" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># (Zusatzaufgabe)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> times(x <span class="op">=</span> <span class="dv">1</span>, y):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> y</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="sec-ex-functions-bmi" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-functions-bmi">Übung 7.3</h2>
 <p>Erstelle eine Funktion namens <code>bmi</code>, die aus Grösse und Gewicht einen BodyMassIndex berechnet (<span class="math inline">\(BMI=\frac{m}{l^2}\)</span>, <span class="math inline">\(m\)</span>: Körpermasse in Kilogramm, <span class="math inline">\(l\)</span>: Körpergrösse in Meter). Das Resultat soll etwa folgendermassen aussehen:</p>
-<div id="6e9aab47" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>bmi(groesse_m <span class="op">=</span> <span class="fl">1.8</span>, gewicht_kg <span class="op">=</span> <span class="dv">88</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="03c6b643" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bmi(groesse_m, gewicht_kg):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gewicht_kg <span class="op">/</span> (groesse_m <span class="op">*</span> groesse_m)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="8de3a6a1" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bmi(groesse_m <span class="op">=</span> <span class="fl">1.8</span>, gewicht_kg <span class="op">=</span> <span class="dv">88</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>27.160493827160494</code></pre>
 </div>
@@ -692,9 +733,16 @@ window.Quarto = {
 <section id="übung-7.4" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.4">Übung 7.4</h2>
 <p>Erstelle eine Funktion <code>mittelwert()</code>, welche den Mittelwert aus einer Liste (<code>List</code>) von Zahlen berechnet. Nutze dazu <code>sum()</code> und <code>len()</code> analog <a href="../C_Programmieren_1/6_Uebung_2.html#sec-mittelwert" class="quarto-xref"><span>Uebung 2.6</span></a>. Das Resultat sollte folgendermassen aussehen:</p>
-<div id="f4bb0348" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>meine_zahlen <span class="op">=</span> [<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">550</span>, <span class="dv">1000</span>]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mittelwert(meine_zahlen)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a76a23d3" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mittelwert(zahlen):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(zahlen) <span class="op">/</span> <span class="bu">len</span>(zahlen)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="bb3c16f3" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>meine_zahlen <span class="op">=</span> [<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">550</span>, <span class="dv">1000</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mittelwert(meine_zahlen)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>425.0</code></pre>
 </div>
@@ -704,9 +752,17 @@ window.Quarto = {
 <section id="übung-7.5" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.5">Übung 7.5</h2>
 <p>Erstelle eine Funktion <code>celsius_zu_farenheit</code>, welche eine beliebige Zahl von Grad Celsius in Grad Farenheit konvertiert. Zur Erinnerung: <em>Temperatur in °F = Temperatur in °C x 1,8 + 32</em>.</p>
+<div id="8a7bb496" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> celsius_zu_farenheit(celsius):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    farenheit <span class="op">=</span> celsius <span class="op">*</span> <span class="fl">1.8</span> <span class="op">+</span> <span class="dv">32</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> farenheit</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <p>Das Resultat sollte folgendermassen aussehen:</p>
-<div id="d9694a36" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>celsius_zu_farenheit(celsius <span class="op">=</span> <span class="dv">25</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fa7c22f7" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>celsius_zu_farenheit(celsius <span class="op">=</span> <span class="dv">25</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>77.0</code></pre>
 </div>
@@ -716,6 +772,12 @@ window.Quarto = {
 <section id="übung-7.6" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.6">Übung 7.6</h2>
 <p>Schreibe die letzte Funktion <code>celsius_zu_farenheit</code> in der <em>lambda</em> Notation.</p>
+<div id="2bbceb58" class="cell" data-execution_count="12">
+<details class="code-fold">
+<summary>Musterlösung</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>celsius_in_farenheit2 <span class="op">=</span> <span class="kw">lambda</span> celsius: celsius <span class="op">*</span> <span class="fl">1.8</span> <span class="op">+</span> <span class="dv">32</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 
 </section>

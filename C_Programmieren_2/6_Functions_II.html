@@ -642,12 +642,12 @@ window.onload = function() {
 <section id="standart-werte" class="level2">
 <h2 class="anchored" data-anchor-id="standart-werte">Standart-Werte</h2>
 <p>Man kann für einzelne (oder alle) Parameter auch Standardwerte festlegen. Das sind Werte die dann zum Zug kommen, wenn der Nutzer der Funktion das entsprechende Parameter leer lässt. Schauen wir dazu nochmals <code>sag_hallo()</code> an.</p>
-<div id="0532f11d" class="cell" data-execution_count="1">
+<div id="9eca50be" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sag_hallo(vorname):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hallo "</span> <span class="op">+</span> vorname <span class="op">+</span> <span class="st">"!"</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Um diese Funktion zu nutzen muss dem Parameter <code>vorname</code> ein Argument übergeben werden, sonst erhalten wir eine Fehlermeldung.</p>
-<div id="0c882054" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="2">
+<div id="235568c6" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sag_hallo()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -661,7 +661,7 @@ Cell <span class="ansi-green-fg">In[2], line 1</span>
 </div>
 </div>
 <p>Wenn wir möchten, dass gewisse Parameter auch ohne Argument auskommen, dann könnnen wir einen Standartwert festlegen. So wird der Parameter optional. Bespielsweise könnte <code>sag_hallo()</code> einfach <em>Hallo Du!</em> zurückgeben, wenn kein Vorname angegeben wird. Um dies zu erreichen, definieren wir den Standartwert bereits innerhalb der Klammer, und zwar folgendermassen:</p>
-<div id="828275a0" class="cell" data-execution_count="3">
+<div id="5888ef86" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sag_hallo(vorname <span class="op">=</span> <span class="st">"Du"</span>):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hallo "</span> <span class="op">+</span> vorname <span class="op">+</span> <span class="st">"!"</span> </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -688,7 +688,7 @@ Wichtig
 <section id="reihenfolge-der-argumente" class="level2">
 <h2 class="anchored" data-anchor-id="reihenfolge-der-argumente">Reihenfolge der Argumente</h2>
 <p>Wenn die Argumente in der gleichen Reihenfolge eingegeben werden, wie sie in der <em>Function</em> definiert sind, müssen die Parameter <strong>nicht</strong> spezifiziert werden (z.B: <code>anrede=</code>, <code>nachname=</code>).</p>
-<div id="2d7f8132" class="cell" data-execution_count="4">
+<div id="9a4324dc" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gruezi2(nachname, anrede):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Guten Tag, "</span> <span class="op">+</span> anrede <span class="op">+</span> <span class="st">" "</span><span class="op">+</span>nachname</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -698,14 +698,14 @@ Wichtig
 </div>
 </div>
 <p>Wenn wir die Reihenfolge missachten, ist der Output unserer Funktion fehlerhaft:</p>
-<div id="6c5187da" class="cell" data-execution_count="5">
+<div id="693c73e3" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>gruezi2(<span class="st">"Herr"</span>, <span class="st">"van Rossum"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>'Guten Tag, van Rossum Herr'</code></pre>
 </div>
 </div>
 <p>Aber wenn die Parameter der Argumente spezifiziert werden, können wir sie in jeder beliebigen Reihenfolge auflisten:</p>
-<div id="c12fc78c" class="cell" data-execution_count="6">
+<div id="518e8e83" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gruezi2(anrede <span class="op">=</span> <span class="st">"Herr"</span>, nachname <span class="op">=</span> <span class="st">"van Rossum"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>'Guten Tag, Herr van Rossum'</code></pre>
@@ -716,7 +716,7 @@ Wichtig
 <h2 class="anchored" data-anchor-id="funktionen-auf-mehreren-zeilen">Funktionen auf mehreren Zeilen</h2>
 <p>Bisher waren unsere Funktionen sehr kurz und einfach und wir benötigten dafür immer nur zwei Zeilen: Die erste Zeile begann die <em>Function</em>-Definition (<code>def..</code>) und die zweite Zeile retournierte bereits die Lösung <code>return(...)</code>.</p>
 <p>Zwischen diesen beiden Komponenten haben wir aber viel Platz, den wir uns zu Nutze machen können. Wir können hier Kommentare hinzufügen wie auch unsere Funktion in Einzelschritte aufteilen um den Code lesbarer zu machen.</p>
-<div id="61a7a535" class="cell" data-execution_count="7">
+<div id="71bc718a" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gruezi2(nachname, anrede):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" </span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Meine coole Grüezi funktion</span></span>
@@ -727,7 +727,7 @@ Wichtig
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gruss</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Allgemeine Kommentare werden in Python mit <code>#</code> hinzugefügt, Funktionen werden aber mit drei Anführungs- und Schlusszeichen kommentiert. Diese Kommentare erscheinen eleganterweise wenn man die Hilfe zu dieser Funktion mit <code>help()</code> aufruft:</p>
-<div id="9aa765b0" class="cell" data-execution_count="8">
+<div id="b0618bd7" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(gruezi2)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Help on function gruezi2 in module __main__:
@@ -744,7 +744,7 @@ gruezi2(nachname, anrede)
 <h2 class="anchored" data-anchor-id="globale-und-lokale-variabeln">Globale und Lokale Variabeln</h2>
 <p>Innerhalb einer <em>Function</em> können nur die Variabeln verwendet werden, die der <em>Function</em> als Argumente übergeben (oder innerhalb der Funktion erstellt) werden. Diese nennt man “lokale” Variabeln und sind nur lokal in der <em>Function</em> vorhanden. Im Gegensatz dazu stehen “globale” Variabeln, welche Teil der aktuellen Session sind.</p>
 <p>Versuchen wir das mit einem Beispiel zu verdeutlichen. Angenommen wir definieren gobal die Variabel <code>vorname</code>:</p>
-<div id="2f4decca" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="9">
+<div id="a1c237ad" class="cell" data-tags="[&quot;raises-exception&quot;]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wir definieren globale Variabel</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>vorname <span class="op">=</span> <span class="st">"Guido"</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>

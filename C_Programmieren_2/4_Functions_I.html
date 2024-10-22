@@ -632,7 +632,7 @@ window.onload = function() {
 <p>Ein Grundprinzip von Programmieren ist “DRY” (<em>Don’t repeat yourself</em>). Wenn unser Script viele ähnliche Codezeilen enthält ist das ein Zeichen dafür, dass man besser eine <em>Function</em> schreiben sollte. Das hat viele Vorteile: Unter anderem wird der Code lesbarer, einfacher zu warten und kürzer.</p>
 <p>Um mit Python gut zurechtzukommen ist das Schreiben von eigenen <em>Functions</em> unerlässlich. Dies ist auch nicht weiter schwierig: Eine <em>Function</em> wird mit <code>def</code> eingeleitet, braucht einen Namen, einen Input und einen Output.</p>
 <p>Wenn wir zum Beispiel eine Function erstellen wollen die uns grüsst, so geht dies folgendermassen:</p>
-<div id="1bc2de43" class="cell" data-execution_count="1">
+<div id="effc7d13" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sag_hallo():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hallo!"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -645,30 +645,30 @@ window.onload = function() {
 <li>Die letzte eingerückte Zeile (in unserem Fall ist das die einzige Zeile) gibt mit <code>return</code> an, was die <em>Function</em> zurück geben soll (der Output). In unserem Fall soll sie “Hallo!” zurück geben.</li>
 </ul>
 <p>Das war’s schon! Jetzt können wir diese <em>Function</em> schon nutzen:</p>
-<div id="2e33815d" class="cell" data-execution_count="2">
+<div id="b76758cc" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sag_hallo()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>'Hallo!'</code></pre>
 </div>
 </div>
 <p>Diese <em>Function</em> ohne Input ist wenig nützlich. Meist wollen wir der <em>Function</em> etwas - einen Input - übergeben können. Beispielsweise könnten wir der <em>Function</em> unseren Vornamen übergeben, damit wir persönlich gegrüsst werden:</p>
-<div id="e6788471" class="cell" data-execution_count="3">
+<div id="af94847d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sag_hallo(vorname):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hallo "</span> <span class="op">+</span> vorname <span class="op">+</span> <span class="st">"!"</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nun können wir der Function ein Argument übergeben. In folgendem Beispiel ist <code>vorname</code> ein Parameter, “Guido” ist sein Argument.</p>
-<div id="d186e9f3" class="cell" data-execution_count="4">
+<div id="6772e0a2" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sag_hallo(vorname <span class="op">=</span> <span class="st">"Guido"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>'Hallo Guido!'</code></pre>
 </div>
 </div>
 <p>Wir können auch eine <em>Function</em> gestalten, die mehrere Parameter annimmt. Beispielweise könnte <code>sag_hallo()</code> zusätzlich noch einen Parameter <code>nachname</code> erwarten:</p>
-<div id="7571f0cd" class="cell" data-execution_count="5">
+<div id="1d3e231a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sag_hallo(vorname, nachname):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hallo "</span> <span class="op">+</span> vorname <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> nachname <span class="op">+</span> <span class="st">"!"</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4a04fc30" class="cell" data-execution_count="6">
+<div id="4f425397" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sag_hallo(vorname <span class="op">=</span> <span class="st">"Guido"</span>, nachname <span class="op">=</span> <span class="st">"van Rossum"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>'Hallo Guido van Rossum!'</code></pre>
