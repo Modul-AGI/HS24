@@ -1,6 +1,35 @@
 # Anhang
 
-## Anhang 1: Probleme mit Conda: Umlaute im Bentzernamen
+## Anhang I: Conda cheat sheet {#sec-conda}
+
+In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda nochmal zusammengefasst. Wichtig ist vor allem, wann dieser Schritt nötig ist und wie er ausgeführt wird. Um die Tabelle kompakt zu halten werden gewisse Details als Fussnote verlinkt.
+
+| Schritt  | Wann ist dies nötig?  | Details zum Vorgehen / Befehl für die Konsole[^konsole] | 
+|:---|:---|:---|
+| **1\. Conda installieren** (installiert das Program *conda*)  | einmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)  | [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (empfohlen) oder [anaconda](https://www.anaconda.com/products/individual) herunterladen und installieren |
+| **2\. *Virtual environment* erstellen** (erstellt eine neue Arbeitsumgebung)  | einmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)  | in der Konsole: `conda create --name geopython` |
+| **3\. *Virutal environment* aktivieren** (schaltet den "Bearbeitungsmodus" ein)  | jedes mal nöig wenn ein  *Erweiterung installiert** oder **jupyter lab gestartet** werden soll  | in der Konsole [^linux]: `activate geopython` |
+| **4\. Jupyter lab installieren** (fügt der virtuellen Umgebung diese IDE hinzu)  | 1x pro  environment*  | in der Konsole [^activate]: ` conda install -c conda-forge jupyterlab` |
+| **5\. Jupyter lab starten** (startet die IDE "JupyterLab")  | jedes mal, wenn am Projekt gearbeitet wird  | in der Konsole [^activate]: ` jupyter lab` |
+| **6\. Jupyter lab (JL) beenden** (beendet "JupyterLab" in der Console)  | wenn ihr die Konsole wieder braucht  | Während JL läuft, ist die Konsole blockiert. Um JL zu beenden und die Konsole freizugeben: Tastenkombination <kbd>CTRL</kbd> + <kbd>C</kbd> |
+| **7\. weitere Module [^weiteremodule] installieren** (fügt der *environment* zB `pandas` hinzu)  | jedes mal nötig, wenn ein Modul in einer Environment fehlt[^modulfehlt]  | in der Konsole [^activate]<sup>,</sup>[^jupyterlabbeenden]: `conda install -c conda-forge pandas` |
+
+[^konsole]: Mit Konsole ist unter Windows *cmd* gemeint (Windowstaste > cmd). Unter Linux wird bash, auf Mac der Terminal verwendet. 
+
+<!-- [^condapath]: Wenn *conda* von ArcGIS Pro verwendet wird, befindet sich die *conda* installation vermutlich hier: *C:\Program Files\ArcGIS\Pro\bin\Python\Scripts*. Prüfen, ob dieser Folder existiert und dort `conda.exe` vorhanden ist. -->
+
+[^linux]: Unter Linux: `conda activate geopython`
+
+[^activate]: Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B `activate geopython`).
+
+[^modulfehlt]: Dies macht sich bemerkbar duch die Fehlermeldung `ModuleNotFoundError: No module named 'pandas'`
+
+[^weiteremodule]: In Programmieren I - III brauchen wir die Module `pandas`, `matplotlib`, `geopandas` und `descartes`
+
+[^jupyterlabbeenden]: Falls JupyterLabs läuft und dadurch die Konsole blockiert ist, startet ihr am besten eine neue Konsole und aktiviert dort die entsprechende *environment*. Danach könnt ihr das Modul installieren
+
+
+## Anhang 2: Probleme mit Conda: Umlaute im Bentzernamen
 
 Alle *conda environments* werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: `C:\Users\DEIN-WINDOWS-BENUTZERNAME\AppData\Local\ESRI\conda\envs\`. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet `conda` eure *environment* möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure *conda environments* zu definieren. Dazu geht ihr wie folgt vor[^envsdirs]:
 
@@ -37,7 +66,7 @@ Alle *conda environments* werden an einem zentralen Ort gespeichert. Typischerwe
 
 [^envsdirs]: Aus: <https://stackoverflow.com/a/67376348/4139249>
 
-## Anhang 2: Conda und `arcpy`
+## Anhang 3: Conda und `arcpy`
 
 Um die ganzen Befehle von ArcGIS direkt in Python ansteuern zu können, muss das package arcpy installiert werden. Bisher haben wir alle unsere Packages mit conda installiert, z.B:
 
@@ -142,7 +171,7 @@ arcpy.Select_analysis(veg, suitableVeg, whereClause)
 
 Der Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt "Code Sample", z.B. [hier](https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm))
 
-## Anhang 3: JupyterLab mit `R`
+## Anhang 4: JupyterLab mit `R`
 
 Einige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort habt ihr JupyterLab mit `R` benutzt, dabei habt ihr aber nicht auf eurem lokalen PC, sondern auf einer *gehosteten* Version von JupyterLab gearbeitet, also auf einem Server. Dieser Server kann jeder Zeit wieder Offline geschaltet werden oder ihr könnt euren Zugriff darauf verlieren. Wenn ihr JupyterLab mit `R` lokal nutzen wollt, geht ihr wie folgt vor (Anleitung in Anlehnung an [diesen Blogpost](https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/)):
 
