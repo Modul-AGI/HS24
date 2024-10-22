@@ -8,7 +8,7 @@ In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda n
 |:---|:---|:---|
 | **1\. Conda installieren** (installiert das Program *conda*)  | einmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)  | [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (empfohlen) oder [anaconda](https://www.anaconda.com/products/individual) herunterladen und installieren |
 | **2\. *Virtual environment* erstellen** (erstellt eine neue Arbeitsumgebung)  | einmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)  | in der Konsole: `conda create --name geopython` |
-| **3\. *Virutal environment* aktivieren** (schaltet den "Bearbeitungsmodus" ein)  | jedes mal nöig wenn ein  *Erweiterung installiert** oder **jupyter lab gestartet** werden soll  | in der Konsole [^linux]: `activate geopython` |
+| **3\. *Virutal environment* aktivieren** (schaltet den "Bearbeitungsmodus" ein)  | jedes mal nöig wenn ein  *Erweiterung installiert** werden soll  | in der Konsole [^linux]: `activate geopython` |
 | **4\. weitere Module [^weiteremodule] installieren** (fügt der *environment* zB `pandas` hinzu)  | jedes mal nötig, wenn ein Modul in einer Environment fehlt[^modulfehlt]  | in der Konsole [^activate]<sup>,</sup>[^jupyterlabbeenden]: `conda install -c conda-forge pandas` |
 
 [^konsole]: Mit Konsole ist unter Windows *cmd* gemeint (Windowstaste > cmd). Unter Linux wird bash, auf Mac der Terminal verwendet. 
@@ -166,36 +166,3 @@ arcpy.Select_analysis(veg, suitableVeg, whereClause)
 
 Der Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt "Code Sample", z.B. [hier](https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm))
 
-## Anhang 4: JupyterLab mit `R`
-
-Einige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort habt ihr JupyterLab mit `R` benutzt, dabei habt ihr aber nicht auf eurem lokalen PC, sondern auf einer *gehosteten* Version von JupyterLab gearbeitet, also auf einem Server. Dieser Server kann jeder Zeit wieder Offline geschaltet werden oder ihr könnt euren Zugriff darauf verlieren. Wenn ihr JupyterLab mit `R` lokal nutzen wollt, geht ihr wie folgt vor (Anleitung in Anlehnung an [diesen Blogpost](https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/)):
-
-1. In eurem Python Command Prompt erstellt ihr eine neue `conda` environment, aktiviert diese und installiert `juypterlab` sowie `r-ikernel` (letzteres aus dem channel `r`, nicht wie gewohnt `conda-forge`).
-
-    ```bash
-    conda create --name r-env
-    conda activate r-env
-    conda install -c conda-forge jupyterlab
-    conda install -c r r-irkernel
-    ```
-
-2. Nun ist `R` in eurer conda environment aktiviert. Nun könnt ihr mit folgenden Befehlen das Package `IRkernel` installieren sowie den Kernel für JuypterLab verfügbar machen.
-
-    ```bash
-    Rscript -e "install.packages('IRkernel', repos = 'https://cloud.r-project.org')"
-    Rscript -e "IRkernel::installspec(user = FALSE)"
-    ```
-
-3. Optional: Wenn ihr ein paar nützliche shortcuts für `R` haben wollt, könnt ihr die extension `techrah/text-shortcuts` mit folgender Zeile installieren.
-
-    ```bash
-    jupyter labextension install @techrah/text-shortcuts
-    ```
-
-4. Nun könnt ihr JupyterLab starten und sollet nun einen *R-Kernel* zur Verfügung haben:
-
-    ```bash
-    jupyter lab
-    ```
-
-![Nach den oben beschriebnen Schritten sollte nun ein `R` Kernel zur Verfügung stehen](figures/ir-kernel.png){#fig-irkernel}
