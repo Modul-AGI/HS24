@@ -44,13 +44,25 @@ Erweitere die Funktion `gruezi2` so, dass zwischen folgende Uhrzeiten berücksic
 
 : Uhrzeiten und ihre Begrüssungsformen {#tbl-begruesung}
 
-Das Problem ist etwas schwierig zu Packen weil wir die "von - bis" Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die `if`, `elif`und `else` Operationen. Im Dropdown unten ist unser Vorschlag.
+Das Problem ist etwas schwierig zu Packen weil wir die "von - bis" Uhrzeiten in eine Ja/Nein Logik überführen müssen. Überlege dir zuerst eine Ausführungslogik und schreibe danach die `if`, `elif`und `else` Operationen. Hier unser Vorschlag:
 
-:::{.callout-note collapse="true"}
 
-![](figures/if-else2.png)
 
-:::
+```{mermaid}
+graph LR
+    A[uhrzeit < 5] 
+    A-->|yes| B[Gute Nacht]
+    A-->|no| C[Uhrzeit < 11]
+    C-->|yes| D[Guten Morgen]
+    C-->|no| E[Uhrzeit < 18]
+    E-->|yes| F[Guten Tag]
+    E-->|no| G[Uhrzeit < 22]
+    G-->|yes| H[Guten Abend]
+    G-->|no| I[Gute Nacht]
+``` 
+
+
+
 
 ```{python}
 def gruezi2(nachname, anrede, uhrzeit):

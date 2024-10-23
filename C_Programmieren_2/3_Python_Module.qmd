@@ -8,7 +8,23 @@ Der Umgang mit Modulen ist in Python in vielerlei Hinsicht ähnlich wie in R. An
 
 In R ist die Installation einer *Library* selbst ein R-Befehl und wird innerhalb von R ausgeführt. Wenn wir keine Quelle angeben, woher die Library heruntergeladen werden soll, wird eine Default-Quelle verwendet, die im System hinterlegt ist (z.B. "https://cloud.r-project.org").
 
-In Python ist dies leider etwas komplizierter, es braucht für die Installation einer Python *Library* eine Zusatzsoftware wie zum Beispiel `conda`. Es gibt auch noch andere Wege, wie zum Beispiel `pip`, aber diese lassen wir der Einfachheit an dieser Stelle weg.
+In Python ist dies leider etwas komplizierter, es braucht für die Installation einer Python *Library* eine Zusatzsoftware wie zum Beispiel `conda`. Es gibt auch noch andere Wege, wie zum Beispiel `pip`, aber diese lassen wir zur Vereinfachung an dieser Stelle weg.
+
+::: {.callout-note title="Exkurs Conda" collapse="true"}
+## Was ist Conda?
+
+Conda ist ein Verwaltungssystem für Python-Bibliotheken[^3_python_module-1], welches unter Windows, macOS und Linux läuft. Neben Conda gibt es noch den "Package Manager" `pip`, welchen wir im Unterricht aber nicht nutzen werden. Mit Conda lassen sich diese Libraries schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten "virtuellen Umgebungen" (wie z.B. geopython1 bzw. geopython2, welche wir in Programmieren I erstellt haben). Diese Umgebungen ermöglichen es, dass Package-Installationen in abgeschottenen "Container" erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.
+:::
+
+[^3_python_module-1]: Genau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.
+
+
+:::{.callout-important}
+
+`maler` ist ein fiktives Modul. Der unten stehende Code bitte nur lesen, nicht ausführen!
+
+:::
+
 
 ::: columns
 ::: {.column width="48%"}
@@ -31,13 +47,6 @@ conda install -c conda-forge maler
 :::
 :::
 
-::: {.callout-note title="Exkurs Conda" collapse="true"}
-## Was ist Conda?
-
-Conda ist ein Verwaltungssystem für Python-Bibliotheken[^3_python_module-1], welches unter Windows, macOS und Linux läuft. Neben Conda gibt es noch den "Package Manager" `pip`, welchen wir im Unterricht aber nicht nutzen werden. Mit Conda lassen sich diese Libraries schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten "virtuellen Umgebungen" (wie z.B. geopython1 bzw. geopython2, welche wir in Programmieren I erstellt haben). Diese Umgebungen ermöglichen es, dass Package-Installationen in abgeschottenen "Container" erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.
-:::
-
-[^3_python_module-1]: Genau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.
 
 ### Erweiterung laden {#sec-modules-import}
 
