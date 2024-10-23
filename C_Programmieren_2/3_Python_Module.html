@@ -652,18 +652,7 @@ window.onload = function() {
 <section id="sec-install-module" class="level3">
 <h3 class="anchored">Erweiterung installieren</h3>
 <p>In R ist die Installation einer <em>Library</em> selbst ein R-Befehl und wird innerhalb von R ausgeführt. Wenn wir keine Quelle angeben, woher die Library heruntergeladen werden soll, wird eine Default-Quelle verwendet, die im System hinterlegt ist (z.B. “https://cloud.r-project.org”).</p>
-<p>In Python ist dies leider etwas komplizierter, es braucht für die Installation einer Python <em>Library</em> eine Zusatzsoftware wie zum Beispiel <code>conda</code>. Es gibt auch noch andere Wege, wie zum Beispiel <code>pip</code>, aber diese lassen wir der Einfachheit an dieser Stelle weg.</p>
-<div class="columns">
-<div class="column" style="width:48%;">
-<p>in R:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"maler"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:48%;">
-<p>In Python:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge maler </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<p>In Python ist dies leider etwas komplizierter, es braucht für die Installation einer Python <em>Library</em> eine Zusatzsoftware wie zum Beispiel <code>conda</code>. Es gibt auch noch andere Wege, wie zum Beispiel <code>pip</code>, aber diese lassen wir zur Vereinfachung an dieser Stelle weg.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Exkurs Conda">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -679,6 +668,30 @@ Exkurs Conda
 <h2 class="anchored" data-anchor-id="was-ist-conda">Was ist Conda?</h2>
 <p>Conda ist ein Verwaltungssystem für Python-Bibliotheken<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, welches unter Windows, macOS und Linux läuft. Neben Conda gibt es noch den “Package Manager” <code>pip</code>, welchen wir im Unterricht aber nicht nutzen werden. Mit Conda lassen sich diese Libraries schnell installieren, ausführen und aktualisieren. Ein zusätzliches, wichtiges Feature von Conda ist die Verwaltung von sogenannten “virtuellen Umgebungen” (wie z.B. geopython1 bzw. geopython2, welche wir in Programmieren I erstellt haben). Diese Umgebungen ermöglichen es, dass Package-Installationen in abgeschottenen “Container” erfolgen. Das heisst, dass man unterschiedliche Versionen des gleichen Packages installieren kann, ohne das dies Probleme bereitet.</p>
 </section>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wichtig
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>maler</code> ist ein fiktives Modul. Der unten stehende Code bitte nur lesen, nicht ausführen!</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>in R:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"maler"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:48%;">
+<p>In Python:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge maler </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
