@@ -6,6 +6,7 @@ Anders gesagt: *Wir* wissen ja, dass mit den Spalten `x` und `y` Koordinaten in 
 
 Was wir später mit den simulierten Zeckenstiche machen wollen, spielen wir an dieser Stelle mit den original Zeckenstichmeldungen (`zeckenstiche.csv`, siehe @tbl-datensaetze) durch.
 
+
 ```{python}
 # Unsere Zeckenstiche hatten wir auf folgende Weise importiert:
     
@@ -57,20 +58,27 @@ Mit `geometry = ` haben wir die Geometriespalte der *GeoDataFrame* festgelegt. B
 
 An dieser Stelle ist es wichtig, die drei Hierarchiestufen von GeoDataFrames zu kären. Von "unten" nach "oben" erläutert gibt es folgende Stufen:
 
-- **Geometry**: Einzelne Objekte [^shapely] der folgenden Typen
-  - Points / Multipoint [^multi]
-  - Linestring / Multilinestring [^multi]
-  - Polygon / Multipolygon [^multi]
+- **Geometry**: Einzelne Objekte der folgenden Typen
+  - Points / Multipoint (siehe @nte-multi)
+  - Linestring / Multilinestring 
+  - Polygon / Multipolygon 
 - **GeoSeries**: Eine vielzahl an *Geometries*, typischerweise eine Spalte einer *GeoDataFrame* namens (*geometry*)
 - **GeoDataFrame**: Eine Tabelle, welche über eine Geometrie-Spalte (*GeoSeries*) verfügt
 
+
+
+
+
+
+:::{#fig-geopandas-types}
+
 ![](figures/Geopandas_types.jpg)
----
-name: geopandas-types
----
+
+
 Die drei Hierarchien in Geopandas: Eine *GeoDataFrame* verfügt immer über eine Geometrie-Spalte, welche sich eine *GeoSeries* nennt. Diese wiederum besteht aus Einzelgeometrien, sogenannten *Geometries*.
 
-[^shapely]: Die Geometrien in Geopandas sind eigentlich Objekte vom Modul [*Shapely*](https://pypi.org/project/Shapely/). Shapely wiederum ist ein Python Modul, welches mit *Geopandas* mit-installiert und mit-importiert wird.
+
+:::
 
 ## Koordinatenbezugssystem {#sec-pythongis-crs}
 
@@ -113,9 +121,16 @@ wald = gpd.read_file("data/wald.gpkg") # <- importiert das File "wald.gpkg"
 wald
 ```
 
-Es handelt sich also um einen Datensatz mit nur zwei Zeilen, aber mehreren Polygonen pro Zeile (das macht es zu einem ***Multi**polygon*[^multi]). Mit `plot` können wir diesen Datensatz einfach visualisieren und mit den Zeckenstichdaten überlagern.
+Es handelt sich also um einen Datensatz mit nur zwei Zeilen, aber mehreren Polygonen pro Zeile (das macht es zu einem ***Multi**polygon*). Mit `plot` können wir diesen Datensatz einfach visualisieren und mit den Zeckenstichdaten überlagern.
 
-[^multi]: Der Unterschied zwischen Point und *Multi*point, Linesstring und *Multi*linestring und Polygon *Multi*polyon ist folgendermassen: Typischerweise hat jedes Attribut *eine* Geometrie. Zum Beispiel hat jede Zeckenstichmeldung eine ID, eine Ungenauigkeitsangabe und eben *eine* Punkgeometrie. Somit handelt es sich bei diesem Datensatz um einen einfach *Point* Datensatz. Wenn pro Attribut mehrere Geometrien zugewiesen sind handelt es sich um ein *Multi*point Objekt.
+:::{.callout-note #nte-multi}
+
+Der Unterschied zwischen Point und *Multi*point, Linesstring und *Multi*linestring und Polygon *Multi*polyon ist folgendermassen: Typischerweise hat jedes Attribut *eine* Geometrie. Zum Beispiel hat jede Zeckenstichmeldung eine ID, eine Ungenauigkeitsangabe und eben *eine* Punkgeometrie. Somit handelt es sich bei diesem Datensatz um einen einfach *Point* Datensatz. Wenn pro Attribut mehrere Geometrien zugewiesen sind handelt es sich um ein *Multi*point Objekt.
+
+
+
+:::
+
 
 ```{python}
 base = wald.plot(color = ["Lightgrey","Green"])

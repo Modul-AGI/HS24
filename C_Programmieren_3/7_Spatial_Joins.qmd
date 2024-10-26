@@ -1,5 +1,6 @@
 # Spatial Joins {#sec-spatialjoin}
 
+
 In dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald-Layer kennt ihr bereits aus dem Block "Datenqualität und Unsicherheit" und wir haben ihn in @sec-pythongis-formate kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche (siehe @tbl-datensaetze) als Geodaten einzulesen und in einem grossen Plot zu visualisieren.
 
 ```{python}

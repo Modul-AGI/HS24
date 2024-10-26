@@ -16,7 +16,31 @@ Gehe dazu wie folgt vor: Erstelle einen `for loop` (siehe @sec-forloops-2), welc
 8. Schritt: Schritte 6 und 7 für drei verschiedene Radien wiederholen
 9. Schritt (Optional): Eine Karte mit den simulierten Zeckenstichen erstellen (siehe @sec-geoviz)
 
-![](figures/mermaid-diagram-2022-10-13-112927.png)
+
+```{mermaid}
+%%| echo: false
+
+flowchart LR
+   
+    A["zeckenstiche_full.csv"]
+    G["Anteil Wald"]
+    H["Boxplot"]
+    subgraph loop ["for loop (>50x)"]
+        direction TB
+        
+        B["zeckenstiche (DataFrame)"]
+        C["Sim. Zeckenstiche (DataFrame)"]
+        D["Sim. Zeckenstiche (GeoDataFrame)"]
+        E["Sim. Zecken. Join (GeoDataFrame)"]
+
+        B -->|offset coordinate|C
+        C -->|gpd.GeoDataFrame|D
+        D -->|gpd.sjoin|E
+    end
+    A --> |pd.read_csv|loop
+    loop -->|Anteil Wald berechnen| G
+    G --> H
+```
  
 ## Anforderungen
 
@@ -28,7 +52,7 @@ Führe die Analyse folgendermassen durch:
 
 Visualisiere für jeden Distanzwert die Verteilung der Anteile (z.B: mittels einem Boxplot)
 
-## Struktur
+<!-- ## Struktur
 
 Führe die Datenanalyse durch, indem du Python Code mit Markdown Text ergänzt.
 
@@ -39,27 +63,10 @@ Strukturiere den Bericht **mithilfe von Markdown** in folgende Unterkapitel
 - Resultate
 - Diskussion
 
-Sorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht, entferne unnötigen Code). Führt die Datenanalyse durch, indem ihr den Python Code **mit Markdown Text** unterstützt. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpretieren sind. Der Fokus soll auf der technischen Umsetzung liegen, nicht auf der Interpretation der Resultate.
+Sorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht, entferne unnötigen Code). Führt die Datenanalyse durch, indem ihr den Python Code **mit Markdown Text** unterstützt. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpretieren sind. Der Fokus soll auf der technischen Umsetzung liegen, nicht auf der Interpretation der Resultate. -->
 
 ## Abgabeformat
 
-Das Jupyter-Notebook File via Moodle. **Wichtig:** Zuerst alle Zellen ausführen (*Run > Restart Kernel and Run all cells...*). **Notebooks, bei denen dieser Schritt nicht ausgeführt wurden, werden nicht akzeptiert!**
+Lauffähigen Python Script file via Moodle.
 
-<!--
-| Teilaufgabe  | Status  | Voraussetzung | 
-|:---|:---|:---|
-| Einen Einzelpunkt zufällig verschieben  | ✓ haben wir in @sec-ex-offset-function gelöst  | @sec-function-basics und @sec-function-advanced |
-| Alle Punkte einer DataFrame zufällig verschieben  | ✓ haben wir in @sec-ex-apply gelöst  | @sec-random-numbers und @sec-offset-dataframe |
-| Wiederholung von Schritt 2 (zum Beispiel 50-mal)  | ✓ haben wir in @sec-simulation gelöst  | @sec-forloops-1 und @sec-forloops-2 |
-| Für jeden simulierten Punkt ermitteln, ob er sich im Wald / ausserhalb des Waldes befindet  | ✓ haben wir in @sec-ex-spatialjoin gelöst  | @sec-pythongis |
-
-: Teilaufgaben für das Lösen der Monte Carlo Simulation {#tbl-monte-carlo-workflow}
-
-
-:::{.callout-note collapse="true"}
-
-| Anteil der Punkte im Wald pro Run ermitteln  | werden wir in @sec-ex-groupby lösen  | Programmieren I - III |
-
-**Für Profis**: Statt das ihr den *For Loop* 3x kopiert könnt ihr auch einen verschachtelten *For Loop* konstuieren, wo der äussere *Loop* über die Radien iteriert, der innere besteht aus dem bisherigen *For Loop*. Wichtig dabei ist, dass die Liste `monte_carlo` vor dem äusseren Loop kontruiert wird und im DataFrame jeweils gespeichert wird, was für ein Radius verwendet wurde. Diese Spalte kann danach in `groupby` wie auch bei `.boxplot()` verwendet werden (siehe unten).
-:::
--->
+<!-- . **Wichtig:** Zuerst alle Zellen ausführen (*Run > Restart Kernel and Run all cells...*). **Notebooks, bei denen dieser Schritt nicht ausgeführt wurden, werden nicht akzeptiert!** -->

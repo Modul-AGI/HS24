@@ -8,6 +8,7 @@ import geopandas as gpd
 zeckenstiche = gpd.read_file("data/zeckenstiche.gpkg")
 ```
 
+
 :::{.callout-note}
 
 - Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen *Geometrien*, *Geoseries* und *GeoDataFrames* hin und her konvertieren (siehe @sec-pythongis-datenstruktur). 
@@ -107,8 +108,9 @@ my_difference = gpd.overlay(my_convex_hull_gdf,buffered_gdf, how='difference')
 ```
 
 ```{python}
+#| column: page
 # Bereitet die drei Subplots vor ################
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3, sharex=True, sharey = True, figsize = (9,9))
+fig, (ax1, ax2, ax3) = plt.subplots(1, 3, sharex=True, sharey = True, figsize = (18,9))
 #################################################
 
 # Plot links ####################################

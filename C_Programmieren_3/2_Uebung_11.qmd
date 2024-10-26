@@ -14,6 +14,7 @@ Kopiere den folgenden *for Loop* und lasse ihn bei dir laufen. Spiele mit den We
 ```{python}
 #| echo: true
 #| output: true
+#| code-fold: false
 
 for platzhalter in [0,1,2,5,10]:
     print("Iteration",platzhalter)
@@ -46,6 +47,7 @@ Kopiere den folgenden *For Loop* und spiele hier mit den Werten herum. Veränder
 ```{python}
 #| echo: true
 #| output: true
+#| code-fold: false
 
 for nonsense in range(3, 5):
     print("Iteration",nonsense)
