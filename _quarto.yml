@@ -4,7 +4,7 @@ project:
       port: 5678
   execute-dir: project
 
-lang: de
+lang: de-DE
 
 format:
   # pdf: default
@@ -97,22 +97,22 @@ book:
       - C_Programmieren_2/12_Funktionen_in_DataFrames.qmd
       - C_Programmieren_2/13_Uebung_10.qmd
       - C_Programmieren_2/20_Anhang.qmd 
-    # - part: "C_Programmieren_3/1_Einleitung.qmd"
-    #   chapters:
-    #   - C_Programmieren_3/2_For_Loops_Intro.qmd
-    #   - C_Programmieren_3/2_Uebung_11.qmd
-    #   - C_Programmieren_3/3_For_Loops_Basics.qmd
-    #   - C_Programmieren_3/3_Uebung_12.qmd
-    #   - C_Programmieren_3/4_For_Loops_Advanced.qmd
-    #   - C_Programmieren_3/4_Uebung_13.qmd
-    #   - C_Programmieren_3/5_GIS_in_Python.qmd
-    #   - C_Programmieren_3/6_Raeumliche_Operationen.qmd
-    #   - C_Programmieren_3/6_Uebung_14.qmd
-    #   - C_Programmieren_3/7_Spatial_Joins.qmd
-    #   - C_Programmieren_3/7_Uebung_15.qmd
-    #   # - C_Programmieren_3/8_Daten_Visualisieren.qmd moved to 10_Anhang.qmd
-    #   - C_Programmieren_3/9_Leistungsnachweis.qmd
-    #   - C_Programmieren_3/10_Anhang.qmd
+    - part: "C_Programmieren_3/1_Einleitung.qmd"
+      chapters:
+      - C_Programmieren_3/2_For_Loops_Intro.qmd
+      - C_Programmieren_3/2_Uebung_11.qmd
+      - C_Programmieren_3/3_For_Loops_Basics.qmd
+      - C_Programmieren_3/3_Uebung_12.qmd
+      - C_Programmieren_3/4_For_Loops_Advanced.qmd
+      - C_Programmieren_3/4_Uebung_13.qmd
+      - C_Programmieren_3/5_GIS_in_Python.qmd
+      - C_Programmieren_3/6_Raeumliche_Operationen.qmd
+      - C_Programmieren_3/6_Uebung_14.qmd
+      - C_Programmieren_3/7_Spatial_Joins.qmd
+      - C_Programmieren_3/7_Uebung_15.qmd
+      # - C_Programmieren_3/8_Daten_Visualisieren.qmd moved to 10_Anhang.qmd
+      - C_Programmieren_3/9_Leistungsnachweis.qmd
+      - C_Programmieren_3/10_Anhang.qmd
     - ---
     - part: "🛣️ Teil: Netzwerkanalyse"
     - part: "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.qmd"
