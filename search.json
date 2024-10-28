@@ -1664,7 +1664,7 @@
     "href": "C_Programmieren_3/3_Uebung_12.html",
     "title": "Übung 12",
     "section": "",
-    "text": "Übung 12.1\nNehmen wir nochmals das Beispiel aus Übung 11.2. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. mylist) gespeichert werden.\nMusterlösung\n# Das Resultat sieht dann so aus:\nmylist\n\n\n['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']",
+    "text": "Übung 12.1\nNehmen wir nochmals das Beispiel aus Übung 11.2. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. mylist) gespeichert werden.\n# Das Resultat sieht dann so aus:\nmylist\n\n['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 12</span>"
@@ -1675,7 +1675,7 @@
     "href": "C_Programmieren_3/3_Uebung_12.html#sec-ex-loopoutput",
     "title": "Übung 12",
     "section": "Übung 12.2",
-    "text": "Übung 12.2\nDer im Beispiel verwendete Refrain aus dem Lied “Bitch” von Meredith Brooks besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit zwei verschiedenen, aneinander gereihten for loops den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“I do not feel ashamed” und “You know you wouldn’t want it any other way”) kannst du auch ausserhalb der Loops in die Listen einfügen (append).\n\n\nMusterlösung\n# Das Resultat sieht dann so aus:\nrefrain\n\n\n[\"I'm a bitch\",\n \"I'm a lover\",\n \"I'm a child\",\n \"I'm a mother\",\n \"I'm a sinner\",\n \"I'm a saint\",\n 'I do not feel ashamed',\n \"I'm your hell\",\n \"I'm your dream\",\n \"I'm nothing in between\",\n \"You know you wouldn't want it any other way\"]",
+    "text": "Übung 12.2\nDer im Beispiel verwendete Refrain aus dem Lied “Bitch” von Meredith Brooks besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit zwei verschiedenen, aneinander gereihten for loops den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“I do not feel ashamed” und “You know you wouldn’t want it any other way”) kannst du auch ausserhalb der Loops in die Listen einfügen (append).\n\n# Das Resultat sieht dann so aus:\nrefrain\n\n[\"I'm a bitch\",\n \"I'm a lover\",\n \"I'm a child\",\n \"I'm a mother\",\n \"I'm a sinner\",\n \"I'm a saint\",\n 'I do not feel ashamed',\n \"I'm your hell\",\n \"I'm your dream\",\n \"I'm nothing in between\",\n \"You know you wouldn't want it any other way\"]",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>41</span>  <span class='chapter-title'>Übung 12</span>"
