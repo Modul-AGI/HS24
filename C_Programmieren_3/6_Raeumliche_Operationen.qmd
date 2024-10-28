@@ -42,7 +42,7 @@ zeckenstiche.plot(ax = base, color = "black") # plottet die Punkte
 
 ## Union
 
-Mit `unary_union` können wir aus unserer *Point*-Geometrie ein *MultiPoint* erstellen (siehe @sec-pythongis-datenstruktur). Dieser Befehl lautet in ArcGIS [Union](https://desktop.arcgis.com/de/arcmap/10.3/tools/analysis-toolbox/union.htm).
+Mit `unary_union` können wir aus unserer *Point*-Geometrie ein *MultiPoint* erstellen (siehe @sec-pythongis-datenstruktur). Dieser Befehl lautet in ArcGIS [Union](https://pro.arcgis.com/de/pro-app/latest/tool-reference/analysis/union.htm).
 
 ```{python}
 zeckenstiche_union = zeckenstiche["geometry"].unary_union

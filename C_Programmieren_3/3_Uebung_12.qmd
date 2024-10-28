@@ -21,6 +21,7 @@ for name in ["Il Buono", "Il Brutto", "Il Cattivo"]:
 ```{python}
 #| echo: true
 #| output: true
+#| code-fold: false
 
 # Das Resultat sieht dann so aus:
 mylist
@@ -46,6 +47,7 @@ refrain.append("You know you wouldn't want it any other way")
 ```{python}
 #| echo: true
 #| output: true
+#| code-fold: false
 
 # Das Resultat sieht dann so aus:
 refrain
