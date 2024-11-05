@@ -45,7 +45,7 @@ for i in werte:
 
 ## Übung  13.3 
 
-Nutze die Funktion `offset_coordinate` (Lösung aus [Übung 8.5](#sec-ex-offset-function)) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).
+Nutze die Funktion `offset_coordinate` (Lösung aus [Übung 9.5](#sec-ex-offset-function)) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).
 
 ```{python}
 import random
