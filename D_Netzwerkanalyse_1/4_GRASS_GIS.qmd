@@ -32,8 +32,7 @@ Im Idealfall sollte unser Netzwerk aus einer Gruppe bestehen; so wäre jeder Kno
 3. Ermitteln Sie die Nummer der Hauptkategorie (z.B. mit dem Werkzeug "Identify Features")
 4. Öffnen Sie die Attributtabelle und machen sie eine "Selektion anhand einer Abfrage" ("Select Features
     using an expression" [1])
-5. Selektieren Sie die Hauptkategorie mittels einer korrekten Abfrage (z.B. comp = 99). QGIS bietet
-    ihnen hierfür leider wenig Hilfestellung (im Gegensatz zum Query Builder von ArcGIS)
+5. Selektieren Sie die Hauptkategorie mittels einer korrekten Abfrage (z.B. `comp = 99`).
 6. Um die anderen Kategorien zu entfernen, haben Sie nun zwei Möglichkeiten:
     - Eine Editiersession starten [2], die Selektion invertieren [3] und die selektierten Daten löschen [4]. **ODER**
     - Selektierte Daten (ohne Invertierung) in ein neues File exportieren mittels Rechtsklick auf den Layer → "Save as" → Häkchen bei "Save only selected features"

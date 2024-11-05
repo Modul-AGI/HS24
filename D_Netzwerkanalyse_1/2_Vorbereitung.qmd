@@ -35,6 +35,15 @@ Hier befinden sich alle Datensätze, die im Laufe des Blocks "Netzwerkanalyse" b
 
 Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den passenden Standalone Installer des "Longterm release (most stable)" herunter (aktuell **3.34**). Installieren Sie QGIS nach dem Download.
 
+
+:::{.callout-important}
+
+Wir empfehlen dringend, dass ihr QGIS auf Englisch umstellt:
+
+Settings → Options → General → User interface translation
+
+:::
+
 ## Übung 2: Tutorials anschauen
 
 Schauen Sie sich danach zum Einstieg einzelne Videos vom Youtube Nutzer [Marshal Mappers](https://www.youtube.com/channel/UCKwC9hcJr-4mgsNUeJzMAvA/videos) an. Schauen Sie die Videos bis Sie die grundlegendsten Arbeitsschritte von QGIS (Daten importieren, Werkzeuge finden, Karte zu pdf exportieren) verstanden haben. Erstellen Sie dann ein neues Projekt (Projekt→New) und speichern Sie dieses direkt ab (Projekt→Save As..). 
@@ -43,7 +52,7 @@ Schauen Sie sich danach zum Einstieg einzelne Videos vom Youtube Nutzer [Marshal
 
 Während Shapefiles im GIS-Unterricht bisher oft zur Speicherung von Vektordaten verwendet wurden, werden in QGIS vor allem Geopackage Dateien verwendet (.gpkg). QGIS kann Shapefiles durchaus lesen und schreiben, wir werden in den Übungen aber vor allem mit Geopackage Daten arbeiten. Geopackages sind eine alternative Methode, Vektordaten abzuspeichern. Sie beheben einige Defizite, die Shapefiles mit sich bringen. Siehe dazu auch die Website ["Shapefiles must die"](http://switchfromshapefile.org/). 
 
-1. Neues QGIS Projekt starten und Projektdatei speichern (Beachten Sie dazu die Empfehlungen am Anfang)
+1. Neues QGIS Projekt starten und Projektdatei speichern
 2. CRS auf EPSG 2056 setzen
 3. Aus dem File *netzwerkanalyse.gpgk* den Layer *Gemeinde_Waedenswil* (siehe @tbl-datensaetze-netzwerkanalyse) in QGIS importieren
 4. Symbologie folgendermassen ändern: Fläche transparent, Stadtgrenze schwarz
