@@ -681,7 +681,7 @@ window.onload = function() {
 </header>
 
 
-<p>Die mächtigsten (aber nicht die einzigen<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) Netzwerkanalyse Werkzeuge in QGIS stammen aus dem eigenständigen GIS “GRASS GIS”, welches bei der Installation von QGIS mitinstalliert wird. Diese können innerhalb von QGIS verwendet werden.</p>
+<p>Die mächtigsten (aber nicht die einzigen<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) Netzwerkanalyse-Werkzeuge in QGIS stammen aus dem eigenständigen GIS “GRASS GIS”, welches bei der Installation von QGIS mitinstalliert wird. Diese können innerhalb von QGIS verwendet werden.</p>
 <section id="übung-2.1-topologie-bereinigen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.1-topologie-bereinigen">Übung 2.1: Topologie bereinigen</h2>
 <p>Das OSM Strassennetz “osm_highway” ist topologisch nicht perfekt für unsere Zwecke vorbereitet. An Kreuzungen fehlen teilweise Knoten, welche ein “Abbiegen” auf der Kreuzung ermöglichen. Um diesen Umstand zu beheben, nutzen wir das Tool <code>v.clean</code> und führen damit die Operation “break” durch. Dadurch werden Linien an Kreuzungen unterbrochen. Diese Operation löst einige topologische Fehler, führt z.B. bei Brücken und Tunnels aber zu neuen Unstimmigkeiten, die Sie an dieser Stelle aber getrost ignorieren können.</p>
@@ -700,7 +700,7 @@ window.onload = function() {
 <section id="übung-2.2-losgelöste-getrennte-elemente-entfernen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.2-losgelöste-getrennte-elemente-entfernen">Übung 2.2: Losgelöste (getrennte) Elemente entfernen</h2>
 <p>Aufmerksamen Anwendern könnte nun auffallen, dass gewisse Bestandteile des Netzwerks nicht mit dem Hauptnetz verbunden sind. Diese getrennten Elemente können mit dem Werkzeug <code>v.net.components</code> identifiziert werden. Das Werkzeug prüft, welche Bestandteile des Netzwerkes miteinander verbunden sind und gruppiert diese mit Nummern. Diese Nummern werden in der Spalte “comp” abgespeichert.</p>
-<p>Im Idealfall sollte unser Netzwerk aus einer Gruppe bestehen; so wäre jeder Knotenpunkt mit jedem andern Knotenpunkt verbunden: Bei uns ist dies jedoch nicht der Fall. Damit wir in den nachstehenden Übungen mit einem sauberen Datensatz arbeiten können, bereinigen wir dieses Problem an dieser Stelle:</p>
+<p>Im Idealfall sollte unser Netzwerk aus einer Gruppe bestehen; so wäre jeder Knotenpunkt mit jedem andern Knotenpunkt verbunden: Bei uns ist dies jedoch nicht der Fall. Damit wir in den nächsten Übungen mit einem sauberen Datensatz arbeiten können, bereinigen wir dieses Problem an dieser Stelle:</p>
 <ol type="1">
 <li>Führen Sie das Werkzeug <code>v.net.components</code> aus
 <ul>
@@ -709,15 +709,15 @@ window.onload = function() {
 <li><em>Network_Components_Line:</em> Save to File…</li>
 <li><em>Network_Components_Point:</em> Save to File…</li>
 </ul></li>
-<li>Der neue Linien Datensatz verfügt (wie oben beschrieben) über eine Spalte “comp”. Überprüfen Sie dies indem Sie die Attributtabelle anschauen.</li>
-<li>Färben Sie die Linien nach der Spalte (“comp”) ein. So, dass jede Gruppe eine Farbe erhält.</li>
+<li>Der neue Linien-Datensatz verfügt (wie oben beschrieben) über eine Spalte “comp”. Überprüfen Sie dies, indem Sie die Attributtabelle anschauen.</li>
+<li>Färben Sie die Linien nach der Spalte (“comp”) ein, sodass jede Gruppe eine Farbe erhält.</li>
 <li>Ermitteln Sie die Nummer der Hauptkategorie (z.B. mit dem Werkzeug “Identify Features”)</li>
 <li>Öffnen Sie die Attributtabelle und machen sie eine “Selektion anhand einer Abfrage” (“Select Features using an expression” [1])</li>
 <li>Selektieren Sie die Hauptkategorie mittels einer korrekten Abfrage (z.B. comp = 99). QGIS bietet ihnen hierfür leider wenig Hilfestellung (im Gegensatz zum Query Builder von ArcGIS)</li>
 <li>Um die anderen Kategorien zu entfernen, haben Sie nun zwei Möglichkeiten:
 <ul>
 <li>Eine Editiersession starten [2], die Selektion invertieren [3] und die selektierten Daten löschen [4]. <strong>ODER</strong></li>
-<li>Selektierte Daten (ohne Invertierung) in ein neues File exportieren mittels Rechtsklick auf den Layer→“Save as”→Häkchen bei “Save only selected features”</li>
+<li>Selektierte Daten (ohne Invertierung) in ein neues File exportieren mittels Rechtsklick auf den Layer → “Save as” → Häkchen bei “Save only selected features”</li>
 </ul></li>
 <li>Speichern Sie den Layer anschliessend mit folgendem Namen ab: “osm_highway_prepared.gpkg”</li>
 </ol>
@@ -749,11 +749,11 @@ Abbildung&nbsp;53.1
 </section>
 <section id="übung-2.4-zentralitätsmasse-visualisieren" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.4-zentralitätsmasse-visualisieren">Übung 2.4: Zentralitätsmasse Visualisieren</h2>
-<p>Visualisieren Sie die Ausprägung “Closeness” der berechneten Zentralitätswerte über die Symbologie (Layer Properties→Style→Graduated). Wählen Sie eine geeignete Methode und passen Sie den Stil an, bis er Ihnen gefällt. Spielen Sie dabei mit der Klassifikationsmethode (Mode: Equal interval, Quantile, Natural Breaks..) sowie der Color ramp rum. Achten Sie darauf, dass Sie immer auf “Classify” klicken müssen, um Änderungen anzuwenden.</p>
+<p>Visualisieren Sie die Ausprägung “Closeness” der berechneten Zentralitätswerte über die Symbologie (Layer Properties → Style → Graduated). Wählen Sie eine geeignete Methode und passen Sie den Stil an, bis er Ihnen gefällt. Spielen Sie dabei mit der Klassifikationsmethode (Mode: Equal interval, Quantile, Natural Breaks..) sowie der Color ramp rum. Achten Sie darauf, dass Sie immer auf “Classify” klicken müssen, um Änderungen anzuwenden.</p>
 </section>
 <section id="übung-2.5-zentralitätsmasse-vergleichen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.5-zentralitätsmasse-vergleichen">Übung 2.5: Zentralitätsmasse vergleichen</h2>
-<p>Installieren Sie das Plugin “QuickMapServices” um eine OSM Hintergrundkarte einzubinden (e.g.&nbsp;Web → QuickMapServices → OSM → OSM Standard). Um direkt in QGIS die Zentralitätsmasse zu vergleichen, duplizieren sie den entsprechenden Layer noch zweimal (rechtsklick &gt; Duplicate) – so können Sie jede der Zentralitäten separat symbolisieren und vergleichen. Sie können auch für jedes der Zentralitätsmasse eine Karte exportieren via <em>Project &gt; Import / Export Export Map to Image</em>.</p>
+<p>Installieren Sie das Plugin “QuickMapServices”, um eine OSM Hintergrundkarte einzubinden (e.g.&nbsp;Web → QuickMapServices → OSM → OSM Standard). Um direkt in QGIS die Zentralitätsmasse zu vergleichen, duplizieren sie den entsprechenden Layer noch zweimal (rechtsklick &gt; Duplicate) – so können Sie jede der Zentralitäten separat symbolisieren und vergleichen. Sie können auch für jedes der Zentralitätsmasse eine Karte exportieren via <em>Project &gt; Import / Export Export Map to Image</em>.</p>
 <p>Vergleichen Sie die drei Zentralitätsmasse und setzen Sie sie in den Kontext der Theorie.</p>
 
 

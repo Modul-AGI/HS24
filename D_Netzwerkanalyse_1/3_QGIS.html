@@ -651,8 +651,8 @@ window.onload = function() {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#sec-ex-network-transfrom" id="toc-sec-ex-network-transfrom" class="nav-link active" data-scroll-target="#sec-ex-network-transfrom">Übung 1.1: Daten Transformieren</a></li>
-  <li><a href="#sec-ex-clip" id="toc-sec-ex-clip" class="nav-link" data-scroll-target="#sec-ex-clip">Übung 1.2: Daten Clippen</a></li>
+  <li><a href="#sec-ex-network-transfrom" id="toc-sec-ex-network-transfrom" class="nav-link active" data-scroll-target="#sec-ex-network-transfrom">Übung 1.1: Daten transformieren</a></li>
+  <li><a href="#sec-ex-clip" id="toc-sec-ex-clip" class="nav-link" data-scroll-target="#sec-ex-clip">Übung 1.2: Daten clippen</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/modul-AGI/hs24/edit/main/D_Netzwerkanalyse_1/3_QGIS.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></nav>
     </div>
@@ -680,8 +680,8 @@ window.onload = function() {
 
 <p>Starten Sie QGIS, erstellen Sie ein neues QGIS Projekt und speichere dieses an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importiere die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe <a href="2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse" class="quarto-xref">Tabelle&nbsp;<span>51.1</span></a>).</p>
 <section id="sec-ex-network-transfrom" class="level2">
-<h2 class="anchored" data-anchor-id="sec-ex-network-transfrom">Übung 1.1: Daten Transformieren</h2>
-<p>Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool <code>Reproject Layer</code>. <strong>Wichtig</strong>: Speichern Sie den Transformierten Strassendatensatz <em>in einer neuen Datei</em> (siehe <a href="#fig-saveToFile" class="quarto-xref">Abbildung&nbsp;<span>52.2</span></a>)</p>
+<h2 class="anchored" data-anchor-id="sec-ex-network-transfrom">Übung 1.1: Daten transformieren</h2>
+<p>Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool <code>Reproject Layer</code>. <strong>Wichtig</strong>: Speichern Sie den transformierten Strassendatensatz <em>in einer neuen Datei</em> (siehe <a href="#fig-saveToFile" class="quarto-xref">Abbildung&nbsp;<span>52.2</span></a>)</p>
 <div id="fig-qgistools" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-qgistools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -706,8 +706,8 @@ Abbildung&nbsp;52.2: Tool Reproject Layer
 <p>Speichern Sie den neuen Strassendatensatz in einer <em>neuen</em> Datei, nicht als temporärer Layer. Normalerweise spielt dies keine Rolle, doch im Falle von “reproject” entsteht beim Speichern als temporärer Layer ein Fehler.</p>
 </section>
 <section id="sec-ex-clip" class="level2">
-<h2 class="anchored" data-anchor-id="sec-ex-clip">Übung 1.2: Daten Clippen</h2>
-<p>Zoomen sie auf die Gemeindegrenze (Layers Panel→Rechtsklick auf Datensatz → <em>Zoom to layer</em>). Sie stellen fest, dass die Strassendaten über die Gemeindegrenze hinaus verlaufen. Wir möchten für die kommenden Übungen nur die Strassen, die <em>innerhalb</em> der Gemeinde Wädenswil liegen. Dazu müssen wir das Strassennetz mit der Gemeindegrenze verschneiden (“clip”). Führen Sie das gleichnamige Werkzeug mit dem Input Layer “OSM_highway” und dem Clip Layer <em>Gemeinde_Waedenswil</em> aus. Speichern Sie die Ausgabe in einer neuen Datei.</p>
+<h2 class="anchored" data-anchor-id="sec-ex-clip">Übung 1.2: Daten clippen</h2>
+<p>Zoomen sie auf die Gemeindegrenze (Layers Panel → Rechtsklick auf Datensatz → <em>Zoom to layer</em>). Sie stellen fest, dass die Strassendaten über die Gemeindegrenze hinaus verlaufen. Wir möchten für die kommenden Übungen nur die Strassen, die <em>innerhalb</em> der Gemeinde Wädenswil liegen. Dazu müssen wir das Strassennetz mit der Gemeindegrenze verschneiden (“clip”). Führen Sie das gleichnamige Werkzeug mit dem Input-Layer “OSM_highway” und dem Clip-Layer <em>Gemeinde_Waedenswil</em> aus. Speichern Sie die Ausgabe in einer neuen Datei.</p>
 <p>Es gibt eine ganze Reihe Werkzeuge zum Begriff “clip”. Entscheiden Sie selbst, welches für diese Fragestellung geeignet ist.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -720,7 +720,7 @@ Hinweis
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Achten Sie darauf, das dem neuen (“clipped”) Datensatz das richtige Koordinatensystem zugewiesen wurde. Wenn nicht, gehe zu: Properties &gt; Source &gt; Assigned Coordinate Reference System (CRS), wähle the EPSG:2056 - CH1903+ / LV95 und klicke auf Apply</li>
+<li>Achten Sie darauf, dass dem neuen (“clipped”) Datensatz das richtige Koordinatensystem zugewiesen wurde. Wenn nicht, gehe zu: Properties &gt; Source &gt; Assigned Coordinate Reference System (CRS), wähle EPSG:2056 - CH1903+ / LV95 und klicke auf Apply</li>
 </ul>
 <p><img src="figures/crs_apply.png" class="img-fluid"></p>
 </div>
