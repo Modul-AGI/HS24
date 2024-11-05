@@ -4,7 +4,7 @@ Das Problem des Handlungsreisenden (engl. Traveling Salesperson Problem) ist ein
 
 ## Übung 4.1: Traveling Salesperson für Campus Standorte
 
-Angenommen Sie sind ein Kurrierdienst und müssen ausgehend von der Halbinsel Au aus alle Campus Standorte der ZHAW Wädenswil besuchen. Sie wollen die Route so optimieren, dass Sie die kürzeste Route Sie das gleichnamige Tool (`v.net.salesmen`) um genau dieses Problem zu lösen.
+Angenommen Sie sind ein Kurrierdienst und müssen ausgehend von der Halbinsel Au aus alle Campus-Standorte der ZHAW Wädenswil besuchen. Sie wollen die Route so optimieren, dass Sie den kürzeste Weg zurücklegen. Dafür verwenden Sie das gleichnamige Tool (`v.net.salesmen`), um genau dieses Problem zu lösen.
 
 1. Erstellen Sie dazu als erstes eine neue Geopackage Datei (Layer→Create Layer→New Geopackage Layer) um die Campus Standorte zu erfassen.
     - Mit dem Feld "Database" ist der Pfad inkl. Dateiname der zu erstellenden Datei gemeint. Wählen Sie hier an einem geeigneten Speicherort den Dateiname "campus_waedenswil.gpkg"
@@ -30,7 +30,7 @@ Der Traveling-Salesperson-Pfad für fünf Punkte zu berechnen ist relativ trivia
 
 ## Übung 4.3 (fakultativ, Guezli-Challenge): Traveling Salesperson für noch mehr Standorte {#sec-ex-network-traveling-buildings}
 
-Um unsere Rechenmaschine richtig herauszufordern, können wir den Traveling Salesperson Pfad für alle Gebäudestandorte in Wädenswil berechnen. Nutzen Sie hierzu QuickOSM um "building" herunterzuladen. Reprojizieren Sie die Polygon-Daten in CRS 2056 und konvertieren Sie diese in Punkte, indem Sie das Centroid pro Polygon berechnen (Tool "Polygon Centroids"). Berechnen Sie anschliessend den Traveling Salesperson. Ermitteln Sie die Gesamtdistanz dieses Pfades, indem Sie mit dem Field Calculator die Länge pro Segment rechnen (length) und anschliessend die Summe aller Längen ermitteln (View→Statistical Summary). **Wer zuerst die korrekte Distanz in den Chat schreibt, wird mit Ruhm und Ehre belohnt und zur/zum "AGI Studentin/Student des Tages" erkürt!**
+Um unsere Rechenmaschine richtig herauszufordern, können wir den Traveling Salesperson Pfad für alle Gebäudestandorte in Wädenswil berechnen. Nutzen Sie hierzu QuickOSM um "building" herunterzuladen. Reprojizieren Sie die Polygon-Daten in CRS 2056 und konvertieren Sie diese in Punkte, indem Sie das Centroid pro Polygon berechnen (Tool "Polygon Centroids"). Berechnen Sie anschliessend den Traveling Salesperson. Ermitteln Sie die Gesamtdistanz dieses Pfades, indem Sie mit dem Field Calculator die Länge pro Segment rechnen (length) und anschliessend die Summe aller Längen ermitteln (View→Statistical Summary). **Wer zuerst die korrekte Distanz in den Chat schreibt, wird mit Ruhm und Ehre belohnt und zur/zum "AGI Studentin/Studenten des Tages" erkoren!**
 
 - Für viele klassische Fragestellungen (z.B. shortest path, traveling salesmen) bietet QGIS / GRASS einen passenden Algorithmus
  - Die Tools werden teilweise sehr unterschiedlich angesprochen (shortest path braucht Textfiles, Traveling salesmen braucht Punkt-Features) und liefern unterschiedliche Outputs
