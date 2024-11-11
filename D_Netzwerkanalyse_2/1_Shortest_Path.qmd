@@ -31,15 +31,15 @@ Nun wollen wir diese Route mit derjenigen eines professionellen Routing Services
 
 Führen Sie das Tool nach der Installation via Web → ORS Tools → ORS Tools aus. Gehen Sie zu Settings siehe @fig-ORS-einstellung). 
 
-![Öffnen der Einstellungen im ORS Tool](figures/ORS_Einstellungen.png){#fig-ORS-einstellung width=25%}
+![Öffnen der Einstellungen im ORS Tool](figures/ORS_Einstellungen.png){#fig-ORS-einstellung width=50%}
 
 Fügen Sie unter "API Key" den Schlüssel ein (siehe @fig-ORS-key). Den Schlüssel findet ihr auf Moodle. Über diesen Schlüssel wird sichergestellt, dass die Anzahl Abfragen pro Minute und Tag ein gewisses Maximum nicht überschreiten.
 
-![Einfügen des API Keys](figures/ORS_key.png){#fig-ORS-key width=25%}
+![Einfügen des API Keys](figures/ORS_key.png){#fig-ORS-key width=50%}
 
 Geben Sie Start und Endpunkt mit der Maus ein (Klick auf das +, siehe @fig-ORS-route) und orientieren sich dabei an dem Layer "Shortest_Path" (aus der vorherigen Übung). Die Punkte setzen Sie mit einem Linksklick, den letzen Punkt setzen Sie mit einem Doppelklick.
 
-![ Beachten Sie, dass Sie mit + eine ganze Route setzen müssen und nicht einzelne Punkte.](figures/ORS_Punkte.png){#fig-ORS-route width=25%}
+![ Beachten Sie, dass Sie mit + eine ganze Route setzen müssen und nicht einzelne Punkte.](figures/ORS_Punkte.png){#fig-ORS-route width=50%}
 
 Allenfalls verschwindet das "ORS Tools" Fenster, sie können es aber über die Toolbar (siehe @fig-orsrouting) wieder aufrufen.
 

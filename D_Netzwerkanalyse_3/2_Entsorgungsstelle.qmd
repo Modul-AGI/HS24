@@ -26,7 +26,7 @@ In einigen Fällen kann es sein, dass SAGA von QGIS nicht erkannt wird, obwohl e
 
 1. Installieren Sie in QGIS das Plugin "Processing Saga NextGen Provider".
 2. Gehen Sie in QGIS zu *Settings > Options > Processing > Providers*
-3. Unter *SAGA folder* geben Sie den Pfad an, wo SAGA auf Ihrem Computer installiert ist.  Dieser Pfad sollte in etwa so aussehen: "C:\Program Files\QGIS 3.34.10\apps\saga"
+3. Unter *SAGA folder* geben Sie den Pfad an, wo SAGA auf Ihrem Computer installiert ist.  Dieser Pfad sollte in etwa so aussehen: `C:\Program Files\QGIS 3.34.10\apps\saga`
 
 :::
 
