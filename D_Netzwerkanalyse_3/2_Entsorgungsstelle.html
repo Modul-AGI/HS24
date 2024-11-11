@@ -696,7 +696,25 @@ window.onload = function() {
 </section>
 <section id="übung-5.2-linien-in-punkte-umwandeln" class="level2">
 <h2 class="anchored" data-anchor-id="übung-5.2-linien-in-punkte-umwandeln">Übung 5.2: Linien in Punkte Umwandeln</h2>
-<p>Um aus den Linien eine Oberfläche zu erhalten müssen wir die Kategorien aus dem Output von <code>v.net.iso</code> interpolieren. Dies funktioniert besser mit Punkten als Linien. In einem ersten Schritt müssen wir also den Output aus <code>v.net.iso</code> in Punkte umwandeln. Verwenden Sie hierfür das Werkzeug “Convert Lines to Points” (SAGA). Belassen sie das Häkchen bei “Insert additional Points” und setzten Sie die Distanz (“Insertion Distance”) auf 100 Meter. Führen Sie das Werkzeug mit “run” aus.</p>
+<p>Um aus den Linien eine Oberfläche zu erhalten müssen wir die Kategorien aus dem Output von <code>v.net.iso</code> interpolieren. Dies funktioniert besser mit Punkten als Linien. In einem ersten Schritt müssen wir also den Output aus <code>v.net.iso</code> in Punkte umwandeln. Verwenden Sie hierfür das Werkzeug “Convert Line/Polygon Vertices to Points” (SAGA). Belassen sie das Häkchen bei “Insert additional Points” und setzten Sie die Distanz (“Insertion Distance”) auf 100 Meter. Führen Sie das Werkzeug mit “run” aus.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In einigen Fällen kann es sein, dass SAGA von QGIS nicht erkannt wird, obwohl es auf dem Computer installiert ist. Damit SAGA in QGIS trotzdem benutzt werden kann, muss einmalig folgende Schritte ausgeführt werden.</p>
+<ol type="1">
+<li>Installieren Sie in QGIS das Plugin “Processing Saga NextGen Provider”.</li>
+<li>Gehen Sie in QGIS zu <em>Settings &gt; Options &gt; Processing &gt; Providers</em></li>
+<li>Unter <em>SAGA folder</em> geben Sie den Pfad an, wo SAGA auf Ihrem Computer installiert ist. Dieser Pfad sollte in etwa so aussehen: “C:Files.10”</li>
+</ol>
+</div>
+</div>
 </section>
 <section id="sec-ex-interpolate-points" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-interpolate-points">Übung 5.3: Punkte interpolieren</h2>
