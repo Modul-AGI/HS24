@@ -10,11 +10,21 @@
     ]
   },
   {
+    "objectID": "A_Unsicherheit/1_Einleitung.html",
+    "href": "A_Unsicherheit/1_Einleitung.html",
+    "title": "💥 Teil: Unsicherheit",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage bei zukünftigen GIS Arbeiten mit der Unsicherheit von Punktdaten umzugehen.\nDu kannst reale räumliche Objekte dahin beurteilen, ob diese grenzscharf oder nur mit einer Unschärfe abgebildet werden können.\nDu kannst mit Fuzzy-Tallness umgehen und diese definieren.\nDu kannst unscharfe Phänomene in deinen zukünftigen Projekten berücksichtigen und deren Unschärfe in den Geoverarbeitungsprozess integrieren und auswerten.\nDu kannst ein Modell mit ModelBuilder erstellen und ausführen.",
+    "crumbs": [
+      "💥 Teil: Unsicherheit"
+    ]
+  },
+  {
     "objectID": "A_Unsicherheit/2_Datengrundlage.html",
     "href": "A_Unsicherheit/2_Datengrundlage.html",
     "title": "Datengrundlage",
     "section": "",
-    "text": "Layer\nDie Feature Class Tick_Original beinhaltet die Originalstandorte der via Zecken App gemeldeten Zeckenstiche im Raum Zürich aus dem Zeitraum März 2015 bis Juli 2019. Es handelt sich dabei um 1076 Meldungen. Die anderen 40 Feature Classes mit den Bezeichnungen Tick_Run_1 (bis …40) enthalten die mittels Zufall veränderten Positionen der Originalstandorte (vgl. Abschnitt Datenvorverarbeitung).\nDer Layer Wald_NichtWald beinhaltet die Waldausdehnung innerhalb des Untersuchungsraums. Die Daten stammen aus dem Landschaftsmodell swissTLM3D von swisstopo (Layer Bodenbedeckung).",
+    "text": "Layer\nAuf Moodle steht ein ArcGIS Pro Project Package (Name: Unsicherheit) mit den heutigen Übungsdaten zum Download zur Verfügung.\nAls Packages aufbereitete ArcGIS Pro Projekte können als File anderen Personen zur Verfügung gestellt werden. Damit können auf elegante Art und Weise die eigenen Projektdaten geteilt werden.\nDas ArcGIS Pro Projekt “Unsicherheit” beinhaltet eine Geodatenbank mit folgenden Feature Classes:\nDie Feature Class Tick_Original beinhaltet die Originalstandorte der via Zecken App gemeldeten Zeckenstiche im Raum Zürich aus dem Zeitraum März 2015 bis Juli 2019. Es handelt sich dabei um 1076 Meldungen. Die anderen 40 Feature Classes mit den Bezeichnungen Tick_Run_1 (bis …40) enthalten die mittels Zufall veränderten Positionen der Originalstandorte (vgl. Abschnitt Datenvorverarbeitung).\nDer Layer Wald_NichtWald beinhaltet die Waldausdehnung innerhalb des Untersuchungsraums. Die Daten stammen aus dem Landschaftsmodell swissTLM3D von swisstopo (Layer Bodenbedeckung).",
     "crumbs": [
       "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Datengrundlage</span>"
@@ -36,7 +46,7 @@
     "href": "A_Unsicherheit/3_Datenvorverarbeitung.html",
     "title": "Datenvorverarbeitung",
     "section": "",
-    "text": "Übung 1: Daten erkunden und neues “Resultate” Feature Dataset erstellen\nDownloade das ArcGIS Pro Package von Moodle, speichere es lokal auf deinem Computer und entpacke die Datei. Öffne anschliessend das Projekt-File (*.aprx), erkunde die Daten und mache dich mit ihnen vertraut.\nErstelle anschliessend in der Projekt-Geodatenbank Unsicherheit.gdb ein neues Feature Dataset mit dem Namen “Resultate”. Weise dem neuen Feature Dataset das Koordinatensystem CH1903+ LV95 zu.\nIn diesem neuen Feature Dataset sollen nachfolgend alle neu erstellten (Zwischen-)Resultate abgelegt werden.",
+    "text": "Übung 1: Daten erkunden und neues “Resultate” Feature Dataset erstellen\nDa der/die App Nutzer(in) den exakten Standort des Zeckenstichs nur mit eingeschränkter Positionsgenauigkeit erfassen kann (abhängig von Zoomstufe in der Karte und individueller räumlicher Orientierungskompetenz), wird davon ausgegangen, dass die erfassten Standorte über eine Unsicherheit verfügen. Um die Auswirkung dieser Unsicherheit auf den Anteil im Wald liegender Stiche simulieren zu können, wurden die 1076 Originalkoordinaten in 40 Monte Carlo Durchgängen (Runs) zufällig in einem Bereich +/-100 Meter versetzt, bildlich gesprochen wurden die Punkte etwas “verschüttelt”. Diese Zufallskoordinaten wurden in Excel generiert. Die untenstehende Abbildung zeigt beispielhaft für Zeckenstichstandort mit ID 1 (blauer Stern = Originalstandort) die 40 zufälligen Standorte (rote Punkte).\nFolgende Abbildung zeigt exemplarisch wie diese künstlich simulierte Ungenauigkeit eines Punktes Auswirkungen darauf hat, ob ein Punkt sich innerhalb oder ausserhalb des Waldes befindet (orange: Originalstandort). Bei 6 von 40 Durchgängen befindet sich der Standort (ID 15611) innerhalb des Waldes. Die Frage, welche beantwortet werden soll, lautet nun: Wie gross ist die Wahrscheinlichkeit, dass sich der mit einer bekannten Ungenauigkeit erfasste Zeckenstichstandort tatsächlich innerhalb des Waldes befindet? (vgl. Kap. 3 Unsicherheit der gemeldeten Zeckenstiche)\nBezüglich Unsicherheit von Geodaten stellt sich zudem die Frage, wie genau kann die Waldrandgrenze mittels einer Polygongrenze überhaupt abgebildet werden? Handelt es sich um ein Objekt, welches eindeutig klar definiert werden kann (grenzscharf) oder verfügt die Waldrandgrenze selber über eine Unschärfe? (vgl. Kap. 4 Unschärfe des Waldrandes)\nDownloade das ArcGIS Pro Package von Moodle, speichere es lokal auf deinem Computer und entpacke die Datei. Öffne anschliessend das Projekt-File (*.aprx), erkunde die Daten und mache dich mit ihnen vertraut.\nErstelle anschliessend in der Projekt-Geodatenbank Unsicherheit.gdb ein neues Feature Dataset mit dem Namen “Resultate”. Weise dem neuen Feature Dataset das Koordinatensystem CH1903+ LV95 zu.\nIn diesem neuen Feature Dataset sollen nachfolgend alle neu erstellten (Zwischen-)Resultate abgelegt werden.",
     "crumbs": [
       "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Datenvorverarbeitung</span>"
@@ -47,7 +57,7 @@
     "href": "A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html",
     "title": "Unsicherheit der gemeldeten Zeckenstichstandorte",
     "section": "",
-    "text": "Übung 2: Zusammenfügen (Append) aller Runs zu einem Datensatz\nKopiere zuerst die Feature Class Tick_Original in das Feature Dataset Resultate. Benenne die kopierte Feature Class in Tick_Append um, ändere auch den Alias. Nutze anschliessend das Geoverarbeitungswerkzeug “Append”, um die soeben kopierten Original-Standorte mit den Zeckenstichstandorten aller Runs zusammenzufügen. Wähle unter Field Matching Type die Option “Use the field map to reconcile field differences”.\nÜberprüfe das Resultat. Die Tick_Append Feature Class sollte anschliessend 44’116 Features beinhalten.",
+    "text": "Übung 2: Zusammenfügen (Append) aller Runs zu einem Datensatz\nDie erste Aufgabe besteht darin, zu untersuchen, wie gross der Einfluss der Erfassungsunsicherheit darauf ist, welcher Anteil der erfassten Zeckenstichstandorte inner- oder ausserhalb des Waldes liegen. Dabei soll der Fokus nur auf der Unsicherheit (der Erfassungsgenauigkeit) der Zeckenstichstandorte liegen.\nKopiere zuerst die Feature Class Tick_Original in das Feature Dataset Resultate. Benenne die kopierte Feature Class in Tick_Append um, ändere auch den Alias. Nutze anschliessend das Geoverarbeitungswerkzeug “Append”, um die soeben kopierten Original-Standorte mit den Zeckenstichstandorten aller Runs zusammenzufügen. Wähle unter Field Matching Type die Option “Use the field map to reconcile field differences”.\nÜberprüfe das Resultat. Die Tick_Append Feature Class sollte anschliessend 44’116 Features beinhalten.",
     "crumbs": [
       "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
@@ -113,7 +123,7 @@
     "href": "A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html",
     "title": "Unschärfe des Waldrandes",
     "section": "",
-    "text": "Übung 7: Waldrandlinie aus Waldpolygon erstellen\nDie Waldrandlinie kann mit Hilfe des Geoverarbeitungswerkzeug “Polygon to Line” hergeleitet werden. Überlege dir, ob vorgängig eine Selektion im Input Feature notwendig ist.\nBetrachte das Resultat und überlege dir wie genau die digitale Waldrandlinie dem Waldrand in der Realität entspricht? Kann das Objekt Waldrand überhaupt grenzscharf abgebildet werden (vgl. rote Linie in Abbildung)?",
+    "text": "Übung 7: Waldrandlinie aus Waldpolygon erstellen\nNeuere Forschungen haben ergeben, dass sich Zecken vermehrt im Waldrandbereich aufhalten und dadurch insbesondere dort das Risiko von einer Zecke gestochen zu werden besonders hoch ist. Deshalb sind wir interessiert daran, ob Zeckenstiche von App-Nutzern auch vermehrt im Bereich des Waldrandes gemeldet wurden. Im Gegensatz zu den vorherigen Übungen, welche die Erfassungsgenauigkeit von Punktdaten untersuchte, liegt der Fokus nun auf der Unschärfe des Waldrands. Wie wird ein Waldrand überhaupt definiert? Handelt es sich um eine scharf abgegrenzte Linie? Falls ja, wo liegt diese Linie exakt? Sind die Baumkronen, die Krautschicht oder die einzelnen Stämme ausschlaggebend? Oder handelt es sich beim Waldrand um einen Bereich mit einem bestimmten Abstand von einer zu definierenden Waldrandlinie? Wie würdest du in der untenstehenden Abbildung den Waldrand festlegen und wie würdest du dies GIS-technisch umsetzen?\nDie Waldrandlinie kann mit Hilfe des Geoverarbeitungswerkzeug “Polygon to Line” hergeleitet werden. Überlege dir, ob vorgängig eine Selektion im Input Feature notwendig ist.\nBetrachte das Resultat und überlege dir wie genau die digitale Waldrandlinie dem Waldrand in der Realität entspricht? Kann das Objekt Waldrand überhaupt grenzscharf abgebildet werden (vgl. rote Linie in Abbildung)?",
     "crumbs": [
       "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Unschärfe des Waldrandes</span>"
@@ -179,7 +189,7 @@
     "href": "A_Unsicherheit/6_Automatisieren-Modelbuilder.html",
     "title": "Automatisierung mit ModelBuilder",
     "section": "",
-    "text": "Übung 12: Waldrand-Fuzzy-Modell in ModelBuilder erstellen\nErstelle ein Modell mit ModelBuilder in dem die 5 Prozesse von Übung 9 bis 11 automatisiert ausgeführt werden können. Das Modell kann anschliessend wie ein normales Werkzeug aufgerufen werden. Als Modellparameter müssen die Fuzzy Tallness Distanzen resp. Werte angepasst sowie ein neuer Output Datensatz erstellt werden können.\nVorgehen:\nMit Hilfe von solchen Modellen kannst du deine Geoverarbeitungsketten auf einfache Art und Weise automatisieren ☺.",
+    "text": "Übung 12: Waldrand-Fuzzy-Modell in ModelBuilder erstellen\nModelBuilder ist eine visuelle Programmiersprache für die Erstellung von Geoverarbeitungs-Workflows. ModelBuilder wird zum Modellieren und Automatisieren von räumlichen Analysen und Datenverwaltungsprozessen verwendet. Du kannst Geoverarbeitungsmodelle in ModelBuilder erstellen und ändern, wo ein Modell als ein Schema dargestellt wird, das Sequenzen von Prozessen und Geoverarbeitungswerkzeugen verkettet, indem die Ausgabe eines Prozesses als die Eingabe eines anderen Prozesses verwendet wird.\nMache dich auf der Online Hilfe von ArcGIS Pro mit den Möglichkeiten des ModelBuilders vertraut:\nErstelle ein Modell mit ModelBuilder in dem die 5 Prozesse von Übung 9 bis 11 automatisiert ausgeführt werden können. Das Modell kann anschliessend wie ein normales Werkzeug aufgerufen werden. Als Modellparameter müssen die Fuzzy Tallness Distanzen resp. Werte angepasst sowie ein neuer Output Datensatz erstellt werden können.\nVorgehen:\nMit Hilfe von solchen Modellen kannst du deine Geoverarbeitungsketten auf einfache Art und Weise automatisieren ☺.",
     "crumbs": [
       "💥 Teil: Unsicherheit",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Automatisierung mit ModelBuilder</span>"
@@ -208,6 +218,26 @@
     ]
   },
   {
+    "objectID": "B_Datenbanken_1/1_Einleitung.html",
+    "href": "B_Datenbanken_1/1_Einleitung.html",
+    "title": "Datenbanken I",
+    "section": "",
+    "text": "Ausgangslage\nDie Gärten und Grünanlagen prägen das Bild des Campus Grüental. Eine grosse Vielfalt an verschiedenen einheimischen und exotischen Pflanzenarten lädt zum Verweilen ein. Mitarbeiter und Studierende nutzen den grünen Raum zur Erholung, zum Miteinander und zum Lernen. Nicht nur in den Sommermonaten ist das offene Areal des Campus ein Erlebnis für alle. Für die individuelle Pflege und Wartung der Gärten bedarf es sehr guter Planung. Als Datenbank Spezialist werden Sie beauftragt eine Datenbanklösung zur Verwaltung der Campus Pflanzenwelt zu entwickeln.",
+    "crumbs": [
+      "Datenbanken I"
+    ]
+  },
+  {
+    "objectID": "B_Datenbanken_1/1_Einleitung.html#ausgangslage",
+    "href": "B_Datenbanken_1/1_Einleitung.html#ausgangslage",
+    "title": "Datenbanken I",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nSie lernen ein vorgegebenes Textmodell zu lesen, zu interpretieren und dazu die richtigen Fragen zu stellen, um fehlende Antworten zu bekommen.\nSie können aus dem Textmodell relevante Objekte, Attribute und Beziehungen extrahieren.\nSie können auf der Grundlage eines bestehenden Textmodells ein konzeptuelles Datenmodell mit Hilfe eines ER-Diagramms entwickeln.\nSie können das konzeptuelle Datenmodell zu einem logischen Datenmodell weiter entwickeln, indem Sie Tabellen ableiten und Attribute, Schlüssel und Kardinalitäten identifizieren.",
+    "crumbs": [
+      "Datenbanken I"
+    ]
+  },
+  {
     "objectID": "B_Datenbanken_1/2_Uebung.html",
     "href": "B_Datenbanken_1/2_Uebung.html",
     "title": "Übung",
@@ -227,6 +257,16 @@
     "crumbs": [
       "Datenbanken I",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Übung</span>"
+    ]
+  },
+  {
+    "objectID": "B_Datenbanken_2/1_Einleitung.html",
+    "href": "B_Datenbanken_2/1_Einleitung.html",
+    "title": "Datenbanken II",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nSie können ein bestehendes logisches Modell auf Datenintegrität prüfen und Konsistenzfehler korrigieren.\nSie können auf der Grundlage eines bestehenden Datenmodells mit Hilfe von pgAdmin und ArcGIS Pro auf eine Server Datenbank zugreifen.\nSie können eine bestehende Server Datenbank mit Hilfe von pgAdmin und ArcGIS Pro mit Daten befüllen.\nSie kennen die grundlegenden Mechanismen von Datenbank-Versionierung und können diese in ArcGIS Pro anwenden.",
+    "crumbs": [
+      "Datenbanken II"
     ]
   },
   {
@@ -395,6 +435,16 @@
     ]
   },
   {
+    "objectID": "B_Datenbanken_3/1_Einleitung.html",
+    "href": "B_Datenbanken_3/1_Einleitung.html",
+    "title": "Datenbanken III",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nSie lernen die Abfragesprache SQL kennen.\nSie können Abfragen in SQL formulieren und dabei auch räumliche PostGIS Funktionen nutzen.\nSie lernen SQL‐Abfragen mit ArcGIS Pro Werkzeugen zu visualisieren.",
+    "crumbs": [
+      "Datenbanken III"
+    ]
+  },
+  {
     "objectID": "B_Datenbanken_3/2_Leistungsnachweis.html",
     "href": "B_Datenbanken_3/2_Leistungsnachweis.html",
     "title": "Leistungsnachweis",
@@ -410,7 +460,7 @@
     "href": "B_Datenbanken_3/3_Uebung_Datenbankverbindung.html",
     "title": "Datenbankverbindung zum Server aufbauen",
     "section": "",
-    "text": "Übung 1: (Wiederholung) Datenbankverbindung zum Server in pgAdmin herstellen\nIn den folgenden Übungen wollen wir mit einer Datenbank auf einem ZHAW‐Server arbeiten. Hierzu erstellen wir zunächst eine Verbindung zu dieser Datenbank über pgAdmin. ACHTUNG: funktioniert nur im ZHAW Netz (VPN).",
+    "text": "Übung 1: (Wiederholung) Datenbankverbindung zum Server in pgAdmin herstellen\nIn den nächsten Übungen wollen wir mit Daten unserer Pflanzendatenbank aus der ersten Datenbank‐Lektion vor 2 Wochen umgehen. Dazu versuchen Sie die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere Pflanzendatenbank hat hierbei immer den Namen “modulagi_pdb”. Verwenden Sie, wenn nicht anders angegeben diese Datenbank.\nOPTIONAL: Es ist Ihnen selbst überlassen, ob Sie in den kommenden Übungen die bestehende Server Datenbank nutzen möchten oder Ihre eigene lokale Pflanzendatenbank. Die Übungen beziehen sich auf die Server Variante. Bei eigener Datenbank passen Sie die Datanbank Verbindungsparameter entsprechend an. Wie Sie Ihre eigene lokale Pflanzendatenbank aufsetzen ist in den Vorbereitungsübungen auf Moodle beschrieben.\nUnterlagen auf Moodle\nIn den folgenden Übungen wollen wir mit einer Datenbank auf einem ZHAW‐Server arbeiten. Hierzu erstellen wir zunächst eine Verbindung zu dieser Datenbank über pgAdmin. ACHTUNG: funktioniert nur im ZHAW Netz (VPN).",
     "crumbs": [
       "Datenbanken III",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Datenbankverbindung zum Server aufbauen</span>"
@@ -443,7 +493,7 @@
     "href": "B_Datenbanken_3/4_Uebung_Abfragen_einblenden.html",
     "title": "Abfragen aus der Datenbank in ArcGIS Pro einbinden",
     "section": "",
-    "text": "Übung 3: Werkzeug “Make Query Table” anwenden\nDas Werkzeug erstellt aus einer beliebigen Datenbankabfrage eine von ArcGIS Pro lesbare temporäre Tabelle. Dies ist immer dann sinnvoll, wenn z.B. nur eine Teilmenge aller Objekte gebraucht wird. Diese Teilmenge wird dabei in eine neue Tabelle geschrieben.",
+    "text": "Übung 3: Werkzeug “Make Query Table” anwenden\nIn den nächsten Übungen wollen wir mit den Daten in unserer Beispiel-Datenbank umgehen (siehe Abbildung 14.1). Dazu versuchen wir die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere Pflanzendatenbank hat hierbei immer den Namen “modulagi_pdb”. Verwenden Sie, wenn nicht anders angegeben diese Datenbank. Erstellen Sie zunächst noch einen beliebigen Ordner auf Ihrem Rechner in welchem wir die jeweiligen Ergebnisse speichern können. Sie finden ein Datenbankschema der Pflanzendatenbank auf dem Moodle. Dies hilft Ihnen beim Verständnis der Datenbank und seinen Beziehungen. Nutzen Sie auch die PostGIS Referenz, um die PostGIS Funktionen zu verstehen.\nWenn Sie sich bei den SQL-Befehlen nicht ganz sicher sind, so versuchen Sie schrittweise zum Ziel zu kommen. Formulieren Sie zunächst einen einfacheren Teil der Abfrage, z.B. nur Attribute aus einer Tabelle und fügen Sie dann die weiteren Attribute und/oder Tabellen schrittweise hinzu. Probieren Sie bei Bedarf nach jedem Zwischenschritt die Abfrage aus und schauen sich die Ergebnisse an.\nDas Werkzeug erstellt aus einer beliebigen Datenbankabfrage eine von ArcGIS Pro lesbare temporäre Tabelle. Dies ist immer dann sinnvoll, wenn z.B. nur eine Teilmenge aller Objekte gebraucht wird. Diese Teilmenge wird dabei in eine neue Tabelle geschrieben.",
     "crumbs": [
       "Datenbanken III",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Abfragen aus der Datenbank in ArcGIS Pro einbinden</span>"
@@ -498,7 +548,7 @@
     "href": "B_Datenbanken_3/5_Uebung_Geoverarbeitung.html",
     "title": "Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL",
     "section": "",
-    "text": "Übung 7: Geometrien zusammenführen mit “Dissolve”\nDie importierten Flächen sind alle einem bestimmten Bereich zugeordnet. Um einen Überblick über die Grösse und Ausdehnung der Bereiche zu bekommen, möchten wir alle Flächen (Tabelle pdb.flaechen_shp) mit identischem Bereich (Attribut “name_bereich”) zusammenführen (Abbildung 15.1).",
+    "text": "Übung 7: Geometrien zusammenführen mit “Dissolve”\nIn diesem Kapitel sollen konkrete Geoverarbeitungsoperationen in ArcGIS Pro und PostGIS/SQL gegenübergestellt werden. Dafür bearbeiten wir die entsprechende Fragestellung zunächst in ArcGIS Pro und stellen anschliessend die gleiche Funktion in PostGIS nach. Zur Visualisierung des Ergebnisses der SQL-Abfrage nutzen wir das Werkzeug “Make Query Layer” in ArcGIS Pro aus Übung 4.\nDie importierten Flächen sind alle einem bestimmten Bereich zugeordnet. Um einen Überblick über die Grösse und Ausdehnung der Bereiche zu bekommen, möchten wir alle Flächen (Tabelle pdb.flaechen_shp) mit identischem Bereich (Attribut “name_bereich”) zusammenführen (Abbildung 15.1).",
     "crumbs": [
       "Datenbanken III",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span>"
@@ -571,6 +621,36 @@
     ]
   },
   {
+    "objectID": "C_Programmieren_1/1_Einleitung.html",
+    "href": "C_Programmieren_1/1_Einleitung.html",
+    "title": "Programmieren I",
+    "section": "",
+    "text": "Vorbereitung\nIn diesem Block bekommt ihr euren ersten Kontakt mit Python. Er soll einen Einstieg in die Programmierwelt von Python bieten und spezifisch zeigen, wie man räumliche Fragestellungen mit frei verfügbarer Software lösen kann. Die Voraussetzung für diesen Kurs ist eine Offenheit, neue Tools und Ansätze kennen zu lernen, die Bereitschaft für lösungsorientiertes Arbeiten sowie etwas Hartnäckigkeit.\nUm Python sinnvoll lernen und anwenden zu können, müsst ihr ein paar Programme installieren. Die folgenden Kapitel leiten euch dabei an.",
+    "crumbs": [
+      "Programmieren I"
+    ]
+  },
+  {
+    "objectID": "C_Programmieren_1/1_Einleitung.html#vorbereitung",
+    "href": "C_Programmieren_1/1_Einleitung.html#vorbereitung",
+    "title": "Programmieren I",
+    "section": "",
+    "text": "Positron IDE\nUm mit R zu programmieren, habt ihr bisher in RStudio gearbeitet. RStudio ist eine sogenannte “Integrierte Entwicklungsumgebung” (Integrated development environment, IDE), wo ihr eure R-Scripts entwicklen konntet. Posit, die Hersteller von RStudio, haben eine zweite IDE erstellt, die von der Bedienung sehr ähnlich ist wie RStudio, aber Python besser unterstützt. Diese IDE heisst Positron und ist ebenfalls kostenlos und mit freiem Quellcode verfügbar.\nLadet die neuste Version von Positron für euer Betriebssystem herunter (siehe hier) und installiert diese.\n\n\nPython\nIm Modul Angewandte Geoinformatik benutzen wir Python. Mit der Installation von ArcGIS sollte Python bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt Windows (s.u.) durch.\nWer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte Mac / Linux (s.u.).\n\nWindowsMac / Linux\n\n\nMit ArcGIS Installation\nUm zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte ausführen:\n\nPython Command Prompt suchen und starten (siehe Terminal)\nFolgender Befehl eingeben:\npython3 --version   \n# oder:\npython --version\nWenn der obige Befehl eine Fehlermeldung verursacht, bitte die Anleitung Mac / Linux befolgen.\n\n\n\nOhne ArcGIS Installation\nWer keine ArcGIS Installation hat, sollte folgendermassen vorgehen:\n\nÜberprüfe, ob Python ≥ 3.11 installiert ist. Tippe dafür folgenden Befehl in den Terminal:\npython3 --version   \n# oder:\npython --version\nWenn Python nicht vorhanden oder die Version &lt; 3.11 ist, solltet ihr eine aktuelle Version von Python installieren: https://www.python.org/downloads/\nInstalliert Miniconda von dieser Website: https://docs.conda.io/projects/miniconda/en/latest/. Wählt den installer für eure Plattform aus, und verwendet nicht den grossen grünnen Button “Download Anaconda”.",
+    "crumbs": [
+      "Programmieren I"
+    ]
+  },
+  {
+    "objectID": "C_Programmieren_1/1_Einleitung.html#daten",
+    "href": "C_Programmieren_1/1_Einleitung.html#daten",
+    "title": "Programmieren I",
+    "section": "Daten",
+    "text": "Daten\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I → Datensätze herunterladen könnt.\n\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\n\n\n\nDatensatz\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet",
+    "crumbs": [
+      "Programmieren I"
+    ]
+  },
+  {
     "objectID": "C_Programmieren_1/2_Python-Command-Prompt.html",
     "href": "C_Programmieren_1/2_Python-Command-Prompt.html",
     "title": "Software Anleitungen",
@@ -630,7 +710,7 @@
     "href": "C_Programmieren_1/3_Primitive_Datentypen.html",
     "title": "Primitive Datentypen",
     "section": "",
-    "text": "Boolean\nHierbei handelt es sich um den einfachsten Datentyp. Er beinhaltet nur zwei Zustände: Wahr oder Falsch. In Python werden diese mit True oder False definiert (diese Schreibweise muss genau beachtet werden). Beispielsweise sind das Antworten auf geschlossene Fragen.\nregen = True # \"es regnet\"\n\nsonne = False # \"die Sonne scheint nicht\"\n\ntype(sonne)\n\nbool\nUm zu prüfen, ob ein bestimmter Wert True oder False ist, verwendet man is True. Will man also fragen, ob es regnet, wird dies folgendermassen formuliert:\n# regnet es?\nregen is True\n\nTrue\nOb die Sonne scheint, lautet folgendermassen (natürlich müssen dazu die Variabel sonne bereits existieren):\n# scheint die Sonne?\nsonne is True\n\nFalse",
+    "text": "Boolean\nBei primitiven Datentypen handelt es sich um die kleinste Einheit der Programmiersprache, sie werden deshalb auch “atomare Datentypen” genannt. Alle komplexeren Datentypen (Tabellarische Daten, Bilder, Geodaten) basieren auf diesen einfachen Strukturen. Die für uns wichtigsten Datentypen lauten: Boolean, String, Integer und Float. Das sind ähnliche Datentypen wie ihr bereits aus R kennt:\nHierbei handelt es sich um den einfachsten Datentyp. Er beinhaltet nur zwei Zustände: Wahr oder Falsch. In Python werden diese mit True oder False definiert (diese Schreibweise muss genau beachtet werden). Beispielsweise sind das Antworten auf geschlossene Fragen.\nregen = True # \"es regnet\"\n\nsonne = False # \"die Sonne scheint nicht\"\n\ntype(sonne)\n\nbool\nUm zu prüfen, ob ein bestimmter Wert True oder False ist, verwendet man is True. Will man also fragen, ob es regnet, wird dies folgendermassen formuliert:\n# regnet es?\nregen is True\n\nTrue\nOb die Sonne scheint, lautet folgendermassen (natürlich müssen dazu die Variabel sonne bereits existieren):\n# scheint die Sonne?\nsonne is True\n\nFalse",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Primitive Datentypen</span>"
@@ -1026,7 +1106,7 @@
     "href": "C_Programmieren_1/12_Uebung_5.html",
     "title": "Übung 5",
     "section": "",
-    "text": "Übung 5.1 Neue Conda Umgebung erstellen",
+    "text": "Übung 5.1 Neue Conda Umgebung erstellen\nDiese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr müsst die Übung nicht verstehen, sondern nur ausführen. Melde dich, falls es Probleme gibt.",
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Übung 5</span>"
@@ -1041,6 +1121,16 @@
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Übung 5</span>"
+    ]
+  },
+  {
+    "objectID": "C_Programmieren_2/1_Einleitung.html",
+    "href": "C_Programmieren_2/1_Einleitung.html",
+    "title": "Programmieren II",
+    "section": "",
+    "text": "Letzte Woche habt ihr die wichtigsten Datentypen in Python kennen gelernt und sowohl den Command Prompt wie auch Positron verwendet. Diese Woche werden wir Python Module genauer beleuchten und dabei conda genauer kennenlernen. Zudem widmen wir uns dem Erstellen von Funktionen (Functions), Fallunterscheidungen (if und else) sowie dem Erstellen von Zufallszahlen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nConda verstehen und beherrschen\nPython Module verstehen\nFunctions kennenlernen und beherrschen\nFunction auf eine ganze Spalte einer DataFrame anwenden können.",
+    "crumbs": [
+      "Programmieren II"
     ]
   },
   {
@@ -1114,7 +1204,7 @@
     "href": "C_Programmieren_2/5_Uebung_6.html",
     "title": "Übung 6",
     "section": "",
-    "text": "Übung 6.1\nErstelle eine Function, die gruezi heisst, einen Nachnamen als Input annimmt und per Sie grüsst.\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi(nachname = \"van Rossum\")\n\n'Guten Tag, van Rossum'",
+    "text": "Übung 6.1\nBevor du mit den Übungen anfägst, solltest du bereits eine eigene Conda Environment nach der Anleitung in Übung 5 “Übung 5” erstellt haben.\nErstelle eine Function, die gruezi heisst, einen Nachnamen als Input annimmt und per Sie grüsst.\n# Das Resultat soll in etwa folgendermassen aussehen:\ngruezi(nachname = \"van Rossum\")\n\n'Guten Tag, van Rossum'",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Übung 6</span>"
@@ -1356,7 +1446,7 @@
     "href": "C_Programmieren_2/11_Uebung_9.html",
     "title": "Übung 9",
     "section": "",
-    "text": "Übung 9.1\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.",
+    "text": "Übung 9.1\nNun wollen wir diesen Zufallszahlengenerator random nutzen um eine Funktion zu entwickeln, welche einen beliebigen Punkt (mit einer x-/y-Koordinate) zufällig in einem definierten Umkreis verschiebt. Unser Fernziel ist es, den simulierten Datensatz aus “Datenqualität und Unsicherheit” zu rekonstruieren (siehe unten). Der erste Schritt dorthin ist es, einen gemeldeten Punkt (rot in Abbildung 34.1) in einem definierten Umkreis zu verschieben.\nDas Ziel dieser Übung ist es also, dass wir eine Funktion entwickeln, die uns einen zufälligen Punkt in der Nähe eines Ursprungspunktes vorschlägt. Unser Vorgehen: Wir addieren jedem Koordinatenwert (x/y) des Ursprungspunktes einen Zufallswert, zum Beispiel zwischen -100 bis +100.\nBevor wir mit Koordinaten arbeiten wollt ihr euch zuerst mit dem Modul random vertraut machen. Importiere das Modul random und generiere eine Zufallszahl zwischen -100 und +100 aus einer uniformen Verteilung sowie aus einer Normalverteilung mit Mittelwert 100 und Standartabweichung 20.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Übung 9</span>"
@@ -1433,7 +1523,7 @@
     "href": "C_Programmieren_2/13_Uebung_10.html",
     "title": "Übung 10",
     "section": "",
-    "text": "Übung 10.1\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.",
+    "text": "Übung 10.1\nFür diese Übung brauchen wir\nMache dich nochmals damit vertraut, einzelne Spalten zu selektieren. Schau dir DataFrames nochmals an wenn du nicht mehr weisst wie das geht.",
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Übung 10</span>"
@@ -1536,6 +1626,16 @@
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>37</span>  <span class='chapter-title'>Anhang</span>"
+    ]
+  },
+  {
+    "objectID": "C_Programmieren_3/1_Einleitung.html",
+    "href": "C_Programmieren_3/1_Einleitung.html",
+    "title": "Programmieren III",
+    "section": "",
+    "text": "Heute widmen wir uns zwei grossen Themen bevor wir uns an die Umsetzung der Monte Carlo Simulation wenden.\nIm ersten Thema geht es um for Loops, mit denen wir eine Aufgabe mehrfach (“Iterativ”) durchzuführen können. Ein for Loop ist ein sehr wichtiges und hilfreiches Werkzeug das man unbedingt kennen sollte. Wir werden for loops brauchen um Zeckenstiche zu simulieren, indem wir die bestehenden Meldungen x-fach zufällig verschieben. Das Thema for loops behandeln wir in Einführung in for loop, Basic for loop und Advanced for loops.\nBeim zweiten Thema geht es um GIS. Wir haben bisher mit Daten gearbeitet die eine Rauminformation beinhalten, die Zeckenstiche haben x/y-Koordinaten. Diese Rauminformation haben wir aber nicht als solche behandelt, wir haben die Koordinaten als Zahlen eingelesen und uns nicht gross darum geschert, dass es sich dabei um spezifische Punkte in der Schweiz handelt. Heute werden wir dies ändern müssen da uns eine räumliche Abfrage bevorsteht: Wir wollen nämlich wissen, welche Zeckenstiche sich im Wald befinden. Dadurch lernen wir eine neue Erweiterung kennen und sehen, was für räumliche Operationen in Python möglich sind. Das Thema behandeln wir in Input: GIS in Python, Räumliche Operationen und Spatial Joins.\nDie Übungen in Programmieren III kannst du mit deiner in Übung 5 erstellten Conda-Umgebung geopython2 durchführen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nIhr kennt for-Loops und könnt sie anwenden\nIhr seht, was mit räumlichen Operationen in Python möglich ist und kennt ein Tool, welches dazu notwendig ist\nIhr könnt räumliche Operationen (spatial join, overlay) in Python umsetzen\nIhr könnt summary Statistiken (mit groupby/count) aus DataFrames extrahieren",
+    "crumbs": [
+      "Programmieren III"
     ]
   },
   {
@@ -1686,7 +1786,7 @@
     "href": "C_Programmieren_3/4_For_Loops_Advanced.html",
     "title": "Advanced for loops",
     "section": "",
-    "text": "Verschachtelte for loops\nWir können verschiedene for loops auch ineinander verschachteln (englisch: nested loops). Das ist vor allem dann nützlich, wenn alle Kombinationen aus zwei Datensätzen miteinander verrechnet werden müssen. Angenommen du willst die drei Mitglieder deiner Band (bestehend aus Il Buono, Il Brutto, Il Cattivo) deinen Eltern vorstellen und auch umgekehrt deine Eltern deiner Band vorstellen. Für so was eignen sich zwei verschachtelte for Loops hervorragend:\neltern = [\"Papa\", \"Mama\"]\nband = [\"Il Buono\", \"Il Brutto\", \"Il Cattivo\"]\n\nfor bandmitglied in band:\n    for elternteil in eltern:\n        print(elternteil, \"das ist\",bandmitglied)\n        print(bandmitglied, \"das ist\",elternteil)\n        print(\"---\")\n\nPapa das ist Il Buono\nIl Buono das ist Papa\n---\nMama das ist Il Buono\nIl Buono das ist Mama\n---\nPapa das ist Il Brutto\nIl Brutto das ist Papa\n---\nMama das ist Il Brutto\nIl Brutto das ist Mama\n---\nPapa das ist Il Cattivo\nIl Cattivo das ist Papa\n---\nMama das ist Il Cattivo\nIl Cattivo das ist Mama\n---",
+    "text": "Verschachtelte for loops\nIn diesem Kapitel kommen noch zwei Aspekte von for loops, die als “Advanced” eingestuft werden können aber in der Praxis sehr nützlich sind. Dabei geht es einerseits um verschachtelte for loops und zum andere um eine verkürzte Schreibweise von for loops.\nWir können verschiedene for loops auch ineinander verschachteln (englisch: nested loops). Das ist vor allem dann nützlich, wenn alle Kombinationen aus zwei Datensätzen miteinander verrechnet werden müssen. Angenommen du willst die drei Mitglieder deiner Band (bestehend aus Il Buono, Il Brutto, Il Cattivo) deinen Eltern vorstellen und auch umgekehrt deine Eltern deiner Band vorstellen. Für so was eignen sich zwei verschachtelte for Loops hervorragend:\neltern = [\"Papa\", \"Mama\"]\nband = [\"Il Buono\", \"Il Brutto\", \"Il Cattivo\"]\n\nfor bandmitglied in band:\n    for elternteil in eltern:\n        print(elternteil, \"das ist\",bandmitglied)\n        print(bandmitglied, \"das ist\",elternteil)\n        print(\"---\")\n\nPapa das ist Il Buono\nIl Buono das ist Papa\n---\nMama das ist Il Buono\nIl Buono das ist Mama\n---\nPapa das ist Il Brutto\nIl Brutto das ist Papa\n---\nMama das ist Il Brutto\nIl Brutto das ist Mama\n---\nPapa das ist Il Cattivo\nIl Cattivo das ist Papa\n---\nMama das ist Il Cattivo\nIl Cattivo das ist Mama\n---",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>42</span>  <span class='chapter-title'>Advanced *for loops*</span>"
@@ -1774,7 +1874,7 @@
     "href": "C_Programmieren_3/5_GIS_in_Python.html",
     "title": "Input: GIS in Python",
     "section": "",
-    "text": "DataFrames &gt; GeoDataFrames\nGlücklicherweise können wir unsere Zeckenstich-Dataframe mit nur einem Zusatzmodul und wenigen Zeilen Code in eine räumliche DataFrame konvertieren. Mit dem Modul geopandas erstellen wir aus unserer pandas DataFrame eine geopandas GeoDataFrame. Mit dieser Erweiterung erhält die DataFrame:\nBeide Bestandteile müssen wir bei der Erstellung der GeoDataFrame festlegen. Nachstehend seht ihr, wie ihr dies bei den Zeckenstichen machen könnt. Was diese Bestandteile genau bedeuten, seht ihr in Aufbau von GeoDataFrames (geometry) und Koordinatenbezugssystem (crs).\nimport geopandas as gpd\n\ngeom = gpd.points_from_xy(\n  zeckenstiche['x'],    # ↘\n  zeckenstiche['y']     # → die Geometrie Spalte\n  )   \n\nzeckenstiche_gpd = gpd.GeoDataFrame(\n    zeckenstiche,    # die DataFrame (\"Attributtabelle\")\n    geometry = geom, #\n    crs = 2056       # das Koordinatenbezugssystem (EPSG Code)\n    )\nNun sehen wir, dass die neue geometry-Spalte die Punkt-Geometrie enthält.\nzeckenstiche_gpd\n\n\n\n\n\n\n\n\nID\naccuracy\nx\ny\ngeometry\n\n\n\n\n0\n2550\n439.128951\n2681116\n1250648\nPOINT (2681116 1250648)\n\n\n1\n10437\n301.748542\n2681092\n1250672\nPOINT (2681092 1250672)\n\n\n2\n9174\n301.748542\n2681128\n1250683\nPOINT (2681128 1250683)\n\n\n3\n8773\n301.748542\n2681111\n1250683\nPOINT (2681111 1250683)\n\n\n4\n2764\n301.748529\n2681131\n1250692\nPOINT (2681131 1250692)\n\n\n5\n2513\n301.748529\n2681171\n1250711\nPOINT (2681171 1250711)\n\n\n6\n9185\n301.748542\n2681107\n1250712\nPOINT (2681107 1250712)\n\n\n7\n28521\n301.748542\n2681124\n1250720\nPOINT (2681124 1250720)\n\n\n8\n26745\n301.748542\n2681117\n1250725\nPOINT (2681117 1250725)\n\n\n9\n27391\n301.748542\n2681138\n1250725\nPOINT (2681138 1250725)\nZudem hat die GeoDataFrame nun ein Attribut crs, wo das Koordinatenbezugssystem gespeichert ist.\nzeckenstiche_gpd.crs.name\n\n'CH1903+ / LV95'",
+    "text": "DataFrames &gt; GeoDataFrames\nManche mag das jetzt überraschen, andere haben es vielleicht schon gemerkt: Mit GIS hatte unseres bisheriges Wirken in Python eigentlich wenig zu tun. Unsere Zeckenstiche haben zwar x/y-Koordinaten, aber diese haben wir bisher gleich behandlet wie alle anderen Spalten.\nAnders gesagt: Wir wissen ja, dass mit den Spalten x und y Koordinaten in der Schweiz gemeint sind, Python hingegen wusste das bisher (noch) nicht. Der konkrete Raumbezug fehlt also noch und das wird irgendwann problematisch: Denn bald wollen wir für jeden simulierten Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Das ist eine explizit räumliche Abfrage, welche nur mit explizit räumlichen Geodaten beantwortet werden kann.\nWas wir später mit den simulierten Zeckenstiche machen wollen, spielen wir an dieser Stelle mit den original Zeckenstichmeldungen (zeckenstiche.csv, siehe Tabelle 1) durch.\nGlücklicherweise können wir unsere Zeckenstich-Dataframe mit nur einem Zusatzmodul und wenigen Zeilen Code in eine räumliche DataFrame konvertieren. Mit dem Modul geopandas erstellen wir aus unserer pandas DataFrame eine geopandas GeoDataFrame. Mit dieser Erweiterung erhält die DataFrame:\nBeide Bestandteile müssen wir bei der Erstellung der GeoDataFrame festlegen. Nachstehend seht ihr, wie ihr dies bei den Zeckenstichen machen könnt. Was diese Bestandteile genau bedeuten, seht ihr in Aufbau von GeoDataFrames (geometry) und Koordinatenbezugssystem (crs).\nimport geopandas as gpd\n\ngeom = gpd.points_from_xy(\n  zeckenstiche['x'],    # ↘\n  zeckenstiche['y']     # → die Geometrie Spalte\n  )   \n\nzeckenstiche_gpd = gpd.GeoDataFrame(\n    zeckenstiche,    # die DataFrame (\"Attributtabelle\")\n    geometry = geom, #\n    crs = 2056       # das Koordinatenbezugssystem (EPSG Code)\n    )\nNun sehen wir, dass die neue geometry-Spalte die Punkt-Geometrie enthält.\nzeckenstiche_gpd\n\n\n\n\n\n\n\n\nID\naccuracy\nx\ny\ngeometry\n\n\n\n\n0\n2550\n439.128951\n2681116\n1250648\nPOINT (2681116 1250648)\n\n\n1\n10437\n301.748542\n2681092\n1250672\nPOINT (2681092 1250672)\n\n\n2\n9174\n301.748542\n2681128\n1250683\nPOINT (2681128 1250683)\n\n\n3\n8773\n301.748542\n2681111\n1250683\nPOINT (2681111 1250683)\n\n\n4\n2764\n301.748529\n2681131\n1250692\nPOINT (2681131 1250692)\n\n\n5\n2513\n301.748529\n2681171\n1250711\nPOINT (2681171 1250711)\n\n\n6\n9185\n301.748542\n2681107\n1250712\nPOINT (2681107 1250712)\n\n\n7\n28521\n301.748542\n2681124\n1250720\nPOINT (2681124 1250720)\n\n\n8\n26745\n301.748542\n2681117\n1250725\nPOINT (2681117 1250725)\n\n\n9\n27391\n301.748542\n2681138\n1250725\nPOINT (2681138 1250725)\nZudem hat die GeoDataFrame nun ein Attribut crs, wo das Koordinatenbezugssystem gespeichert ist.\nzeckenstiche_gpd.crs.name\n\n'CH1903+ / LV95'",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Input: GIS in Python</span>"
@@ -1818,7 +1918,7 @@
     "href": "C_Programmieren_3/5_GIS_in_Python.html#sec-pythongis-formate",
     "title": "Input: GIS in Python",
     "section": "Geodatenformate",
-    "text": "Geodatenformate\nDas Einlesen von CSV und die Konvertierung von DataFrame zu GeoDataFrame hat bei den Zeckenstichen zwar gut funktioniert, es ist aber auch etwas umständlich, jedes Mal die geometry Spalte und das crs zu setzen. CSVs eignen sich nicht besonders gut für das speichern von Geodaten, insbesonders wenn die Daten komplexer sind (Linien, Polygone..)). Deshalb gibt es auch spezifische Datenformate, in den Geodaten gespeichert werden können. Bei diesen Datenformaten werden geometry und crs automatisch abgespeichert.\nIhr seid im Studium mit solchen Datenformate bereits in Kontakt gekommen, sicher kennt ihr ESRI’s File Geodatabases/Feature Classes sowie Shapefiles. Dies sind häufig genutzte Formate, aber leider nicht offen, und gerade Shapefiles haben viele Tücken (siehe switchfromshapefile.org). Es gibt dafür ganz tolle Alternativen, beispielsweise Geopackages (nicht zu verwechseln mit ArcGIS Pro Packages!). Mit nachstehendem Befehl können wir zeckenstiche_gpd als Geopackage abspeichern.\n\nzeckenstiche_gpd.to_file(\"data/zeckenstiche.gpkg\", driver = \"GPKG\")   \n# Wer UNBEDINGT ein shapefile abspeichern will, \n# kann \".gpkg\" mit \".shp\" ersetzen\n# (-_-)\n\nDas File “zeckenstiche.gpkg” befindet sich nun in meiner Working Directory und ich kann sie mit gpd.read_file(\"data/zeckenstiche.gpkg\") wieder einlesen. Im Unterschied zu vorher musst ich nun geometry und crs nicht mehr zuweisen, diese sind beim Schreiben des Geopackage abgespeichert worden. Das Geopackage kann ich nun auch mit ArcGIS / QGIS öffnen, wenn ich die Punkte interaktiv explorieren möchte.\nIm Block “Datenqualität und Unsicherheit” habt ihr mit dem Wald-Datensatz gearbeitet. Ich habe diesen als Geopackage exportiert (siehe Tabelle 1) und kann ihn wie im nachstehenden Codeblock ersichtlich einlesen und visualisieren.\n\nwald = gpd.read_file(\"data/wald.gpkg\") # &lt;- importiert das File \"wald.gpkg\"\n\nwald\n\n\n\n\n\n\n\n\nShape_Area\nWald_text\ngeometry\n\n\n\n\n0\n2.380876e+08\nnein\nMULTIPOLYGON Z (((2692100 1256542.253 276.942,...\n\n\n1\n7.963237e+07\nja\nMULTIPOLYGON Z (((2689962.355 1245335.25 644.5...\n\n\n\n\n\n\n\nEs handelt sich also um einen Datensatz mit nur zwei Zeilen, aber mehreren Polygonen pro Zeile (das macht es zu einem Multipolygon). Mit plot können wir diesen Datensatz einfach visualisieren und mit den Zeckenstichdaten überlagern.\n\n\n\n\n\n\nNote 44.1\n\n\n\nDer Unterschied zwischen Point und Multipoint, Linesstring und Multilinestring und Polygon Multipolyon ist folgendermassen: Typischerweise hat jedes Attribut eine Geometrie. Zum Beispiel hat jede Zeckenstichmeldung eine ID, eine Ungenauigkeitsangabe und eben eine Punkgeometrie. Somit handelt es sich bei diesem Datensatz um einen einfach Point Datensatz. Wenn pro Attribut mehrere Geometrien zugewiesen sind handelt es sich um ein Multipoint Objekt.\n\n\n\nbase = wald.plot(color = [\"Lightgrey\",\"Green\"])\nzeckenstiche_gpd.plot(ax = base, color = \"red\")\n\n\n\n\n\n\n\n\nNoch einfacher und sogar mit einer Basemap und Zoom-Möglichkeit geht es mit der explore() Methode. Nun wird übrigens auch klar, dass es sich bei unseren 10 Zeckenstichen um sehr dicht beieinanderliegenden Punkte handelt.\n\nbase = wald.explore()\nzeckenstiche_gpd.explore(m = base, color = \"red\")\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook",
+    "text": "Geodatenformate\nDas Einlesen von CSV und die Konvertierung von DataFrame zu GeoDataFrame hat bei den Zeckenstichen zwar gut funktioniert, es ist aber auch etwas umständlich, jedes Mal die geometry Spalte und das crs zu setzen. CSVs eignen sich nicht besonders gut für das speichern von Geodaten, insbesonders wenn die Daten komplexer sind (Linien, Polygone..)). Deshalb gibt es auch spezifische Datenformate, in den Geodaten gespeichert werden können. Bei diesen Datenformaten werden geometry und crs automatisch abgespeichert.\nIhr seid im Studium mit solchen Datenformate bereits in Kontakt gekommen, sicher kennt ihr ESRI’s File Geodatabases/Feature Classes sowie Shapefiles. Dies sind häufig genutzte Formate, aber leider nicht offen, und gerade Shapefiles haben viele Tücken (siehe switchfromshapefile.org). Es gibt dafür ganz tolle Alternativen, beispielsweise Geopackages (nicht zu verwechseln mit ArcGIS Pro Packages!). Mit nachstehendem Befehl können wir zeckenstiche_gpd als Geopackage abspeichern.\n\nzeckenstiche_gpd.to_file(\"data/zeckenstiche.gpkg\", driver = \"GPKG\")   \n# Wer UNBEDINGT ein shapefile abspeichern will, \n# kann \".gpkg\" mit \".shp\" ersetzen\n# (-_-)\n\nDas File “zeckenstiche.gpkg” befindet sich nun in meiner Working Directory und ich kann sie mit gpd.read_file(\"data/zeckenstiche.gpkg\") wieder einlesen. Im Unterschied zu vorher musst ich nun geometry und crs nicht mehr zuweisen, diese sind beim Schreiben des Geopackage abgespeichert worden. Das Geopackage kann ich nun auch mit ArcGIS / QGIS öffnen, wenn ich die Punkte interaktiv explorieren möchte.\nIm Block “Datenqualität und Unsicherheit” habt ihr mit dem Wald-Datensatz gearbeitet. Ich habe diesen als Geopackage exportiert (siehe Tabelle 1) und kann ihn wie im nachstehenden Codeblock ersichtlich einlesen und visualisieren.\n\nwald = gpd.read_file(\"data/wald.gpkg\") # &lt;- importiert das File \"wald.gpkg\"\n\nwald\n\n\n\n\n\n\n\n\nShape_Area\nWald_text\ngeometry\n\n\n\n\n0\n2.380876e+08\nnein\nMULTIPOLYGON Z (((2692100 1256542.253 276.942,...\n\n\n1\n7.963237e+07\nja\nMULTIPOLYGON Z (((2689962.355 1245335.25 644.5...\n\n\n\n\n\n\n\nEs handelt sich also um einen Datensatz mit nur zwei Zeilen, aber mehreren Polygonen pro Zeile (das macht es zu einem Multipolygon). Mit plot können wir diesen Datensatz einfach visualisieren und mit den Zeckenstichdaten überlagern.\n\n\n\n\n\n\nHinweis 44.1\n\n\n\nDer Unterschied zwischen Point und Multipoint, Linesstring und Multilinestring und Polygon Multipolyon ist folgendermassen: Typischerweise hat jedes Attribut eine Geometrie. Zum Beispiel hat jede Zeckenstichmeldung eine ID, eine Ungenauigkeitsangabe und eben eine Punkgeometrie. Somit handelt es sich bei diesem Datensatz um einen einfach Point Datensatz. Wenn pro Attribut mehrere Geometrien zugewiesen sind handelt es sich um ein Multipoint Objekt.\n\n\n\nbase = wald.plot(color = [\"Lightgrey\",\"Green\"])\nzeckenstiche_gpd.plot(ax = base, color = \"red\")\n\n\n\n\n\n\n\n\nNoch einfacher und sogar mit einer Basemap und Zoom-Möglichkeit geht es mit der explore() Methode. Nun wird übrigens auch klar, dass es sich bei unseren 10 Zeckenstichen um sehr dicht beieinanderliegenden Punkte handelt.\n\nbase = wald.explore()\nzeckenstiche_gpd.explore(m = base, color = \"red\")\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Input: GIS in Python</span>"
@@ -1829,7 +1929,7 @@
     "href": "C_Programmieren_3/6_Raeumliche_Operationen.html",
     "title": "Räumliche Operationen",
     "section": "",
-    "text": "Buffer\nEine typische GIS-Operation ist das “Buffern” von Objekten. Der ArcGIS Befehl “Buffer” erreichen wir in Geopandas mit .buffer(). Folgender Code macht einen Buffer mit einer Distanz von 10m.\nbuffered = zeckenstiche.buffer(10)\nUm Geopandas-Objekte zu plotten, kann man einfach .plot() verwenden. Zudem kann man mit boundary die Umrisse eines Polygons extrahieren:\nbase = buffered.boundary.plot() # plottet die boundries    \n\nzeckenstiche.plot(ax = base, color = \"black\") # plottet die Punkte",
+    "text": "Buffer\nWas bringt uns diese Geo Erweiterung? Mit GeoDataFrames sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen DataFrames noch nicht möglich waren. Ich möchte dies an ein paar Beispielen demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in Input: GIS in Python beschrieben.\nEine typische GIS-Operation ist das “Buffern” von Objekten. Der ArcGIS Befehl “Buffer” erreichen wir in Geopandas mit .buffer(). Folgender Code macht einen Buffer mit einer Distanz von 10m.\nbuffered = zeckenstiche.buffer(10)\nUm Geopandas-Objekte zu plotten, kann man einfach .plot() verwenden. Zudem kann man mit boundary die Umrisse eines Polygons extrahieren:\nbase = buffered.boundary.plot() # plottet die boundries    \n\nzeckenstiche.plot(ax = base, color = \"black\") # plottet die Punkte",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>45</span>  <span class='chapter-title'>Räumliche Operationen</span>"
@@ -1884,7 +1984,7 @@
     "href": "C_Programmieren_3/6_Uebung_14.html",
     "title": "Übung 14",
     "section": "",
-    "text": "Übung 14.1\nImportiere Geopandas und wandle zeckenstiche in eine GeoDataFrame um (zeckenstiche). Vergiss nicht, das Koordinatenbezugssystem festzulegen!",
+    "text": "Übung 14.1\nNun ist es Zeit, dass ihr selbst mit GeoDataFrames Hand anlegt. Achtet dabei immer auf die Datentypen eurer Daten (mit type) und konsultiert dazu Aufbau von GeoDataFrames. Zudem ist Geopandas gut dokumentiert, es lohnt ich diese immer wieder zu konsultieren: geopandas.org\nImportiere Geopandas und wandle zeckenstiche in eine GeoDataFrame um (zeckenstiche). Vergiss nicht, das Koordinatenbezugssystem festzulegen!",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Übung 14</span>"
@@ -1950,7 +2050,7 @@
     "href": "C_Programmieren_3/7_Spatial_Joins.html",
     "title": "Spatial Joins",
     "section": "",
-    "text": "Wie funktioniert ein Spatial Join?\nIn Input: GIS in Python habt ihr euch mit den GIS-Funktionalitäten von geopandas vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten “Spatial Joins”. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret für unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft “Wald: ja” / “Wald: nein” aus `wald zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:\nIn Python wird ein Spatial Join zwischen zeckenstiche und wald wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: left_df bestimmt den Geometrietyp des Outputs):\ngpd.sjoin(left_df = zeckenstiche_gpd, right_df = wald)\n\n\n\n\n\n\n\n\nID\naccuracy\nx\ny\ngeometry\nindex_right\nShape_Area\nWald_text\n\n\n\n\n0\n2550\n439.128951\n2681116\n1250648\nPOINT (2681116 1250648)\n0\n2.380876e+08\nnein\n\n\n1\n10437\n301.748542\n2681092\n1250672\nPOINT (2681092 1250672)\n0\n2.380876e+08\nnein\n\n\n2\n9174\n301.748542\n2681128\n1250683\nPOINT (2681128 1250683)\n0\n2.380876e+08\nnein\n\n\n3\n8773\n301.748542\n2681111\n1250683\nPOINT (2681111 1250683)\n0\n2.380876e+08\nnein\n\n\n4\n2764\n301.748529\n2681131\n1250692\nPOINT (2681131 1250692)\n0\n2.380876e+08\nnein\n\n\n5\n2513\n301.748529\n2681171\n1250711\nPOINT (2681171 1250711)\n1\n7.963237e+07\nja\n\n\n6\n9185\n301.748542\n2681107\n1250712\nPOINT (2681107 1250712)\n1\n7.963237e+07\nja\n\n\n7\n28521\n301.748542\n2681124\n1250720\nPOINT (2681124 1250720)\n1\n7.963237e+07\nja\n\n\n8\n26745\n301.748542\n2681117\n1250725\nPOINT (2681117 1250725)\n1\n7.963237e+07\nja\n\n\n9\n27391\n301.748542\n2681138\n1250725\nPOINT (2681138 1250725)\n1\n7.963237e+07\nja",
+    "text": "Wie funktioniert ein Spatial Join?\nIn dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald-Layer kennt ihr bereits aus dem Block “Datenqualität und Unsicherheit” und wir haben ihn in Geodatenformate kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche (siehe Tabelle 1) als Geodaten einzulesen und in einem grossen Plot zu visualisieren.\nIn Input: GIS in Python habt ihr euch mit den GIS-Funktionalitäten von geopandas vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten “Spatial Joins”. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret für unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft “Wald: ja” / “Wald: nein” aus `wald zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:\nIn Python wird ein Spatial Join zwischen zeckenstiche und wald wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: left_df bestimmt den Geometrietyp des Outputs):\ngpd.sjoin(left_df = zeckenstiche_gpd, right_df = wald)\n\n\n\n\n\n\n\n\nID\naccuracy\nx\ny\ngeometry\nindex_right\nShape_Area\nWald_text\n\n\n\n\n0\n2550\n439.128951\n2681116\n1250648\nPOINT (2681116 1250648)\n0\n2.380876e+08\nnein\n\n\n1\n10437\n301.748542\n2681092\n1250672\nPOINT (2681092 1250672)\n0\n2.380876e+08\nnein\n\n\n2\n9174\n301.748542\n2681128\n1250683\nPOINT (2681128 1250683)\n0\n2.380876e+08\nnein\n\n\n3\n8773\n301.748542\n2681111\n1250683\nPOINT (2681111 1250683)\n0\n2.380876e+08\nnein\n\n\n4\n2764\n301.748529\n2681131\n1250692\nPOINT (2681131 1250692)\n0\n2.380876e+08\nnein\n\n\n5\n2513\n301.748529\n2681171\n1250711\nPOINT (2681171 1250711)\n1\n7.963237e+07\nja\n\n\n6\n9185\n301.748542\n2681107\n1250712\nPOINT (2681107 1250712)\n1\n7.963237e+07\nja\n\n\n7\n28521\n301.748542\n2681124\n1250720\nPOINT (2681124 1250720)\n1\n7.963237e+07\nja\n\n\n8\n26745\n301.748542\n2681117\n1250725\nPOINT (2681117 1250725)\n1\n7.963237e+07\nja\n\n\n9\n27391\n301.748542\n2681138\n1250725\nPOINT (2681138 1250725)\n1\n7.963237e+07\nja",
     "crumbs": [
       "Programmieren III",
       "<span class='chapter-number'>47</span>  <span class='chapter-title'>Spatial Joins</span>"
@@ -2089,11 +2189,21 @@
     ]
   },
   {
+    "objectID": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
+    "href": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
+    "title": "Netzwerkanalyse I",
+    "section": "",
+    "text": "Die Lerneinheit vermittelt die Grundlagen bei der Verwendung von Netzwerk-Geodaten. Die Anwendungsfelder reichen von Streckenfindung und Reisezeitberechnungen zu Energienetzwerk-Systeme bis hin zu Gewässernetzen in der Hydrologie. Diese Lerneinheit vermittelt die dafür relevanten Grundlagen aus der Graphentheorie und knüpft dabei an die bekannten Grundlagen der Vektordatenmodellierung (Definitionen, Elemente von Graphen, Eigenschaften von Graphen, Bäume) an. Zudem werden im theoretischen Teil Netzwerkmasse, insbesondere Zentralitätsmasse nähergebracht. Der praktische Teil basiert auf der Einführung und Verwendung von QGIS als Alternative zu den ESRI-Produkten.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nEinfache GIS-Operationen mit QGIS durchführen können (Clip, Reproject, Abfrage der Attributtabelle, Symbolisierung, Export als jpg)\nSchnittstelle zwischen QGIS und anderen GIS-Software am Beispiel GRASS kennenlernen\nErste Netzwerkoperationen mit QGIS/GRASS GIS durchführen\nNetzwerk-Zentralitätsmasse verstehen und für einfache Netzwerkdaten berechnen können",
+    "crumbs": [
+      "Netzwerkanalyse I"
+    ]
+  },
+  {
     "objectID": "D_Netzwerkanalyse_1/2_Vorbereitung.html",
     "href": "D_Netzwerkanalyse_1/2_Vorbereitung.html",
     "title": "Vorbereitung",
     "section": "",
-    "text": "Datensätze\nLaden Sie das File netzwerkanalyse.gpkg von Moodle herunter. Hier befinden sich alle Datensätze, die im Laufe des Blocks “Netzwerkanalyse” benötigt werden:",
+    "text": "Datensätze\nDamit wir im ersten Teil von Netzwerkanalyse direkt loslegen können, solltet ihr euch vorgängig mit QGIS vertraut machen. Dafür haben wir ein paar Übungen zusammengestellt, die ihr als Vorbereitung auf Netzwerkanalyse I erledigen solltet.\nLaden Sie das File netzwerkanalyse.gpkg von Moodle herunter. Hier befinden sich alle Datensätze, die im Laufe des Blocks “Netzwerkanalyse” benötigt werden:",
     "crumbs": [
       "Netzwerkanalyse I",
       "<span class='chapter-number'>51</span>  <span class='chapter-title'>Vorbereitung</span>"
@@ -2192,7 +2302,7 @@
     "href": "D_Netzwerkanalyse_1/3_QGIS.html",
     "title": "Aufgabe 1: Operationen mit QGIS",
     "section": "",
-    "text": "Übung 1.1: Daten transformieren\nDie OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool Reproject Layer. Wichtig: Speichern Sie den transformierten Strassendatensatz in einer neuen Datei (siehe Abbildung 52.2)\nViele wichtige Tools lassen sich über die Menü Bar aufrufen (v.a. “Vector” und “Raster”). Die Tools lassen sich auch relativ rasch mit der Suchfunktion in “Processing Toolbox” finden.\nSpeichern Sie den neuen Strassendatensatz in einer neuen Datei, nicht als temporärer Layer. Normalerweise spielt dies keine Rolle, doch im Falle von “reproject” entsteht beim Speichern als temporärer Layer ein Fehler.",
+    "text": "Übung 1.1: Daten transformieren\nStarten Sie QGIS, erstellen Sie ein neues QGIS Projekt und speichere dieses an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importiere die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe Tabelle 51.1).\nDie OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool Reproject Layer. Wichtig: Speichern Sie den transformierten Strassendatensatz in einer neuen Datei (siehe Abbildung 52.2)\nViele wichtige Tools lassen sich über die Menü Bar aufrufen (v.a. “Vector” und “Raster”). Die Tools lassen sich auch relativ rasch mit der Suchfunktion in “Processing Toolbox” finden.\nSpeichern Sie den neuen Strassendatensatz in einer neuen Datei, nicht als temporärer Layer. Normalerweise spielt dies keine Rolle, doch im Falle von “reproject” entsteht beim Speichern als temporärer Layer ein Fehler.",
     "crumbs": [
       "Netzwerkanalyse I",
       "<span class='chapter-number'>52</span>  <span class='chapter-title'>Aufgabe 1: Operationen mit QGIS</span>"
@@ -2225,7 +2335,7 @@
     "href": "D_Netzwerkanalyse_1/4_GRASS_GIS.html",
     "title": "Aufgabe 2: Zentralitätsmasse berechnen",
     "section": "",
-    "text": "Übung 2.1: Topologie bereinigen\nDas OSM Strassennetz “osm_highway” ist topologisch nicht perfekt für unsere Zwecke vorbereitet. An Kreuzungen fehlen teilweise Knoten, welche ein “Abbiegen” auf der Kreuzung ermöglichen. Um diesen Umstand zu beheben, nutzen wir das Tool v.clean und führen damit die Operation “break” durch. Dadurch werden Linien an Kreuzungen unterbrochen. Diese Operation löst einige topologische Fehler, führt z.B. bei Brücken und Tunnels aber zu neuen Unstimmigkeiten, die Sie an dieser Stelle aber getrost ignorieren können.",
+    "text": "Übung 2.1: Topologie bereinigen\nDie mächtigsten (aber nicht die einzigen1) Netzwerkanalyse-Werkzeuge in QGIS stammen aus dem eigenständigen GIS “GRASS GIS”, welches bei der Installation von QGIS mitinstalliert wird. Diese können innerhalb von QGIS verwendet werden.\nDas OSM Strassennetz “osm_highway” ist topologisch nicht perfekt für unsere Zwecke vorbereitet. An Kreuzungen fehlen teilweise Knoten, welche ein “Abbiegen” auf der Kreuzung ermöglichen. Um diesen Umstand zu beheben, nutzen wir das Tool v.clean und führen damit die Operation “break” durch. Dadurch werden Linien an Kreuzungen unterbrochen. Diese Operation löst einige topologische Fehler, führt z.B. bei Brücken und Tunnels aber zu neuen Unstimmigkeiten, die Sie an dieser Stelle aber getrost ignorieren können.",
     "crumbs": [
       "Netzwerkanalyse I",
       "<span class='chapter-number'>53</span>  <span class='chapter-title'>Aufgabe 2: Zentralitätsmasse berechnen</span>"
@@ -2298,6 +2408,16 @@
     ]
   },
   {
+    "objectID": "D_Netzwerkanalyse_2/1_Einleitung.html",
+    "href": "D_Netzwerkanalyse_2/1_Einleitung.html",
+    "title": "Netzwerkanalyse II",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nIn einem gegebenen Netzwerk kürzeste Pfade mit QGIS berechnen können\nWeitere GRASS GIS Werkezeuge innerhalb von QGIS ansteuern können\nVerschiedene QGIS / GRASS GIS Tools kennenlernen und deren Outputs interpretieren können\nEigene einfache Vektor-Datensätze erstellen können, resp. Punkte von Hand digitalisieren können\nAlternative, professionelle Routing Services kennenlernen und ausserhalb herkömmlicher Services (z.B. Google) nutzen",
+    "crumbs": [
+      "Netzwerkanalyse II"
+    ]
+  },
+  {
     "objectID": "D_Netzwerkanalyse_2/1_Shortest_Path.html",
     "href": "D_Netzwerkanalyse_2/1_Shortest_Path.html",
     "title": "Aufgabe 3: Kürzeste Pfade (shortest path)",
@@ -2335,7 +2455,7 @@
     "href": "D_Netzwerkanalyse_2/2_Travelling_Salesman.html",
     "title": "Aufgabe 4: Traveling Salesperson",
     "section": "",
-    "text": "Übung 4.1: Traveling Salesperson für Campus Standorte\nAngenommen Sie sind ein Kurrierdienst und müssen ausgehend von der Halbinsel Au aus alle Campus-Standorte der ZHAW Wädenswil besuchen. Sie wollen die Route so optimieren, dass Sie den kürzeste Weg zurücklegen. Dafür verwenden Sie das gleichnamige Tool (v.net.salesmen), um genau dieses Problem zu lösen.",
+    "text": "Übung 4.1: Traveling Salesperson für Campus Standorte\nDas Problem des Handlungsreisenden (engl. Traveling Salesperson Problem) ist ein kombinatorisches Optimierungsproblem, in dem die Aufgabe darin besteht, eine Reihenfolge für den Besuch mehrerer Orte so zu wählen, dass keine Station ausser der ersten mehr als einmal besucht wird, die gesamte Reisestrecke des Handlungsreisenden möglichst kurz und die erste Station gleich wie letzten Station ist.\nAngenommen Sie sind ein Kurrierdienst und müssen ausgehend von der Halbinsel Au aus alle Campus-Standorte der ZHAW Wädenswil besuchen. Sie wollen die Route so optimieren, dass Sie den kürzeste Weg zurücklegen. Dafür verwenden Sie das gleichnamige Tool (v.net.salesmen), um genau dieses Problem zu lösen.",
     "crumbs": [
       "Netzwerkanalyse II",
       "<span class='chapter-number'>55</span>  <span class='chapter-title'>Aufgabe 4: Traveling Salesperson</span>"
@@ -2372,6 +2492,16 @@
     "crumbs": [
       "Netzwerkanalyse II",
       "<span class='chapter-number'>55</span>  <span class='chapter-title'>Aufgabe 4: Traveling Salesperson</span>"
+    ]
+  },
+  {
+    "objectID": "D_Netzwerkanalyse_3/1_Einleitung.html",
+    "href": "D_Netzwerkanalyse_3/1_Einleitung.html",
+    "title": "Netzwerkanalyse III",
+    "section": "",
+    "text": "Angenommen Sie sind auf Wohnungssuche in Wädenswil. Dabei gilt es nebst dem Budget viele wichtige raumgebundene Variablen zu berücksichtigen, dazu verwenden Sie natürlich QGIS. Sie wollen drei Kriterien untersuchen:\n\nLaufdistanz zur nächsten Entsorgungsstelle\nErschliessung an die öffentlichen Verkehrsmittel (unter Berücksichtigung des Fahrplans)\nDistanz zur Durchfahrtsstrasse\n\nWir werden für jeden dieser drei Kriterien einen Rasterdatensatz kreieren, den wir zum Schluss miteinander verrechnen können. So finden wir den optimalen Standort unter der Berücksichtigung aller drei Kriterien. Starten Sie dazu QGIS und laden Sie folgende Daten in das Projekt:\n\nStrassennetz Wädenswil (“osm_highway_prepared.gpkg”, siehe Tabelle 51.1)\nEntsorgungsstellen Wädenswil (“abfallentsorgung_waedenswil.gpkg”, siehe Tabelle 51.1)\nGemeindegrenze Wädenswil (“Gemeinde_Waedenswil.gpkg”, siehe Tabelle 51.1)\nOptional: OSM Hintergrundkarte grau eingefärbt (siehe Übung 3.1: Projekt vorbereiten)\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nSie sind in der Lage, einfache Reisezeitberechnungen in QGIS selber durchzuführen.\nSie erweitern Ihr Skillset zur Umwandlung von verschiedenen Geodatentypen (Vektor zu Raster, Raster zu Vektor, Linien zu Punkte, usw.)\nSie können eine einfache Multi-Kriterien-Analyse (MCA) mit Raster-Daten in QGIS selbständig durchführen.\nSie können einfache Map Overlay-Operationen in QGIS selber ausführen.",
+    "crumbs": [
+      "Netzwerkanalyse III"
     ]
   },
   {
@@ -2500,7 +2630,7 @@
     "href": "D_Netzwerkanalyse_3/5_Flaechen_verrechnen.html",
     "title": "Aufgabe 8: Flächen verrechnen",
     "section": "",
-    "text": "Übung 8.1: Rasterdatensätze skalieren\nÖffnen Sie anschliessend das Tool Rescale Raster und skalieren Sie jeden der drei Rasterdatensätze jeweils so, dass Sie Werte von 0 bis 100 erhalten. Geben Sie dabei bei “New minimum value” 0 und bei “New maximum value” 100 ein.\nSpeichern Sie die Ergebnisse unter folgenden Namen ab: oev_scaled.tif, abfall_scaled.tif, centrality_scaled.tif.",
+    "text": "Übung 8.1: Rasterdatensätze skalieren\nIn dieser Übung verschneiden wir die Informationen aus Entsorgungsstellen (abfall_raster.tif), ÖV-Güteklassen (oev_raster.tif), und Zentralitätsmass (centrality_raster.tif), die wir in den vorherigen Übungen berechnet und in Raster überführt haben. Durch die Verschneidung können wir den optimalen Wohnort eruieren. Diese Methode ist auch als Multikriterienevaluation bekannt und kennt ihr bereits vom GIS “Basic” Modul. In einem ersten Schritt müssen wir alle drei Rasterdatensätze auf eine einheitliche Skala (z.B. 0 – 100) bringen um sie anschliessend miteinander verrechnen zu können. Dafür brauchen wir die Minimum- und Maximumwerte der drei Raster Datensätzen oev_raster.tif, centrality_raster.tif, abfall_raster.tif. Gehen Sie dafür in die Properties→Information von jedem Layer und notieren Sie sich die minimalen und maximalen Zellenwerte.\nÖffnen Sie anschliessend das Tool Rescale Raster und skalieren Sie jeden der drei Rasterdatensätze jeweils so, dass Sie Werte von 0 bis 100 erhalten. Geben Sie dabei bei “New minimum value” 0 und bei “New maximum value” 100 ein.\nSpeichern Sie die Ergebnisse unter folgenden Namen ab: oev_scaled.tif, abfall_scaled.tif, centrality_scaled.tif.",
     "crumbs": [
       "Netzwerkanalyse III",
       "<span class='chapter-number'>59</span>  <span class='chapter-title'>Aufgabe 8: Flächen verrechnen</span>"
@@ -2526,6 +2656,16 @@
     "crumbs": [
       "Netzwerkanalyse III",
       "<span class='chapter-number'>60</span>  <span class='chapter-title'>Leistungsnachweis</span>"
+    ]
+  },
+  {
+    "objectID": "E_WebGIS_1/1_Einleitung.html",
+    "href": "E_WebGIS_1/1_Einleitung.html",
+    "title": "WebGIS I",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage auf dem ArcGIS Online Organisationskonto Deine Inhalte zu organisieren und die Freigabeeigenschaften von Inhalten zu ändern.\nDu kannst in ArcGIS Pro eine Karte vorbereiten, eine Zeitanimation aktivieren und ArcGIS Pro Karten auf einem ArcGIS Online Organisationskonto als Web Maps veröffentlichen.\nDu kannst eine Web Map zielgerichtet gestalten und basierend auf bestehenden Web Maps neue Web Map Applikationen erstellen.\nDu weisst, wie Du eine Story Map erstellen und diese mit Inhalten füllen kannst.",
+    "crumbs": [
+      "WebGIS I"
     ]
   },
   {
@@ -2654,7 +2794,7 @@
     "href": "E_WebGIS_1/3_Uebung_Story_Map.html",
     "title": "Übung Story Map",
     "section": "",
-    "text": "Übung 1: Story Map im ZHAW ArcGIS Online Portal erstellen\nDer einfachste Weg eine Story Map zu erstellen, geht am schnellsten via ZHAW ArcGIS Online Oberfläche im Menü «Inhalt». Am besten erstellst Du vorgängig einen eigenen Ordner, in dem alle Inhalte der Story Map abgelegt sind.",
+    "text": "Übung 1: Story Map im ZHAW ArcGIS Online Portal erstellen\nStory Maps vermitteln in interaktiver Form Informationen zu einem Ort, Ereignis, Problem, Trend oder Muster in einem geographischen Kontext. Textliche Inhalte können mit Fotos, Videos, Audiodateien und interaktiven Karten kombiniert werden.\nFür diese Übung werden keine Daten zur Verfügung gestellt. Du kannst eine Story Map basierend auf einem in diesem Modul behandelten Themenbereich und deren vorhandenen Daten aufbauen – oder alternativ – die Grundlage für die Story Map (eine mögliche Dokumentationsart) Deines Semesterprojekts entwerfen. Die Story Map erstellst Du auf dem ZHAW ArcGIS Online Portal.\nDer einfachste Weg eine Story Map zu erstellen, geht am schnellsten via ZHAW ArcGIS Online Oberfläche im Menü «Inhalt». Am besten erstellst Du vorgängig einen eigenen Ordner, in dem alle Inhalte der Story Map abgelegt sind.",
     "crumbs": [
       "WebGIS I",
       "<span class='chapter-number'>62</span>  <span class='chapter-title'>Übung Story Map</span>"
@@ -2683,11 +2823,21 @@
     ]
   },
   {
+    "objectID": "E_WebGIS_2/1_Einleitung.html",
+    "href": "E_WebGIS_2/1_Einleitung.html",
+    "title": "WebGIS II",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nDu kannst eine Map mit mehreren Layern und einer Legende in Python erstellen.\nDu kannst deine Map und weitere Elemente mittels Chunk Options als HTML publizieren. \nOptional: Du kennst die grundlegenden Webtechnologien wie HyperText Markup Language (HTML), JavaScript und Cascading Style Sheets (CSS).\nOptional: Du hast dich mit Leaflet, der beliebtesten Open-Source-JavaScript-Bibliothek, vertraut gemacht.\nOptional: Du kannst das GeoJson-Dateiformat verwenden.",
+    "crumbs": [
+      "WebGIS II"
+    ]
+  },
+  {
     "objectID": "E_WebGIS_2/2_Uebung_Zeckenstiche.html",
     "href": "E_WebGIS_2/2_Uebung_Zeckenstiche.html",
     "title": "Übung Visualisierung Zeckenstiche",
     "section": "",
-    "text": "Übung 1: Vorbereitung",
+    "text": "Übung 1: Vorbereitung\nIn dieser Übung wollen wir mit unseren originalen und simulierten Zeckenstichen aus dem Block Programmieren eine interaktive Karte erstellen. Zudem werdet ihr weitere Tools und Tipps erhalten, wie ihr euren Code aufwerten und zum Schluss als HTML darstellen könnt.",
     "crumbs": [
       "WebGIS II",
       "<span class='chapter-number'>64</span>  <span class='chapter-title'>Übung Visualisierung Zeckenstiche</span>"
@@ -2760,11 +2910,11 @@
     ]
   },
   {
-    "objectID": "E_WebGIS_2/2_Uebung_Zeckenstiche.html#übung-7-notebook-in-html-konvertieren",
-    "href": "E_WebGIS_2/2_Uebung_Zeckenstiche.html#übung-7-notebook-in-html-konvertieren",
+    "objectID": "E_WebGIS_2/2_Uebung_Zeckenstiche.html#übung-7-notebook-in-html-konvertieren-und-publizieren",
+    "href": "E_WebGIS_2/2_Uebung_Zeckenstiche.html#übung-7-notebook-in-html-konvertieren-und-publizieren",
     "title": "Übung Visualisierung Zeckenstiche",
-    "section": "Übung 7: Notebook in HTML konvertieren",
-    "text": "Übung 7: Notebook in HTML konvertieren\nDamit wir nun unser Quarto Dokument publizieren können, müssen wir davon einen Output generieren.\nDazu nutzen wir wieder Quarto im Terminal. Aber anstelle des preview Commands nutzen wir den render Command, sprich quarto render NameQuartoDokument.qmd. Da wir in den Quarto Metadaten als Format HTML angegeben haben, wird Quarto ein HTML File generieren.\nÄndere zum Schluss den Namen des HTML Files auf index.html. Mit Rechtsklick auf das File kann über Download das HTML-File heruntergeladen werden.",
+    "section": "Übung 7: Notebook in HTML konvertieren und publizieren",
+    "text": "Übung 7: Notebook in HTML konvertieren und publizieren\nDamit wir nun unser Quarto Dokument publizieren können, müssen wir davon einen Output generieren.\nDazu nutzen wir wieder Quarto im Terminal. Aber anstelle des preview Commands nutzen wir den render Command, sprich quarto render NameQuartoDokument.qmd. Da wir in den Quarto Metadaten als Format HTML angegeben haben, wird Quarto ein HTML File generieren.\nErstellt nun einen neuen Ordner und kopiert euer HTML File hinein. Ändere den Namen des HTMLs auf index.html. Euer HTML werden wir nun kurzfristig auf Netlify publizieren. Öffnet dazu diesen Link und drag und drop euren eben erstellten Ordner. Über den angezeigten Link könnt ihr nun, nachdem ihr das automatisch generierte Passwort eingegeben habt, eine Stunde lang auf eure Webseite zugreifen.",
     "crumbs": [
       "WebGIS II",
       "<span class='chapter-number'>64</span>  <span class='chapter-title'>Übung Visualisierung Zeckenstiche</span>"
@@ -2856,156 +3006,6 @@
     "crumbs": [
       "WebGIS II",
       "<span class='chapter-number'>65</span>  <span class='chapter-title'>(Optional) Übung Leaflet</span>"
-    ]
-  },
-  {
-    "objectID": "A_Unsicherheit/1_Einleitung.html",
-    "href": "A_Unsicherheit/1_Einleitung.html",
-    "title": "💥 Teil: Unsicherheit",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage bei zukünftigen GIS Arbeiten mit der Unsicherheit von Punktdaten umzugehen.\nDu kannst reale räumliche Objekte dahin beurteilen, ob diese grenzscharf oder nur mit einer Unschärfe abgebildet werden können.\nDu kannst mit Fuzzy-Tallness umgehen und diese definieren.\nDu kannst unscharfe Phänomene in deinen zukünftigen Projekten berücksichtigen und deren Unschärfe in den Geoverarbeitungsprozess integrieren und auswerten.\nDu kannst ein Modell mit ModelBuilder erstellen und ausführen.",
-    "crumbs": [
-      "💥 Teil: Unsicherheit"
-    ]
-  },
-  {
-    "objectID": "B_Datenbanken_1/1_Einleitung.html",
-    "href": "B_Datenbanken_1/1_Einleitung.html",
-    "title": "Datenbanken I",
-    "section": "",
-    "text": "Ausgangslage\nDie Gärten und Grünanlagen prägen das Bild des Campus Grüental. Eine grosse Vielfalt an verschiedenen einheimischen und exotischen Pflanzenarten lädt zum Verweilen ein. Mitarbeiter und Studierende nutzen den grünen Raum zur Erholung, zum Miteinander und zum Lernen. Nicht nur in den Sommermonaten ist das offene Areal des Campus ein Erlebnis für alle. Für die individuelle Pflege und Wartung der Gärten bedarf es sehr guter Planung. Als Datenbank Spezialist werden Sie beauftragt eine Datenbanklösung zur Verwaltung der Campus Pflanzenwelt zu entwickeln.",
-    "crumbs": [
-      "Datenbanken I"
-    ]
-  },
-  {
-    "objectID": "B_Datenbanken_1/1_Einleitung.html#ausgangslage",
-    "href": "B_Datenbanken_1/1_Einleitung.html#ausgangslage",
-    "title": "Datenbanken I",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nSie lernen ein vorgegebenes Textmodell zu lesen, zu interpretieren und dazu die richtigen Fragen zu stellen, um fehlende Antworten zu bekommen.\nSie können aus dem Textmodell relevante Objekte, Attribute und Beziehungen extrahieren.\nSie können auf der Grundlage eines bestehenden Textmodells ein konzeptuelles Datenmodell mit Hilfe eines ER-Diagramms entwickeln.\nSie können das konzeptuelle Datenmodell zu einem logischen Datenmodell weiter entwickeln, indem Sie Tabellen ableiten und Attribute, Schlüssel und Kardinalitäten identifizieren.",
-    "crumbs": [
-      "Datenbanken I"
-    ]
-  },
-  {
-    "objectID": "B_Datenbanken_2/1_Einleitung.html",
-    "href": "B_Datenbanken_2/1_Einleitung.html",
-    "title": "Datenbanken II",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nSie können ein bestehendes logisches Modell auf Datenintegrität prüfen und Konsistenzfehler korrigieren.\nSie können auf der Grundlage eines bestehenden Datenmodells mit Hilfe von pgAdmin und ArcGIS Pro auf eine Server Datenbank zugreifen.\nSie können eine bestehende Server Datenbank mit Hilfe von pgAdmin und ArcGIS Pro mit Daten befüllen.\nSie kennen die grundlegenden Mechanismen von Datenbank-Versionierung und können diese in ArcGIS Pro anwenden.",
-    "crumbs": [
-      "Datenbanken II"
-    ]
-  },
-  {
-    "objectID": "B_Datenbanken_3/1_Einleitung.html",
-    "href": "B_Datenbanken_3/1_Einleitung.html",
-    "title": "Datenbanken III",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nSie lernen die Abfragesprache SQL kennen.\nSie können Abfragen in SQL formulieren und dabei auch räumliche PostGIS Funktionen nutzen.\nSie lernen SQL‐Abfragen mit ArcGIS Pro Werkzeugen zu visualisieren.",
-    "crumbs": [
-      "Datenbanken III"
-    ]
-  },
-  {
-    "objectID": "C_Programmieren_1/1_Einleitung.html",
-    "href": "C_Programmieren_1/1_Einleitung.html",
-    "title": "Programmieren I",
-    "section": "",
-    "text": "Vorbereitung\nUm Python sinnvoll lernen und anwenden zu können, müsst ihr ein paar Programme installieren. Die folgenden Kapitel leiten euch dabei an.",
-    "crumbs": [
-      "Programmieren I"
-    ]
-  },
-  {
-    "objectID": "C_Programmieren_1/1_Einleitung.html#vorbereitung",
-    "href": "C_Programmieren_1/1_Einleitung.html#vorbereitung",
-    "title": "Programmieren I",
-    "section": "",
-    "text": "Positron IDE\nUm mit R zu programmieren, habt ihr bisher in RStudio gearbeitet. RStudio ist eine sogenannte “Integrierte Entwicklungsumgebung” (Integrated development environment, IDE), wo ihr eure R-Scripts entwicklen konntet. Posit, die Hersteller von RStudio, haben eine zweite IDE erstellt, die von der Bedienung sehr ähnlich ist wie RStudio, aber Python besser unterstützt. Diese IDE heisst Positron und ist ebenfalls kostenlos und mit freiem Quellcode verfügbar.\nLadet die neuste Version von Positron für euer Betriebssystem herunter (siehe hier) und installiert diese.\n\n\nPython\nIm Modul Angewandte Geoinformatik benutzen wir Python. Mit der Installation von ArcGIS sollte Python bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt Windows (s.u.) durch.\nWer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte Mac / Linux (s.u.).\n\nWindowsMac / Linux\n\n\nMit ArcGIS Installation\nUm zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte ausführen:\n\nPython Command Prompt suchen und starten (siehe Terminal)\nFolgender Befehl eingeben:\npython3 --version   \n# oder:\npython --version\nWenn der obige Befehl eine Fehlermeldung verursacht, bitte die Anleitung Mac / Linux befolgen.\n\n\n\nOhne ArcGIS Installation\nWer keine ArcGIS Installation hat, sollte folgendermassen vorgehen:\n\nÜberprüfe, ob Python ≥ 3.11 installiert ist. Tippe dafür folgenden Befehl in den Terminal:\npython3 --version   \n# oder:\npython --version\nWenn Python nicht vorhanden oder die Version &lt; 3.11 ist, solltet ihr eine aktuelle Version von Python installieren: https://www.python.org/downloads/\nInstalliert Miniconda von dieser Website: https://docs.conda.io/projects/miniconda/en/latest/. Wählt den installer für eure Plattform aus, und verwendet nicht den grossen grünnen Button “Download Anaconda”.",
-    "crumbs": [
-      "Programmieren I"
-    ]
-  },
-  {
-    "objectID": "C_Programmieren_1/1_Einleitung.html#daten",
-    "href": "C_Programmieren_1/1_Einleitung.html#daten",
-    "title": "Programmieren I",
-    "section": "Daten",
-    "text": "Daten\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I → Datensätze herunterladen könnt.\n\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\n\n\n\nDatensatz\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet",
-    "crumbs": [
-      "Programmieren I"
-    ]
-  },
-  {
-    "objectID": "C_Programmieren_2/1_Einleitung.html",
-    "href": "C_Programmieren_2/1_Einleitung.html",
-    "title": "Programmieren II",
-    "section": "",
-    "text": "Letzte Woche habt ihr die wichtigsten Datentypen in Python kennen gelernt und sowohl den Command Prompt wie auch Positron verwendet. Diese Woche werden wir Python Module genauer beleuchten und dabei conda genauer kennenlernen. Zudem widmen wir uns dem Erstellen von Funktionen (Functions), Fallunterscheidungen (if und else) sowie dem Erstellen von Zufallszahlen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nConda verstehen und beherrschen\nPython Module verstehen\nFunctions kennenlernen und beherrschen\nFunction auf eine ganze Spalte einer DataFrame anwenden können.",
-    "crumbs": [
-      "Programmieren II"
-    ]
-  },
-  {
-    "objectID": "C_Programmieren_3/1_Einleitung.html",
-    "href": "C_Programmieren_3/1_Einleitung.html",
-    "title": "Programmieren III",
-    "section": "",
-    "text": "Heute widmen wir uns zwei grossen Themen bevor wir uns an die Umsetzung der Monte Carlo Simulation wenden.\nIm ersten Thema geht es um for Loops, mit denen wir eine Aufgabe mehrfach (“Iterativ”) durchzuführen können. Ein for Loop ist ein sehr wichtiges und hilfreiches Werkzeug das man unbedingt kennen sollte. Wir werden for loops brauchen um Zeckenstiche zu simulieren, indem wir die bestehenden Meldungen x-fach zufällig verschieben. Das Thema for loops behandeln wir in Einführung in for loop, Basic for loop und Advanced for loops.\nBeim zweiten Thema geht es um GIS. Wir haben bisher mit Daten gearbeitet die eine Rauminformation beinhalten, die Zeckenstiche haben x/y-Koordinaten. Diese Rauminformation haben wir aber nicht als solche behandelt, wir haben die Koordinaten als Zahlen eingelesen und uns nicht gross darum geschert, dass es sich dabei um spezifische Punkte in der Schweiz handelt. Heute werden wir dies ändern müssen da uns eine räumliche Abfrage bevorsteht: Wir wollen nämlich wissen, welche Zeckenstiche sich im Wald befinden. Dadurch lernen wir eine neue Erweiterung kennen und sehen, was für räumliche Operationen in Python möglich sind. Das Thema behandeln wir in Input: GIS in Python, Räumliche Operationen und Spatial Joins.\nDie Übungen in Programmieren III kannst du mit deiner in Übung 5 erstellten Conda-Umgebung geopython2 durchführen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nIhr kennt for-Loops und könnt sie anwenden\nIhr seht, was mit räumlichen Operationen in Python möglich ist und kennt ein Tool, welches dazu notwendig ist\nIhr könnt räumliche Operationen (spatial join, overlay) in Python umsetzen\nIhr könnt summary Statistiken (mit groupby/count) aus DataFrames extrahieren",
-    "crumbs": [
-      "Programmieren III"
-    ]
-  },
-  {
-    "objectID": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
-    "href": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
-    "title": "Netzwerkanalyse I",
-    "section": "",
-    "text": "Die Lerneinheit vermittelt die Grundlagen bei der Verwendung von Netzwerk-Geodaten. Die Anwendungsfelder reichen von Streckenfindung und Reisezeitberechnungen zu Energienetzwerk-Systeme bis hin zu Gewässernetzen in der Hydrologie. Diese Lerneinheit vermittelt die dafür relevanten Grundlagen aus der Graphentheorie und knüpft dabei an die bekannten Grundlagen der Vektordatenmodellierung (Definitionen, Elemente von Graphen, Eigenschaften von Graphen, Bäume) an. Zudem werden im theoretischen Teil Netzwerkmasse, insbesondere Zentralitätsmasse nähergebracht. Der praktische Teil basiert auf der Einführung und Verwendung von QGIS als Alternative zu den ESRI-Produkten.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nEinfache GIS-Operationen mit QGIS durchführen können (Clip, Reproject, Abfrage der Attributtabelle, Symbolisierung, Export als jpg)\nSchnittstelle zwischen QGIS und anderen GIS-Software am Beispiel GRASS kennenlernen\nErste Netzwerkoperationen mit QGIS/GRASS GIS durchführen\nNetzwerk-Zentralitätsmasse verstehen und für einfache Netzwerkdaten berechnen können",
-    "crumbs": [
-      "Netzwerkanalyse I"
-    ]
-  },
-  {
-    "objectID": "D_Netzwerkanalyse_2/1_Einleitung.html",
-    "href": "D_Netzwerkanalyse_2/1_Einleitung.html",
-    "title": "Netzwerkanalyse II",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nIn einem gegebenen Netzwerk kürzeste Pfade mit QGIS berechnen können\nWeitere GRASS GIS Werkezeuge innerhalb von QGIS ansteuern können\nVerschiedene QGIS / GRASS GIS Tools kennenlernen und deren Outputs interpretieren können\nEigene einfache Vektor-Datensätze erstellen können, resp. Punkte von Hand digitalisieren können\nAlternative, professionelle Routing Services kennenlernen und ausserhalb herkömmlicher Services (z.B. Google) nutzen",
-    "crumbs": [
-      "Netzwerkanalyse II"
-    ]
-  },
-  {
-    "objectID": "D_Netzwerkanalyse_3/1_Einleitung.html",
-    "href": "D_Netzwerkanalyse_3/1_Einleitung.html",
-    "title": "Netzwerkanalyse III",
-    "section": "",
-    "text": "Angenommen Sie sind auf Wohnungssuche in Wädenswil. Dabei gilt es nebst dem Budget viele wichtige raumgebundene Variablen zu berücksichtigen, dazu verwenden Sie natürlich QGIS. Sie wollen drei Kriterien untersuchen:\n\nLaufdistanz zur nächsten Entsorgungsstelle\nErschliessung an die öffentlichen Verkehrsmittel (unter Berücksichtigung des Fahrplans)\nDistanz zur Durchfahrtsstrasse\n\nWir werden für jeden dieser drei Kriterien einen Rasterdatensatz kreieren, den wir zum Schluss miteinander verrechnen können. So finden wir den optimalen Standort unter der Berücksichtigung aller drei Kriterien. Starten Sie dazu QGIS und laden Sie folgende Daten in das Projekt:\n\nStrassennetz Wädenswil (“osm_highway_prepared.gpkg”, siehe Tabelle 51.1)\nEntsorgungsstellen Wädenswil (“abfallentsorgung_waedenswil.gpkg”, siehe Tabelle 51.1)\nGemeindegrenze Wädenswil (“Gemeinde_Waedenswil.gpkg”, siehe Tabelle 51.1)\nOptional: OSM Hintergrundkarte grau eingefärbt (siehe Übung 3.1: Projekt vorbereiten)\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nSie sind in der Lage, einfache Reisezeitberechnungen in QGIS selber durchzuführen.\nSie erweitern Ihr Skillset zur Umwandlung von verschiedenen Geodatentypen (Vektor zu Raster, Raster zu Vektor, Linien zu Punkte, usw.)\nSie können eine einfache Multi-Kriterien-Analyse (MCA) mit Raster-Daten in QGIS selbständig durchführen.\nSie können einfache Map Overlay-Operationen in QGIS selber ausführen.",
-    "crumbs": [
-      "Netzwerkanalyse III"
-    ]
-  },
-  {
-    "objectID": "E_WebGIS_1/1_Einleitung.html",
-    "href": "E_WebGIS_1/1_Einleitung.html",
-    "title": "WebGIS I",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage auf dem ArcGIS Online Organisationskonto Deine Inhalte zu organisieren und die Freigabeeigenschaften von Inhalten zu ändern.\nDu kannst in ArcGIS Pro eine Karte vorbereiten, eine Zeitanimation aktivieren und ArcGIS Pro Karten auf einem ArcGIS Online Organisationskonto als Web Maps veröffentlichen.\nDu kannst eine Web Map zielgerichtet gestalten und basierend auf bestehenden Web Maps neue Web Map Applikationen erstellen.\nDu weisst, wie Du eine Story Map erstellen und diese mit Inhalten füllen kannst.",
-    "crumbs": [
-      "WebGIS I"
-    ]
-  },
-  {
-    "objectID": "E_WebGIS_2/1_Einleitung.html",
-    "href": "E_WebGIS_2/1_Einleitung.html",
-    "title": "WebGIS II",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nDu kannst eine Map mit mehreren Layern und einer Legende in Python erstellen.\nDu kannst deine Map und weitere Elemente mittels Chunk Options als HTML publizieren. \nOptional: Du kennst die grundlegenden Webtechnologien wie HyperText Markup Language (HTML), JavaScript und Cascading Style Sheets (CSS).\nOptional: Du hast dich mit Leaflet, der beliebtesten Open-Source-JavaScript-Bibliothek, vertraut gemacht.\nOptional: Du kannst das GeoJson-Dateiformat verwenden.",
-    "crumbs": [
-      "WebGIS II"
     ]
   }
 ]
