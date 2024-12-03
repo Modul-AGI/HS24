@@ -264,13 +264,13 @@ Seht euch die [Webseite](https://modul-agi.github.io/WebGIS2_Zeckenstiche/) an. 
 
 Benutze zudem die Cell Options, um euren Code sauber darzustellen. Nutzt dazu `echo` und `output`, um unnötige Cell Codes und Outputs nicht auszugeben. Benenne zudem alle eingeklappten Code Cells sinnvoll mittels `code-summary`. 
 
-## Übung 7: Notebook in HTML konvertieren
+## Übung 7: Notebook in HTML konvertieren und publizieren
 
 Damit wir nun unser Quarto Dokument publizieren können, müssen wir davon einen Output generieren.
 
 Dazu nutzen wir wieder Quarto im Terminal. Aber anstelle des `preview` Commands nutzen wir den `render` Command, sprich `quarto render NameQuartoDokument.qmd`. Da wir in den Quarto Metadaten als Format HTML angegeben haben, wird Quarto ein HTML File generieren.
 
-Ändere zum Schluss den Namen des HTML Files auf `index.html`. Mit Rechtsklick auf das File kann über `Download` das HTML-File heruntergeladen werden.
+Erstellt nun einen neuen Ordner und kopiert euer HTML File hinein. Ändere den Namen des HTMLs auf `index.html`. Euer HTML werden wir nun kurzfristig auf Netlify publizieren. Öffnet dazu diesen [Link](https://app.netlify.com/drop) und drag und drop euren eben erstellten Ordner. Über den angezeigten Link könnt ihr nun, nachdem ihr das automatisch generierte Passwort eingegeben habt, eine Stunde lang auf eure Webseite zugreifen.
 
 <!--## Übung 8: GitHub und Publizieren
 
