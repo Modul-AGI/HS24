@@ -14,7 +14,7 @@ Gehe folgendermassen vor:
     - Wie können Personen dieser Gruppe beitreten? -> Nach Einladung
     - Wer kann Inhalte beitragen? -> Alle Gruppenmitglieder
 
-- Füge Hanno Rahn (rahn_zhaw) und Dominic Lüönd (luoe_zhaw) deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
+- Füge Hanno Rahn (rahn_zhaw) und Evelyn Terzer (terz_zhaw) deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
 
 - Veröffentliche deine Story Map für alle Mitglieder Deiner Gruppe «Leistungsnachweis Vorname Name».
 
