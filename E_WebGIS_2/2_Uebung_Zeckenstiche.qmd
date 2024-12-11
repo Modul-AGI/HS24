@@ -64,6 +64,7 @@ wald = gpd.read_file("data/wald.gpkg")
 ```
 
 ## Übung 2: Base Map
+
 Nun können wir unsere Karte bauen. Zuerst müssen wir eine Basiskarte erstellen, zu welcher wir dann die weiteren Layer hinzufügen können. Dazu nutzen wir nun Folium. Als Mittelpunkt der Karte wählen wir die WGS84 Koordinaten der Stadt Zürich (Zurich latitude: 47.36667, longitude: 8.55) aus.
 
 ```{python}
