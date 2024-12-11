@@ -38,7 +38,7 @@ Ein Quarto Dokument hat grob drei Elemente: (1) Den Header bzw. die Metadaten, (
     ---
     ```
 
-2. Der Code wird in sogenannten *Code Chunks* geschrieben. Eine neue Zelle fügt ihr ein, indem ihr `Ctrl+Shift+I` drückt. Falls in der eckigen Klammer nicht *pyhton* stehen sollte, müsst ihr das in diesem Fall anpassen.
+2. Der Code wird in sogenannten *Code Chunks* geschrieben. Eine neue Zelle fügt ihr ein, indem ihr `Ctrl+Shift+I` drückt. Falls in der eckigen Klammer nicht *python* stehen sollte, müsst ihr das in diesem Fall anpassen.
 
 3. Zwischen die Code Chunks könnt ihr euren Text schreiben. Die Basics, wie ihr euren Text formatieren könnt, findet ihr [hier](https://quarto.org/docs/authoring/markdown-basics.html)
 
